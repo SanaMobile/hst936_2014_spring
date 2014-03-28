@@ -22,6 +22,8 @@
 		A3D03CB018E5BDB600510D84 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3D03C9418E5BDB600510D84 /* CoreData.framework */; };
 		A3D03CB818E5BDB600510D84 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A3D03CB618E5BDB600510D84 /* InfoPlist.strings */; };
 		A3D03CBA18E5BDB600510D84 /* Sana_iOS_ClientTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D03CB918E5BDB600510D84 /* Sana_iOS_ClientTests.m */; };
+		A3D03CC418E5BF4000510D84 /* sana.ios.old.zip in Resources */ = {isa = PBXBuildFile; fileRef = A3D03CC318E5BF4000510D84 /* sana.ios.old.zip */; };
+		A3D03CC518E5BF4000510D84 /* sana.ios.old.zip in Resources */ = {isa = PBXBuildFile; fileRef = A3D03CC318E5BF4000510D84 /* sana.ios.old.zip */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,7 @@
 		A3D03CB518E5BDB600510D84 /* Sana iOS ClientTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Sana iOS ClientTests-Info.plist"; sourceTree = "<group>"; };
 		A3D03CB718E5BDB600510D84 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A3D03CB918E5BDB600510D84 /* Sana_iOS_ClientTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Sana_iOS_ClientTests.m; sourceTree = "<group>"; };
+		A3D03CC318E5BF4000510D84 /* sana.ios.old.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = sana.ios.old.zip; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +130,7 @@
 		A3D03C9718E5BDB600510D84 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A3D03CC318E5BF4000510D84 /* sana.ios.old.zip */,
 				A3D03C9818E5BDB600510D84 /* Sana iOS Client-Info.plist */,
 				A3D03C9918E5BDB600510D84 /* InfoPlist.strings */,
 				A3D03C9C18E5BDB600510D84 /* main.m */,
@@ -230,6 +234,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A3D03C9B18E5BDB600510D84 /* InfoPlist.strings in Resources */,
+				A3D03CC418E5BF4000510D84 /* sana.ios.old.zip in Resources */,
 				A3D03CA618E5BDB600510D84 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -238,6 +243,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3D03CC518E5BF4000510D84 /* sana.ios.old.zip in Resources */,
 				A3D03CB818E5BDB600510D84 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -373,6 +379,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Sana iOS Client/Sana iOS Client-Prefix.pch";
 				INFOPLIST_FILE = "Sana iOS Client/Sana iOS Client-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -386,6 +393,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Sana iOS Client/Sana iOS Client-Prefix.pch";
 				INFOPLIST_FILE = "Sana iOS Client/Sana iOS Client-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
