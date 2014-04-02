@@ -1,0 +1,137 @@
+<?xml version="1.0"?>
+<html xmlns:xforms="http://www.w3.org/2002/xforms"
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ev="http:www.w3.org/2001/xml-events"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:sana="http://www.sana.mit.edu/xforms"
+    targetNamespace="http://www.w3.org/1999/xhtml"
+    elementFormDefault="qualified">  
+    <head> 
+        <xforms:model id="API Test">
+            <xforms:instance>
+                <sana:procedure src="procedure://xxxx-xxxx-xxxx-xxxa"/>
+                <sana:procedure src="subject://xxxx-xxxx-xxxx-xxxb"/>
+                <sana:procedure src="observer://xxxx-xxxx-xxxx-xxxc"/>
+                <sana:procedure src="device://xxxx-xxxx-xxxx-xxxd"/>
+                <xforms:date></xforms:date>
+                <data>
+                    <sana:observation id="1">
+                        <sana:concept src="concept://xxxx-xxxx-xxxx-xxxe"/>
+                        <sana:value></sana:value>
+                        <sana:date></sana:date>
+                    </sana:observation>
+                    <sana:observation id="2">
+                        <sana:concept src="concept://xxxx-xxxx-xxxx-xxxf"/>
+                        <sana:value></sana:value>
+                        <sana:date></sana:date>
+                    </sana:observation>
+                    <sana:observation id="picturesList">
+                        <sana:concept src="concept://xxxx-xxxx-xxxx-xxxf"/>
+                        <sana:value></sana:value>
+                        <sana:date></sana:date>
+                    </sana:observation>
+                </data>
+            </xforms:instance>
+            <xforms:bind nodeset="/data/sana:observation@1" type="string"/>
+            <xforms:bind nodeset="/data/sana:observation@2" type="string" relevant="../observation@1/value='Yes'"/>
+            <xforms:bind nodeset="/data/sana:observation@10" type="string" constraint="not(. null())"/>
+        </xforms:model>
+    </head>
+    <body>
+        <sana:group>
+            <xforms:input ref="data/observation[@id='1']/value">
+                <xforms:label>Enter First Name</xforms:label>
+            </xforms:input>
+            <xforms:input ref="data/observation[@id='2']/value">
+                <xforms:label>Enter Last Name</xforms:label>
+            </xforms:input>
+            <xforms:input ref="data/observation[@id='3']/value">
+                <xforms:label>Enter Date Of Birth</xforms:label>
+            </xforms:input>
+            <xforms:input ref="data/observation[@id='4']/value">
+                <xforms:label>Enter Medical Record Number</xforms:label>
+            </xforms:input>
+        </sana:group>
+        <sana:group>
+            <xforms:textarea ref="data/observation[@id='5']/value">
+                <xforms:label>Enter History Of Present Illness</xforms:label>
+            </xforms:textarea>
+        </sana:group>
+        <sana:group>
+            <xforms:select1
+                appearance="compact"
+                ref="data/observation[@id='6']/value">
+                <xforms:label>What is patient's ethnicity?</xforms:label>
+                <xforms:item>
+                    <xforms:value>White</xforms:value>
+                </xforms:item>
+                <xforms:item>
+                    <xforms:value>Black</xforms:value>
+                </xforms:item>
+                <xforms:item>
+                    <xforms:value>Hispanic</xforms:value>
+                </xforms:item>
+                <xforms:item>
+                    <xforms:value>Asian</xforms:value>
+                </xforms:item>
+                <xforms:item>
+                    <xforms:value>Other</xforms:value>
+                </xforms:item>
+            </xforms:select1>
+        </sana:group>
+        <sana:group>
+            <xforms:select
+                appearance="normal"
+                ref="data/observation[@id='7']/value">
+                <xforms:label>Are these symptoms present?</xforms:label>
+                <xforms:item>
+                    <xforms:value>Fever</xforms:value>
+                </xforms:item>
+                <xforms:item>
+                    <xforms:value>Shortness of breath</xforms:value>
+                </xforms:item>
+                <xforms:item>
+                    <xforms:value>Huge Headache pain</xforms:value>
+                </xforms:item>
+                <xforms:item>
+                    <xforms:value>Headache</xforms:value>
+                </xforms:item>
+                <xforms:item>
+                    <xforms:value>Nausea</xforms:value>
+                </xforms:item>
+                <xforms:item>
+                    <xforms:value>Stomach pain</xforms:value>
+                </xforms:item>
+                <xforms:item>
+                    <xforms:value>Dizziness</xforms:value>
+                </xforms:item>
+            </xforms:select>
+        </sana:group> 
+        <sana:group>
+            <xforms:label>Capture multimedia</xforms:label>
+            <xforms:repeat id="picturesList">
+                <xforms:upload
+                    ref="data/observation[@id='picturesList']"
+                    mediatype="image/*">
+                    <mediatype ref="@mediatype" />
+                </xforms:upload>
+            </xforms:repeat>
+            <xforms:trigger>
+                <xforms:label>Add a picture</xforms:label>
+                <xforms:action ev:event="DOMActivate">
+                <xforms:insert
+                context="data/sana:observation[@id='picturesList']"
+                nodeset="data/sana:observation"
+                at="index(’picturesList’)"
+                origin="instance(’encounter’)/data/observation[@id='picturesList']"/>
+                <xforms:setfocus control="@id='picturesList'"/>
+                </xforms:action>
+            </xforms:trigger>
+        </sana:group>
+        <sana:group>
+            <xforms:input ref="data/observation@9/value">
+                <xforms:label>Capture current GPS Coordinates (coming soon)</xforms:label>
+            </xforms:input>
+        </sana:group>
+    </body>
+</html>

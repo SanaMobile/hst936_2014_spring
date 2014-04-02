@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SanaHomePageViewController.h"
+#import "SanaColorManager.h"
 
 @interface SanaAppDelegate : UIResponder <UIApplicationDelegate>
 

@@ -1,0 +1,196 @@
+<h:html xmlns="http://www.w3.org/2002/xforms"
+    xmlns:h="http://www.w3.org/1999/xhtml"
+    xmlns:ev="http:www.w3.org/2001/xml-events"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    
+    <h:head>
+        <model id="API Test">
+            <instance>
+                <procedure src="procedure://xxxx-xxxx-xxxx-xxxa"/>
+                <procedure src="subject://xxxx-xxxx-xxxx-xxxb"/>
+                <procedure src="observer://xxxx-xxxx-xxxx-xxxc"/>
+                <procedure src="device://xxxx-xxxx-xxxx-xxxd"/>
+                <date></date>
+                <data>
+                    <observation id="1">
+                        <concept src="concept://xxxx-xxxx-xxxx-xxxe"/>
+                        <value></value>
+                        <date></date>
+                    </observation>
+                    <observation id="2">
+                        <concept src="concept://xxxx-xxxx-xxxx-xxxf"/>
+                        <value></value>
+                        <date></date>
+                    </observation>
+                </data>
+            </instance>
+            <bind nodeset="/data/observation@1" type="string"/>
+            <bind nodeset="/data/observation@2" type="string" relevant="../observation@1/value='Yes'"/>
+            <bind nodeset="/data/observation@10" type="string" constraint="not(. null())"/>
+        </model>
+    </h:head>
+    
+    <h:body>
+        <group>
+            <!-- Text entry -->
+            <input ref="data/observation@1/value">
+            	<label>Enter Text</label>
+            </input>
+            <input ref="data/observation@2/value">
+            	<label>Enter More Text</label>
+            </input>
+            
+            <!-- Dropdown selection -->
+            <select1
+                appearance="normal"
+                ref="data/observation@3/value">
+                <label>Dropdown: Select single value</label>
+                <item>
+                    <value>1</value>
+                </item>
+                <item>
+                    <value>2</value>
+                </item>
+                <item>
+                    <value>3</value>
+                </item>
+                <item>
+                    <value>4</value>
+                </item>
+            </select1>
+            
+            <!--  Radio selection -->
+            <select1
+                appearance="compact"
+                ref="data/observation@4/value">
+                <label>Radio: Select single value</label>
+                <item>
+                    <value>1</value>
+                </item>
+                <item>
+                    <value>2</value>
+                </item>
+                <item>
+                    <value>3</value>
+                </item>
+                <item>
+                    <value>4</value>
+                </item>
+            </select1>
+            
+            <!-- Checkboxes: multiple selection -->
+            <select
+                appearance="normal"
+                ref="data/observation@5/value">
+                <label>Checkboxes: Select one or more</label>
+                <item>
+                    <value>1</value>
+                </item>
+                <item>
+                    <value>2</value>
+                </item>
+                <item>
+                    <value>3</value>
+                </item>
+                <item>
+                    <value>4</value>
+                </item>
+            </select>
+            
+            <!--  Capture GPS coordinates -->
+            <upload
+                ref="data/observation@6/value"
+                mediatype="application/gpx+xml">
+                <label>Grab GPS Coordinates</label>
+                <mediatype ref="@mediatype" />
+            </upload>
+        </group>
+        
+        <!-- Picture- repeat to keep as many pictures as the user desires -->
+        <group>
+            <label>Take a picture of the condition.</label>
+            <repeat id="data/observation/@7">
+                <upload
+                    ref="data/observation@7/item/value"
+                    mediatype="image/*">
+                    <mediatype ref="@mediatype"/>
+                </upload>
+            </repeat>
+            <trigger>
+                <label>Add a picture</label>
+                <action ev:event="DOMActivate">
+                    <insert
+                        context="data/observation"
+                        nodeset="item"
+                        at="index('R3')"
+                        origin="instance('encounter')/data/observation@7/item"/>
+                        <setfocus control="R3"/>
+                </action>
+            </trigger>
+        </group>
+        
+        <!-- Select a value within a given range -->
+        <group>
+            <range
+                ref="data/observation@8/value"
+                start="-2.0"
+                end="2.0"
+                step="0.5">
+                <label>Select a value</label>
+            </range>
+            <textarea ref="data/onservation@9/value">
+                <label>Enter a large block of text</label>
+            </textarea>
+        </group>
+        
+        <!--  tests hint, help, and alert -->
+        <group>
+            <input ref="data/observation@10/value">
+                <label>Enter some text</label>
+                <hint>
+                    <output
+                        src="./input.jpg"
+                        mediatype="image/jpg"/>
+                </hint>
+                <help>
+                    <output
+                        src="./infopage.html"
+                        mediatype="text/html"/>
+                </help>
+                <alert>
+                    <label>Value must be non-null</label>
+                </alert>
+            </input>
+        </group>
+        <!-- The following groups test logic -->
+        <group>
+            <bind nodeset="/data/observation@11" type="integer" relevant="../observation@3/value = 2" />
+            <label>The dropdown selection on the first page was 2</label>
+        </group>
+        
+     	<!--    TODO these two are causing errors
+        <group>
+            <bind nodeset="/data/observation@12" type="integer" relevant="../observation@3/value &lt 2" />
+            <label>The dropdown selection on the first page was 1</label>
+        </group>
+        <group>
+            <bind nodeset="/data/observation@13" type="integer" relevant="../observation@3/value &gt 3" />
+            <label>The dropdown selection on the first page was 4</label>
+        </group>
+         -->
+         
+        <!--  The following groups test boolean operators -->
+        <group>
+            <bind nodeset="/data/observation@14" type="integer" relevant="../observation@3/value = 1 and ../observation@4/value = 1" />
+            <label>The dropdown and radio selections were both 1</label>
+        </group>
+        <group>
+            <bind nodeset="/data/observation@15" type="integer" relevant="../observation@4/value = 2 or ../observation@4/value = 4" />
+            <label>The radio selection was 2 or 4</label>
+        </group>
+        <group>
+            <bind nodeset="/data/observation@16" type="integer" relevant="not(../observation@5/value = 1)" />
+            <label>The checkbox multi-selection was not 1</label>
+        </group>
+    </h:body>
+</h:html>
