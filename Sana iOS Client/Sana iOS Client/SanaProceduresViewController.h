@@ -11,6 +11,8 @@
 #import "SanaColorManager.h"
 #import "SanaImageManager.h"
 
+#import "SanaProcedureDetailViewController.h"
+
 @interface SanaProceduresViewController : UIViewController
 
 @end
