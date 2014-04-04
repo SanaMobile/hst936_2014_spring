@@ -12,11 +12,16 @@
 #define ELEMENT_HEIGHT 30
 #define PADDING 10
 
-@interface SanaProcedureDetailViewController () <UIScrollViewDelegate>
+@interface SanaProcedureDetailViewController () {
+    BOOL viewMoved;
+}
 @property (nonatomic, strong) GDataXMLDocument *domDocument;
 @property (nonatomic, strong) UIPageControl *pageControl;
 @property (nonatomic, strong) UIScrollView *backgroundScrollView;
 @property (nonatomic, strong) UIScrollView *procedureScrollView;
+@property (nonatomic, strong) UITextField *currentTextField;
+@property (nonatomic, strong) UITextView *currentTextView;
+@property (nonatomic, strong) UIBarButtonItem *doneButton;
 
 @property (nonatomic, strong) NSMutableArray *widgetsArray;
 @property (nonatomic, strong) NSMutableArray *currentGroupWidgetsArray;
@@ -32,13 +37,14 @@
 
         // NAVIGATION BUTTON
         UIBarButtonItem *leftButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(didTapCancel:)];
-        UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(didTapDone:)];
+        self.doneButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(didTapDone:)];
+        [self.doneButton setEnabled:NO];
         [self.navigationItem setLeftBarButtonItem:leftButton];
-        [self.navigationItem setRightBarButtonItem:rightButton];
+        [self.navigationItem setRightBarButtonItem:self.doneButton];
 
         // PAGECONTROL
         self.pageControl = [[UIPageControl alloc] initWithFrame:CGRectMake(0, SCREEN_HEIGHT - PAGE_CONTROL_HEIGHT, SCREEN_WIDTH, PAGE_CONTROL_HEIGHT)];
-        [self.pageControl setBackgroundColor:[UIColor colorWithWhite:1.0 alpha:0.6]];
+        [self.pageControl setBackgroundColor:[UIColor colorWithWhite:1.0 alpha:TRANSLUCENT_ALPHA]];
         [self.pageControl setPageIndicatorTintColor:[SanaColorManager colorWithHexString:@"E5CDB8"]];
         [self.pageControl setCurrentPageIndicatorTintColor:[SanaColorManager colorWithHexString:@"E67E22"]];
 
@@ -56,7 +62,7 @@
         [self.procedureScrollView setDelegate:self];
 
         SanaLoadProcedureFromXML *loader = [[SanaLoadProcedureFromXML alloc] init];
-        NSArray *views = [loader loadProcedureFromDocument:[self loadSampleDocument]];
+        NSArray *views = [loader loadProcedureFromDocument:[self loadSampleDocument] forDelegate:self];
 
         double _x = 0;
 //        for(int i=0; i<5; i++) {
@@ -105,7 +111,7 @@
 }
 
 - (GDataXMLDocument *)loadSampleDocument {
-    NSString *pathToProcedure = [[NSBundle mainBundle] pathForResource:@"test_proc" ofType:@"xml"];
+    NSString *pathToProcedure = [[NSBundle mainBundle] pathForResource:@"test_proc_2" ofType:@"xml"];
     NSData *xmlNSData = [[NSMutableData alloc] initWithContentsOfFile:pathToProcedure];
     NSError *error;
     return [[GDataXMLDocument alloc] initWithData:xmlNSData options:0 error:&error];
@@ -121,36 +127,58 @@
         CGFloat pageWidth = scrollView.frame.size.width;
         int currentPage = floor((scrollView.contentOffset.x - pageWidth / 2) / pageWidth) + 1;
         [self.pageControl setCurrentPage:currentPage];
+
+        if(currentPage == self.pageControl.numberOfPages - 1) {
+            [self.doneButton setEnabled:YES];
+        } else {
+            [self.doneButton setEnabled:NO];
+        }
     }
+
+    // RESIGN KEYBOARD ASYNCHRONOUSLY
+    dispatch_async(dispatch_get_main_queue(), ^{
+        if(self.currentTextField != nil)
+            [self.currentTextField resignFirstResponder];
+
+        if(self.currentTextView != nil)
+            [self.currentTextView resignFirstResponder];
+    });
+
 }
 
-- (void)addFormToView:(UIView *)view withFields:(NSArray *)array {
-    UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, view.bounds.size.width, view.bounds.size.height)];
-    [scrollView setShowsVerticalScrollIndicator:NO];
-    [scrollView setScrollsToTop:YES];
+// TEXTFIELD AND TEXTVIEW DELEGATES
+- (void)textFieldDidBeginEditing:(UITextField *)textField {
+    self.currentTextField = textField;
+    [textField.layer setBorderColor:ORANGE_COLOR.CGColor];
+    [textField.layer setBorderWidth:1.0];
 
-    double _y = PADDING;
-    double _width = view.bounds.size.width - (2 * PADDING);
-    double _height = 20.0f;
-    for(NSDictionary *dict in array) {
-        [scrollView addSubview:[self getLabelWithText:dict[@"label"] ofFrame:CGRectMake(PADDING, _y, _width, _height)]];
-        _y += _height + PADDING;
-        [scrollView addSubview:[self getFieldOfFrame:CGRectMake(PADDING, _y, _width, _height)]];
-        _y += _height + PADDING;
-    }
+    double height = textField.frame.origin.y - (3 * PADDING);
+    UIScrollView *superView = (UIScrollView *)textField.superview;
+    [superView setContentOffset:CGPointMake(0, height) animated:YES];
 }
 
-- (UILabel *)getLabelWithText:(NSString *)text ofFrame:(CGRect)frame {
-    UILabel *label = [[UILabel alloc] initWithFrame:frame];
-    [label setText:text];
-    [label setFont:[UIFont systemFontOfSize:15.0]];
-    return label;
+- (void)textFieldDidEndEditing:(UITextField *)textField {
+    [textField.layer setBorderColor:[UIColor whiteColor].CGColor];
 }
 
-- (UITextField *)getFieldOfFrame:(CGRect)frame {
-    UITextField *textField = [[UITextField alloc] initWithFrame:frame];
-    [textField setFont:[UIFont systemFontOfSize:15.0]];
-    return textField;
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    return YES;
+}
+
+- (void)textViewDidBeginEditing:(UITextView *)textView {
+    self.currentTextView = textView;
+    [textView.layer setBorderColor:ORANGE_COLOR.CGColor];
+    [textView.layer setBorderWidth:1.0];
+}
+
+- (void)textViewDidEndEditing:(UITextView *)textView {
+    [textView.layer setBorderColor:[UIColor whiteColor].CGColor];
+}
+
+// TOUCH EVENT CAPTURE
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
+    [self.view resignFirstResponder];
 }
 
 - (void)viewDidLoad

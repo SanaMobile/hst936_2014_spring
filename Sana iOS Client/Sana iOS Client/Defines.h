@@ -6,6 +6,15 @@
 //  Copyright (c) 2014 MIT. All rights reserved.
 //
 
+#define NAVIGATION_COLOR [SanaColorManager colorWithHexString:@"506271"]
+#define ORANGE_COLOR [SanaColorManager colorWithHexString:@"EA7C38"]
+
+#define HELVETICA_LIGHT @"HelveticaNeue-Light"
+#define HELVETICA_THIN @"HelveticaNeue-Thin"
+#define HELVETICA_REGULAR @"HelveticaNeue-Regular"
+#define HELVETICA_SEMIBOLD @"HelveticaNeue-SemiBold"
+#define HELVETICA_BOLD @"HelveticaNeue-Bold"
+
 #define MAIN_SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
 #define MAIN_SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
 #define MAIN_SCREEN_HEIGHT_NC (MAIN_SCREEN_HEIGHT - NC_HEIGHT - STATUS_BAR_HEIGHT)
@@ -16,7 +25,8 @@
 #define SCREEN_HEIGHT_2 (self.view.bounds.size.height/2)
 #define SCREEN_HEIGHT_NC (SCREEN_HEIGHT - NC_HEIGHT - STATUS_BAR_HEIGHT)
 
-
+#define TRANSLUCENT_ALPHA 0.8
+#define KEYBOARD_HEIGHT 216
 #define NC_HEIGHT 44
 #define STATUS_BAR_HEIGHT 15
 #define PAGE_CONTROL_HEIGHT 30

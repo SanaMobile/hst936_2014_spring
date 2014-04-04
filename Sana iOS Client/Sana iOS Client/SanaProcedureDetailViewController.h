@@ -13,7 +13,7 @@
 #import "GDataXMLNode.h"
 #import "SanaLoadProcedureFromXML.h"
 
-@interface SanaProcedureDetailViewController : UIViewController
+@interface SanaProcedureDetailViewController : UIViewController <UIScrollViewDelegate, UITextFieldDelegate, UITextViewDelegate>
 
 - (id)initWithProcedureDocument:(GDataXMLDocument *)document;
 

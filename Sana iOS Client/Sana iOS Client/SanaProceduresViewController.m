@@ -9,7 +9,7 @@
 #import "SanaProceduresViewController.h"
 
 #define PADDING 10
-#define ROW_HEIGHT 40.0f
+#define ROW_HEIGHT 50.0f
 
 @interface SanaProceduresViewController () <UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, strong) UIView *containerView;
@@ -36,7 +36,7 @@
         [self.proceduresTableView setDelegate:self];
         [self.proceduresTableView setDataSource:self];
         [self.proceduresTableView setRowHeight:ROW_HEIGHT];
-        [self.proceduresTableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
+        [self.proceduresTableView setSeparatorStyle:UITableViewCellSeparatorStyleSingleLine];
         [self.proceduresTableView setBackgroundColor:[UIColor clearColor]];
 
         [self.containerView addSubview:self.proceduresTableView];
@@ -64,7 +64,11 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     if(cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+        UIImageView *rightArrow = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"list_arrow.png"]];
+        cell.accessoryView = rightArrow;
         cell.backgroundColor = [UIColor clearColor];
+        cell.textLabel.font = [UIFont fontWithName:HELVETICA_LIGHT size:15.0];
+        cell.textLabel.textColor = NAVIGATION_COLOR;
     }
 
     cell.textLabel.text = @"Test Procedure";
@@ -85,14 +89,16 @@
 
 - (void)tableView:(UITableView *)tableView didHighlightRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-    cell.textLabel.textColor = [SanaColorManager colorWithHexString:@"EA7C38"];
-    cell.backgroundColor = [UIColor clearColor];
+    cell.textLabel.textColor = ORANGE_COLOR;
+    UIImageView *rightArrow = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"list_arrow_h.png"]];
+    cell.accessoryView = rightArrow;
 }
 
 - (void)tableView:(UITableView *)tableView didUnhighlightRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-    cell.textLabel.textColor = [UIColor blackColor];
-    cell.backgroundColor = [UIColor clearColor];
+    cell.textLabel.textColor = NAVIGATION_COLOR;
+    UIImageView *rightArrow = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"list_arrow.png"]];
+    cell.accessoryView = rightArrow;
 }
 
 - (void)viewDidLoad

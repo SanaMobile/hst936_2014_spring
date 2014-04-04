@@ -25,19 +25,21 @@
 
     [self.window setRootViewController:navigationController];
     [self.window setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"main_background.jpg"]]];
+//    [self.window setBackgroundColor:[SanaColorManager colorWithHexString:@"f6f6f6"]];
     [self.window makeKeyAndVisible];
     
     return YES;
 }
 
 - (void)updateNavigationBarStyle {
-    [[UINavigationBar appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor], NSForegroundColorAttributeName, [UIFont systemFontOfSize:22.0], NSFontAttributeName, nil]];
+    [[UINavigationBar appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor], NSForegroundColorAttributeName, [UIFont fontWithName:@"HelveticaNeue-Light" size:22.0], NSFontAttributeName, nil]];
 
-    [[UINavigationBar appearance] setBarTintColor:[SanaColorManager colorWithHexString:@"566675"]];
+    [[UINavigationBar appearance] setBarTintColor:NAVIGATION_COLOR];
     [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
 
-    [[UIBarButtonItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor], NSForegroundColorAttributeName, [UIFont systemFontOfSize:15.0], NSFontAttributeName, nil] forState:UIControlStateNormal];
-    [[UIBarButtonItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor], NSForegroundColorAttributeName, [UIFont systemFontOfSize:15.0], NSFontAttributeName, nil] forState:UIControlStateHighlighted];
+    [[UIBarButtonItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor], NSForegroundColorAttributeName, [UIFont fontWithName:@"HelveticaNeue-Light" size:15.0], NSFontAttributeName, nil] forState:UIControlStateNormal];
+    [[UIBarButtonItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor], NSForegroundColorAttributeName, [UIFont fontWithName:@"HelveticaNeue-Light" size:15.0], NSFontAttributeName, nil] forState:UIControlStateHighlighted];
+    [[UIBarButtonItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor lightGrayColor], NSForegroundColorAttributeName, [UIFont fontWithName:@"HelveticaNeue-Light" size:15.0], NSFontAttributeName, nil] forState:UIControlStateDisabled];
 
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:YES];
 }
