@@ -263,14 +263,22 @@ if __name__ == 'main':
                 'filename': 'util.py'}], 
             "id": "2bbeb878-33f1-4590-9237-e41b151fa553"}
     
+#necessary for the map in dana()
 class MapForm(forms.Form):
     map = forms.Field(widget=GoogleMap(attrs={'width':500, 'height':400}))
         
 def dana(request, **kwargs):
     tmpl = 'core/dana.html'
+    
+    #Contains counts of #encounters/x, x is location, concept, etc.
     numencs = {}
+    
+    #Contains counts of #subjects/x, x is location, concept, etc.  All x except location are associated with subject via the encounters
     numsubjs = {}
+    
+    #Contains counts of #x and #x that have actually happened in the trial so far
     nums = {'enum':Encounter.objects.all().count()}
+    
     numencs['e_in_s'] = Subject.objects.annotate(revcount = Count('encounter')).order_by('-revcount')
     nums['snum'] = numencs['e_in_s'].count()
     nums['snum_in_e'] = numencs['e_in_s'].exclude(revcount=0).count()
@@ -284,10 +292,15 @@ def dana(request, **kwargs):
     numsubjs['p_s_in_e'] = Procedure.objects.annotate(scount = Count('encounter__subject__uuid', distinct = True)).order_by('-scount')
     numsubjs['cc_s_in_e'] = Concept.objects.annotate(scount = Count('encounter__subject__uuid', distinct = True)).order_by('-scount')
     numencs['e_in_l'] = Location.objects.annotate(revcount = Count('subject__encounter')).order_by('-revcount')
+    
+    #All EncounterTasks that have an associated concept
     datesas = EncounterTask.objects.exclude(concept = '').prefetch_related()
 
+    #structures that will contain sorted counts of late, ontime, early, and missing encounters
     basedict = {'conc': [], 'proc': [], 'loc': [], 'subj': [], 'obs': [], 'days': [], 'count': 0}
     timely = {'late': deepcopy(basedict), 'ontime': deepcopy(basedict), 'early': deepcopy(basedict), 'missing': deepcopy(basedict)}
+    
+    #function that returns whether an encounter was late, ontime, or early, and by how much
     def checklate(a,b):
         ch = (a-b).days
         if ch > 0:
@@ -297,6 +310,7 @@ def dana(request, **kwargs):
         else:
             return (ch, 'ontime')
     
+    #Adds values to appropriate list
     def sorttimes(entry, delay, late, timely):
         timely[late]['conc'].append(entry.concept)
         timely[late]['proc'].append(entry.procedure)
@@ -307,8 +321,11 @@ def dana(request, **kwargs):
         timely[late]['count'] += 1
             
     upcomingcount = 0
+    
+    #for each EncounterTask, finds and processes corresponding encounters
     for x in datesas:
         f = Encounter.objects.filter(subject = x.subject).filter(concept = x.concept)
+        #checks if nonextant encounters were already due.  If so, they are missing.  If not, they are upcoming
         if f.count() == 0:
             delay, late = checklate(datetime.today().date(), x.due_on.date())
             if late == 'late':
@@ -322,10 +339,12 @@ def dana(request, **kwargs):
             else:
                 upcomingcount += 1
         else:
+            #processes existing encounters
             for entry in f:
                 delay, late = checklate(entry.modified.date(), x.due_on.date())
                 sorttimes(entry, delay, late, timely)
                          
+    #actually perform sorted counts on the entries that have been assigned to each category
     danacounts = {}
     for x in timely:
         danacounts[x] = {}
@@ -333,9 +352,11 @@ def dana(request, **kwargs):
             if y != 'count':
                 danacounts[x][y] = Counter(timely[x][y]).most_common()
     
+    #function that takes in a uuid and returns a hex color of the form XXXXXX
     def chwtocolor(uuid):
         return uuid.replace('-','').upper()[2:8] 
     
+    #
     gmap = maps.Map(opts = {
         'center': maps.LatLng(19.3, -72.7),
         'mapTypeId': maps.MapTypeId.ROADMAP,
