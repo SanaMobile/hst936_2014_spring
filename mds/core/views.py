@@ -356,7 +356,7 @@ def dana(request, **kwargs):
     def chwtocolor(uuid):
         return uuid.replace('-','').upper()[2:8] 
     
-    #
+    #Sets the basic map options
     gmap = maps.Map(opts = {
         'center': maps.LatLng(19.3, -72.7),
         'mapTypeId': maps.MapTypeId.ROADMAP,
@@ -375,6 +375,8 @@ def dana(request, **kwargs):
     content = []
     mycounter = -1
     obswithgps = Observation.objects.filter(node = '1a')
+    
+    #Places a map pin with correct observer color for every location observation
     for obj in obswithgps:
         mycounter += 1
         a,b,c = map(float, obj.value_text.strip('()').replace(',','').split())
@@ -387,6 +389,8 @@ def dana(request, **kwargs):
                                            'position': maps.LatLng(a, b),
                                            'icon': pinImages[mycounter],
         }))
+        
+        #Adds popup textboxes with info to describe the pinned encounter
         maps.event.addListener(markers[mycounter], 'mouseover', 'myobj.markerOver')
         maps.event.addListener(markers[mycounter], 'mouseout', 'myobj.markerOut')
         content.append('<p>' + str(obj.encounter.observer) + ' visited ' + str(obj.encounter.subject) + '</br>for ' + str(obj.encounter.concept) + ' on ' + str(obj.encounter.modified.date()) + '</p>')
