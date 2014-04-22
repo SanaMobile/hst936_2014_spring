@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <title>{% block title %}Sana MDS{% endblock %}</title>
+    {% block styles %}
+    {% endblock %}
+    {% block scripts %}
+    
+    {% load static %}
+    <script src="{{ STATIC_URL }}admin/js/jquery.js"></script>
+    <!-- <script src="/1.4/jquery.min.js"></script> -->
+    {% endblock %}
+  </head>
+  <body>
+    {% block header %}{% endblock %}
+    {% block body %}{% endblock %}
+    {% block footer %}
+    <div align="right" width=100%>
+    API Version: {{ version }}
+    </div>
+    {% endblock %} 
+  </body>
+</html>

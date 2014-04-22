@@ -1,0 +1,474 @@
+{% extends "core/mobile/base.html" %}
+{% block body %}
+<script type="text/javascript">
+    window.myobj = {
+        markerOver: function() { this.openInfoWindow(); },
+        markerOut: function() { this.closeInfoWindow(); }
+    };
+</script>
+<h1>Overall Statistics Page</h1>
+<div>
+	<table>
+		<tr>
+			<td>
+		{{ form.map }}
+		{{ form.media.js }}
+	</td>
+	<td>
+		<h3>Legend</h3>
+		<table>
+		{% for thing in chwscolors %}
+			<tr>
+				<td bgcolor={{ thing.color }}>{{ thing.chw }}</td>
+			</tr>
+		{% endfor %}
+		</table>
+		</td>
+		</tr>
+		</table>
+	</span>
+</div>
+<div>
+	<p>
+		Total encounters: {{ nums.enum }}
+	</p>
+	<p>
+		Total encounters scheduled for the future: {{ upcomingcount }}
+	</p>
+	<p>
+		Total patients encountered: {{ nums.snum_in_e }} out of {{ nums.snum }}
+	</p>
+	<hr />
+	<div class="legtab">
+		<h3>Timing</h3>
+		<table>
+			<tr><th>Timing</th><th>Number of Encounters</th></tr>
+			<tr><td>ONTIME</td><td>{{ timely.ontime.count }}</td></tr>
+			<tr><td>LATE</td><td>{{ timely.late.count }}</td></tr>
+			<tr><td>EARLY</td><td>{{ timely.early.count }}</td></tr>
+			<tr><td>MISSING</td><td>{{ timely.missing.count }}</td></tr>
+		</table>
+	<hr />
+		<h3>Patients</h3>
+		<table>
+			<tr>
+				<th>Patient</th><th>Number of Encounters</th>
+			</tr>
+			{% for thing in numencs.e_in_s %}
+			<tr><td>{{ thing }}</td><td>{{ thing.revcount }}</td></tr>
+			{% endfor %}
+		</table>
+		{% if timely.late.count > 0 %}
+		<table>
+			<tr>
+				<th>Patient</th><th>Number of LATE Encounters</th>
+			</tr>
+			{% for thing in danacounts.late.subj %}
+			<tr>
+				{% for x in thing %}
+				<td>{{ x }}</td> 
+				{% endfor %}
+			</tr>
+			{% endfor %}
+		</table>
+		{% endif %}
+		{% if timely.ontime.count > 0 %}
+		<table>
+			<tr>
+				<th>Patient</th><th>Number of ONTIME Encounters</th>
+			</tr>
+			{% for thing in danacounts.ontime.subj %}
+			<tr>
+				{% for x in thing %}
+				<td>{{ x }}</td> 
+				{% endfor %}
+			</tr>
+			{% endfor %}
+		</table>
+		{% endif %}
+		{% if timely.early.count > 0 %}
+		<table>
+			<tr>
+				<th>Patient</th><th>Number of EARLY Encounters</th>
+			</tr>
+			{% for thing in danacounts.early.subj %}
+			<tr>
+				{% for x in thing %}
+				<td>{{ x }}</td> 
+				{% endfor %}
+			</tr>
+			{% endfor %}
+		</table>
+		{% endif %}
+		{% if timely.missing.count > 0 %}
+		<table>
+			<tr>
+				<th>Patient</th><th>Number of MISSING Encounters</th>
+			</tr>
+			{% for thing in danacounts.missing.subj %}
+			<tr>
+				{% for x in thing %}
+				<td>{{ x }}</td> 
+				{% endfor %}
+			</tr>
+			{% endfor %}
+		</table>
+		{% endif %}
+	<hr />
+		<h3>Concepts</h3>
+		<table>
+			<tr>
+				<th>Concept</th><th>Number of Encounters</th>
+			</tr>
+		    {% for thing in numencs.e_in_cc %}
+			{% if thing.revcount > 0 %}
+		<tr><td>{{ thing }}</td><td>{{ thing.revcount }}</td></tr>
+			{% endif %}
+		    {% endfor %}
+		</table>
+		{% if timely.late.count > 0 %}
+		<table>
+			<tr>
+				<th>Concept</th><th>Number of LATE Encounters</th>
+			</tr>
+			{% for thing in danacounts.late.conc %}
+			<tr>
+				{% for x in thing %}
+				<td>{{ x }}</td> 
+				{% endfor %}
+			</tr>
+			{% endfor %}
+		</table>
+		{% endif %}
+		{% if timely.ontime.count > 0 %}
+		<table>
+			<tr>
+				<th>Concept</th><th>Number of ONTIME Encounters</th>
+			</tr>
+			{% for thing in danacounts.ontime.conc %}
+			<tr>
+				{% for x in thing %}
+				<td>{{ x }}</td> 
+				{% endfor %}
+			</tr>
+			{% endfor %}
+		</table>
+		{% endif %}
+		{% if timely.early.count > 0 %}
+		<table>
+			<tr>
+				<th>Concept</th><th>Number of EARLY Encounters</th>
+			</tr>
+			{% for thing in danacounts.early.conc %}
+			<tr>
+				{% for x in thing %}
+				<td>{{ x }}</td> 
+				{% endfor %}
+			</tr>
+			{% endfor %}
+		</table>
+		{% endif %}
+		{% if timely.missing.count > 0 %}
+		<table>
+			<tr>
+				<th>Concept</th><th>Number of MISSING Encounters</th>
+			</tr>
+			{% for thing in danacounts.missing.conc %}
+			<tr>
+				{% for x in thing %}
+				<td>{{ x }}</td> 
+				{% endfor %}
+			</tr>
+			{% endfor %}
+		</table>
+		{% endif %}
+		<table>
+			<tr>
+				<th>Concept</th><th>Number of Patients Encountered</th>
+			</tr>
+		    {% for thing in numsubjs.cc_s_in_e %}
+		    {% if thing.scount > 0 %}
+		<tr><td>{{ thing }}</td><td>{{ thing.scount }}</td></tr>
+            {% endif %}
+		    {% endfor %}
+		</table>
+	<hr />
+		<h3>Procedures</h3>
+		<table>
+			<tr>
+				<th>Procedure</th><th>Number of Encounters</th>
+			</tr>
+		    {% for thing in numencs.e_in_p %}
+			{% if thing.revcount > 0 %}
+		<tr><td>{{ thing }}</td><td>{{ thing.revcount }}</td></tr>
+			{% endif %}
+		    {% endfor %}
+		</table>
+		{% if timely.late.count > 0 %}
+		<table>
+			<tr>
+				<th>Procedure</th><th>Number of LATE Encounters</th>
+			</tr>
+			{% for thing in danacounts.late.proc %}
+			<tr>
+				{% for x in thing %}
+				<td>{{ x }}</td> 
+				{% endfor %}
+			</tr>
+			{% endfor %}
+		</table>
+		{% endif %}
+		{% if timely.ontime.count > 0 %}
+		<table>
+			<tr>
+				<th>Procedure</th><th>Number of ONTIME Encounters</th>
+			</tr>
+			{% for thing in danacounts.ontime.proc %}
+			<tr>
+				{% for x in thing %}
+				<td>{{ x }}</td> 
+				{% endfor %}
+			</tr>
+			{% endfor %}
+		</table>
+		{% endif %}
+		{% if timely.early.count > 0 %}
+		<table>
+			<tr>
+				<th>Procedure</th><th>Number of EARLY Encounters</th>
+			</tr>
+			{% for thing in danacounts.early.proc %}
+			<tr>
+				{% for x in thing %}
+				<td>{{ x }}</td> 
+				{% endfor %}
+			</tr>
+			{% endfor %}
+		</table>
+		{% endif %}
+		{% if timely.missing.count > 0 %}
+		<table>
+			<tr>
+				<th>Procedure</th><th>Number of MISSING Encounters</th>
+			</tr>
+			{% for thing in danacounts.missing.proc %}
+			<tr>
+				{% for x in thing %}
+				<td>{{ x }}</td> 
+				{% endfor %}
+			</tr>
+			{% endfor %}
+		</table>
+		{% endif %}
+		<table>
+			<tr>
+				<th>Procedure</th><th>Number of Patients Encountered</th>
+			</tr>
+		    {% for thing in numsubjs.p_s_in_e %}
+		    {% if thing.scount > 0 %}
+		<tr><td>{{ thing }}</td><td>{{ thing.scount }}</td></tr>
+            {% endif %}
+		    {% endfor %}
+		</table>
+	<hr />
+		<h3>Observers</h3>
+		<p> Total number of observers who have been on encounters: {{ nums.onum_in_e }} out of {{ nums.onum }}</p>
+		<table>
+			<tr>
+				<th>Observer</th><th>Number of Encounters</th>
+			</tr>
+		    {% for thing in numencs.e_in_o %}
+		<tr><td>{{ thing }}</td><td>{{ thing.revcount }}</td></tr>
+		    {% endfor %}
+		</table>
+		{% if timely.late.count > 0 %}
+		<table>
+			<tr>
+				<th>Observer</th><th>Number of LATE Encounters</th>
+			</tr>
+			{% for thing in danacounts.late.obs %}
+			<tr>
+				{% for x in thing %}
+				<td>{{ x }}</td> 
+				{% endfor %}
+			</tr>
+			{% endfor %}
+		</table>
+		{% endif %}
+		{% if timely.ontime.count > 0 %}
+		<table>
+			<tr>
+				<th>Observer</th><th>Number of ONTIME Encounters</th>
+			</tr>
+			{% for thing in danacounts.ontime.obs %}
+			<tr>
+				{% for x in thing %}
+				<td>{{ x }}</td> 
+				{% endfor %}
+			</tr>
+			{% endfor %}
+		</table>
+		{% endif %}
+		{% if timely.early.count > 0 %}
+		<table>
+			<tr>
+				<th>Observer</th><th>Number of EARLY Encounters</th>
+			</tr>
+			{% for thing in danacounts.early.obs %}
+			<tr>
+				{% for x in thing %}
+				<td>{{ x }}</td> 
+				{% endfor %}
+			</tr>
+			{% endfor %}
+		</table>
+		{% endif %}
+		{% if timely.missing.count > 0 %}
+		<table>
+			<tr>
+				<th>Observer</th><th>Number of MISSING Encounters</th>
+			</tr>
+			{% for thing in danacounts.missing.obs %}
+			<tr>
+				{% for x in thing %}
+				<td>{{ x }}</td> 
+				{% endfor %}
+			</tr>
+			{% endfor %}
+		</table>
+		{% endif %}
+		<table>
+			<tr>
+				<th>Observer</th><th>Number of Patients Encountered</th>
+			</tr>
+		    {% for thing in numsubjs.o_s_in_e %}
+		    {% if thing.scount > 0 %}
+		<tr><td>{{ thing }}</td><td>{{ thing.scount }}</td></tr>
+            {% endif %}
+		    {% endfor %}
+		</table>
+	<hr />
+		<h3>Locations</h3>
+		<table>
+			<tr>
+				<th>Location</th><th>Number of Encounters</th>
+			</tr>
+		    {% for thing in numencs.e_in_l %}
+		    {% if thing.revcount > 0 %}
+		<tr><td>{{ thing }}</td><td>{{ thing.revcount }}</td></tr>
+            {% endif %}
+		    {% endfor %}
+		</table>
+		{% if timely.late.count > 0 %}
+		<table>
+			<tr>
+				<th>Location</th><th>Number of LATE Encounters</th>
+			</tr>
+			{% for thing in danacounts.late.loc %}
+			<tr>
+				{% for x in thing %}
+				<td>{{ x }}</td> 
+				{% endfor %}
+			</tr>
+			{% endfor %}
+		</table>
+		{% endif %}
+		{% if timely.ontime.count > 0 %}
+		<table>
+			<tr>
+				<th>Location</th><th>Number of ONTIME Encounters</th>
+			</tr>
+			{% for thing in danacounts.ontime.loc %}
+			<tr>
+				{% for x in thing %}
+				<td>{{ x }}</td> 
+				{% endfor %}
+			</tr>
+			{% endfor %}
+		</table>
+		{% endif %}
+		{% if timely.early.count > 0 %}
+		<table>
+			<tr>
+				<th>Location</th><th>Number of EARLY Encounters</th>
+			</tr>
+			{% for thing in danacounts.early.loc %}
+			<tr>
+				{% for x in thing %}
+				<td>{{ x }}</td> 
+				{% endfor %}
+			</tr>
+			{% endfor %}
+		</table>
+		{% endif %}
+		{% if timely.missing.count > 0 %}
+		<table>
+			<tr>
+				<th>Location</th><th>Number of MISSING Encounters</th>
+			</tr>
+			{% for thing in danacounts.missing.loc %}
+			<tr>
+				{% for x in thing %}
+				<td>{{ x }}</td> 
+				{% endfor %}
+			</tr>
+			{% endfor %}
+		</table>
+		{% endif %}
+		<table>
+			<tr>
+				<th>Location</th><th>Number of Patients</th>
+			</tr>
+		    {% for thing in numsubjs.s_in_l %}
+		    {% if thing.revcount > 0 %}
+		<tr><td>{{ thing }}</td><td>{{ thing.revcount }}</td></tr>
+            {% endif %}
+		    {% endfor %}
+		</table>
+	<hr />
+		<h3>Timing: Details</h3>
+		{% if timely.late.count > 0 %}
+		<table>
+			<tr>
+				<th>Number of Days Late</th><th>Number of LATE Encounters</th>
+			</tr>
+			{% for thing in danacounts.late.days %}
+			<tr>
+				{% for x in thing %}
+				<td>{{ x }}</td> 
+				{% endfor %}
+			</tr>
+			{% endfor %}
+		</table>
+		{% endif %}
+		{% if timely.early.count > 0 %}
+		<table>
+			<tr>
+				<th>Number of Days Early</th><th>Number of EARLY Encounters</th>
+			</tr>
+			{% for thing in danacounts.early.days %}
+			<tr>
+				{% for x in thing %}
+				<td>{{ x }}</td> 
+				{% endfor %}
+			</tr>
+			{% endfor %}
+		</table>
+		{% endif %}
+		{% if timely.missing.count > 0 %}
+		<table>
+			<tr>
+				<th>Number of Days after encounter was due</th><th>Number of MISSING Encounters</th>
+			</tr>
+			{% for thing in danacounts.missing.days %}
+			<tr>
+				{% for x in thing %}
+				<td>{{ x }}</td> 
+				{% endfor %}
+			</tr>
+			{% endfor %}
+		</table>
+		{% endif %}
+	</div>
+</div>
+{% endblock %}

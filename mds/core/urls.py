@@ -1,0 +1,120 @@
+"""The Django url to handler mappings.
+
+
+:Authors: Sana dev team
+:Version: 2.0
+"""
+from django.conf.urls.defaults import patterns, url, include
+#from piston.resource import Resource
+
+#from .handlers import *
+from .resources import *
+
+#concept_handler = Resource(ConceptHandler)
+#relationship_handler = Resource(RelationshipHandler)
+#relationshipcategory_handler = Resource(RelationshipCategoryHandler)
+#device_handler = Resource(DeviceHandler)
+#encounter_handler = Resource(EncounterHandler)
+#event_handler = Resource(EventHandler)
+#notification_handler = Resource(NotificationHandler)
+#observation_handler = Resource(ObservationHandler)
+#observer_handler = Resource(ObserverHandler)
+#procedure_handler = Resource(ProcedureHandler)
+#session_handler = Resource(SessionHandler)
+#subject_handler = Resource(SubjectHandler)
+#surgical_subject_handler = Resource(SurgicalSubjectHandler)
+
+#doc_handler = Resource(DocHandler)
+#location_handler = Resource(LocationHandler)
+
+# non-restful urls
+urlpatterns = patterns(    
+    'core',
+    url(r'^$',
+        'views.home',
+        name="home"),
+    
+    # Web views of logs
+    url(r'^logs/$', 'views.log_index', name='log-index'),
+    url(r'^logs/list/$', 'views.log_list', name='log-list'),
+    url(r'^logs/detail/(?P<uuid>[^/]+)/$', 'views.log_detail', name='log-detail'),
+    url(r'^logs/report/$', 'views.log_report', name='log-report'),
+    url(r'^intake/$', 'views.intake', name='intake'),
+    url(r'^mobile/encounter/$', 'views.encounter', name='mobile-encounter-list'),
+    url(r'^mobile/encounter/(?P<uuid>[^/]+)/$', 'views.encounter', name='mobile-encounter'),
+    url(r'^mobile/subject/register/$', 'views.subject_create', name='mobile-subject-register,'),
+    url(r'^mobile/subject/$', 'views.subject', name='mobile-subject-list,'),
+    url(r'^mobile/subject/(?P<uuid>[^/]+)/$', 'views.subject', name='mobile-subject,'),
+    # docs
+    url(r'^docs/$', rsrc_doc, name='core-docs'),
+    url(r'^login/$', 'django.contrib.auth.views.login'),
+    url(r'^dana/$', 'views.dana', name='dana'),
+)
+
+extra_patterns = patterns(
+    '',
+    # session auth
+    url(r'^session/$', rsrc_session, name='session-list'),
+    
+    # notification
+    url(r'^notification/$', rsrc_notification, name='notification-list'),
+    url(r'^notification/(?P<uuid>[^/]+)/$', rsrc_notification, name='notification'),
+    
+    # events   
+    url(r'^event/$', rsrc_event, name='event-list'),
+    url(r'^event/(?P<uuid>[^/]+)/$', rsrc_event, name='event'),
+    
+    # concepts
+    url(r'^concept/$', rsrc_concept, name='concept-list'),
+    url(r'^concept/(?P<uuid>[^/]+)/$', rsrc_concept, name='concept'),
+    url(r'^concept/(?P<uuid>[^/]+)/relationship/$', rsrc_concept, name='concept-relationships', kwargs={'related':'relationship'}),
+    url(r'^concept/(?P<uuid>[^/]+)/procedure/$', rsrc_concept, name='concept-procedures', kwargs={'related':'procedure'}),
+    
+    # concept relationships
+    url(r'^relationship/$', rsrc_relationship,name='relationship-list'),
+    url(r'^relationship/(?P<uuid>[^/]+)/$', rsrc_relationship,name='relationship'),
+    
+    # concept relationship categories
+    url(r'^relationshipcategory/$', rsrc_relationshipcategory,
+        name='relationshipcategory-list'),
+    url(r'^relationshipcategory/(?P<uuid>[^/]+)/$', rsrc_relationshipcategory,
+        name='relationshipcategory'),
+    
+    # devices
+    url(r'^device/$', rsrc_device, name='device-list'),
+    url(r'^device/(?P<uuid>[^/]+)/$', rsrc_device, name='device'),
+    
+    # encounters
+    url(r'^encounter/$', rsrc_encounter, name='encounter-list'),
+    url(r'^encounter/(?P<uuid>[^/]+)/$', rsrc_encounter, name='encounter'),
+    url(r'^encounter/(?P<uuid>[^/]+)/(?P<related>[^/]+)/$', rsrc_encounter, name='encounter-observations', kwargs={'related':'observation'}),
+    #url(r'^encounter/(?P<uuid>[^/]+)/(?P<related>[^/]+)/$', encounter, name='encounter-observations'),
+    
+    # observations
+    url(r'^observation/$', rsrc_observation, name='observation-list'),
+    url(r'^observation/(?P<uuid>[^/]+)/$', rsrc_observation, name='observation'),
+    
+    # observers
+    url(r'^observer/$', rsrc_observer, name='observer-list'),
+    url(r'^observer/(?P<uuid>[^/]+)/$', rsrc_observer, name='observer'),
+    
+    # procedures
+    url(r'^procedure/$', rsrc_procedure, name='procedure-list'),
+    url(r'^procedure/(?P<uuid>[^/]+)/$', rsrc_procedure, name='procedure'),
+    
+    # subjects
+    url(r'^subject/$', rsrc_subject, name='subject-list'),
+    url(r'^subject/(?P<uuid>[^/]+)/$', rsrc_subject, name='subject'),
+    url(r'^subject/(?P<uuid>[^/]+)/encounter/$', rsrc_subject, name='subject-encounters', kwargs={'related':'procedure'}),
+
+    # surgical subjects
+    url(r'^surgicalsubject/$', rsrc_surgicalsubject, name='surgical-subject-list'),
+    url(r'^surgicalsubject/(?P<uuid>[^/]+)/$', rsrc_surgicalsubject, name='surgical-subject'),
+    url(r'^surgicalsubject/(?P<uuid>[^/]+)/encounter/$', rsrc_surgicalsubject, name='surgical-subject-encounters', kwargs={'related':'procedure'}),
+
+    url(r'^location/$', rsrc_location, name='location-list'),
+)
+
+# add the non-RESTful urls
+urlpatterns += extra_patterns
+
