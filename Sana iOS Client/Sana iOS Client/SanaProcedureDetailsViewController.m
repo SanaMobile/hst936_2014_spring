@@ -84,7 +84,7 @@
         [self.view addSubview:self.backgroundScrollView];
         [self.view addSubview:self.procedureScrollView];
         
-        [self.navigationItem setTitle:@"Procedure"];
+        [self.navigationItem setTitle:[self getProcedureTitle:self.domDocument]];
     }
     return self;
 }
@@ -99,6 +99,16 @@
     NSError *error;
     NSArray *groupsArray = [domDoc nodesForXPath:@"//Page" error:&error];
     return groupsArray;
+}
+
+-(NSString *)getProcedureTitle:(GDataXMLDocument *) domDoc {
+    NSError *error;
+    NSArray *groupsArray = [domDoc nodesForXPath:@"//Procedure" error:&error];
+    if(groupsArray.count == 0)
+        return @"Procedure";
+
+    GDataXMLElement *element = groupsArray[0];
+    return [[element attributeForName:@"title"] stringValue];
 }
 
 - (void)didTapPrev:(id)sender {
@@ -184,7 +194,6 @@
 
 - (void)terminateProcedure {
     NSString *final = @"";
-    NSMutableArray *ar = self.allAnsweredElements;
     for(NSDictionary *dict in self.allAnsweredElements) {
         for(UIView *view in dict[@"Elements"]) {
             NSString *pageNumber = [NSString stringWithFormat:@"%@", dict[@"Page"]];
