@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/1037/servers/mds/trunk/sana/api/deprecated
+END
+__init__.py
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/1030/servers/mds/trunk/sana/api/deprecated/__init__.py
+END
+api.py
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/1037/servers/mds/trunk/sana/api/deprecated/api.py
+END

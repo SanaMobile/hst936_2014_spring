@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block body %}
+<h1>MocaMobile MDS</h1>
+
+<b>If you see this message then that means that your instance of the Moca
+Dispatch Server is working.</b>
+
+<h3>Tools</h3>
+<ul>
+<li><a href="{% url admin:index %}">Moca Admin</a></li>
+<li><a href="{% url requestlog-list %}">MDS Request Log</a></li>
+</ul>
+
+<h3>Support</h3>
+<ul>
+<li><a href="http://mocamobile.org">Moca Mobile</a></li>
+<li><a href="http://code.google.com/p/moca">Moca Google Code Project</a> Please
+go here to find our developer documentation and please file any bugs you
+find. </li>
+<li><a href="http://groups.google.com/group/moca-users">moca-users Google
+Group<a/> Please visit this forum for technical support on setting up and
+configuring Moca.</li>
+</ul>
+
+
+{% endblock %}

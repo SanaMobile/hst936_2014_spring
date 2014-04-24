@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/1037/servers/mds/trunk/sana/mrs/_models
+END
+notification.py
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/1031/servers/mds/trunk/sana/mrs/_models/notification.py
+END
+procedure.py
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/1031/servers/mds/trunk/sana/mrs/_models/procedure.py
+END
+queue_element.py
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/1031/servers/mds/trunk/sana/mrs/_models/queue_element.py
+END
+client.py
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/1031/servers/mds/trunk/sana/mrs/_models/client.py
+END
+__init__.py
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/1031/servers/mds/trunk/sana/mrs/_models/__init__.py
+END
+log.py
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/1031/servers/mds/trunk/sana/mrs/_models/log.py
+END
+encounter.py
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/1031/servers/mds/trunk/sana/mrs/_models/encounter.py
+END
+binary.py
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/1037/servers/mds/trunk/sana/mrs/_models/binary.py
+END
+patient.py
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/1031/servers/mds/trunk/sana/mrs/_models/patient.py
+END

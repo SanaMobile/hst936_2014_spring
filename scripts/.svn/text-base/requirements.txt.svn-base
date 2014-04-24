@@ -1,0 +1,8 @@
+MySQL-python
+python-memcached
+-e svn+http://code.djangoproject.com/svn/django/trunk/#egg=django
+simplejson
+-e git+https://github.com/robhudson/django-debug-toolbar.git#egg=django-debug-toolbar
+-e hg+https://bitbucket.org/jespern/django-piston/#egg=django-piston
+-e hg+https://bitbucket.org/rryan/django-requestlog/#egg=django-requestlog
+

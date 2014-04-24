@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/!svn/ver/1042/servers/mds/trunk/moca
+END
+__init__.py
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/527/servers/mds/trunk/moca/__init__.py
+END
+urls.py
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/592/servers/mds/trunk/moca/urls.py
+END
+manage.py
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/527/servers/mds/trunk/moca/manage.py
+END
+local_settings.py
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/703/servers/mds/trunk/moca/local_settings.py
+END
+settings.py.tmpl
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/703/servers/mds/trunk/moca/settings.py.tmpl
+END
+handler.py
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/527/servers/mds/trunk/moca/handler.py
+END
