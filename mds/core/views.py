@@ -306,9 +306,9 @@ def dana(request, **kwargs):
         if ch > 0:
             return (ch, 'late')
         elif ch < -1:
-            return (ch, 'early')
+            return (abs(ch), 'early')
         else:
-            return (ch, 'ontime')
+            return (abs(ch), 'ontime')
     
     #Adds values to appropriate list
     def sorttimes(entry, delay, late, timely):
