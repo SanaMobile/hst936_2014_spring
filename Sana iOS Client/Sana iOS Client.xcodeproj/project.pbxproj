@@ -128,6 +128,21 @@
 		A3D03DC718EF134F00510D84 /* switch_off@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A3D03DC418EF134F00510D84 /* switch_off@2x.jpg */; };
 		A3D03DC818EF134F00510D84 /* switch_on@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A3D03DC518EF134F00510D84 /* switch_on@2x.jpg */; };
 		A3D03DC918EF134F00510D84 /* switch_on@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A3D03DC518EF134F00510D84 /* switch_on@2x.jpg */; };
+		A3D03E1819027B3D00510D84 /* procedure_schema.xml in Resources */ = {isa = PBXBuildFile; fileRef = A3D03E1719027B3D00510D84 /* procedure_schema.xml */; };
+		A3D03E1919027B3D00510D84 /* procedure_schema.xml in Resources */ = {isa = PBXBuildFile; fileRef = A3D03E1719027B3D00510D84 /* procedure_schema.xml */; };
+		A3D03E2019027C8F00510D84 /* SanaParseXML.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D03E1F19027C8F00510D84 /* SanaParseXML.m */; };
+		A3D03E2119027C8F00510D84 /* SanaParseXML.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D03E1F19027C8F00510D84 /* SanaParseXML.m */; };
+		A3D03E281903166A00510D84 /* SanaAttributedDatePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D03E271903166A00510D84 /* SanaAttributedDatePickerView.m */; };
+		A3D03E291903166A00510D84 /* SanaAttributedDatePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D03E271903166A00510D84 /* SanaAttributedDatePickerView.m */; };
+		A3D03E2C190318AE00510D84 /* SanaProcedureDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D03E2B190318AE00510D84 /* SanaProcedureDetailsViewController.m */; };
+		A3D03E2D190318AE00510D84 /* SanaProcedureDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D03E2B190318AE00510D84 /* SanaProcedureDetailsViewController.m */; };
+		A3D03E2F1903225A00510D84 /* sample_1.xml in Resources */ = {isa = PBXBuildFile; fileRef = A3D03E2E1903225A00510D84 /* sample_1.xml */; };
+		A3D03E301903225A00510D84 /* sample_1.xml in Resources */ = {isa = PBXBuildFile; fileRef = A3D03E2E1903225A00510D84 /* sample_1.xml */; };
+		A3D03E34190338A800510D84 /* Element.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D03E33190338A800510D84 /* Element.m */; };
+		A3D03E35190338A800510D84 /* Element.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D03E33190338A800510D84 /* Element.m */; };
+		A3D03E3819093D5E00510D84 /* sample_2.xml in Resources */ = {isa = PBXBuildFile; fileRef = A3D03E3719093D5E00510D84 /* sample_2.xml */; };
+		A3D03E3919093D5E00510D84 /* sample_2.xml in Resources */ = {isa = PBXBuildFile; fileRef = A3D03E3719093D5E00510D84 /* sample_2.xml */; };
+		A3E0BF041909682F00582DE3 /* Saves.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E0BF031909682F00582DE3 /* Saves.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -241,6 +256,19 @@
 		A3D03DBF18EF131B00510D84 /* switch_on.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = switch_on.jpg; sourceTree = "<group>"; };
 		A3D03DC418EF134F00510D84 /* switch_off@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "switch_off@2x.jpg"; sourceTree = "<group>"; };
 		A3D03DC518EF134F00510D84 /* switch_on@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "switch_on@2x.jpg"; sourceTree = "<group>"; };
+		A3D03E1719027B3D00510D84 /* procedure_schema.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = procedure_schema.xml; sourceTree = "<group>"; };
+		A3D03E1E19027C8F00510D84 /* SanaParseXML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SanaParseXML.h; sourceTree = "<group>"; };
+		A3D03E1F19027C8F00510D84 /* SanaParseXML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SanaParseXML.m; sourceTree = "<group>"; };
+		A3D03E261903166A00510D84 /* SanaAttributedDatePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SanaAttributedDatePickerView.h; sourceTree = "<group>"; };
+		A3D03E271903166A00510D84 /* SanaAttributedDatePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SanaAttributedDatePickerView.m; sourceTree = "<group>"; };
+		A3D03E2A190318AE00510D84 /* SanaProcedureDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SanaProcedureDetailsViewController.h; sourceTree = "<group>"; };
+		A3D03E2B190318AE00510D84 /* SanaProcedureDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SanaProcedureDetailsViewController.m; sourceTree = "<group>"; };
+		A3D03E2E1903225A00510D84 /* sample_1.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = sample_1.xml; sourceTree = "<group>"; };
+		A3D03E32190338A800510D84 /* Element.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Element.h; sourceTree = "<group>"; };
+		A3D03E33190338A800510D84 /* Element.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Element.m; sourceTree = "<group>"; };
+		A3D03E3719093D5E00510D84 /* sample_2.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = sample_2.xml; sourceTree = "<group>"; };
+		A3E0BF021909682F00582DE3 /* Saves.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Saves.h; sourceTree = "<group>"; };
+		A3E0BF031909682F00582DE3 /* Saves.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Saves.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -276,6 +304,7 @@
 		A3D03C8218E5BDB500510D84 = {
 			isa = PBXGroup;
 			children = (
+				A3D03E0F19027A4200510D84 /* Procedure */,
 				A3D03C9618E5BDB600510D84 /* Sana iOS Client */,
 				A3D03CB318E5BDB600510D84 /* Sana iOS ClientTests */,
 				A3D03C8D18E5BDB600510D84 /* Frameworks */,
@@ -311,6 +340,7 @@
 		A3D03C9618E5BDB600510D84 /* Sana iOS Client */ = {
 			isa = PBXGroup;
 			children = (
+				A3D03E311903389400510D84 /* Classes */,
 				A3D03D5F18EEA5D700510D84 /* Subclasses */,
 				A3D03D0C18EC882200510D84 /* Resources */,
 				A3D03CD018EC68DF00510D84 /* Image Assets */,
@@ -323,12 +353,18 @@
 				A3D03D0518EC71F400510D84 /* SanaProceduresViewController.m */,
 				A3D03D5418EDB92100510D84 /* SanaProcedureDetailViewController.h */,
 				A3D03D5518EDB92100510D84 /* SanaProcedureDetailViewController.m */,
+				A3D03E2A190318AE00510D84 /* SanaProcedureDetailsViewController.h */,
+				A3D03E2B190318AE00510D84 /* SanaProcedureDetailsViewController.m */,
 				A3D03D5B18EDE42F00510D84 /* SanaLoadProcedureFromXML.h */,
 				A3D03D5C18EDE42F00510D84 /* SanaLoadProcedureFromXML.m */,
+				A3D03E1E19027C8F00510D84 /* SanaParseXML.h */,
+				A3D03E1F19027C8F00510D84 /* SanaParseXML.m */,
 				A3D03DB218EEC05600510D84 /* SanaPickerDataSource.h */,
 				A3D03DB318EEC05600510D84 /* SanaPickerDataSource.m */,
 				A3D03CA518E5BDB600510D84 /* Images.xcassets */,
 				A3D03CA218E5BDB600510D84 /* Sana_iOS_Client.xcdatamodeld */,
+				A3E0BF021909682F00582DE3 /* Saves.h */,
+				A3E0BF031909682F00582DE3 /* Saves.m */,
 				A3D03C9718E5BDB600510D84 /* Supporting Files */,
 			);
 			path = "Sana iOS Client";
@@ -411,7 +447,9 @@
 		A3D03D0C18EC882200510D84 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				A3D03D4D18EC94A800510D84 /* Sample Procedures */,
+				A3D03E3619093D2200510D84 /* Sample Procdeures */,
+				A3D03E1719027B3D00510D84 /* procedure_schema.xml */,
+				A3D03D4D18EC94A800510D84 /* Sample Procedures - xForms */,
 				A3D03D1218EC88AB00510D84 /* Services */,
 				A3D03D1118EC887600510D84 /* XML */,
 			);
@@ -464,14 +502,14 @@
 			path = AFNetworking;
 			sourceTree = "<group>";
 		};
-		A3D03D4D18EC94A800510D84 /* Sample Procedures */ = {
+		A3D03D4D18EC94A800510D84 /* Sample Procedures - xForms */ = {
 			isa = PBXGroup;
 			children = (
 				A3D03D4E18EC94B600510D84 /* test_procedure_sana_2_0.xml */,
 				A3D03D4F18EC94B600510D84 /* test_proc.xml */,
 				A3D03D6C18EEAC3000510D84 /* test_proc_2.xml */,
 			);
-			name = "Sample Procedures";
+			name = "Sample Procedures - xForms";
 			sourceTree = "<group>";
 		};
 		A3D03D5F18EEA5D700510D84 /* Subclasses */ = {
@@ -485,10 +523,37 @@
 				A3D03DAF18EEB8EE00510D84 /* SanaAttributedTextView.m */,
 				A3D03DB618EF066D00510D84 /* SanaAttributedPickerView.h */,
 				A3D03DB718EF066D00510D84 /* SanaAttributedPickerView.m */,
+				A3D03E261903166A00510D84 /* SanaAttributedDatePickerView.h */,
+				A3D03E271903166A00510D84 /* SanaAttributedDatePickerView.m */,
 				A3D03DBA18EF130400510D84 /* SanaAttributedSwitch.h */,
 				A3D03DBB18EF130400510D84 /* SanaAttributedSwitch.m */,
 			);
 			name = Subclasses;
+			sourceTree = "<group>";
+		};
+		A3D03E0F19027A4200510D84 /* Procedure */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Procedure;
+			sourceTree = "<group>";
+		};
+		A3D03E311903389400510D84 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				A3D03E32190338A800510D84 /* Element.h */,
+				A3D03E33190338A800510D84 /* Element.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		A3D03E3619093D2200510D84 /* Sample Procdeures */ = {
+			isa = PBXGroup;
+			children = (
+				A3D03E2E1903225A00510D84 /* sample_1.xml */,
+				A3D03E3719093D5E00510D84 /* sample_2.xml */,
+			);
+			name = "Sample Procdeures";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -576,6 +641,7 @@
 				A3D03CE518EC68EB00510D84 /* add_photo@2x.png in Resources */,
 				A3D03CF318EC68EB00510D84 /* view_notifications@2x.png in Resources */,
 				A3D03DC818EF134F00510D84 /* switch_on@2x.jpg in Resources */,
+				A3D03E2F1903225A00510D84 /* sample_1.xml in Resources */,
 				A3D03CEF18EC68EB00510D84 /* list_arrow@2x.png in Resources */,
 				A3D03D5918EDC3C600510D84 /* mountain_village.jpg in Resources */,
 				A3D03CE918EC68EB00510D84 /* add_video@2x.png in Resources */,
@@ -588,6 +654,7 @@
 				A3D03CA618E5BDB600510D84 /* Images.xcassets in Resources */,
 				A3D03DC618EF134F00510D84 /* switch_off@2x.jpg in Resources */,
 				A3D03CE318EC68EB00510D84 /* create_encounter_h@2x.png in Resources */,
+				A3D03E1819027B3D00510D84 /* procedure_schema.xml in Resources */,
 				A3D03CFF18EC68EB00510D84 /* view_encounters_h@2x.png in Resources */,
 				A3D03D0218EC6E6700510D84 /* main_background.jpg in Resources */,
 				A3D03CE718EC68EB00510D84 /* add_photo_h@2x.png in Resources */,
@@ -595,6 +662,7 @@
 				A3D03CF118EC68EB00510D84 /* list_arrow_h@2x.png in Resources */,
 				A3D03D5218EC94B600510D84 /* test_proc.xml in Resources */,
 				A3D03DC218EF131B00510D84 /* switch_on.jpg in Resources */,
+				A3D03E3819093D5E00510D84 /* sample_2.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -602,6 +670,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3D03E301903225A00510D84 /* sample_1.xml in Resources */,
 				A3D03CC518E5BF4000510D84 /* sana.ios.old.zip in Resources */,
 				A3D03D5318EC94B600510D84 /* test_proc.xml in Resources */,
 				A3D03DC118EF131B00510D84 /* switch_off.jpg in Resources */,
@@ -625,9 +694,11 @@
 				A3D03CF418EC68EB00510D84 /* view_notifications@2x.png in Resources */,
 				A3D03CF818EC68EB00510D84 /* sana_logo@2x.png in Resources */,
 				A3D03CF018EC68EB00510D84 /* list_arrow@2x.png in Resources */,
+				A3D03E3919093D5E00510D84 /* sample_2.xml in Resources */,
 				A3D03D6E18EEAC3000510D84 /* test_proc_2.xml in Resources */,
 				A3D03CFE18EC68EB00510D84 /* view_encounters@2x.png in Resources */,
 				A3D03CF218EC68EB00510D84 /* list_arrow_h@2x.png in Resources */,
+				A3D03E1919027B3D00510D84 /* procedure_schema.xml in Resources */,
 				A3D03CEE18EC68EB00510D84 /* arrow@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -639,20 +710,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3E0BF041909682F00582DE3 /* Saves.m in Sources */,
 				A3D03D4118EC89A600510D84 /* AFJSONUtilities.m in Sources */,
 				A3D03DB818EF066D00510D84 /* SanaAttributedPickerView.m in Sources */,
 				A3D03D3B18EC89A600510D84 /* AFHTTPRequestOperation.m in Sources */,
 				A3D03D0A18EC843900510D84 /* SanaImageManager.m in Sources */,
 				A3D03D0F18EC886D00510D84 /* GDataXMLNode.m in Sources */,
 				A3D03DB018EEB8EE00510D84 /* SanaAttributedTextView.m in Sources */,
+				A3D03E2019027C8F00510D84 /* SanaParseXML.m in Sources */,
 				A3D03D5D18EDE42F00510D84 /* SanaLoadProcedureFromXML.m in Sources */,
 				A3D03D4718EC89A600510D84 /* AFURLConnectionOperation.m in Sources */,
 				A3D03D4318EC89A600510D84 /* AFNetworkActivityIndicatorManager.m in Sources */,
+				A3D03E2C190318AE00510D84 /* SanaProcedureDetailsViewController.m in Sources */,
 				A3D03C9D18E5BDB600510D84 /* main.m in Sources */,
 				A3D03D1518EC88B900510D84 /* SDSServices.m in Sources */,
 				A3D03D4518EC89A600510D84 /* AFPropertyListRequestOperation.m in Sources */,
+				A3D03E34190338A800510D84 /* Element.m in Sources */,
 				A3D03DB418EEC05600510D84 /* SanaPickerDataSource.m in Sources */,
 				A3D03CA418E5BDB600510D84 /* Sana_iOS_Client.xcdatamodeld in Sources */,
+				A3D03E281903166A00510D84 /* SanaAttributedDatePickerView.m in Sources */,
 				A3D03D4918EC89A600510D84 /* AFXMLRequestOperation.m in Sources */,
 				A3D03DAC18EEB8DD00510D84 /* SanaAttributedTextField.m in Sources */,
 				A3D03DA818EEB88B00510D84 /* SanaAttributedLabel.m in Sources */,
@@ -680,14 +756,17 @@
 				A3D03D1618EC88B900510D84 /* SDSServices.m in Sources */,
 				A3D03D0B18EC843900510D84 /* SanaImageManager.m in Sources */,
 				A3D03DB518EEC05600510D84 /* SanaPickerDataSource.m in Sources */,
+				A3D03E2D190318AE00510D84 /* SanaProcedureDetailsViewController.m in Sources */,
 				A3D03D5718EDB92100510D84 /* SanaProcedureDetailViewController.m in Sources */,
 				A3D03D4018EC89A600510D84 /* AFJSONRequestOperation.m in Sources */,
 				A3D03DB918EF066D00510D84 /* SanaAttributedPickerView.m in Sources */,
 				A3D03D3C18EC89A600510D84 /* AFHTTPRequestOperation.m in Sources */,
 				A3D03DA918EEB88B00510D84 /* SanaAttributedLabel.m in Sources */,
+				A3D03E35190338A800510D84 /* Element.m in Sources */,
 				A3D03D3E18EC89A600510D84 /* AFImageRequestOperation.m in Sources */,
 				A3D03DBD18EF130400510D84 /* SanaAttributedSwitch.m in Sources */,
 				A3D03DB118EEB8EE00510D84 /* SanaAttributedTextView.m in Sources */,
+				A3D03E2119027C8F00510D84 /* SanaParseXML.m in Sources */,
 				A3D03D4C18EC89A600510D84 /* UIImageView+AFNetworking.m in Sources */,
 				A3D03D3A18EC89A600510D84 /* AFHTTPClient.m in Sources */,
 				A3D03D5E18EDE42F00510D84 /* SanaLoadProcedureFromXML.m in Sources */,
@@ -700,6 +779,7 @@
 				A3D03D4418EC89A600510D84 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				A3D03D1018EC886D00510D84 /* GDataXMLNode.m in Sources */,
 				A3D03D4A18EC89A600510D84 /* AFXMLRequestOperation.m in Sources */,
+				A3D03E291903166A00510D84 /* SanaAttributedDatePickerView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -896,6 +976,7 @@
 				A3D03CBF18E5BDB600510D84 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A3D03CC018E5BDB600510D84 /* Build configuration list for PBXNativeTarget "Sana iOS ClientTests" */ = {
 			isa = XCConfigurationList;
@@ -904,6 +985,7 @@
 				A3D03CC218E5BDB600510D84 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

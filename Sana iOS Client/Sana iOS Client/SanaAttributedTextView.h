@@ -10,6 +10,9 @@
 
 @interface SanaAttributedTextView : UITextView
 
-@property (nonatomic, assign) NSString *ref;
+@property (nonatomic, retain) NSString *elementId;
+@property (nonatomic, retain) NSString *question;
+@property (nonatomic, retain) NSString *answer;
+@property (nonatomic, retain) NSString *concept;
 
 @end

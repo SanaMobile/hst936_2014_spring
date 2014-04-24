@@ -1,20 +1,20 @@
+////
+////  SanaProcedureDetailViewController.h
+////  Sana iOS Client
+////
+////  Created by Prince Shekhar on 4/3/14.
+////  Copyright (c) 2014 MIT. All rights reserved.
+////
 //
-//  SanaProcedureDetailViewController.h
-//  Sana iOS Client
+//#import <UIKit/UIKit.h>
+//#import "Defines.h"
+//#import "SanaColorManager.h"
+//#import "SanaImageManager.h"
+//#import "GDataXMLNode.h"
+//#import "SanaLoadProcedureFromXML.h"
 //
-//  Created by Prince Shekhar on 4/3/14.
-//  Copyright (c) 2014 MIT. All rights reserved.
+//@interface SanaProcedureDetailViewController : UIViewController <UIScrollViewDelegate, UITextFieldDelegate, UITextViewDelegate>
 //
-
-#import <UIKit/UIKit.h>
-#import "Defines.h"
-#import "SanaColorManager.h"
-#import "SanaImageManager.h"
-#import "GDataXMLNode.h"
-#import "SanaLoadProcedureFromXML.h"
-
-@interface SanaProcedureDetailViewController : UIViewController <UIScrollViewDelegate, UITextFieldDelegate, UITextViewDelegate>
-
-- (id)initWithProcedureDocument:(GDataXMLDocument *)document;
-
-@end
+//- (id)initWithProcedureDocument:(GDataXMLDocument *)document;
+//
+//@end

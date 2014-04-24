@@ -9,13 +9,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Sana iOS Client/SanaProceduresViewController.m"
-            timestampString = "418153865.549603"
+            filePath = "Sana iOS Client/SanaProcedureDetailsViewController.m"
+            timestampString = "420058034.393348"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
-            landmarkName = "-initWithNibName:bundle:"
+            startingLineNumber = "134"
+            endingLineNumber = "134"
+            landmarkName = "-didTapNext:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -25,13 +25,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Sana iOS Client/SanaProceduresViewController.m"
-            timestampString = "418153865.549603"
+            filePath = "Sana iOS Client/SanaProcedureDetailsViewController.m"
+            timestampString = "420058034.393348"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
-            landmarkName = "-initWithNibName:bundle:"
+            startingLineNumber = "140"
+            endingLineNumber = "140"
+            landmarkName = "-didTapNext:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -41,13 +41,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Sana iOS Client/SanaProceduresViewController.m"
-            timestampString = "418153865.549603"
+            filePath = "Sana iOS Client/SanaProcedureDetailsViewController.m"
+            timestampString = "420058034.393348"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
-            landmarkName = "-initWithNibName:bundle:"
+            startingLineNumber = "135"
+            endingLineNumber = "135"
+            landmarkName = "-didTapNext:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -57,13 +57,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Sana iOS Client/SanaProceduresViewController.m"
-            timestampString = "418299347.606425"
+            filePath = "Sana iOS Client/SanaProcedureDetailsViewController.m"
+            timestampString = "420060171.727876"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "91"
-            endingLineNumber = "91"
-            landmarkName = "-tableView:didHighlightRowAtIndexPath:"
+            startingLineNumber = "242"
+            endingLineNumber = "242"
+            landmarkName = "-elementForId:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -73,13 +73,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Sana iOS Client/SanaProcedureDetailViewController.m"
-            timestampString = "418296203.473409"
+            filePath = "Sana iOS Client/SanaParseXML.m"
+            timestampString = "420040032.277388"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "121"
-            endingLineNumber = "121"
-            landmarkName = "-scrollViewDidScroll:"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "-loadProcedureForPage:forDelegate:withExistingArray:onPageNumber:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -89,13 +89,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Sana iOS Client/SanaProcedureDetailViewController.m"
-            timestampString = "418296203.473409"
+            filePath = "Sana iOS Client/SanaParseXML.m"
+            timestampString = "420040043.906194"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "123"
-            endingLineNumber = "123"
-            landmarkName = "-scrollViewDidScroll:"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "-loadProcedureForPage:forDelegate:withExistingArray:onPageNumber:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -105,13 +105,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Sana iOS Client/SanaProcedureDetailViewController.m"
-            timestampString = "418296203.473409"
+            filePath = "Sana iOS Client/SanaParseXML.m"
+            timestampString = "420062649.485058"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "127"
-            endingLineNumber = "127"
-            landmarkName = "-scrollViewDidScroll:"
+            startingLineNumber = "152"
+            endingLineNumber = "152"
+            landmarkName = "-evaluateCriteriaWithType:elementId:value:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -121,13 +121,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Sana iOS Client/SanaProcedureDetailViewController.m"
-            timestampString = "418302059.502839"
+            filePath = "Sana iOS Client/SanaProcedureDetailsViewController.m"
+            timestampString = "420058123.421867"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "156"
-            endingLineNumber = "156"
-            landmarkName = "-textFieldDidBeginEditing:"
+            startingLineNumber = "188"
+            endingLineNumber = "188"
+            landmarkName = "-terminateProcedure"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -137,13 +137,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Sana iOS Client/SanaProcedureDetailViewController.m"
-            timestampString = "418302059.502839"
+            filePath = "Sana iOS Client/SanaProcedureDetailsViewController.m"
+            timestampString = "420060171.727876"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "157"
-            endingLineNumber = "157"
-            landmarkName = "-textFieldDidBeginEditing:"
+            startingLineNumber = "192"
+            endingLineNumber = "192"
+            landmarkName = "-terminateProcedure"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -153,13 +153,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Sana iOS Client/SanaLoadProcedureFromXML.m"
-            timestampString = "418324779.110125"
+            filePath = "Sana iOS Client/SanaProcedureDetailsViewController.m"
+            timestampString = "420060171.727876"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "81"
-            endingLineNumber = "81"
-            landmarkName = "-loadProcedureFromDocument:forDelegate:"
+            startingLineNumber = "193"
+            endingLineNumber = "193"
+            landmarkName = "-terminateProcedure"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -169,13 +169,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Sana iOS Client/SanaProcedureDetailViewController.m"
-            timestampString = "418300946.114834"
+            filePath = "Sana iOS Client/SanaProcedureDetailsViewController.m"
+            timestampString = "420060171.727876"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "82"
-            endingLineNumber = "82"
-            landmarkName = "-initWithProcedureDocument:"
+            startingLineNumber = "191"
+            endingLineNumber = "191"
+            landmarkName = "-terminateProcedure"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -185,13 +185,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Sana iOS Client/SanaProcedureDetailViewController.m"
-            timestampString = "418300950.228652"
+            filePath = "Sana iOS Client/SanaProcedureDetailsViewController.m"
+            timestampString = "420058823.741777"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "93"
-            endingLineNumber = "93"
-            landmarkName = "-initWithProcedureDocument:"
+            startingLineNumber = "189"
+            endingLineNumber = "189"
+            landmarkName = "-terminateProcedure"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -201,13 +201,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Sana iOS Client/SanaProcedureDetailViewController.m"
-            timestampString = "418300958.094843"
+            filePath = "Sana iOS Client/SanaProcedureDetailsViewController.m"
+            timestampString = "420060171.727876"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "95"
-            endingLineNumber = "95"
-            landmarkName = "-initWithProcedureDocument:"
+            startingLineNumber = "190"
+            endingLineNumber = "190"
+            landmarkName = "-terminateProcedure"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -217,13 +217,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Sana iOS Client/SanaPickerDataSource.m"
-            timestampString = "418319482.324032"
+            filePath = "Sana iOS Client/SanaProcedureDetailsViewController.m"
+            timestampString = "420060171.727876"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
-            landmarkName = "-numberOfComponentsInPickerView:"
+            startingLineNumber = "252"
+            endingLineNumber = "252"
+            landmarkName = "-setAnswer:forElementId:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -233,13 +233,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Sana iOS Client/SanaPickerDataSource.m"
-            timestampString = "418319482.324032"
+            filePath = "Sana iOS Client/SanaProcedureDetailsViewController.m"
+            timestampString = "420060171.727876"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
-            landmarkName = "-initWithDataSourceArray:forPicker:withTextField:"
+            startingLineNumber = "248"
+            endingLineNumber = "248"
+            landmarkName = "-setAnswer:forElementId:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -249,13 +249,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Sana iOS Client/SanaLoadProcedureFromXML.m"
-            timestampString = "418328451.327006"
+            filePath = "Sana iOS Client/SanaProcedureDetailsViewController.m"
+            timestampString = "420060171.727876"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "240"
-            endingLineNumber = "240"
-            landmarkName = "-createMultimediaCaptureGUI:inView:"
+            startingLineNumber = "268"
+            endingLineNumber = "268"
+            landmarkName = "-textFieldDidChangeValue:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -265,29 +265,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Sana iOS Client/SanaLoadProcedureFromXML.m"
-            timestampString = "418327605.873147"
+            filePath = "Sana iOS Client/SanaProcedureDetailsViewController.m"
+            timestampString = "420060171.727876"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "217"
-            endingLineNumber = "217"
-            landmarkName = "-createCheckboxes:inView:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Sana iOS Client/SanaLoadProcedureFromXML.m"
-            timestampString = "418327605.873147"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "219"
-            endingLineNumber = "219"
-            landmarkName = "-createCheckboxes:inView:"
+            startingLineNumber = "253"
+            endingLineNumber = "253"
+            landmarkName = "-setAnswer:forElementId:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

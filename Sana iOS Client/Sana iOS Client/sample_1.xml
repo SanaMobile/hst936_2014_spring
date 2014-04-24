@@ -1,0 +1,35 @@
+<Procedure title="HIV Regimen Failure" author="Click Diagnostics">
+	<!--  <Page>
+     <Element type="ENTRY" id="patientId" question="Enter the patient's ID number:" answer=""/>
+     </Page> -->
+	<Page>
+		<Element type="RADIO" id="14" concept="ADD REGIMEN" question="Add another regimen?" answer="" choices="Yes, No" />
+	</Page>
+	<Page>
+		<ShowIf>
+    		<Criteria type="EQUALS" id="14" value="Yes"/>
+  		</ShowIf>
+		<Element type="ENTRY" id="15" concept="REGIMENT START DATE"  question="Enter start date:" answer=""/>
+		<Element type="ENTRY" id="16" concept="REGIMEN STOP DATE" question="Stop date:" answer=""/>
+	</Page>
+	<Page>
+		<ShowIf>
+    		<Criteria type="EQUALS" id="14" value="YES"/>
+  		</ShowIf>
+		<Element type="ENTRY" id="17" concept="REGIMEN" question="Enter regimen during this time:" answer=""/>
+		<Element type="ENTRY" id="18" concept="REACTIONS" question="Adverse reactions and reason for discontinuation:" answer=""/>
+	</Page>
+	<Page>
+		<Element type="TEXT" id="59" concept="CREATININE INFO" question="Enter Creatinine info on following pages:" answer=""/>
+	</Page>
+	<Page>
+		<Element type="ENTRY" id="60" concept="CREATININE START DATE" question="Enter start date:" answer=""/>
+		<Element type="ENTRY" id="61" concept="CREATININE STOP DATE" question="Stop date:" answer=""/>
+	</Page>
+	<Page>
+		<Element type="ENTRY" id="62" concept="CREATININE RESULTS" question="Enter Creatinine Results:" answer=""/>
+	</Page>
+    <Page>
+		<Element type="ENTRY" id="71" concept="COMMENTS" question="Additional comments:" answer=""/>
+	</Page>
+</Procedure>

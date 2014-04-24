@@ -13,7 +13,7 @@
 @interface SanaPickerDataSource()
 @property (nonatomic, strong) NSArray *array;
 @property (nonatomic, strong) UIPickerView *pickerView;
-@property (nonatomic, strong) UITextField *textField;
+@property (nonatomic, strong) SanaAttributedTextField *textField;
 @end
 
 @implementation SanaPickerDataSource
@@ -60,7 +60,7 @@
 }
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
-    self.textField.text = self.array[row];
+    self.textField.text = self.textField.answer = self.array[row];
 }
 
 @end

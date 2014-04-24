@@ -80,7 +80,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 
-    SanaProcedureDetailViewController *detailView = [[SanaProcedureDetailViewController alloc] initWithProcedureDocument:nil];
+    SanaProcedureDetailsViewController *detailView = [[SanaProcedureDetailsViewController alloc] initWithProcedureDocument:nil];
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:detailView];
     [self presentViewController:navigationController animated:YES completion:^{
         [self.navigationController popViewControllerAnimated:YES];

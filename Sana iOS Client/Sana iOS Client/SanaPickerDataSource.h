@@ -10,6 +10,7 @@
 #import "Defines.h"
 #import "SanaColorManager.h"
 #import "SanaAttributedLabel.h"
+#import "SanaAttributedTextField.h"
 
 @interface SanaPickerDataSource : NSObject <UIPickerViewDelegate, UIPickerViewDataSource>
 
