@@ -6,12 +6,15 @@ import java.net.URISyntaxException;
 import org.sana.R;
 import org.sana.analytics.Runner;
 import org.sana.android.Constants;
+import org.sana.android.access.Access;
+import org.sana.android.access.AccessParseException;
 import org.sana.android.activity.settings.Settings;
 import org.sana.android.app.DefaultActivityRunner;
 import org.sana.android.app.Locales;
 import org.sana.android.content.DispatchResponseReceiver;
 import org.sana.android.content.Intents;
 import org.sana.android.content.Uris;
+import org.sana.android.content.core.ObserverWrapper;
 import org.sana.android.fragment.AuthenticationDialogFragment.AuthenticationDialogListener;
 import org.sana.android.media.EducationResource;
 import org.sana.android.procedure.Procedure;
@@ -28,6 +31,7 @@ import org.sana.android.service.impl.SessionService;
 import org.sana.android.task.ResetDatabaseTask;
 import org.sana.android.util.Logf;
 import org.sana.android.util.SanaUtil;
+import org.sana.api.IObserver;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -117,6 +121,7 @@ public class MainActivity extends BaseActivity implements AuthenticationDialogLi
     	case RESULT_OK:
     		if(data != null)
     			onUpdateAppState(data);
+    		Log.d("MyData",data.toString());
 			Intent intent = new Intent();
 			//if(data != null)
 			onSaveAppState(intent);
@@ -161,8 +166,15 @@ public class MainActivity extends BaseActivity implements AuthenticationDialogLi
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
     	Logf.I(TAG, "onCreate()");
-		Locales.updateLocale(this, getString(R.string.force_locale));
+    	Locales.updateLocale(this, getString(R.string.force_locale));
         setContentView(R.layout.main);
+        
+        /*try {
+			Access.hideViews(this,this.getPackageName());
+		} catch (AccessParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}*/
         // TODO rethink where to integrate this
     	checkUpdate(Uris.buildUri("package", "org.sana.provider" , ""));
         runner = new DefaultActivityRunner();

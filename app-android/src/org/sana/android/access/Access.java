@@ -10,6 +10,9 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 
 import org.sana.R;
+import org.sana.android.activity.BaseActivity;
+import org.sana.android.content.core.ObserverWrapper;
+import org.sana.android.provider.Observers;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
@@ -25,20 +28,18 @@ import android.util.Log;
 import android.view.View;
 
 public class Access {
-	private String author;
-	private String metadata;
 	
 	static Context context;
 	static String currentPackageName;
-	//private List<AccessRole> roles;
 	
 	private static String TAG="Access";
 	
 	
-	public static Access fromXML(InputSource xml) throws IOException, 
-	ParserConfigurationException, SAXException 
+	public static void fromXML(InputSource xml) throws IOException, 
+	ParserConfigurationException, SAXException, AccessParseException 
 	{
 	
+		
 		long processingTime = System.currentTimeMillis();
 		DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
 	    dbf.setValidating(false);
@@ -59,34 +60,28 @@ public class Access {
 	            break;
 	        }
 	    }
-	    /*if(procedureNode == null) {
-	        throw new ProcedureParseException("Can't get procedure");
-	    }*/
-	    Access result = fromXML(accessNode);
+	    if(accessNode == null) {
+	    	throw new AccessParseException("Can't get Acl");
+	    }
+	    fromXML(accessNode);
 	    
-	    //fromXML(procedureNode);
 	    processingTime = System.currentTimeMillis() - processingTime;
-	    Log.i(TAG, "Parsing procedure XML took " + processingTime + " milliseconds.");
+	    Log.i(TAG, "Parsing Acl XML took " + processingTime + " milliseconds.");
 	    
-	    return result;
 	}
 	
 	
-	private static Access fromXML(Node node) {
+	private static void fromXML(Node node) throws AccessParseException {
         
         if(!node.getNodeName().equals("Acl")) {
-        //throw new ProcedureParseException("Procedure got NodeName" 
-        //		+ node.getNodeName());
+        	throw new AccessParseException("Acl got NodeName" 
+        		+ node.getNodeName());
         	}
         
-        //List<AccessRole> roles = new ArrayList<AccessRole>();
         NodeList nl = node.getChildNodes();
-        
-        //AccessRole role;
-        //HashMap<String, ProcedureElement> elts = new HashMap<String, ProcedureElement>();
         for(int i=0; i<nl.getLength(); i++) {
             Node child = nl.item(i);
-            if(child.getNodeName().equals("Role")) {
+            if(child.getNodeName().equals("Role")) {  // And Check here for current Observer Role
                 NodeList viewNodes = child.getChildNodes();
             	for(int j=0; j<viewNodes.getLength();j++)
             	{
@@ -102,18 +97,13 @@ public class Access {
             		}
             		
             	}
-            	
-            	
-            	//role = AccessRole.fromXML(child);
-                //elts.putAll(page.getElementMap());
-                //roles.add(role);
+
             }
         }
-            
-        return null;
+        
 	}
 	
-	public static void hideViews(Context c, String packageName)
+	public static void hideViews(Context c, String packageName) throws AccessParseException
 	{
 		Access.context = c;
 		Access.currentPackageName = packageName;
@@ -140,11 +130,11 @@ public class Access {
 		try{
 			View child = ((Activity)context).findViewById(context.getResources().getIdentifier(resourceId, "id", currentPackageName));
 			child.setVisibility(View.GONE);
-			Log.d("TEST", child.toString());
+			Log.i(TAG, child.toString());
 		}
 		catch(Exception e)
 		{
-			Log.e("TEST Error", e.toString());
+			Log.e(TAG, e.toString());
 		}
 	}
 
