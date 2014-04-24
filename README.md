@@ -27,4 +27,7 @@ with the mDS API.
         
     10.  When you are comfortable that the middleware is working how you would like,
         remove the lines from #8 from sana.api.urls
-    11. Add your new middleware to settings.DISPATCHERS 
+    11. Add your new middleware to settings.DISPATCHERS
+
+
+The main implemented code by us is in sana/contrib/middleware. 
