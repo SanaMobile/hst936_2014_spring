@@ -15,7 +15,9 @@
         android:id="@+id/moca_main_view_patients"
         android:layout_width="@dimen/btn_main_width"
         android:layout_height="wrap_content"
-        android:text="@string/button_main_view_patients" />
+        android:text="Custom"/>
+        <!-- android:text="@string/button_main_view_patients"  -->
+        
 
     <Button
         android:id="@+id/moca_main_procedure"

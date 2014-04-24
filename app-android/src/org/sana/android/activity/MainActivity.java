@@ -88,6 +88,8 @@ public class MainActivity extends BaseActivity implements AuthenticationDialogLi
 	private boolean checkUpdate = true;
 	private boolean init = false;
 	
+	
+	
 	@Override
     protected void onNewIntent(Intent intent){
     	Logf.D(TAG, "onNewIntent()");
@@ -98,6 +100,7 @@ public class MainActivity extends BaseActivity implements AuthenticationDialogLi
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data){
     	Logf.I(TAG, "onActivityResult()", ((resultCode == RESULT_OK)? "OK":"CANCELED" ));
+    	
     	switch(resultCode){
     	case RESULT_CANCELED:
 
@@ -159,7 +162,7 @@ public class MainActivity extends BaseActivity implements AuthenticationDialogLi
         super.onCreate(savedInstanceState);
     	Logf.I(TAG, "onCreate()");
 		Locales.updateLocale(this, getString(R.string.force_locale));
-        setContentView(R.layout.main_ht);
+        setContentView(R.layout.main);
         // TODO rethink where to integrate this
     	checkUpdate(Uris.buildUri("package", "org.sana.provider" , ""));
         runner = new DefaultActivityRunner();

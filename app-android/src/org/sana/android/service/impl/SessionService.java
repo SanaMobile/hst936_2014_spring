@@ -370,6 +370,8 @@ public class SessionService extends Service{
 					Constants.PREFERENCE_EMR_PASSWORD, password);
 			preferences.edit().commit();
 			
+			//Constants.PREFERENCE_EM
+			
 			// send result to the call back (INVALID, user uuid)
 			removeTempSession(tempKey);
 			addAuthenticatedSession(sessionKey, credentials);
@@ -490,6 +492,10 @@ public class SessionService extends Service{
 		values.put(Observers.Contract.USERNAME, username);
 		values.put(Observers.Contract.PASSWORD, encrypt(password));
 		values.put(Observers.Contract.UUID, uuid);
+		
+		//Observers.Contract.ROLE
+		
+		
 		Uri uri = getContentResolver().insert(Observers.CONTENT_URI,
 				values);
 		return uri;
