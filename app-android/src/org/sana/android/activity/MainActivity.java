@@ -14,6 +14,7 @@ import org.sana.android.app.Locales;
 import org.sana.android.content.DispatchResponseReceiver;
 import org.sana.android.content.Intents;
 import org.sana.android.content.Uris;
+import org.sana.android.content.core.ObserverParcel;
 import org.sana.android.content.core.ObserverWrapper;
 import org.sana.android.fragment.AuthenticationDialogFragment.AuthenticationDialogListener;
 import org.sana.android.media.EducationResource;
@@ -44,6 +45,7 @@ import android.content.IntentFilter;
 import android.content.ServiceConnection;
 import android.content.SharedPreferences;
 import android.content.DialogInterface.OnClickListener;
+import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
@@ -155,19 +157,20 @@ public class MainActivity extends BaseActivity implements AuthenticationDialogLi
     			break;
     		default:
     		}
-    			
-    		//data.setAction(Intents.ACTION_OK);
+    		
+    		try {
+    				Access.hideViews(this,this.getPackageName());
+    			} catch (AccessParseException e) {
+    				// TODO Auto-generated catch block
+    				e.printStackTrace();
+    			}
+        	
+        	//data.setAction(Intents.ACTION_OK);
     		//onNext(data);
     		break;
     	}
+    	/**/
     	
-    	try {
-			Access.hideViews(this,this.getPackageName());
-		} catch (AccessParseException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-        
     }
 	
     @Override

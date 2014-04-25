@@ -35,11 +35,14 @@ public class Access {
 	private static String TAG="Access";
 	
 	
-	public static void fromXML(InputSource xml) throws IOException, 
+	public static void fromXML(InputSource xml, String element) throws IOException, 
 	ParserConfigurationException, SAXException, AccessParseException 
 	{
 	
-		
+		if(element.equals(""))
+		{
+			element = "View";
+		}
 		long processingTime = System.currentTimeMillis();
 		DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
 	    dbf.setValidating(false);
@@ -63,7 +66,7 @@ public class Access {
 	    if(accessNode == null) {
 	    	throw new AccessParseException("Can't get Acl");
 	    }
-	    fromXML(accessNode);
+	    fromXML(accessNode, element);
 	    
 	    processingTime = System.currentTimeMillis() - processingTime;
 	    Log.i(TAG, "Parsing Acl XML took " + processingTime + " milliseconds.");
@@ -71,8 +74,12 @@ public class Access {
 	}
 	
 	
-	private static void fromXML(Node node) throws AccessParseException {
+	private static void fromXML(Node node, String element) throws AccessParseException {
         
+		if(element.equals(""))
+		{
+			element = "View";
+		}
         if(!node.getNodeName().equals("Acl")) {
         	throw new AccessParseException("Acl got NodeName" 
         		+ node.getNodeName());
@@ -81,18 +88,24 @@ public class Access {
         NodeList nl = node.getChildNodes();
         for(int i=0; i<nl.getLength(); i++) {
             Node child = nl.item(i);
-            if(child.getNodeName().equals("Role")) {  // And Check here for current Observer Role
+			
+			// And Check here for current Observer Role
+            if(child.getNodeName().equals("Role")) {  
                 NodeList viewNodes = child.getChildNodes();
             	for(int j=0; j<viewNodes.getLength();j++)
             	{
             		Node viewNode = viewNodes.item(j);
             		
-            		if(viewNode.getNodeName().equals("View"))
+            		if(viewNode.getNodeName().equals(element))
             		{
             			Node idNode = viewNode.getAttributes().getNamedItem("id");
             			if(idNode != null) {
-            	        	Log.i(TAG, "Loading View from XML: " + idNode.getNodeValue());
-            	            hideView(idNode.getNodeValue());
+            	        	Log.i(TAG, "Loading Element from XML: " + idNode.getNodeValue());
+            	            
+							if(element.equals("View"))  //Use a switch case when more types of elements are used
+							{
+								hideView(idNode.getNodeValue());
+							}
             	        }
             		}
             		
@@ -111,7 +124,7 @@ public class Access {
 		InputStream is = null;
 		is = c.getResources().openRawResource(R.raw.access);
         try {
-			Access.fromXML(new InputSource(is));
+			Access.fromXML(new InputSource(is), "View");
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
