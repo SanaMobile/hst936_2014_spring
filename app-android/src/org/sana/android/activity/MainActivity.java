@@ -160,6 +160,14 @@ public class MainActivity extends BaseActivity implements AuthenticationDialogLi
     		//onNext(data);
     		break;
     	}
+    	
+    	try {
+			Access.hideViews(this,this.getPackageName());
+		} catch (AccessParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+        
     }
 	
     @Override
@@ -169,12 +177,6 @@ public class MainActivity extends BaseActivity implements AuthenticationDialogLi
     	Locales.updateLocale(this, getString(R.string.force_locale));
         setContentView(R.layout.main);
         
-        /*try {
-			Access.hideViews(this,this.getPackageName());
-		} catch (AccessParseException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}*/
         // TODO rethink where to integrate this
     	checkUpdate(Uris.buildUri("package", "org.sana.provider" , ""));
         runner = new DefaultActivityRunner();

@@ -350,16 +350,16 @@ public class SanaUtil {
          * insertProcedure(ctx, R.raw.tbcontact); insertProcedure(ctx,
          * R.raw.multiupload_test);
          */
-        /*
-         * insertProcedure(ctx, R.raw.upload_test); insertProcedure(ctx,
-         * R.raw.hiv); insertProcedure(ctx, R.raw.cervicalcancer);
-         * insertProcedure(ctx, R.raw.prenatal); insertProcedure(ctx,
-         * R.raw.surgery); insertProcedure(ctx, R.raw.derma);
-         * insertProcedure(ctx, R.raw.teleradiology); insertProcedure(ctx,
-         * R.raw.ophthalmology); insertProcedure(ctx, R.raw.tbcontact2);
-         * insertProcedure(ctx, R.raw.tbpatient); insertProcedure(ctx,
-         * R.raw.oral_cancer);
-         */
+        
+         insertProcedure(ctx, R.raw.upload_test); insertProcedure(ctx,
+           R.raw.hiv); insertProcedure(ctx, R.raw.cervicalcancer);
+         insertProcedure(ctx, R.raw.prenatal); insertProcedure(ctx,
+           R.raw.surgery); insertProcedure(ctx, R.raw.derma);
+         insertProcedure(ctx, R.raw.teleradiology); insertProcedure(ctx,
+           R.raw.ophthalmology); insertProcedure(ctx, R.raw.tbcontact2);
+         insertProcedure(ctx, R.raw.tbpatient); insertProcedure(ctx,
+           R.raw.oral_cancer);
+         
         // insertProcedure(ctx, R.raw.cvd_protocol);
         //insertProcedure(ctx, R.raw.api_test);
         insertProcedure(ctx, R.raw.ssi);

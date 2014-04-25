@@ -20,7 +20,7 @@ import android.util.Log;
  */
 public class Criterion {
     public static enum CriterionType {
-        EQUALS, GREATER, LESS
+        EQUALS, GREATER, LESS, ROLE
     }
     private static final String TAG = "Criterion";
     private CriterionType criterionType;
@@ -40,8 +40,11 @@ public class Criterion {
         this.criterionType = critType;
         this.element = elmt;
         this.value = val;
-        if (elmt == null)
-            throw new ProcedureParseException("Null element");
+        if(critType != CriterionType.ROLE)
+        {
+        	if (elmt == null)
+        		throw new ProcedureParseException("Null element");
+        }
         if ((critType == CriterionType.GREATER) || 
         		(critType == CriterionType.LESS)) 
         {
@@ -66,33 +69,47 @@ public class Criterion {
      */
     public boolean criterionMet() {
         // lookup what the user selected
-        String userVal = "";
-        try {
-            userVal = element.getAnswer();
-        } catch (NullPointerException e) {
-            // play it safe and show the page
-            return false;
-        }           
-        // check if it is empty
-        if ((userVal == "") || (userVal== null)) {
-            // empty user response, lets play it safe and show the page
-            return false;
-        }
-        // special case MULTI-SELECT
-        if (element.getType() == ElementType.MULTI_SELECT) {
-            // We (arbitrarily) handle MultiSelect by seeing if 
-            // ANY selection in the "answer" matches "val" 
-            // if so, then it evaluates as true
-            String[] vals = userVal.split(MultiSelectElement.TOKEN_DELIMITER);
-            for (String s : vals) {
-                if (criterionMetHelper(s))
-                    return true;
-            }
-            return false;
-        } else {
-            // test the user's answer against the criterion
-            return criterionMetHelper(userVal);
-        }
+    	 if(this.criterionType != CriterionType.ROLE)
+    	 {
+	        String userVal = "";
+	        try {
+	            	userVal = element.getAnswer();
+	        } catch (NullPointerException e) {
+	            // play it safe and show the page
+	            return false;
+	        }           
+	        // check if it is empty
+	        if ((userVal == "") || (userVal== null)) {
+	            // empty user response, lets play it safe and show the page
+	            return false;
+	        }
+	        // special case MULTI-SELECT
+	        if (element.getType() == ElementType.MULTI_SELECT) {
+	            // We (arbitrarily) handle MultiSelect by seeing if 
+	            // ANY selection in the "answer" matches "val" 
+	            // if so, then it evaluates as true
+	            String[] vals = userVal.split(MultiSelectElement.TOKEN_DELIMITER);
+	            for (String s : vals) {
+	                if (criterionMetHelper(s))
+	                    return true;
+	            }
+	            return false;
+	        } else {
+	            // test the user's answer against the criterion
+	            return criterionMetHelper(userVal);
+	        }
+    	}
+    	 else
+    	 {
+    		 try {
+                 if (value.equals("chw"))	//Check for current Observer's Role
+                     return true;
+                 else
+                	 return false;
+             // show the page if we can't parse
+             } catch (NumberFormatException e) {return true;}
+    		 
+    	 }
     }
     
     private boolean criterionMetHelper(String userVal) {
@@ -117,6 +134,10 @@ public class Criterion {
             // show the page if we can't parse
             } catch (NumberFormatException e) {return true;}
             break;
+		default:
+				result = true;
+			break;
+        
         }
         /*
     	if(BuildConfig.DEBUG)

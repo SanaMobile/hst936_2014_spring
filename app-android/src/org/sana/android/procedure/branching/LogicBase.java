@@ -47,6 +47,8 @@ public  class LogicBase extends Criteria {
                 critType = CriterionType.GREATER;
             else if (type.equals("LESS"))
                 critType = CriterionType.LESS;
+            else if (type.equals("ROLE"))
+                critType = CriterionType.ROLE;
             else
                 throw new ProcedureParseException("LogicBase bad type for "
                 		+"NodeName " + node.getNodeName());
@@ -56,12 +58,14 @@ public  class LogicBase extends Criteria {
         }
         Node elementIdNode = attributes.getNamedItem("id");
         String elementId = "";
-        if(elementIdNode != null) {                
-            elementId = elementIdNode.getNodeValue();
-        } else {
-            throw new ProcedureParseException("LogicBase no id for NodeName " 
-            		+ node.getNodeName());
-        }            
+        if(critType != CriterionType.ROLE)
+        {   if(elementIdNode != null) {                
+	            elementId = elementIdNode.getNodeValue();
+	        } else {
+	            throw new ProcedureParseException("LogicBase no id for NodeName " 
+	            		+ node.getNodeName());
+	        }
+        }
         Node valueNode = attributes.getNamedItem("value");
         String value = "";
         if(valueNode != null) {                
@@ -70,10 +74,14 @@ public  class LogicBase extends Criteria {
             throw new ProcedureParseException("LogicBase no value for NodeName " 
             		+ node.getNodeName());
         }
-        ProcedureElement elt = elts.get(elementId);
-        if (elt == null)
-            throw new ProcedureParseException("LogicBase cannot resolve element"
-            		+"#" + elementId);
+        ProcedureElement elt = null;
+        if(critType != CriterionType.ROLE)
+        {
+	        elt = elts.get(elementId);
+	        if (elt == null)
+	            throw new ProcedureParseException("LogicBase cannot resolve element"
+	            		+"#" + elementId);
+        }
         return new LogicBase(new Criterion(critType, elt, value));
     }
 }    

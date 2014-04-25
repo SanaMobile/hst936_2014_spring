@@ -6,13 +6,16 @@
     <Page>
        <Element id="i1" type="TEXT" 
         concept="INSTRUCTION 1"
-        question="Sivouple, mache kay malad sa, e pose'l kesyon yo ki swivan.\n\nSi w pa ka rive kay malad la, w met pose'l kesyon yo nan yon lot kote."
+        question="1.Sivouple, mache kay malad sa, e pose'l kesyon yo ki swivan.\n\nSi w pa ka rive kay malad la, w met pose'l kesyon yo nan yon lot kote."
         />
     </Page>
     <Page>
+        <ShowIf>
+			<Criteria type="ROLE" value="doctor"/>
+        </ShowIf>
         <Element id="1" type="RADIO" 
         concept="LOCATION PATIENT HOUSE"
-        question="Eske w kay malad la kounye-a?"
+        question="2.Eske w kay malad la kounye-a?"
         choices="wi|non"
         required="true"
         />
