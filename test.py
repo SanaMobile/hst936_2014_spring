@@ -38,8 +38,7 @@ try:
     con = psycopg2.connect(database='mysanadb', user='kundan')    
     
     cur = con.cursor()
-  
-    
+   cur.execute("CREATE TABLE cars(id INT PRIMARY KEY, name VARCHAR(20), price INT)")
     cur.execute("INSERT INTO carasa VALUES(1,'Audi',52642)")
     cur.execute("INSERT INTO carasa VALUES(2,'Mercedes',57127)")
     cur.execute("INSERT INTO carasa VALUES(3,'Skoda',9000)")
