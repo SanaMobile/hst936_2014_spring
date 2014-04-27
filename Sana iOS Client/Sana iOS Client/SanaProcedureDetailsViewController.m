@@ -33,16 +33,26 @@
 @property (nonatomic, strong) NSMutableArray *currentElements;
 @property (nonatomic, strong) NSMutableArray *allAnsweredElements;
 @property (nonatomic, strong) SanaParseXML *xmlparser;
+@property (nonatomic) BOOL editMode;
+@property (nonatomic, strong) NSArray *previousAnswers;
 @end
 
 @implementation SanaProcedureDetailsViewController
 
-- (id)initWithProcedure:(Procedure *)procedure {
+- (id)initWithProcedure:(Procedure *)procedure inEditMode:(BOOL)editMode {
     self = [super initWithNibName:nil bundle:nil];
     if (self) {
 
         self.procedure = procedure;
         self.domDocument = [self loadDocumentWithProcedure:procedure];
+        self.editMode = editMode;
+
+        if(editMode) {
+            self.previousAnswers = [[SanaCoreData sharedCoreData] getFetchResultsForEntityName:@"Answer" usingPredicate:[NSPredicate predicateWithFormat:@"procedure == %@", self.procedure] inContext:[[SanaCoreData sharedCoreData] managedObjectContext] error:nil];
+        } else {
+            self.previousAnswers = [[NSArray alloc] init];
+        }
+
 
         // NAVIGATION BUTTON
         self.nextButton = [[UIBarButtonItem alloc] initWithTitle:@"Next" style:UIBarButtonItemStylePlain target:self action:@selector(didTapNext:)];
@@ -72,7 +82,7 @@
         NSMutableArray *newArray = self.allAnsweredElements;
 
         GDataXMLElement *firstPage = self.allPages[currentPage];
-        UIView *firstView = [self.xmlparser loadProcedureForPage:firstPage forDelegate:self withExistingArray:newArray onPageNumber:currentPage];
+        UIView *firstView = [self.xmlparser loadProcedureForPage:firstPage forDelegate:self withExistingArray:newArray onPageNumber:currentPage onPreviousAnswer:self.previousAnswers];
         [firstView setTag:100 + currentPage];
 
         self.allAnsweredElements = newArray;
@@ -88,6 +98,11 @@
         [self.view addSubview:self.procedureScrollView];
         
         [self.navigationItem setTitle:[self getProcedureTitle:self.domDocument]];
+
+        // SAVE TITLE OF THIS PROCEDURE
+        Procedure *tempProc = [[[SanaCoreData sharedCoreData] getFetchResultsForEntityName:@"Procedure" usingPredicate:nil inContext:[[SanaCoreData sharedCoreData] managedObjectContext] error:nil] objectAtIndex:0];
+        tempProc.name = [self getProcedureTitle:self.domDocument];
+        [[SanaCoreData sharedCoreData] save];
     }
     return self;
 }
@@ -150,7 +165,7 @@
             break;
 
         GDataXMLElement *nextPage = self.allPages[currentPage];
-        nextView = [self.xmlparser loadProcedureForPage:nextPage forDelegate:self withExistingArray:newArray onPageNumber:currentPage];
+        nextView = [self.xmlparser loadProcedureForPage:nextPage forDelegate:self withExistingArray:newArray onPageNumber:currentPage onPreviousAnswer:self.previousAnswers];
         self.allAnsweredElements = newArray;
     }
 
@@ -214,6 +229,16 @@
             NSString *elementId = [view valueForKey:@"elementId"];
 
             Answer *ans = [[SanaCoreData sharedCoreData] createObjectNamed:@"Answer"];
+            if(self.editMode) {
+                NSArray *array = [[SanaCoreData sharedCoreData] getFetchResultsForEntityName:@"Answer"
+                                                                   usingPredicate:[NSPredicate predicateWithFormat:@"procedure == %@ && elementId == %@", self.procedure, elementId]
+                                                                        inContext:[[SanaCoreData sharedCoreData] managedObjectContext]
+                                                                                       error:nil];
+                if(array.count > 0) {
+                    ans = array[0];
+                }
+            }
+
             if(ans) {
                 [ans setProcedure:self.procedure];
                 [ans setAnswer:answer];
@@ -223,7 +248,8 @@
     }
     [[SanaCoreData sharedCoreData] save];
 
-    [[[UIAlertView alloc] initWithTitle:@"Procedure" message:@"Complete" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil] show];
+//    [[[UIAlertView alloc] initWithTitle:@"Procedure" message:@"Complete" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil] show];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 
@@ -304,6 +330,12 @@
     SanaAttributedTextField *textField = (SanaAttributedTextField *)notification.object;
     if([self elementForId:textField.elementId]) {
         [self setAnswer:textField.text forElementId:textField.elementId];
+    }
+}
+
+- (void)multiSelectAnswersUpdated:(NSString *)answers onElementId:(NSString *)elementId {
+    if([self elementForId:elementId]) {
+        [self setAnswer:answers forElementId:elementId];
     }
 }
 

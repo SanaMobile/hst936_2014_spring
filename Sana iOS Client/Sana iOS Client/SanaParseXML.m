@@ -22,13 +22,13 @@
     double current_y;
 }
 @property (nonatomic, strong) SanaProcedureDetailsViewController *controller;
-@property (nonatomic, strong) GDataXMLDocument *document;
 @property (nonatomic, strong) GDataXMLElement *page;
-@property (nonatomic, strong) NSMutableArray *currentGroupWidgetsArray;
-@property (nonatomic, strong) NSMutableArray *procedureWidgetsArray;
+
 @property (nonatomic, strong) NSMutableArray *existingElements;
 @property (nonatomic, strong) NSMutableArray *allElements;
+@property (nonatomic, strong) NSArray *previousAnswers;
 @property (nonatomic, strong) NSMutableArray *viewsArray;
+
 @property (nonatomic, retain) NSMutableParagraphStyle *paraAttr;
 @property (nonatomic, retain) NSDictionary *attrDictionary;
 @property (nonatomic, retain) NSDictionary *attrDictionary2;
@@ -36,9 +36,10 @@
 
 @implementation SanaParseXML
 
-- (UIView *)loadProcedureForPage:(GDataXMLElement *)page forDelegate:(UIViewController *)controller withExistingArray:(NSMutableArray *)elements onPageNumber:(int)pageNumber {
+- (UIView *)loadProcedureForPage:(GDataXMLElement *)page forDelegate:(UIViewController *)controller withExistingArray:(NSMutableArray *)elements onPageNumber:(int)pageNumber onPreviousAnswer:(NSArray *)previousAnswers {
     self.page = page;
     self.allElements = elements;
+    self.previousAnswers = previousAnswers;
 
     NSMutableArray *currentElements = [[NSMutableArray alloc] init];
     self.existingElements = currentElements;
@@ -205,6 +206,7 @@
     }
     else if ([type isEqualToString:@"MULTI_SELECT"]){
         // MULTIPLE SELECT
+        [self createMultiSelectPicker:element inView:view];
     }
     else if ([type isEqualToString:@"RADIO"]){
         // SELECT ONE
@@ -262,6 +264,15 @@
     }
 }
 
+- (NSString *)answerForId:(NSString *)elemId {
+    for(Answer *ans in self.previousAnswers) {
+        if([ans.elementId isEqualToString:elemId])
+            return ans.answer;
+    }
+
+    return @"";
+}
+
 #pragma mark iOS Widget Creation Methods
 /************************************************/
 /* Converts:                                    */
@@ -285,7 +296,8 @@
 
     inputField.elementId = [[inputElement attributeForName:@"id"] stringValue];
     inputField.question = [[inputElement attributeForName:@"question"] stringValue];
-    inputField.answer = [[inputElement attributeForName:@"answer"] stringValue];
+    inputField.answer = [self answerForId:inputField.elementId];
+    [inputField setText:[self answerForId:inputField.elementId]];
     inputField.concept = [[inputElement attributeForName:@"concept"] stringValue];
 
     [self.existingElements addObject:inputField];
@@ -353,7 +365,8 @@
 
     inputField.elementId = [[select1Element attributeForName:@"id"] stringValue];
     inputField.question = [[select1Element attributeForName:@"question"] stringValue];
-    inputField.answer = [[select1Element attributeForName:@"answer"] stringValue];
+    inputField.answer = [self answerForId:inputField.elementId];
+    [inputField setText:[self answerForId:inputField.elementId]];
     inputField.concept = [[select1Element attributeForName:@"concept"] stringValue];
 
     [self.existingElements addObject:inputField];
@@ -373,6 +386,23 @@
     current_y += PICKER_HEIGHT + PADDING;
 }
 
+-(void)createMultiSelectPicker:(GDataXMLElement *) select1Element inView:(UIView *)view  {
+
+    if ([[[select1Element attributeForName:@"question"] stringValue] length] > 0) {
+        [self createLabel:[[select1Element attributeForName:@"question"] stringValue] inView:view];
+    }
+
+    NSMutableArray *itemsArray = [[NSMutableArray alloc] initWithArray:[[[select1Element attributeForName:@"choices"] stringValue] componentsSeparatedByString:@","]];
+    NSMutableArray *finalItems = [[NSMutableArray alloc] init];
+    for(NSString *item in itemsArray){
+        [finalItems addObject:[item stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]]];
+    }
+
+    SanaAttributedTableView *tableView = [[SanaAttributedTableView alloc] initWithFrame:CGRectMake(PADDING, current_y, view.bounds.size.width - (2 * PADDING), view.bounds.size.height - LABEL_HEIGHT - PADDING) withOptions:[finalItems componentsJoinedByString:@","] andAnswers:@"" onDelegate:self.controller withElementId:[[select1Element attributeForName:@"id"] stringValue]];
+    [view addSubview:tableView];
+    current_y += view.bounds.size.height + PADDING;
+}
+
 -(void)createDatePicker:(GDataXMLElement *) select1Element inView:(UIView *)view forDate:(BOOL)dateFlag {
 
     if ([[[select1Element attributeForName:@"question"] stringValue] length] > 0) {
@@ -387,7 +417,8 @@
 
     inputField.elementId = [[select1Element attributeForName:@"id"] stringValue];
     inputField.question = [[select1Element attributeForName:@"question"] stringValue];
-    inputField.answer = [[select1Element attributeForName:@"answer"] stringValue];
+    inputField.answer = [self answerForId:inputField.elementId];
+    [inputField setText:[self answerForId:inputField.elementId]];
     inputField.concept = [[select1Element attributeForName:@"concept"] stringValue];
 
     [self.existingElements addObject:inputField];

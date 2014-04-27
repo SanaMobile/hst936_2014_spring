@@ -18,7 +18,7 @@
 
 @implementation SanaPickerDataSource
 
-- (id)initWithDataSourceArray:(NSArray *)array forPicker:(UIPickerView *)picker withTextField:(UITextField *)textField {
+- (id)initWithDataSourceArray:(NSArray *)array forPicker:(UIPickerView *)picker withTextField:(SanaAttributedTextField *)textField {
     self = [super init];
     if(self) {
         self.array = array;

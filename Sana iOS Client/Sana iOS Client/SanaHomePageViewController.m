@@ -95,7 +95,8 @@
 }
 
 - (void)viewEncountersClicked:(UIButton *)sender {
-
+    SanaStoredProceduresViewController *procedureController = [[SanaStoredProceduresViewController alloc] init];
+    [self.navigationController pushViewController:procedureController animated:YES];
 }
 
 

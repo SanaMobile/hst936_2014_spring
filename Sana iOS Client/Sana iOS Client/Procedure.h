@@ -17,6 +17,7 @@
 @property (nonatomic, retain) NSDate * modifiedAt;
 @property (nonatomic, retain) NSString * originalFile;
 @property (nonatomic, retain) NSString * savedFile;
+@property (nonatomic, retain) NSString * name;
 @property (nonatomic, retain) NSSet *answers;
 @end
 

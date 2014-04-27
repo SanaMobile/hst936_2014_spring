@@ -12,6 +12,7 @@
 #import "SanaImageManager.h"
 
 #import "SanaProceduresViewController.h"
+#import "SanaStoredProceduresViewController.h"
 
 @interface SanaHomePageViewController : UIViewController
 

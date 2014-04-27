@@ -16,6 +16,7 @@
 @dynamic modifiedAt;
 @dynamic originalFile;
 @dynamic savedFile;
+@dynamic name;
 @dynamic answers;
 
 @end

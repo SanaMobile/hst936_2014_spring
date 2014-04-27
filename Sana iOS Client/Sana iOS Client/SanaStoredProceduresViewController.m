@@ -1,25 +1,25 @@
 //
-//  SanaProceduresViewController.m
+//  SanaStoredProceduresViewController.m
 //  Sana iOS Client
 //
-//  Created by Prince Shekhar on 4/2/14.
+//  Created by Prince Shekhar on 4/27/14.
 //  Copyright (c) 2014 MIT. All rights reserved.
 //
 
-#import "SanaProceduresViewController.h"
+#import "SanaStoredProceduresViewController.h"
 #import "SanaFileManager.h"
 #import "SanaCoreData.h"
 
 #define PADDING 10
 #define ROW_HEIGHT 50.0f
 
-@interface SanaProceduresViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface SanaStoredProceduresViewController () <UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, strong) UIView *containerView;
 @property (nonatomic, strong) UITableView *proceduresTableView;
 @property (nonatomic, strong) NSArray *procedures;
 @end
 
-@implementation SanaProceduresViewController
+@implementation SanaStoredProceduresViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -32,7 +32,7 @@
             tableHeight = rows * ROW_HEIGHT;
         }
 
-        self.procedures = [self getSampleProcedures];
+        self.procedures = [self getStoredProcedures];
 
         self.containerView = [[UIView alloc] initWithFrame:CGRectMake(PADDING, PADDING + NC_HEIGHT + STATUS_BAR_HEIGHT, SCREEN_WIDTH - PADDING * 2, SCREEN_HEIGHT - PADDING * 2 - (NC_HEIGHT + STATUS_BAR_HEIGHT))];
         [SanaImageManager addBlurToView:self.containerView];
@@ -47,7 +47,7 @@
         [self.containerView addSubview:self.proceduresTableView];
         [self.view addSubview:self.containerView];
 
-//        [self.view addSubview:self.proceduresTableView];
+        //        [self.view addSubview:self.proceduresTableView];
 
         [self.navigationItem setTitle:@"Procedures"];
         [self.view setBackgroundColor:[UIColor clearColor]];
@@ -79,9 +79,8 @@
         cell.textLabel.textColor = NAVIGATION_COLOR;
     }
 
-    NSDictionary *dict = self.procedures[indexPath.row];
-
-    cell.textLabel.text = dict[@"name"];
+    Procedure *proc = self.procedures[indexPath.row];
+    cell.textLabel.text = proc.name;
 
     return cell;
 }
@@ -90,22 +89,11 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 
-    NSDictionary *dict = self.procedures[indexPath.row];
-    NSString *url = dict[@"url"];
-
-    NSURLRequest *req = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:url]];
-    [NSURLConnection sendAsynchronousRequest:req queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
-
-        if(data != nil) {
-            Procedure *newProcedure = [SanaFileManager saveProcedure:data forType:@"xml"];
-            SanaProcedureDetailsViewController *detailView = [[SanaProcedureDetailsViewController alloc] initWithProcedure:newProcedure inEditMode:NO];
-            UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:detailView];
-            [self presentViewController:navigationController animated:YES completion:^{
-                [self.navigationController popViewControllerAnimated:YES];
-            }];
-        } else {
-            [[[UIAlertView alloc] initWithTitle:@"Sana" message:@"Please check your internet connection" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil] show];
-        }
+    Procedure *proc = self.procedures[indexPath.row];
+    SanaProcedureDetailsViewController *detailView = [[SanaProcedureDetailsViewController alloc] initWithProcedure:proc inEditMode:YES];
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:detailView];
+    [self presentViewController:navigationController animated:YES completion:^{
+        [self.navigationController popViewControllerAnimated:YES];
     }];
 }
 
@@ -135,28 +123,8 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (NSArray *)getSampleProcedures {
-    NSMutableArray *proc = [[NSMutableArray alloc] init];
-    NSString *initUrl = @"https://moca.googlecode.com/svn/clients/android/tags/release-1.1/res/raw";
-
-
-    NSDictionary *d1 = [NSDictionary dictionaryWithObjects:@[@"Cervical Cancer", [initUrl stringByAppendingPathComponent:@"cervicalcancer.xml"]]
-                                                   forKeys:@[@"name", @"url"]];
-    NSDictionary *d2 = [NSDictionary dictionaryWithObjects:@[@"Teledermatology", [initUrl stringByAppendingPathComponent:@"derma.xml"]]
-                                                   forKeys:@[@"name", @"url"]];
-    NSDictionary *d3 = [NSDictionary dictionaryWithObjects:@[@"Oral Cancer", [initUrl stringByAppendingPathComponent:@"oral_cancer.xml"]]
-                                                   forKeys:@[@"name", @"url"]];
-    NSDictionary *d4 = [NSDictionary dictionaryWithObjects:@[@"Prenatal Screening", [initUrl stringByAppendingPathComponent:@"prenatal.xml"]]
-                                                   forKeys:@[@"name", @"url"]];
-    NSDictionary *d5 = [NSDictionary dictionaryWithObjects:@[@"TB Contact Assessment", [initUrl stringByAppendingPathComponent:@"tbcontact.xml"]]
-                                                   forKeys:@[@"name", @"url"]];
-
-    [proc addObject:d1];
-    [proc addObject:d2];
-    [proc addObject:d3];
-    [proc addObject:d4];
-    [proc addObject:d5];
-
+- (NSArray *)getStoredProcedures {
+    NSArray *proc = [[SanaCoreData sharedCoreData] getFetchResultsForEntityName:@"Procedure" usingPredicate:nil inContext:[[SanaCoreData sharedCoreData] managedObjectContext] error:nil];
     return proc;
 }
 

@@ -16,9 +16,9 @@
 #import "SanaCoreData.h"
 #import "SanaParseXML.h"
 
-@interface SanaProcedureDetailsViewController : UIViewController <UIScrollViewDelegate, UITextFieldDelegate, UITextViewDelegate>
+@interface SanaProcedureDetailsViewController : UIViewController <UIScrollViewDelegate, UITextFieldDelegate, UITextViewDelegate, MultiSelectDelegate>
 
-- (id)initWithProcedure:(Procedure *)procedure;
+- (id)initWithProcedure:(Procedure *)procedure inEditMode:(BOOL)editMode;
 
 - (void)didChangeSwitchValue:(id)sender;
 - (void)textFieldDidChangeValue:(id)sender;

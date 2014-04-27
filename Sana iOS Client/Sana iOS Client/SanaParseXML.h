@@ -16,13 +16,16 @@
 #import "SanaAttributedPickerView.h"
 #import "SanaAttributedSwitch.h"
 #import "SanaAttributedDatePickerView.h"
+#import "SanaAttributedTableView.h"
 #import "Element.h"
+#import "Procedure.h"
+#import "Answer.h"
 
 #import "SanaProcedureDetailsViewController.h"
 
 @interface SanaParseXML : NSObject
 
-- (UIView *)loadProcedureForPage:(GDataXMLElement *)page forDelegate:(UIViewController *)controller withExistingArray:(NSMutableArray *)elements onPageNumber:(int)pageNumber;
+- (UIView *)loadProcedureForPage:(GDataXMLElement *)page forDelegate:(UIViewController *)controller withExistingArray:(NSMutableArray *)elements onPageNumber:(int)pageNumber onPreviousAnswer:(NSArray *)previousAnswers;
 
 @end
 
