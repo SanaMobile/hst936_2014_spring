@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="5063" systemVersion="13C64" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <entity name="Saves" representedClassName="Saves" syncable="YES">
-        <attribute name="created" optional="YES" attributeType="Date" syncable="YES"/>
-        <attribute name="modified" optional="YES" attributeType="Date" syncable="YES"/>
-        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+    <entity name="Answer" representedClassName="Answer" syncable="YES">
+        <attribute name="answer" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="elementId" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="procedure" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Procedure" inverseName="answers" inverseEntity="Procedure" syncable="YES"/>
+    </entity>
+    <entity name="Procedure" representedClassName="Procedure" isAbstract="YES" syncable="YES">
+        <attribute name="createdAt" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="modifiedAt" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="originalFile" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="savedFile" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="answers" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Answer" inverseName="procedure" inverseEntity="Answer" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Saves" positionX="-63" positionY="-18" width="128" height="120"/>
+        <element name="Procedure" positionX="-54" positionY="27" width="128" height="118"/>
+        <element name="Answer" positionX="-36" positionY="81" width="128" height="88"/>
     </elements>
 </model>

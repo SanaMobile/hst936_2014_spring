@@ -100,12 +100,8 @@
 		A3D03D5118EC94B600510D84 /* test_procedure_sana_2_0.xml in Resources */ = {isa = PBXBuildFile; fileRef = A3D03D4E18EC94B600510D84 /* test_procedure_sana_2_0.xml */; };
 		A3D03D5218EC94B600510D84 /* test_proc.xml in Resources */ = {isa = PBXBuildFile; fileRef = A3D03D4F18EC94B600510D84 /* test_proc.xml */; };
 		A3D03D5318EC94B600510D84 /* test_proc.xml in Resources */ = {isa = PBXBuildFile; fileRef = A3D03D4F18EC94B600510D84 /* test_proc.xml */; };
-		A3D03D5618EDB92100510D84 /* SanaProcedureDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D03D5518EDB92100510D84 /* SanaProcedureDetailViewController.m */; };
-		A3D03D5718EDB92100510D84 /* SanaProcedureDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D03D5518EDB92100510D84 /* SanaProcedureDetailViewController.m */; };
 		A3D03D5918EDC3C600510D84 /* mountain_village.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A3D03D5818EDC3C600510D84 /* mountain_village.jpg */; };
 		A3D03D5A18EDC3C600510D84 /* mountain_village.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A3D03D5818EDC3C600510D84 /* mountain_village.jpg */; };
-		A3D03D5D18EDE42F00510D84 /* SanaLoadProcedureFromXML.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D03D5C18EDE42F00510D84 /* SanaLoadProcedureFromXML.m */; };
-		A3D03D5E18EDE42F00510D84 /* SanaLoadProcedureFromXML.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D03D5C18EDE42F00510D84 /* SanaLoadProcedureFromXML.m */; };
 		A3D03D6D18EEAC3000510D84 /* test_proc_2.xml in Resources */ = {isa = PBXBuildFile; fileRef = A3D03D6C18EEAC3000510D84 /* test_proc_2.xml */; };
 		A3D03D6E18EEAC3000510D84 /* test_proc_2.xml in Resources */ = {isa = PBXBuildFile; fileRef = A3D03D6C18EEAC3000510D84 /* test_proc_2.xml */; };
 		A3D03DA818EEB88B00510D84 /* SanaAttributedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D03DA718EEB88B00510D84 /* SanaAttributedLabel.m */; };
@@ -142,7 +138,10 @@
 		A3D03E35190338A800510D84 /* Element.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D03E33190338A800510D84 /* Element.m */; };
 		A3D03E3819093D5E00510D84 /* sample_2.xml in Resources */ = {isa = PBXBuildFile; fileRef = A3D03E3719093D5E00510D84 /* sample_2.xml */; };
 		A3D03E3919093D5E00510D84 /* sample_2.xml in Resources */ = {isa = PBXBuildFile; fileRef = A3D03E3719093D5E00510D84 /* sample_2.xml */; };
-		A3E0BF041909682F00582DE3 /* Saves.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E0BF031909682F00582DE3 /* Saves.m */; };
+		A3E0BF09190CFFF300582DE3 /* SanaFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E0BF08190CFFF300582DE3 /* SanaFileManager.m */; };
+		A3E0BF15190D02F900582DE3 /* SanaCoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E0BF14190D02F900582DE3 /* SanaCoreData.m */; };
+		A3E0BF27190D0E8100582DE3 /* Answer.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E0BF26190D0E8100582DE3 /* Answer.m */; };
+		A3E0BF2A190D0E8100582DE3 /* Procedure.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E0BF29190D0E8100582DE3 /* Procedure.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -234,11 +233,7 @@
 		A3D03D3818EC89A600510D84 /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
 		A3D03D4E18EC94B600510D84 /* test_procedure_sana_2_0.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = test_procedure_sana_2_0.xml; sourceTree = "<group>"; };
 		A3D03D4F18EC94B600510D84 /* test_proc.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = test_proc.xml; sourceTree = "<group>"; };
-		A3D03D5418EDB92100510D84 /* SanaProcedureDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SanaProcedureDetailViewController.h; sourceTree = "<group>"; };
-		A3D03D5518EDB92100510D84 /* SanaProcedureDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SanaProcedureDetailViewController.m; sourceTree = "<group>"; };
 		A3D03D5818EDC3C600510D84 /* mountain_village.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mountain_village.jpg; sourceTree = "<group>"; };
-		A3D03D5B18EDE42F00510D84 /* SanaLoadProcedureFromXML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SanaLoadProcedureFromXML.h; sourceTree = "<group>"; };
-		A3D03D5C18EDE42F00510D84 /* SanaLoadProcedureFromXML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SanaLoadProcedureFromXML.m; sourceTree = "<group>"; };
 		A3D03D6C18EEAC3000510D84 /* test_proc_2.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = test_proc_2.xml; sourceTree = "<group>"; };
 		A3D03DA618EEB88B00510D84 /* SanaAttributedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SanaAttributedLabel.h; sourceTree = "<group>"; };
 		A3D03DA718EEB88B00510D84 /* SanaAttributedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SanaAttributedLabel.m; sourceTree = "<group>"; };
@@ -267,8 +262,14 @@
 		A3D03E32190338A800510D84 /* Element.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Element.h; sourceTree = "<group>"; };
 		A3D03E33190338A800510D84 /* Element.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Element.m; sourceTree = "<group>"; };
 		A3D03E3719093D5E00510D84 /* sample_2.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = sample_2.xml; sourceTree = "<group>"; };
-		A3E0BF021909682F00582DE3 /* Saves.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Saves.h; sourceTree = "<group>"; };
-		A3E0BF031909682F00582DE3 /* Saves.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Saves.m; sourceTree = "<group>"; };
+		A3E0BF07190CFFF300582DE3 /* SanaFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SanaFileManager.h; sourceTree = "<group>"; };
+		A3E0BF08190CFFF300582DE3 /* SanaFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SanaFileManager.m; sourceTree = "<group>"; };
+		A3E0BF13190D02F900582DE3 /* SanaCoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SanaCoreData.h; sourceTree = "<group>"; };
+		A3E0BF14190D02F900582DE3 /* SanaCoreData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SanaCoreData.m; sourceTree = "<group>"; };
+		A3E0BF25190D0E8100582DE3 /* Answer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Answer.h; sourceTree = "<group>"; };
+		A3E0BF26190D0E8100582DE3 /* Answer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Answer.m; sourceTree = "<group>"; };
+		A3E0BF28190D0E8100582DE3 /* Procedure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Procedure.h; sourceTree = "<group>"; };
+		A3E0BF29190D0E8100582DE3 /* Procedure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Procedure.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -351,20 +352,18 @@
 				A3D03CC718EC569300510D84 /* SanaHomePageViewController.m */,
 				A3D03D0418EC71F400510D84 /* SanaProceduresViewController.h */,
 				A3D03D0518EC71F400510D84 /* SanaProceduresViewController.m */,
-				A3D03D5418EDB92100510D84 /* SanaProcedureDetailViewController.h */,
-				A3D03D5518EDB92100510D84 /* SanaProcedureDetailViewController.m */,
 				A3D03E2A190318AE00510D84 /* SanaProcedureDetailsViewController.h */,
 				A3D03E2B190318AE00510D84 /* SanaProcedureDetailsViewController.m */,
-				A3D03D5B18EDE42F00510D84 /* SanaLoadProcedureFromXML.h */,
-				A3D03D5C18EDE42F00510D84 /* SanaLoadProcedureFromXML.m */,
 				A3D03E1E19027C8F00510D84 /* SanaParseXML.h */,
 				A3D03E1F19027C8F00510D84 /* SanaParseXML.m */,
 				A3D03DB218EEC05600510D84 /* SanaPickerDataSource.h */,
 				A3D03DB318EEC05600510D84 /* SanaPickerDataSource.m */,
 				A3D03CA518E5BDB600510D84 /* Images.xcassets */,
 				A3D03CA218E5BDB600510D84 /* Sana_iOS_Client.xcdatamodeld */,
-				A3E0BF021909682F00582DE3 /* Saves.h */,
-				A3E0BF031909682F00582DE3 /* Saves.m */,
+				A3E0BF28190D0E8100582DE3 /* Procedure.h */,
+				A3E0BF29190D0E8100582DE3 /* Procedure.m */,
+				A3E0BF25190D0E8100582DE3 /* Answer.h */,
+				A3E0BF26190D0E8100582DE3 /* Answer.m */,
 				A3D03C9718E5BDB600510D84 /* Supporting Files */,
 			);
 			path = "Sana iOS Client";
@@ -411,6 +410,10 @@
 				A3D03CCD18EC642200510D84 /* SanaColorManager.m */,
 				A3D03D0818EC843900510D84 /* SanaImageManager.h */,
 				A3D03D0918EC843900510D84 /* SanaImageManager.m */,
+				A3E0BF07190CFFF300582DE3 /* SanaFileManager.h */,
+				A3E0BF08190CFFF300582DE3 /* SanaFileManager.m */,
+				A3E0BF13190D02F900582DE3 /* SanaCoreData.h */,
+				A3E0BF14190D02F900582DE3 /* SanaCoreData.m */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -710,7 +713,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A3E0BF041909682F00582DE3 /* Saves.m in Sources */,
 				A3D03D4118EC89A600510D84 /* AFJSONUtilities.m in Sources */,
 				A3D03DB818EF066D00510D84 /* SanaAttributedPickerView.m in Sources */,
 				A3D03D3B18EC89A600510D84 /* AFHTTPRequestOperation.m in Sources */,
@@ -718,7 +720,6 @@
 				A3D03D0F18EC886D00510D84 /* GDataXMLNode.m in Sources */,
 				A3D03DB018EEB8EE00510D84 /* SanaAttributedTextView.m in Sources */,
 				A3D03E2019027C8F00510D84 /* SanaParseXML.m in Sources */,
-				A3D03D5D18EDE42F00510D84 /* SanaLoadProcedureFromXML.m in Sources */,
 				A3D03D4718EC89A600510D84 /* AFURLConnectionOperation.m in Sources */,
 				A3D03D4318EC89A600510D84 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				A3D03E2C190318AE00510D84 /* SanaProcedureDetailsViewController.m in Sources */,
@@ -733,12 +734,15 @@
 				A3D03DAC18EEB8DD00510D84 /* SanaAttributedTextField.m in Sources */,
 				A3D03DA818EEB88B00510D84 /* SanaAttributedLabel.m in Sources */,
 				A3D03D4B18EC89A600510D84 /* UIImageView+AFNetworking.m in Sources */,
+				A3E0BF2A190D0E8100582DE3 /* Procedure.m in Sources */,
+				A3E0BF15190D02F900582DE3 /* SanaCoreData.m in Sources */,
 				A3D03DBC18EF130400510D84 /* SanaAttributedSwitch.m in Sources */,
+				A3E0BF09190CFFF300582DE3 /* SanaFileManager.m in Sources */,
 				A3D03CA118E5BDB600510D84 /* SanaAppDelegate.m in Sources */,
 				A3D03D2118EC899900510D84 /* SanaConstants.m in Sources */,
 				A3D03CCE18EC642200510D84 /* SanaColorManager.m in Sources */,
-				A3D03D5618EDB92100510D84 /* SanaProcedureDetailViewController.m in Sources */,
 				A3D03D3D18EC89A600510D84 /* AFImageRequestOperation.m in Sources */,
+				A3E0BF27190D0E8100582DE3 /* Answer.m in Sources */,
 				A3D03D3F18EC89A600510D84 /* AFJSONRequestOperation.m in Sources */,
 				A3D03CC818EC569300510D84 /* SanaHomePageViewController.m in Sources */,
 				A3D03D3918EC89A600510D84 /* AFHTTPClient.m in Sources */,
@@ -757,7 +761,6 @@
 				A3D03D0B18EC843900510D84 /* SanaImageManager.m in Sources */,
 				A3D03DB518EEC05600510D84 /* SanaPickerDataSource.m in Sources */,
 				A3D03E2D190318AE00510D84 /* SanaProcedureDetailsViewController.m in Sources */,
-				A3D03D5718EDB92100510D84 /* SanaProcedureDetailViewController.m in Sources */,
 				A3D03D4018EC89A600510D84 /* AFJSONRequestOperation.m in Sources */,
 				A3D03DB918EF066D00510D84 /* SanaAttributedPickerView.m in Sources */,
 				A3D03D3C18EC89A600510D84 /* AFHTTPRequestOperation.m in Sources */,
@@ -769,7 +772,6 @@
 				A3D03E2119027C8F00510D84 /* SanaParseXML.m in Sources */,
 				A3D03D4C18EC89A600510D84 /* UIImageView+AFNetworking.m in Sources */,
 				A3D03D3A18EC89A600510D84 /* AFHTTPClient.m in Sources */,
-				A3D03D5E18EDE42F00510D84 /* SanaLoadProcedureFromXML.m in Sources */,
 				A3D03D2218EC899900510D84 /* SanaConstants.m in Sources */,
 				A3D03D4618EC89A600510D84 /* AFPropertyListRequestOperation.m in Sources */,
 				A3D03CBA18E5BDB600510D84 /* Sana_iOS_ClientTests.m in Sources */,

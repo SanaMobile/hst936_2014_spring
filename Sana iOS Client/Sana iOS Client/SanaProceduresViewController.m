@@ -7,6 +7,8 @@
 //
 
 #import "SanaProceduresViewController.h"
+#import "SanaFileManager.h"
+#import "SanaCoreData.h"
 
 #define PADDING 10
 #define ROW_HEIGHT 50.0f
@@ -14,6 +16,7 @@
 @interface SanaProceduresViewController () <UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, strong) UIView *containerView;
 @property (nonatomic, strong) UITableView *proceduresTableView;
+@property (nonatomic, strong) NSArray *procedures;
 @end
 
 @implementation SanaProceduresViewController
@@ -28,6 +31,8 @@
         if(rows < numberOfRowsPossible) {
             tableHeight = rows * ROW_HEIGHT;
         }
+
+        self.procedures = [self getSampleProcedures];
 
         self.containerView = [[UIView alloc] initWithFrame:CGRectMake(PADDING, PADDING + NC_HEIGHT + STATUS_BAR_HEIGHT, SCREEN_WIDTH - PADDING * 2, SCREEN_HEIGHT - PADDING * 2 - (NC_HEIGHT + STATUS_BAR_HEIGHT))];
         [SanaImageManager addBlurToView:self.containerView];
@@ -46,6 +51,9 @@
 
         [self.navigationItem setTitle:@"Procedures"];
         [self.view setBackgroundColor:[UIColor clearColor]];
+
+        NSArray *array = [[SanaCoreData sharedCoreData] getFetchResultsForEntityName:@"Procedure" usingPredicate:nil inContext:[[SanaCoreData sharedCoreData] managedObjectContext] error:nil];
+        NSLog(@"%d", array.count);
     }
     return self;
 }
@@ -56,7 +64,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 2;
+    return self.procedures.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -71,7 +79,9 @@
         cell.textLabel.textColor = NAVIGATION_COLOR;
     }
 
-    cell.textLabel.text = @"Test Procedure";
+    NSDictionary *dict = self.procedures[indexPath.row];
+
+    cell.textLabel.text = dict[@"name"];
 
     return cell;
 }
@@ -80,10 +90,19 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 
-    SanaProcedureDetailsViewController *detailView = [[SanaProcedureDetailsViewController alloc] initWithProcedureDocument:nil];
-    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:detailView];
-    [self presentViewController:navigationController animated:YES completion:^{
-        [self.navigationController popViewControllerAnimated:YES];
+    NSDictionary *dict = self.procedures[indexPath.row];
+    NSString *url = dict[@"url"];
+
+    NSURLRequest *req = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:url]];
+    [NSURLConnection sendAsynchronousRequest:req queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+
+        Procedure *newProcedure = [SanaFileManager saveProcedure:data forType:@"xml"];
+        SanaProcedureDetailsViewController *detailView = [[SanaProcedureDetailsViewController alloc] initWithProcedure:newProcedure];
+        UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:detailView];
+        [self presentViewController:navigationController animated:YES completion:^{
+            [self.navigationController popViewControllerAnimated:YES];
+        }];
+
     }];
 }
 
@@ -113,15 +132,29 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
+- (NSArray *)getSampleProcedures {
+    NSMutableArray *proc = [[NSMutableArray alloc] init];
+    NSString *initUrl = @"https://moca.googlecode.com/svn/clients/android/tags/release-1.1/res/raw";
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+
+    NSDictionary *d1 = [NSDictionary dictionaryWithObjects:@[@"Cervical Cancer", [initUrl stringByAppendingPathComponent:@"cervicalcancer.xml"]]
+                                                   forKeys:@[@"name", @"url"]];
+    NSDictionary *d2 = [NSDictionary dictionaryWithObjects:@[@"Teledermatology", [initUrl stringByAppendingPathComponent:@"derma.xml"]]
+                                                   forKeys:@[@"name", @"url"]];
+    NSDictionary *d3 = [NSDictionary dictionaryWithObjects:@[@"Oral Cancer", [initUrl stringByAppendingPathComponent:@"oral_cancer.xml"]]
+                                                   forKeys:@[@"name", @"url"]];
+    NSDictionary *d4 = [NSDictionary dictionaryWithObjects:@[@"Prenatal Screening", [initUrl stringByAppendingPathComponent:@"prenatal.xml"]]
+                                                   forKeys:@[@"name", @"url"]];
+    NSDictionary *d5 = [NSDictionary dictionaryWithObjects:@[@"TB Contact Assessment", [initUrl stringByAppendingPathComponent:@"tbcontact.xml"]]
+                                                   forKeys:@[@"name", @"url"]];
+
+    [proc addObject:d1];
+    [proc addObject:d2];
+    [proc addObject:d3];
+    [proc addObject:d4];
+    [proc addObject:d5];
+
+    return proc;
 }
-*/
 
 @end

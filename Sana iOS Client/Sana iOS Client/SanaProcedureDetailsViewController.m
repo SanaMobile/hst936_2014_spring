@@ -28,6 +28,7 @@
 @property (nonatomic, strong) NSMutableArray *widgetsArray;
 @property (nonatomic, strong) NSMutableArray *currentGroupWidgetsArray;
 
+@property (nonatomic, strong) Procedure *procedure;
 @property (nonatomic, strong) NSArray *allPages;
 @property (nonatomic, strong) NSMutableArray *currentElements;
 @property (nonatomic, strong) NSMutableArray *allAnsweredElements;
@@ -36,10 +37,12 @@
 
 @implementation SanaProcedureDetailsViewController
 
-- (id)initWithProcedureDocument:(GDataXMLDocument *)document {
+- (id)initWithProcedure:(Procedure *)procedure {
     self = [super initWithNibName:nil bundle:nil];
     if (self) {
-        self.domDocument = [self loadSampleDocument];
+
+        self.procedure = procedure;
+        self.domDocument = [self loadDocumentWithProcedure:procedure];
 
         // NAVIGATION BUTTON
         self.nextButton = [[UIBarButtonItem alloc] initWithTitle:@"Next" style:UIBarButtonItemStylePlain target:self action:@selector(didTapNext:)];
@@ -204,8 +207,26 @@
             final = [final stringByAppendingString:@"\n"];
         }
     }
-    [[[UIAlertView alloc] initWithTitle:@"Procedure" message:final delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil] show];
+
+    for(NSDictionary *dict in self.allAnsweredElements) {
+        for(UIView *view in dict[@"Elements"]) {
+            NSString *answer = [view valueForKey:@"answer"];
+            NSString *elementId = [view valueForKey:@"elementId"];
+
+            Answer *ans = [[SanaCoreData sharedCoreData] createObjectNamed:@"Answer"];
+            if(ans) {
+                [ans setProcedure:self.procedure];
+                [ans setAnswer:answer];
+                [ans setElementId:elementId];
+            }
+        }
+    }
+    [[SanaCoreData sharedCoreData] save];
+
+    [[[UIAlertView alloc] initWithTitle:@"Procedure" message:@"Complete" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil] show];
 }
+
+
 
 - (void)removeElementsInScrollView:(UIScrollView *)scrollView afterOffset:(double)xPoint {
     for(UIView *view in scrollView.subviews) {
@@ -231,6 +252,12 @@
     NSData *xmlNSData = [[NSMutableData alloc] initWithContentsOfFile:pathToProcedure];
     NSError *error;
     return [[GDataXMLDocument alloc] initWithData:xmlNSData options:0 error:&error];
+}
+
+- (GDataXMLDocument *)loadDocumentWithProcedure:(Procedure *)procedure {
+    NSData *data = [[NSData alloc] initWithData:[NSData dataWithContentsOfFile:procedure.originalFile]];
+    NSError *error;
+    return [[GDataXMLDocument alloc] initWithData:data options:0 error:&error];
 }
 
 - (void)didReceiveMemoryWarning

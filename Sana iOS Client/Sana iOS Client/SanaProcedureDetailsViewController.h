@@ -11,12 +11,14 @@
 #import "SanaColorManager.h"
 #import "SanaImageManager.h"
 #import "GDataXMLNode.h"
-#import "SanaLoadProcedureFromXML.h"
+#import "Procedure.h"
+#import "Answer.h"
+#import "SanaCoreData.h"
 #import "SanaParseXML.h"
 
 @interface SanaProcedureDetailsViewController : UIViewController <UIScrollViewDelegate, UITextFieldDelegate, UITextViewDelegate>
 
-- (id)initWithProcedureDocument:(GDataXMLDocument *)document;
+- (id)initWithProcedure:(Procedure *)procedure;
 
 - (void)didChangeSwitchValue:(id)sender;
 - (void)textFieldDidChangeValue:(id)sender;
