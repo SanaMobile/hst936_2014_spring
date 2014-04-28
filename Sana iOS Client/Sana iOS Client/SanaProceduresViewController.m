@@ -97,7 +97,16 @@
     [NSURLConnection sendAsynchronousRequest:req queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
 
         if(data != nil) {
-            Procedure *newProcedure = [SanaFileManager saveProcedure:data forType:@"xml"];
+            NSError *error;
+            GDataXMLDocument *xmlDoc = [[GDataXMLDocument alloc] initWithData:data options:0 error:&error];
+            if(error) {
+                [[[UIAlertView alloc] initWithTitle:@"Sana" message:@"Unable to parse document" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil] show];
+                return;
+            }
+
+            NSString *title = [self getProcedureTitle:xmlDoc];
+            Procedure *newProcedure = [SanaFileManager saveProcedure:data forType:@"xml" withName:title];
+
             SanaProcedureDetailsViewController *detailView = [[SanaProcedureDetailsViewController alloc] initWithProcedure:newProcedure inEditMode:NO];
             UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:detailView];
             [self presentViewController:navigationController animated:YES completion:^{
@@ -107,6 +116,16 @@
             [[[UIAlertView alloc] initWithTitle:@"Sana" message:@"Please check your internet connection" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil] show];
         }
     }];
+}
+
+-(NSString *)getProcedureTitle:(GDataXMLDocument *) domDoc {
+    NSError *error;
+    NSArray *groupsArray = [domDoc nodesForXPath:@"//Procedure" error:&error];
+    if(groupsArray.count == 0)
+        return @"Procedure";
+
+    GDataXMLElement *element = groupsArray[0];
+    return [[element attributeForName:@"title"] stringValue];
 }
 
 - (void)tableView:(UITableView *)tableView didHighlightRowAtIndexPath:(NSIndexPath *)indexPath {

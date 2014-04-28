@@ -35,7 +35,7 @@
         [self.headerImageView setContentMode:UIViewContentModeScaleAspectFit];
         [self.headerImageView setClipsToBounds:YES];
         [self.navigationItem setTitleView:self.headerImageView];
-        [self.navigationItem.titleView sizeToFit];
+//        [self.navigationItem.titleView sizeToFit];
 
         // BUTTONS CONTAINER
         double containerWidth = BUTTON_WIDTH + 2 * CONTAINER_PADDING;

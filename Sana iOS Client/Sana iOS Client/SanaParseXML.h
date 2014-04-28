@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreLocation/CoreLocation.h>
 #import "Defines.h"
 #import "GDataXMLNode.h"
 #import "SanaImageManager.h"
@@ -23,7 +24,7 @@
 
 #import "SanaProcedureDetailsViewController.h"
 
-@interface SanaParseXML : NSObject
+@interface SanaParseXML : NSObject <CLLocationManagerDelegate>
 
 - (UIView *)loadProcedureForPage:(GDataXMLElement *)page forDelegate:(UIViewController *)controller withExistingArray:(NSMutableArray *)elements onPageNumber:(int)pageNumber onPreviousAnswer:(NSArray *)previousAnswers;
 

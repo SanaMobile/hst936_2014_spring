@@ -11,6 +11,6 @@
 
 @interface SanaFileManager : NSObject
 
-+ (Procedure *)saveProcedure:(NSData *)data forType:(NSString *)extension;
++ (Procedure *)saveProcedure:(NSData *)data forType:(NSString *)extension withName:(NSString *)title;
 
 @end

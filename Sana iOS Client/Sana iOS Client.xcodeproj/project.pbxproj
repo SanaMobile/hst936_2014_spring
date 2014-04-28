@@ -145,6 +145,7 @@
 		A3E0BF33190D165F00582DE3 /* Procedure.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E0BF32190D165F00582DE3 /* Procedure.m */; };
 		A3E0BF36190D2CDB00582DE3 /* SanaMultiSelectDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E0BF35190D2CDB00582DE3 /* SanaMultiSelectDataSource.m */; };
 		A3E0BF39190D314B00582DE3 /* SanaAttributedTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E0BF38190D314B00582DE3 /* SanaAttributedTableView.m */; };
+		A3E0BF3B190EFC1100582DE3 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3E0BF3A190EFC1100582DE3 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -279,6 +280,7 @@
 		A3E0BF35190D2CDB00582DE3 /* SanaMultiSelectDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SanaMultiSelectDataSource.m; sourceTree = "<group>"; };
 		A3E0BF37190D314B00582DE3 /* SanaAttributedTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SanaAttributedTableView.h; sourceTree = "<group>"; };
 		A3E0BF38190D314B00582DE3 /* SanaAttributedTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SanaAttributedTableView.m; sourceTree = "<group>"; };
+		A3E0BF3A190EFC1100582DE3 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -286,6 +288,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3E0BF3B190EFC1100582DE3 /* CoreLocation.framework in Frameworks */,
 				A3D03D1E18EC891100510D84 /* MobileCoreServices.framework in Frameworks */,
 				A3D03D1C18EC890A00510D84 /* QuartzCore.framework in Frameworks */,
 				A3D03D1A18EC88DA00510D84 /* libxml2.dylib in Frameworks */,
@@ -334,6 +337,7 @@
 		A3D03C8D18E5BDB600510D84 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A3E0BF3A190EFC1100582DE3 /* CoreLocation.framework */,
 				A3D03D1D18EC891100510D84 /* MobileCoreServices.framework */,
 				A3D03D1B18EC890A00510D84 /* QuartzCore.framework */,
 				A3D03D1918EC88DA00510D84 /* libxml2.dylib */,

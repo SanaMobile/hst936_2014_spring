@@ -50,7 +50,7 @@
     return libraryPath;
 }
 
-+ (Procedure *)saveProcedure:(NSData *)data forType:(NSString *)extension {
++ (Procedure *)saveProcedure:(NSData *)data forType:(NSString *)extension withName:(NSString *)title {
     if(data == nil)
         return nil;
 
@@ -64,6 +64,7 @@
     if(saved) {
         Procedure *proc = [[SanaCoreData sharedCoreData] createObjectNamed:@"Procedure"];
         if(proc != nil) {
+            [proc setName:title];
             [proc setOriginalFile:filePath];
             [proc setCreatedAt:[NSDate date]];
             [[SanaCoreData sharedCoreData] save];

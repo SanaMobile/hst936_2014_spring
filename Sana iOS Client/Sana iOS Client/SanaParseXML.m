@@ -32,6 +32,8 @@
 @property (nonatomic, retain) NSMutableParagraphStyle *paraAttr;
 @property (nonatomic, retain) NSDictionary *attrDictionary;
 @property (nonatomic, retain) NSDictionary *attrDictionary2;
+
+@property (nonatomic, strong) SanaAttributedTextField *geoField;
 @end
 
 @implementation SanaParseXML
@@ -213,12 +215,12 @@
         [self createPicker:element inView:view];
     }
     else if ([type isEqualToString:@"IMAGE"]){
-        /*
-         * NO REFERENCE
-         */
+        // IMAGE PICKER
+        [self element:element notAvailable:@"IMAGE" inView:view];
     }
     else if ([type isEqualToString:@"PICTURE"]){
         // IMAGE PICKER
+        [self element:element notAvailable:@"PICTURE" inView:view];
     }
     else if ([type isEqualToString:@"SOUND"]){
         // RECORD SOUND
@@ -227,14 +229,17 @@
         /*
          * NO REFERENCE
          */
+        [self element:element notAvailable:@"BINARY FILE" inView:view];
     }
     else if ([type isEqualToString:@"INVALID"]){
         /*
          * NO REFERENCE
          */
+        [self element:element notAvailable:@"INVALID" inView:view];
     }
-    else if ([type isEqualToString:@"GPS"]){
+    else if ([type isEqualToString:@"GPS"] || [type isEqualToString:@"GEOGRAPHICAL LOCATION"]){
         // RECORD CURRENT GPS COORDINATES
+        [self createGeographicalLabel:element inView:view];
     }
     else if ([type isEqualToString:@"TIME"]){
         // TIME PICKER
@@ -248,16 +253,19 @@
         /*
          * ONLY FOR ANDROID
          */
+        [self element:element notAvailable:@"EDUCATION RESOURCE" inView:view];
     }
     else if ([type isEqualToString:@"PLUGIN"]){
         /*
          * ONLY FOR ANDROID 
          */
+        [self element:element notAvailable:@"PLUGIN" inView:view];
     }
     else if ([type isEqualToString:@"PLUGIN_ENTRY"]){
         /* 
          * ONLY FOR ANDROID 
          */
+        [self element:element notAvailable:@"PLUGIN ENTRY" inView:view];
     }
     else {
         NSLog(@"%@ : Element cannot be parsed.", type);
@@ -276,9 +284,7 @@
 #pragma mark iOS Widget Creation Methods
 /************************************************/
 /* Converts:                                    */
-/* <xforms:input ref="data/observation@1/value">*/
-/* <xforms:label>Enter Text</xforms:label>      */
-/* </xforms:input>                              */
+/* <ELEMENT type="ENTRY"                        */
 /* Into:                                        */
 /*    UILabel                                   */
 /*    UITextField                               */
@@ -292,6 +298,7 @@
     SanaAttributedTextField *inputField = [[SanaAttributedTextField alloc]initWithFrame:CGRectMake(PADDING, current_y, view.bounds.size.width - (2 * PADDING), INPUT_FIELD_HEIGHT)];
     inputField.backgroundColor = [UIColor whiteColor];
     inputField.delegate = self.controller;
+    inputField.textAlignment = NSTextAlignmentCenter;
     inputField.font = [UIFont fontWithName:HELVETICA_LIGHT size:NORMAL_FONT_SIZE];
 
     inputField.elementId = [[inputElement attributeForName:@"id"] stringValue];
@@ -312,7 +319,76 @@
     return inputField;
 }
 
-//xforms:textarea = UITextView
+- (void)element:(GDataXMLElement *)element notAvailable:(NSString *)title inView:(UIView *)view {
+    if ([[[element attributeForName:@"question"] stringValue] length] > 0) {
+        [self createLabel:[[element attributeForName:@"question"] stringValue] inView:view];
+    }
+
+    SanaAttributedTextField *inputField = [[SanaAttributedTextField alloc]initWithFrame:CGRectMake(PADDING, current_y, view.bounds.size.width - (2 * PADDING), INPUT_FIELD_HEIGHT)];
+    inputField.backgroundColor = [UIColor whiteColor];
+    inputField.delegate = self.controller;
+    inputField.textAlignment = NSTextAlignmentCenter;
+    inputField.enabled = NO;
+    inputField.font = [UIFont fontWithName:HELVETICA_LIGHT size:NORMAL_FONT_SIZE];
+    inputField.text = @"Feature not available yet";
+
+    [view addSubview:inputField];
+    current_y += INPUT_FIELD_HEIGHT + PADDING;
+}
+
+-(void)createGeographicalLabel:(GDataXMLElement *) geoLocationElement inView:(UIView *) view {
+
+    if ([[[geoLocationElement attributeForName:@"question"] stringValue] length] > 0) {
+        [self createLabel:[[geoLocationElement attributeForName:@"question"] stringValue] inView:view];
+    }
+
+    CLLocationManager *locationManager = [[CLLocationManager alloc] init];
+    [locationManager startUpdatingLocation];
+
+    SanaAttributedTextField *inputField = [[SanaAttributedTextField alloc]initWithFrame:CGRectMake(PADDING, current_y, view.bounds.size.width - (2 * PADDING), INPUT_FIELD_HEIGHT)];
+    inputField.backgroundColor = [UIColor whiteColor];
+    inputField.delegate = self.controller;
+    inputField.textAlignment = NSTextAlignmentCenter;
+    inputField.enabled = NO;
+    inputField.font = [UIFont fontWithName:HELVETICA_LIGHT size:NORMAL_FONT_SIZE];
+
+    inputField.elementId = [[geoLocationElement attributeForName:@"id"] stringValue];
+    inputField.question = [[geoLocationElement attributeForName:@"question"] stringValue];
+    inputField.answer = [self answerForId:inputField.elementId];
+    [inputField setText:[self answerForId:inputField.elementId]];
+    inputField.concept = [[geoLocationElement attributeForName:@"concept"] stringValue];
+
+    self.geoField = inputField;
+
+    [self.existingElements addObject:inputField];
+
+    [view addSubview:inputField];
+    current_y += INPUT_FIELD_HEIGHT + PADDING;
+}
+
+- (void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status {
+    if(status == kCLAuthorizationStatusAuthorized) {
+        if(self.geoField != nil) {
+            self.geoField.text = [NSString stringWithFormat:@"%f, %f", manager.location.coordinate.latitude, manager.location.coordinate.longitude];
+        }
+    } else {
+        if(self.geoField != nil) {
+            self.geoField.text = @"No Permission";
+        }
+    }
+}
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
+    if(self.geoField == nil)
+        return;
+
+    if(locations.count == 0) {
+        self.geoField.text = @"Could not update";
+    } else {
+        self.geoField.text = [NSString stringWithFormat:@"%f, %f", ((CLLocation *)locations[0]).coordinate.latitude, ((CLLocation *)locations[0]).coordinate.longitude];
+    }
+}
+
 -(void)createTextArea:(GDataXMLElement *) textAreaElement inView:(UIView *)view  {
 
     if ([[[textAreaElement attributeForName:@"question"] stringValue] length] > 0) {
@@ -335,11 +411,7 @@
     current_y += TEXT_VIEW_HEIGHT + PADDING;
 }
 
-//xforms:label = UILabel
 -(void)createLabel:(NSString *)labelText inView:(UIView *)view  {
-    //    double width = view.bounds.size.width - (2 * PADDING);
-    //    CGRect frame = [[labelElement stringValue] boundingRectWithSize:CGSizeMake(width, CGFLOAT_MAX) options:NSStringDrawingUsesLineFragmentOrigin attributes:self.attrDictionary context:nil];
-
     SanaAttributedLabel *label = [[SanaAttributedLabel alloc]initWithFrame:CGRectMake(PADDING, current_y, view.bounds.size.width - (2 * PADDING), LABEL_HEIGHT)];
     label.backgroundColor = [UIColor clearColor];
     label.textColor = NAVIGATION_COLOR;
@@ -398,8 +470,13 @@
         [finalItems addObject:[item stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]]];
     }
 
-    SanaAttributedTableView *tableView = [[SanaAttributedTableView alloc] initWithFrame:CGRectMake(PADDING, current_y, view.bounds.size.width - (2 * PADDING), view.bounds.size.height - LABEL_HEIGHT - PADDING) withOptions:[finalItems componentsJoinedByString:@","] andAnswers:@"" onDelegate:self.controller withElementId:[[select1Element attributeForName:@"id"] stringValue]];
+    SanaAttributedTableView *tableView = [[SanaAttributedTableView alloc] initWithFrame:CGRectMake(PADDING, current_y, view.bounds.size.width - (2 * PADDING), view.bounds.size.height - LABEL_HEIGHT - PADDING) withOptions:[finalItems componentsJoinedByString:@","] andAnswers:[self answerForId:[[select1Element attributeForName:@"id"] stringValue]] onDelegate:self.controller withElementId:[[select1Element attributeForName:@"id"] stringValue]];
+    tableView.elementId = [[select1Element attributeForName:@"id"] stringValue];
+    tableView.question = [[select1Element attributeForName:@"question"] stringValue];
+    tableView.answer = [self answerForId:[[select1Element attributeForName:@"id"] stringValue]];
     [view addSubview:tableView];
+    
+    [self.existingElements addObject:tableView];
     current_y += view.bounds.size.height + PADDING;
 }
 

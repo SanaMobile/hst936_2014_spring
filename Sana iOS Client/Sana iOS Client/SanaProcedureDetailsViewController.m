@@ -98,11 +98,6 @@
         [self.view addSubview:self.procedureScrollView];
         
         [self.navigationItem setTitle:[self getProcedureTitle:self.domDocument]];
-
-        // SAVE TITLE OF THIS PROCEDURE
-        Procedure *tempProc = [[[SanaCoreData sharedCoreData] getFetchResultsForEntityName:@"Procedure" usingPredicate:nil inContext:[[SanaCoreData sharedCoreData] managedObjectContext] error:nil] objectAtIndex:0];
-        tempProc.name = [self getProcedureTitle:self.domDocument];
-        [[SanaCoreData sharedCoreData] save];
     }
     return self;
 }

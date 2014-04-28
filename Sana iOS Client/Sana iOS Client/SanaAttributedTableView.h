@@ -13,6 +13,8 @@
 
 @property (nonatomic, strong) SanaMultiSelectDataSource *dataSourceAndDelegate;
 @property (nonatomic, strong) NSString *elementId;
+@property (nonatomic, strong) NSString *question;
+@property (nonatomic, strong) NSString *answer;
 
 - (id)initWithFrame:(CGRect)frame withOptions:(NSString *)options andAnswers:(NSString *)answers onDelegate:(id)controller withElementId:(NSString *)elementId;
 
