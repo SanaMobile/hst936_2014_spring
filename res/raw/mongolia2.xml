@@ -1,0 +1,593 @@
+<Procedure
+    author="Education"
+    title="Common dermatology dieseases in Mongolia"
+    version="1" >
+
+    
+    
+    <Page>
+    
+        <Element
+            id="1"
+            answer=""
+            concept="CHOOSE "
+            question="Select a value before proceeding."
+            choices="LIST IN GROUPED BY CLINICAL CHARACTERISTICS,LIST IN DISEASES' ALPHABETICAL ORDER A -> Z"
+            required="true"
+            type="RADIO"
+              />
+        
+     </Page>
+    <Page>
+        <ShowIf>
+            <Criteria
+                id="1"
+                type="EQUALS"
+                value="LIST IN GROUPED BY CLINICAL CHARACTERISTICS" />
+        </ShowIf>
+        <Element
+            id="2"
+            concept="PATIENT ALLERGY"
+            helpText=""
+            question="What do you want to learn more about?"
+            type="TEXT" />
+        
+        <Element 
+           id="3"
+            answer=""
+            concept="CHOOSE DISEASES "
+            question="Erythematous scaly rashes"
+            choices="Psoriasis,Eczema(atopic dermatitis),Tinea Corporis,Tinea Faciei,Tinea Pedis,Tinea Capitis(scalp ringworm)"
+           
+            type="RADIO"/>
+        
+         <Element 
+           id="4"
+            answer=""
+            concept="CHOOSE DISEASES "
+            question="Vesicular or Bullous dermatitis"
+            choices="Herpes simplex,Herpes zoster,Impetigo"
+            
+            type="RADIO"/>
+          
+          <Element 
+           id="5"
+            answer=""
+            concept="CHOOSE DISEASES "
+            question="Growths"
+            choices="Warts,Flat warts"
+           
+            type="RADIO"/>
+           
+           <Element 
+           id="6"
+            answer=""
+            concept="CHOOSE DISEASES "
+            question="Pigmentary or Color disorders"
+            choices="Pytiriasis alba,Vitiligo"
+            
+            type="RADIO"/>
+           
+           <Element 
+           id="7"
+            answer=""
+            concept="CHOOSE DISEASES "
+            question="Nail disorders"
+            choices="Onychomycosis"
+            
+            type="RADIO"/>
+            
+            
+     <Element 
+           id="8"
+            answer=""
+            concept="CHOOSE DISEASES "
+            question="Bites and infestations"
+            choices="Insect bites,Scabies"
+            
+            type="RADIO" />
+           
+     </Page>
+    
+   
+    
+    
+    
+    
+     <Page>
+        <ShowIf>
+            <Criteria
+                id="1"
+                type="EQUALS"
+                value="LIST IN DISEASES' ALPHABETICAL ORDER A -> Z" />
+        </ShowIf>
+        <Element
+            id="9"
+            helpText=""
+            concept="CHOOSE "
+            question="What do you want to learn more about"
+            choices="Eczema(atopic dermatitis),Flat warts,Herpes simplex,Herpes zoster,Impetigo,Insect bites,Onychomycosis,Psoriasis,Pytiriasis alba,Scabies,Tinea Capitis(scalp ringworm),Tinea Corporis,Tinea Faciei,Tinea Pedis,Vitiligo"
+            required="true"
+            answer=""
+            type="RADIO" />
+        
+    </Page>
+
+     
+     
+     
+     
+     
+     
+     
+     <Page>
+         <ShowIf>
+             
+           <or> <Criteria
+                id="3"
+                type="EQUALS"
+                value="Psoriasis" /> 
+                <Criteria
+                id="9"
+                type="EQUALS"
+                value="Psoriasis" /></or>
+        </ShowIf>
+         <Element 
+           id="10"
+            answer=""
+            concept="CHOOSE DISEASES "
+            question="PSORIASIS"
+            choices="Symptoms,Manifestations,Causes,Prevention,Treatment"
+            required="true"
+            type="RADIO" />
+    </Page>
+    <Page>
+         <ShowIf>
+            <Criteria
+                id="10"
+                type="EQUALS"
+                value="Symptoms" />
+        </ShowIf>
+         <Element 
+           id="11"
+            answer=""
+            concept="DISEASES "
+            question="PSORIASIS"
+            figure="mocap" 
+            type="TEXT" />
+         <Element 
+           id="12"
+            answer=""
+            concept="DISEASES "
+            question="Symptoms    
+                               1.Plaques or raised skin patches with 1/4-in to several inches in diameter.
+                               2.Deep pink or red in color.
+                               3.Silvery, yellow white scales.
+                               4.Heavy white scaling or pits and thickening under the nails."
+            required="true"
+            type="TEXT" />
+    </Page>
+    
+    <Page>
+         <ShowIf>
+            <Criteria
+                id="10"
+                type="EQUALS"
+                value="Manifestations" />
+        </ShowIf>
+         <Element 
+           id="11"
+            answer=""
+            concept="DISEASES "
+            question="PSORIASIS"
+            figure="mocap"
+            required="true"
+            type="TEXT" />
+         <Element 
+           id="12"
+            answer=""
+            concept="DISEASES "
+            question="Occureces   
+                               1.scalp               2.elblow
+                               3.knees              4.navel
+                               5.genitalia         6.lower back
+                               7. buttock or buttock fold"
+            required="true"
+            type="TEXT" />
+    </Page>
+    
+    
+    <Page>
+         <ShowIf>
+            <Criteria
+                id="10"
+                type="EQUALS"
+                value="Causes" />
+        </ShowIf>
+         <Element 
+           id="11"
+            answer=""
+            concept="DISEASES "
+            question="PSORIASIS"
+            figure="mocap"
+            required="true"
+            type="TEXT" />
+         <Element 
+           id="12"
+            answer=""
+            concept="DISEASES "
+            question="causes   
+                                           the exact causes of Psoariasis is not known. Flares can be triggered by infection, stress , changes in temeperature or climate , skin injury and alcihol intake. It can also be trigerred by prescribed medicine such as lithium and anti-malarial drugs."
+            required="true"
+            type="TEXT" />
+    </Page>
+    
+    
+    <Page>
+         <ShowIf>
+            <Criteria
+                id="10"
+                type="EQUALS"
+                value="Prevention" />
+        </ShowIf>
+         <Element 
+           id="11"
+            answer=""
+            concept="DISEASES "
+            question="PSORIASIS"
+            figure="mocap"
+            required="true"
+            type="TEXT" />
+         <Element 
+           id="12"
+            answer=""
+            concept="DISEASES "
+            question="Prevention  
+                               1.avoid skin injury. plaques can form following cuts and scratches on the skin.
+                               2.treating infection as early as possible.
+                               3.getting enough(but not too much).
+                               4.avoiding alcohol intake."
+                            
+            required="true"
+            type="TEXT"   />
+         
+    </Page> 
+    
+     <Page>
+         <ShowIf>
+            <Criteria
+                id="10"
+                type="EQUALS"
+                value="Treatment" />
+        </ShowIf>
+         <Element 
+           id="11"
+            answer=""
+            concept="DISEASES "
+            question="PSORIASIS"
+            figure="mocap"
+            type="TEXT" />
+        <Element 
+            
+            id="13"
+            answer=""
+            concept="DISEASES"
+            question="treatments"
+            choices="1.prescribed tropical creams or gels,2.light treatment or photo therapy,3.oral medications"
+            type="RADIO"/>
+        
+        <Element
+            id="14"
+             answer=""
+            concept="DISEASES"
+            question="* There is no cure for psoriasis. however the treatment above can hlep clear up the plaques and alleviate the symptoms of this condition"
+            type="TEXT"/>
+    </Page>
+
+     <Page>
+         <ShowIf>
+             <Criteria
+                 id="13"
+                 type="EQUALS"
+                 value="1.prescribed tropical creams or gels"/>
+         </ShowIf>
+         <Element
+             id="15"
+              answer=""
+            concept="DISEASES"
+             question="Corticosteroids vitamin D- vitamin A- derivatives  "
+              type="TEXT"        
+                      />
+         
+     </Page>
+     
+      <Page>
+         <ShowIf>
+             <Criteria
+                 id="13"
+                 type="EQUALS"
+                 value="2.light treatment or photo therapy"/>
+         </ShowIf>
+         <Element
+             id="15"
+              answer=""
+            concept="DISEASES"
+             question="UVB phototheraphy "
+              type="TEXT"        
+                      />
+         
+     </Page>
+     
+      <Page>
+         <ShowIf>
+             <Criteria
+                 id="13"
+                 type="EQUALS"
+                 value="3.oral medications"/>
+         </ShowIf>
+         <Element
+             id="15"
+              answer=""
+            concept="DISEASES"
+             question="1. Calcipotriene Vitamin-D
+                       2. Anthralin and Tar  "
+              type="TEXT"        
+                      />
+         
+     </Page>
+     
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+     <Page>
+         <ShowIf>
+             
+           <or> <Criteria
+                id="3"
+                type="EQUALS"
+                value="Eczema(atopic dermatitis)" /> 
+                <Criteria
+                id="9"
+                type="EQUALS"
+                value="Eczema(atopic dermatitis)" /></or>
+        </ShowIf>
+         <Element 
+           id="20"
+            answer=""
+            concept="CHOOSE DISEASES "
+            question="Eczema(atopic dermatitis)"
+            choices="Symptoms,Manifestations,Causes,Prevention,Treatment"
+            required="true"
+            type="RADIO" />
+    </Page>
+    <Page>
+         <ShowIf>
+            <Criteria
+                id="20"
+                type="EQUALS"
+                value="Symptoms" />
+        </ShowIf>
+         <Element 
+           id="21"
+            answer=""
+            concept="DISEASES "
+            question="Eczema(atopic dermatitis)"
+            figure="mocap"
+            required="true"
+            type="TEXT" />
+         <Element 
+           id="22"
+            answer=""
+            concept="DISEASES "
+            question="Symptoms    
+                               1.Itchy skin
+                               2.dry skin 
+                               3.thickened skin"
+                               
+            required="true"
+            type="TEXT" />
+    </Page>
+    
+    <Page>
+         <ShowIf>
+            <Criteria
+                id="20"
+                type="EQUALS"
+                value="Manifestations" />
+        </ShowIf>
+         <Element 
+           id="21"
+            answer=""
+            concept="DISEASES "
+            question="Eczema(atopic dermatitis)"
+            figure="mocap"
+            required="true"
+            type="TEXT" />
+         <Element 
+           id="22"
+            answer=""
+            concept="DISEASES "
+            question="Occureces   
+                               1.Infants : face, extensor surface of extremities,trunk
+                               2. Children : flexor surface of extremities, trunk
+							   3. Adults : hands, trunk"
+            required="true"
+            type="TEXT" />
+    </Page>
+    
+    
+    <Page>
+         <ShowIf>
+            <Criteria
+                id="20"
+                type="EQUALS"
+                value="Causes" />
+        </ShowIf>
+         <Element 
+           id="21"
+            answer=""
+            concept="DISEASES "
+            question="Eczema(atopic dermatitis)"
+            figure="mocap"
+            required="true"
+            type="TEXT" />
+         <Element 
+           id="22"
+            answer=""
+            concept="DISEASES "
+            question="causes   
+                                       1. Genetics
+									   2.abnormal function of immune system
+									   3.activity that may cause skin to be more sensitive
+									   4.defects in the skin barrier that allow moisture out and germs in."
+            required="true"
+            type="TEXT" />
+    </Page>
+    
+    
+    <Page>
+         <ShowIf>
+            <Criteria
+                id="20"
+                type="EQUALS"
+                value="Prevention" />
+        </ShowIf>
+         <Element 
+           id="21"
+            answer=""
+            concept="DISEASES "
+            question="Eczema(atopic dermatitis)"
+            figure="mocap"
+            required="true"
+            type="TEXT" />
+         <Element 
+           id="22"
+            answer=""
+            concept="DISEASES "
+            question="Prevention  
+                               1.avoiding irritants and allergens.
+                               2.wet dressings.
+                               3.moisturisers and emollients.
+                               4.steroids.
+                               5. anti biotics and anti septics
+							   6. nutritional supplements"
+            required="true"
+            type="TEXT"   />
+         
+    </Page> 
+    
+     <Page>
+         <ShowIf>
+            <Criteria
+                id="20"
+                type="EQUALS"
+                value="Treatment" />
+        </ShowIf>
+         <Element 
+           id="21"
+            answer=""
+            concept="DISEASES "
+            question="Eczema(atopic dermatitis)"
+            figure="mocap"
+            type="TEXT" />
+        <Element 
+            
+            id="23"
+            answer=""
+            concept="DISEASES"
+            question="treatments"
+            choices="1.prescribed tropical creams or gels,2.light treatment or photo therapy,3.oral medications"
+            type="RADIO"/>
+        
+        <Element
+            id="24"
+             answer=""
+            concept="DISEASES"
+            question="* this is chronic condition, no cure
+			          * this is not a food allergy"
+            type="TEXT"/>
+    </Page>
+
+     <Page>
+         <ShowIf>
+             <Criteria
+                 id="23"
+                 type="EQUALS"
+                 value="1.prescribed tropical creams or gels"/>
+         </ShowIf>
+         <Element
+             id="25"
+              answer=""
+            concept="DISEASES"
+             question="Corticosteroids vitamin D- vitamin A- derivatives  "
+              type="TEXT"        
+                      />
+         
+     </Page>
+     
+      <Page>
+         <ShowIf>
+             <Criteria
+                 id="23"
+                 type="EQUALS"
+                 value="2.light treatment or photo therapy"/>
+         </ShowIf>
+         <Element
+             id="25"
+              answer=""
+            concept="DISEASES"
+             question="UVB phototheraphy "
+              type="TEXT"        
+                      />
+         
+     </Page>
+     
+      <Page>
+         <ShowIf>
+             <Criteria
+                 id="23"
+                 type="EQUALS"
+                 value="3.oral medications"/>
+         </ShowIf>
+         <Element
+             id="25"
+              answer=""
+            concept="DISEASES"
+             question="1.Cyclosporin(serious side effects, only for adults "
+              type="TEXT"        
+                      />
+         
+     </Page>
+      
+      
+      
+      
+     
+     
+</Procedure>

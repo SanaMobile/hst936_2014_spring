@@ -1,0 +1,638 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Docs say that all the identifiers should be in lower case -->
+
+<resources>
+
+    <string name="hello">Hello</string>
+    <string name="app_name">Sana</string>
+
+    <!-- Activity titles -->
+    <string name="title_procedures_list">Available Procedures</string>
+    <string name="title_savedprocedure_list">Saved Procedures</string>
+    <string name="title_procedure_runner">Sana Perform Procedure</string>
+    <string name="title_notification_viewer">Sana Notification Viewer</string>
+    <string name="title_notifications_list">Notifications List (by Patient ID)</string>
+    <string name="title_help_list">Help List</string>
+    <string name="title_settings">Sana Settings</string>
+    <string name="title_network_settings">Sana Network Settings</string>
+    <string name="title_resource_settings">Sana Resource Settings</string>
+    <string name="title_upload_service">Sana Upload Service</string>
+
+    <!-- Main menu buttons -->
+    <string name="button_main_education">Education Resources</string>
+    <string name="button_main_new_encounter">Start New Encounter</string>
+    <string name="button_main_view_prior_encounters">View Prior Encounters</string>
+    <string name="button_main_view_notifications">View Notifications</string>
+
+    <!-- General Phrases -->
+    <string name="general_ok">Okay</string>
+    <string name="general_cancel">Cancel</string>
+    <string name="general_yes">Yes</string>
+    <string name="general_no">No</string>
+    <string name="general_save">Save</string>
+    <string name="general_dismiss">Dismiss</string>
+    <string name="general_discard">Discard</string>
+    <string name="general_alert">Alert!</string>
+    <string name="general_capture_data">Capture Data</string>
+    <string name="general_view_data">View Data</string>
+    <string name="general_zoom_in">Zoom In</string>
+    <string name="general_zoom_out">Zoom Out</string>
+    <string name="general_back">Back</string>
+    <string name="general_center">Center</string>
+    <string name="general_error">Error</string>
+    <string name="general_change_settings">Change Settings</string>
+    <string name="general_input_required">Input required</string>
+
+    <!-- Dialog Strings -->
+    <string name="dialog_already_uploaded">This procedure has already been uploaded.</string>
+    <string name="dialog_exit_procedure">Exit Current Procedure</string>
+    <string name="dialog_save_changes">Save Changes</string>
+    <string name="dialog_incorrect_credentials">Could not upload: OpenMRS username/password incorrect!</string>
+    <string name="dialog_no_help_available">No help Available</string>
+    <string name="dialog_no_network">Could not check username/password - no network connection.</string>
+    <string name="dialog_no_reload_db_warn">Warning: reloading the database will clear all saved procedures and notifications. Proceed?</string>
+    <string name="dialog_no_phone_name">Phone Name is blank! Must enter a phone number</string>
+
+    <!-- Menu options strings -->
+    <string name="menu_reload_db">Reload Database</string>
+    <string name="menu_settings">Settings</string>
+    <string name="menu_sync">Sync</string>
+    <string name="menu_select_all">Select All</string>
+    <string name="menu_delete">Delete</string>
+    <string name="menu_save_exit">Save &amp; Exit</string>
+    <string name="menu_discard_exit">Discard &amp; Exit</string>
+    <string name="menu_jump_to_question">Jump To A Question</string>
+    <string name="menu_exit">Exit</string>
+
+    <!-- Settings Activity Strings -->
+    <string name="settings_title">Sana Configuration</string>
+    <string name="settings_network_title">Sana Configuration</string>
+    <string name="settings_resource_title">Sana Configuration</string>
+    <string name="setting_mds_url">Mobile Dispatch Server URL</string>
+    <string name="setting_mds_url_summary">IP address of MDS, do NOT add a trailing /</string>
+    <string name="setting_secure">Secure Transmission</string>
+    <string name="setting_secure_summary">Encrypt data sent over the network</string>
+    <string name="setting_phone_name">Phone Name</string>
+    <string name="setting_phone_name_summary">(typically the phone number)</string>
+    <string name="setting_pkt_size">Initial Packet Size</string>
+    <string name="setting_pkt_size_summary">(should be lower in poor coverage areas)</string>
+    <string name="setting_storage_directory">External Device File Folder</string>
+    <string name="setting_storage_directory_summary">Folder where binary files for upload are stored</string>
+    <string name="setting_emr_refresh">OpenMRS Database Refresh Interval</string>
+    <string name="setting_emr_refresh_summary">Interval at which the OpenMRS database will be cached, in hours</string>
+    <string name="setting_emr_username">Username</string>
+    <string name="setting_emr_username_summary">Username for medical records system</string>
+    <string name="setting_emr_password">Password</string>
+    <string name="setting_emr_password_summary">Password for medical records system</string>
+    <string name="setting_proxy_host">Proxy Hostname</string>
+    <string name="setting_proxy_host_summary">Enter the hostname of a proxy to use if required  (ex: 10.10.1.100). Leave blank if not required.</string>
+    <string name="setting_proxy_port">Proxy Port</string>
+    <string name="setting_proxy_port_summary">Enter the port number of your proxy if required (ex: 9401). Leave blank if not required.</string>
+    <string name="setting_bandwidth">Estimated Network Bandwidth </string>
+    <string name="setting_bandwidth_summary">Used for calculating timeouts</string>
+    <string name="setting_bandwidth_dialog">The network bandwidth value will be used to calculate appropriate timeouts for uploading. Enter in kilobytes per second.</string>
+    <string name="setting_image_scale">Image downscale factor</string>
+    <string name="setting_image_scale_summary">Scales down pictures taken with the camera.</string>
+    <string name="setting_barcode">Enable barcode reading</string>
+    <string name="setting_barcode_summary">Enable barcode reading of patient and physician ids.</string>
+    <string name="setting_upload_hack">Enable Upload Hack</string>
+    <string name="setting_upload_hack_summary">Enable a hack to send images as text to the MDS. This is a workaround for cell phone carriers which block file uploads</string>
+    <string name="setting_edu">Visible Education Resources</string>
+    <string name="setting_edu_summary">Make education resources visible in procedures</string>
+    <string name="setting_edu_viewer">View All Education Resources</string>
+    <string name="setting_edu_viewer_summary">Displays a list of all available resources</string>
+    <string name="setting_procedure">Manage Procedures</string>
+    <string name="setting_procedure_summary">update, add, and delete available procedures</string>
+    <string name="setting_resource">Sana Resources</string>
+    <string name="setting_resource_summary">Configure and view available resources</string>
+    <string name="setting_network">Sana Network</string>
+    <string name="setting_network_summary">Configure network settings</string>
+
+    <!-- Strings describing standard questions and common UI elements once inside a Procedure -->
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="question_standard_new_mrn">Enter New Patient\'s Medical Record Number</string>
+    <string name="question_standard_firstname">Enter Patient\'s First Name</string>
+    <string name="question_standard_lastname">Last Name</string>
+    <string name="question_standard_birthdate">Enter Patient\'s Birthdate</string>
+    <string name="question_standard_month">Month</string>
+    <string name="question_standard_day">Day</string>
+    <string name="question_standard_year">Year</string>
+    <string name="question_standard_gender">Select Patient\'s Gender</string>
+    <string name="question_standard_male">Male</string>
+    <string name="question_standard_female">Female</string>
+    <string name="question_standard_view_resource">View Resource</string>
+    <string name="question_standard_capture">Capture Data</string>
+    <string name="question_standard_binary_element">Capture Data</string>
+
+    <!-- GPS element -->
+    <string name="question_standard_gps_element">Please enter GPS coordinates:</string>
+    <string name="gps_element_acquire_waiting">Waiting for GPS...</string>
+    <string name="gps_element_acquire_unavailable">GPS service not available. Try again.</string>
+    <string name="gps_element_acquire_fail">Could not acquire location. Try again.</string>
+    <string name="gps_element_default_answer">Coordinates not acquired.</string>
+
+    <!-- Procedure Runner related -->
+    <string name="procedurerunner_formdone">All Done. What would you like to do?</string>
+    <string name="procedurerunner_viewpagelist">View Page List</string>
+    <string name="procedurerunner_goback">Go Back</string>
+    <string name="procedurerunner_upload">Save &amp; Upload to Server</string>
+    <string name="procedurerunner_saveforlater">Save for Later Upload</string>
+    <string name="procedurerunner_next">Next</string>
+    <string name="procedurerunner_previous">Prev</string>
+    <string name="procedurerunner_done">Done</string>
+    <string name="procedurerunner_scan_id">Scan ID</string>
+    <string name="procedurerunner_info">Info</string>
+
+    <!-- SD card Procedure updater -->
+    <string name="sd_import_empty">No new procedures found. Check settings?</string>
+    <string name="import_proc_all">Importing all procedures from SD card</string>
+    <string name="import_load_all">Load All Procedures</string>
+    <string name="import_proc">Importing procedure</string>
+    <string name="import_proc_delete_db">Delete Database</string>
+    <string name="import_proc_reload">Reload Database</string>
+    <string name="import_proc_warn_load_all">Warning: Load all procedures found on SD card?</string>
+    <string name="import_proc_warn_reload_all">Warning: RELOADING the database will clear all saved procedures and notifications. Proceed?</string>
+    <string name="import_proc_warn_delete_all">Warning: DELETING the database will clear all saved procedures and notifications. Proceed?</string>
+    <string name="import_proc_duplicate">Duplicate procedure found. Press OK to Update.</string>
+
+    <!-- Message strings -->
+    <string name="msg_err_no_plugin">No capture plugin found.</string>
+    <string name="msg_err_no_data">No data available.</string>
+    <string name="msg_err_no_answer">Answer not set.</string>
+    <string name="msg_err_reset_db">Error resetting database.</string>
+
+    <!-- PatientInfoDialog Activity -->
+    <string name="patient_out_of_sync">Patient information does not match database</string>
+
+    <!-- Notification Viewer Activity -->
+    <string name="note_pt_diagnosis">Diagnosis for Patient</string>
+
+    <string-array name="Diseases">
+        <item>Eczema(atopic dermatitis)</item>
+        <item>Flat Warts</item>
+        <item>Herpes Simplex</item>
+        <item>Herpes Zoster</item>
+        <item>Impetigo</item>
+        <item>Insect Bites</item>
+        <item>Onychomycosis</item>
+        <item>Psoriasis</item>
+        <item>Pytiriasis alba</item>
+        <item>Scabies</item>
+        <item>Tinea Capitis(scalp ringworm)</item>
+        <item>Tinea Corporis</item>
+        <item>Tinea Faciei</item>
+        <item>Tinea Pedis</item>
+        <item>Vitiligo</item>
+        <item>Warts</item>
+    </string-array>
+    <string-array name="Sym1">
+        <item>1.Itchy skin</item>
+        <item>1.Capillaries appear as dark dots</item>
+        <item>1.Blisters or ulcers</item>
+        <item>1.Painful burning sensation</item>
+        <item>1.Tustules or vesicles that become yellowish crusts on Erythematous base</item>
+        <item>1.Low raised welt</item>
+        <item>1.Thick coloured nails</item>
+        <item>1.Plaques or raise skin patches with 1/4-inches to several inches in diameter.</item>
+        <item>1.Dry scaling appearance</item>
+        <item>1.Itching</item>
+        <item>1.Can be inflammatory with pustules or abscesses</item>
+        <item>1.One or more Erythematous scaly annular plaques</item>
+        <item>1.Annular erythematous</item>
+        <item>1.Skin cracking, White and soggy toes</item>
+        <item>1.Melanocytes are destroyed by auto immune process</item>
+        <item>1.Grow most often on the fingers around the nails and on the backs of the hand</item>
+    </string-array>
+    <string-array name="Sym2">
+        <item>2.dry skin </item>
+        <item>2.Tiny blood vessels grow into the core of the wart to supply it with blood</item>
+        <item>2.Enlarged lymph nodes </item>
+        <item>2.Hyper esthesia(over sensitivity)</item>
+        <item>2.Can be secondary to any skin condition</item>
+        <item>2.Itches several hours</item>
+        <item>2.Crumbly appearance</item>
+        <item>2.Deep pink or red in color</item>
+        <item>2.Smooth flat pale patches</item>
+        <item>2.Mite tunnels(Burrows) </item>
+        <item>2.Bals with small black dots</item>
+        <item>2.Red raised spots and pimples</item>
+        <item>2.Scaly plaques</item>
+        <item>2.Entire sole and heel becomes dry and flaky</item>
+        <item>2.White well defined patches usually symmetrical</item>
+        <item>2.Are more common where the skin was broken</item>
+    </string-array>
+    <string-array name="Sym3">
+        <item>3.Thickened skin</item>
+        <item>3.Sometimes Dark specks are visible</item>
+        <item>3.Fever especially during the firts episode</item>
+        <item>3.Orpar esthesia</item>
+        <item>3.Ooze fluid and crusty looking sores</item>
+        <item>3.Red itchy and painful welt</item>
+        <item>3.Nails become brittle with pieces breaking off away from the toe completely</item>
+        <item>3.Silvery yellow white scales </item>
+        <item>3.Whitish scaly patches on face and extremities</item>
+        <item>3.Rash : blotchy, lumpy red rash that can appear anywhere on the body</item>
+        <item>3.Puss filled sores</item>
+        <item>3.Rashes become ring shaped and itchy</item>
+        <item>3.Itchy</item>
+        <item>3.Scaling and Itchiness</item>
+        <item>3.White hair</item>
+        <item>3.Can have black dots that look like seeds</item>
+    </string-array>
+    <string-array name="Sym4">
+        <item></item>
+        <item></item>
+        <item>4.Genital lesions, mouth sores</item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item>4.Heavy white scaling or pits and thickening under the nails</item>
+        <item></item>
+        <item>4.Scratching : if skin becomes infected with bacteria it becomes red,inflamed,hot and tender </item>
+        <item>4.Low grade fever around 100-101 degree Fahrenheit and itching.</item>
+        <item></item>
+        <item></item>
+        <item>4.White scales that appear in moccasin like patterns</item>
+        <item></item>
+        <item>4.Most often feel like rough bumps</item>
+    </string-array>
+    
+    
+    
+    
+    
+    
+    
+    <string-array name="Man1">
+        <item>1.Infants(face, extensor surfaces of extremities, trunk)</item>
+        <item>1.Face, neck</item>
+        <item>1.Lips</item>
+        <item>1.Chest</item>
+        <item>1.In children around orifices, nose , ear , mouth</item>
+        <item>1.Anywhere on the body</item>
+        <item>1.Toe nails</item>
+        <item>1.Scalp, Elbow </item>
+        <item>1.Face and extremities</item>
+        <item>1.Wrists</item>
+        <item>1.Mans beard</item>
+        <item>1.On the scalp </item>
+        <item>1.Cheeks</item>
+        <item>1.Between toes and soles</item>
+        <item>1.Around mouth</item>
+        <item>1.Around mouth</item>
+    </string-array>
+    
+    
+    <string-array name="Man2">
+        <item>2.Children(flexor surface of extremities,trunk)</item>
+        <item>2.Hands, Wrists</item>
+        <item>2.Mouth</item>
+        <item>2.Neck</item>
+        <item></item>
+        <item></item>
+        <item>2.Nails</item>
+        <item>2.Knees , naval</item>
+        <item></item>
+        <item>2.Intertriginous areas</item>
+        <item>2.Growing(Jock itch)</item>
+        <item>2.Growing(Jock itch)</item>
+        <item>2.Nose</item>
+        <item></item>
+        <item>2.Eyes and extremities</item>
+        <item>2.Fingers</item>
+    </string-array>
+    
+    
+    <string-array name="Man3">
+        <item>3.Adults(hands,trunks)</item>
+        <item>3.Elbows and knees</item>
+        <item>3.Face</item>
+        <item>3.Shoulders</item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item>3.Genitalia</item>
+        <item> </item>
+        <item></item>
+        <item>3.Other places on the skin</item>
+        <item>3.Other places on the skin</item>
+        <item>3.Around the eye</item>
+        <item></item>
+        <item>3.Face</item>
+        <item>3.Hands and Feet</item>
+    </string-array>
+    
+    
+    
+    <string-array name="Man4">
+        <item></item>
+        <item></item>
+        <item>4.Infection of the eye especially the conjunctiva and the cornea</item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item>4.Lower back, Buttock fold</item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item>4.Mans beard</item>
+        <item>4.Chin and Forehead</item>
+        <item></item>
+        <item>4.Hands and wrist</item>
+        <item></item>
+    </string-array>
+    
+    
+    
+    
+    <string-array name="Cau1">
+        <item>1.Genetics</item>
+        <item>1.You are more susceptible to HPV if you have a got a cut,scratch or some other opening in the skin</item>
+        <item>1.Caused by HSV1 or HSV2</item>
+        <item>1.Caused by VZV( the virus lies dormant in the sensory nerves until reactivated and its DNA is enclosed within protein envelope)</item>
+        <item>1.Auto Infection </item>
+        <item>1.Insect Bites</item>
+        <item>1.Dermatophytes are the most common cause</item>
+        <item>1.Flares can be triggered by infection, stress,changes in temperature or climate, skin injury and alcohol intake</item>
+        <item>1.Causes unknown , however it is considered to be associated with Eczema</item>
+        <item>1.Casued by sarcoptes scabies SP</item>
+        <item>1.Minor skin or scalp injuries</item>
+        <item>1.Having wet skin for long time</item>
+        <item>1.Suppressed immune system ( diabetes , leukaemia , HIV-AIDS)</item>
+        <item>1.Caused by fungal infection</item>
+        <item>1.An auto immune disorder - the patients immune system become over active and destroys the melanocytes</item>
+        <item>1.Caused by human papilloma virus</item>
+    </string-array>
+    <string-array name="Cau2">
+        <item>2.Abnormal function of immune system</item>
+        <item>2.It is spread through the act of shaving</item>
+        <item>2.Transmitted by contact with infected saliva</item>
+        <item>2.Chicken pox and Stress</item>
+        <item>2.Caused by one of two bacteria</item>
+        <item></item>
+        <item>2.Trichophyton Rubrum is the most common cause</item>
+        <item>2.It can also be triggered by prescribed medicine such as lithium and anti-malarial drugs</item>
+        <item> </item>
+        <item></item>
+        <item>2.Improper bath or less washing of hair</item>
+        <item>2.Having minor skin and nail injuries</item>
+        <item></item>
+        <item>2.Due to allergic reaction to fungal organisms causing blisters </item>
+        <item>2.Genetic oxidative stress imbalance</item>
+        <item></item>
+    </string-array>
+    <string-array name="Cau3">
+        <item>3.Activity that may cause skin to be more sensitive</item>
+        <item></item>
+        <item> </item>
+        <item> </item>
+        <item>(i) Streptococcus</item>
+        <item> </item>
+        <item>3.Trychophyton Interdigitale is less common and effects the great toe nail</item>
+        <item></item>
+        <item> </item>
+        <item></item>
+        <item>3.Having wet skin fro long time suck as sweating</item>
+        <item>3.Improper bathing and less often washing hair</item>
+        <item> </item>
+        <item> </item>
+        <item>3.A stress-full event</item>
+        <item></item>
+    </string-array>
+    <string-array name="Cau4">
+        <item>4.Defects in the skin barrier that allow moisture out and germs in</item>
+        <item></item>
+        <item> </item>
+        <item> </item>
+        <item>(ii) Staphylococcus</item>
+        <item> </item>
+        <item></item>
+        <item></item>
+        <item> </item>
+        <item></item>
+        <item></item>
+        <item> </item>
+        <item> </item>
+        <item> </item>
+        <item>4.Harm to the skin due to critical skin burn or cut or exposure to certain chemicals</item>
+        <item></item>
+    </string-array>
+    
+    <string-array name="Pre1">
+        <item>1.Avoiding irritants and allergens.</item>
+        <item>Avoid skin contact with existing warts and with contaminated floors such as those in locker rooms and around swimming pools.</item>
+        <item>1.Avoid direct contact with an open lesion.</item>
+        <item>There is a live vaccine for VZV marketed as Zostavax.</item>
+        <item>1.Keep cuts and scratches clean.</item>
+        <item>1.Cover exposed skins </item>
+        <item>1.Keep your feet clean and dry.</item>
+        <item>1.Avoid skin injury.Plaques can form following cuts and scratches on the skin.</item>
+        <item>1.Sun protection</item>
+        <item>Avoid skin to skin contact with someone who has scabies or with their personal items such as clothes,towels and brushes.</item>
+        <item>1.Avoid direct contact with area of ringworm on someone else\'s body.</item>
+        <item>1.Avoid direct contact with area of ringworm on someone else\'s body.</item>
+        <item>1.Avoid close contact with people who have Tinea Faciei.</item>
+        <item>1.Good Hygiene </item>
+        <item>1.Use sun screen with minimum sun protection factor (SPF) of 15.</item>
+        <item>Gardasil is designed to prevent infection with HPV.</item>
+    </string-array>
+    
+    <string-array name="Pre2">
+        <item>2.Wet Dressings.</item>
+        <item></item>
+        <item>2.Avoid sexual contact when they have active lesions</item>
+        <item></item>
+        <item>2.Ensure that any condition that causes broken skin such as eczema is treated promptly.</item>
+        <item>2.Apply insect repellents.</item>
+        <item>2.Do not trim or pick at the skin near your nails.</item>
+        <item>2.Treating infection as early as possible.</item>
+        <item>2.No very well known protective measures.</item>
+        <item></item>
+        <item>2.Avoid contact with pets particularly Cats.</item>
+        <item>2.Avoid contact with pets particularly Cats.</item>
+        <item>2.Gently wash your face after physical exertion and sweating.</item>
+        <item>2.Keeping feet cool and dry especially between your toes.</item>
+        <item>2.No other methods to prevent Vitiligo.</item>
+        <item></item>
+    </string-array>
+    
+    <string-array name="Pre3">
+        <item>3.Moisturisers and emollients</item>
+        <item></item>
+        <item>3.To decrease the risk of infecting new-borns, a caesarean delivery is recommended for pregnant women</item>
+        <item></item>
+        <item>3.Cover cuts and grazes with plaster or dressing.</item>
+        <item>3.Avoid using products with strong perfumes.</item>
+        <item>3.Avoid Shoes that are too tight.</item>
+        <item>3.Getting enough sunlight(but not too much).</item>
+        <item></item>
+        <item></item>
+        <item>3.Avoid touching items such as combs, hats, clothing that have been used by somebody with ringworm.</item>
+        <item>3.Avoid touching items such as combs, hats, clothing that have been used by somebody with ringworm.</item>
+        <item>3.Wash personal items regularly.(Beddings, clothes and linens)</item>
+        <item>3.Use an absorbent powder such as talcum powder.</item>
+        <item></item>
+        <item></item>
+    </string-array>
+    
+    <string-array name="Pre4">
+        <item>4.Steroids, antibiotics and antiseptics.</item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item>4.Wear absorbent cotton socks.</item>
+        <item>4.Avoiding alcohol intake.</item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item>4.Wear cotton or wool socks.</item>
+        <item></item>
+        <item></item>
+    </string-array>
+    
+    
+    <string-array name="Tre1">
+        <item>1.Oral Medication</item>
+        <item>1.Prescribed topical creams or gel</item>
+        <item>1.Oral Medication</item>
+        <item>1.Oral Medication</item>
+        <item>1.Oral Medication</item>
+        <item>1.Oral Medication</item>
+        <item>1.Oral Medication</item>
+        <item>1.Prescribed topical creams or gel</item>
+        <item>1.Prescribed topical creams or gel</item>
+        <item>1.Oral Medication</item>
+        <item>1.Oral Medication</item>
+        <item>1.Oral Medication</item>
+        <item>1.Prescribed topical creams or gel</item>
+        <item>1.Oral Medication</item>
+        <item>1.Light treatment or photo therapy</item>
+        <item>1.Prescribed topical creams or gel</item>
+    </string-array>
+    
+    <string-array name="Tre2">
+        <item>2.Prescribed topical creams or gel</item>
+        <item>2.Surgery</item>
+        <item>2.Prescribed topical creams or gel</item>
+        <item>2.Prescribed topical creams or gel</item>
+        <item>2.Prescribed topical creams or gel</item>
+        <item>2.Prescribed topical creams or gel</item>
+        <item>2.Prescribed topical creams or gel</item>
+        <item>2.Light treatment or photo therapy</item>
+        <item></item>
+        <item>2.Prescribed topical creams or gel</item>
+        <item>2.Light treatment or photo therapy</item>
+        <item>2.Prescribed topical creams or gel</item>
+        <item>2.Oral Medication</item>
+        <item>2.Prescribed topical creams or gel</item>
+        <item>2.Oral Medication</item>
+        <item>2.Therapy</item>
+    </string-array>
+    
+    <string-array name="Tre3">
+        <item></item>
+        <item></item>
+        <item></item>
+        <item>3.Light treatment or photo therapy</item>
+        <item></item>
+        <item>Insect Bites</item>
+        <item>3.Surgery</item>
+        <item>3.Oral medications</item>
+        <item></item>
+        <item></item>
+        <item>3.Prescribed topical creams or gel</item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item>3.Depigmenting</item>
+        <item></item>
+    </string-array>
+    
+    <string-array name="Tre4">
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item>*There is no cure for psoriasis however the treatment above can help clear up the plaques and alleviate the symptoms of his condition</item>
+        <item></item>
+        <item>*Treat  the whole family and persons who live in the same house</item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item>*Check thyroid function</item>
+        <item></item>
+    </string-array>
+    
+    
+    <string-array name="Tredia1">
+        <item>Cyclosporin( serious  side effects, only for adults )</item>
+        <item>Cantharidin- the area after the canthradin is applied it is covered with bandage , Aldera for genital warts</item>
+        <item>famciclovi (Famvir) , Valacyclovir(Valtrax)</item>
+        <item>Acyclovir , Corticosteroids and Analgesics</item>
+        <item>Oral antibiotics</item>
+        <item>Topical steroids, Anti-Histamines</item>
+        <item>Anti-fungal medicine for 3 MONTHS</item>
+        <item>Corticosteroids</item>
+        <item>HydroCortisone cream , Moisturizers such as petroleum jelly , Pragmatar Ointment</item>
+        <item>Ivermectin-1 dose for adults , Permetrin for children</item>
+        <item>Griseofulvin , Terbinafine , Itraconazole</item>
+        <item>Oral or Topical  Itraconazole( 3 WEEKS )</item>
+        <item>Terbinafine , Clotrimazole , Miconazole</item>
+        <item>Oral or Topical anti-fungal ( 3 WEEKS )</item>
+        <item>Expose to UVB light</item>
+        <item>Salicyclic Acid, Imiquimod </item>
+    </string-array>
+    
+    <string-array name="Tredia2">
+        <item>Corticosteroids</item>
+        <item>Laser surgery , minor surgery ( cut away the wart OR cryo surgery)</item>
+        <item>Acyclovir(Zovirax)</item>
+        <item>Lotions containing calamine</item>
+        <item>Bactroban (Mupirocin)</item>
+        <item>Insect Repellents</item>
+        <item>Anti-fungal nail lacquer</item>
+        <item>UVB Phototheraphy</item>
+        <item>Pytiriasis alba</item>
+        <item>Gel of Aloevera</item>
+        <item>Wood\'s lamp test</item>
+        <item>Miconazole, Clotrimazole , Oxiconazole</item>
+        <item>Oral or topical anti-fungal ( 3 WEEK )</item>
+        <item>Ciclopirox ( hydroxy pyridone anit-fungal)</item>
+        <item>Steroids , Calcineurin inhibitors</item>
+        <item>Cryo-surgery , Cryo-therapy</item>
+    </string-array>
+    
+    
+    <string-array name="Tredia3">
+        <item></item>
+        <item></item>
+        <item></item>
+        <item>If on phase, then IV treatment</item>
+        <item></item>
+        <item></item>
+        <item>Surgery to remove the nail is sometimes done in severe cases and a new nail grows in its place.</item>
+        <item>Calcipotriene Vitamin-D,Anthralin and Tar</item>
+        <item></item>
+        <item></item>
+        <item>SKIN CREAM: Deionized Water, Mineral Oil, MSM, Polysorbate 20, Acrylates/ Acrylamide Copolymer.
+              GEL: Benzalkonium chloride. Other Ingredients: Deionized water, Hydroxyethyl cellulose.</item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item>Mono-benzone Mequinol OR Hydroquinole </item>
+        <item></item>
+    </string-array>
+    
+
+</resources>
