@@ -1,0 +1,5 @@
+username='sunnyrajkotiya'
+password='HGgDMMgUYeMRfS'
+apiid='3476725'
+to='918124612664'
+text='Test'
