@@ -1,0 +1,22 @@
+.jumbotron {
+background-color: #5a5a5a;
+color: #FFF;
+border-radius: 0px;
+}
+.jumbotron-sm { padding-top: 24px;
+padding-bottom: 24px; }
+.jumbotron small {
+color: #FFF;
+}
+.h1 small {
+font-size: 24px;
+}
+body{
+ font-family: 'Roboto Condensed', sans-serif;
+}
+#header{
+	font-size: 18px;
+}
+#info{
+	font-size: 20px;
+}
