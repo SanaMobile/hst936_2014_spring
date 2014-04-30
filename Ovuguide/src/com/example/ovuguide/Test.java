@@ -23,7 +23,7 @@ public class Test extends Activity {
 		dailyReading.setDayOfMonth(intent.getIntExtra("dayOfMonth",0));
 		dailyReading.setMonth(intent.getIntExtra("month",0));
 		dailyReading.setYear(intent.getIntExtra("year",0));
-		Random r1 = new Random();
+		//Random r1 = new Random();
 		
 		dailyReading.setMucus(0);
 		dailyReading.setTemperature(0.0);
@@ -33,36 +33,19 @@ public class Test extends Activity {
 		observationsDAO.addDailyReadings(dailyReading);
 		observationsDAO.close();
 		
-		Intent i = new Intent("com.example.ovuguide.Test2");
+		/*Intent i = new Intent("com.example.ovuguide.Test2");
 		i.putExtra("dayOfMonth", dailyReading.getDayOfMonth());
 		i.putExtra("month", dailyReading.getMonth());
 		i.putExtra("year", dailyReading.getYear());
-		startActivity(i);
+		startActivity(i);*/
 		
-		/*observationsDAO.open();
-		
+		observationsDAO.open();		
 		dailyReading2= observationsDAO.getDailyReading(intent.getIntExtra("dayOfMonth",0), intent.getIntExtra("month",0), intent.getIntExtra("year",0));
 		observationsDAO.close();
-		if(truth)
-		{
-			Toast toast =Toast.makeText(this.getBaseContext(), "Not null", Toast.LENGTH_LONG);
-			toast.show();
-		}
-		else
-		{
-			Toast toast =Toast.makeText(this.getBaseContext(), "Its null", Toast.LENGTH_LONG);
-			toast.show();
-		}
-		/*String txt="";
-		for (String string : res) {
-			txt+=string;
-		}
-		Toast toast =Toast.makeText(this.getBaseContext(), txt, Toast.LENGTH_LONG);
-		toast.show();*/
 		
-		/*String txt = dailyReading.getDayOfMonth()+"\n"+dailyReading.getMonth()+"\n"+dailyReading.getYear()+"\n"+dailyReading.getMucus()+"\n"+dailyReading.getTemperature()+"\n"+dailyReading.getPhase();
+		String txt = dailyReading2.getDayOfMonth()+"\n"+dailyReading2.getMonth()+"\n"+dailyReading2.getYear()+"\n"+dailyReading2.getMucus()+"\n"+dailyReading2.getTemperature()+"\n"+dailyReading2.getPhase();
 		Toast toast =Toast.makeText(this.getBaseContext(), txt, Toast.LENGTH_LONG);
-		toast.show();*/
+		toast.show();
 		/*if(dailyReading2==null)
 		{
 			

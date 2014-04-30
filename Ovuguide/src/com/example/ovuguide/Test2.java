@@ -18,15 +18,15 @@ public class Test2 extends Activity {
 		
 		ObservationsDAO observationsDAO = new ObservationsDAO(getBaseContext());
 		observationsDAO.open();		
-		ArrayList<DailyReading> dailyReading2= observationsDAO.getDailyReading(intent.getIntExtra("dayOfMonth",0), intent.getIntExtra("month",0), intent.getIntExtra("year",0));
+		DailyReading dailyReading2= observationsDAO.getDailyReading(intent.getIntExtra("dayOfMonth",0), intent.getIntExtra("month",0), intent.getIntExtra("year",0));
 		observationsDAO.close();
 		
-		for (DailyReading reading : dailyReading2)
-		{
-		String txt = reading.getDayOfMonth()+"\n"+reading.getMonth()+"\n"+reading.getYear()+"\n"+reading.getMucus()+"\n"+reading.getTemperature()+"\n"+reading.getPhase();
-		Toast toast =Toast.makeText(this.getBaseContext(), txt, Toast.LENGTH_LONG);
+		//for (DailyReading reading : dailyReading2)
+		//{
+		String txt = dailyReading2.getDayOfMonth()+"\n"+dailyReading2.getMonth()+"\n"+dailyReading2.getYear()+"\n"+dailyReading2.getMucus()+"\n"+dailyReading2.getTemperature()+"\n"+dailyReading2.getPhase();
+		Toast toast =Toast.makeText(this.getBaseContext(), "Helllllllooooooo", Toast.LENGTH_LONG);
 		toast.show();
-		}
+		//}
 	}
 
 	@Override

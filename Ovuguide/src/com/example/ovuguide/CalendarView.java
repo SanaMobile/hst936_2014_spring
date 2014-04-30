@@ -88,11 +88,11 @@ public class CalendarView extends Activity {
 		        	String day = date.getText().toString();
 		        			        	
 		        	//intent.putExtra("date", android.text.format.DateFormat.format("yyyy-MM", month)+"-"+day);
-		        	// send chosen date as a (dayOfMonth,month,year) tuple 
+		        	// send the selected date as a (dayOfMonth,month,year) tuple 
 		        	intent.putExtra("dayOfMonth", Integer.parseInt(day));
 		        	intent.putExtra("month", month.get(Calendar.MONTH));
 		        	intent.putExtra("year", month.get(Calendar.YEAR));
-		        	//startActivity(intent);
+		        	startActivity(intent);
 		        	
 		        }
 		        

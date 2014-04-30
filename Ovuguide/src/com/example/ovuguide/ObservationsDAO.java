@@ -67,30 +67,30 @@ public class ObservationsDAO {
 	}
 	
 	
-	public ArrayList<DailyReading> getDailyReading(int dayOfMonth, int month,int year)
+	public DailyReading getDailyReading(int dayOfMonth, int month,int year)
 	{
 		DailyReading dailyReading = new DailyReading();
 		
-		//String allColumns[] = {ObservationsSQLiteHelper.DAY_OF_MONTH,ObservationsSQLiteHelper.MONTH,ObservationsSQLiteHelper.YEAR,ObservationsSQLiteHelper.MUCUS,ObservationsSQLiteHelper.TEMPERATURE,ObservationsSQLiteHelper.PHASE};
+		String allColumns[] = {ObservationsSQLiteHelper.DAY_OF_MONTH,ObservationsSQLiteHelper.MONTH,ObservationsSQLiteHelper.YEAR,ObservationsSQLiteHelper.MUCUS,ObservationsSQLiteHelper.TEMPERATURE,ObservationsSQLiteHelper.PHASE};
 		String whereClause = ObservationsSQLiteHelper.DAY_OF_MONTH+"=? and "+ObservationsSQLiteHelper.MONTH+"=? and "+ObservationsSQLiteHelper.YEAR+"=?";
 		String whereArgs[]={(dayOfMonth+""),(month+""),(year+"")};
 		
-		Cursor cursor = observations.query(ObservationsSQLiteHelper.TABLE_NAME, null, null, null, null, null,null);
+		Cursor cursor = observations.query(ObservationsSQLiteHelper.TABLE_NAME, null, whereClause, whereArgs, null, null, null);
 		
-		ArrayList<DailyReading> dailyReadings = new ArrayList<DailyReading>();
+		
 		cursor.moveToFirst();
-		while (!cursor.isAfterLast())
-		{
+		//while (!cursor.isAfterLast())
+		//{
 		dailyReading.setDayOfMonth(cursor.getInt(0));
 		dailyReading.setMonth(cursor.getInt(1));
 		dailyReading.setYear(cursor.getInt(2));
 		dailyReading.setMucus(cursor.getInt(3));
 		dailyReading.setPhase(cursor.getInt(5));
 		dailyReading.setTemperature(cursor.getDouble(4));
-		dailyReadings.add(dailyReading);
-		}
+		//dailyReadings.add(dailyReading);
+		//}
 		
-		return dailyReadings;
+		return dailyReading;
 	
 	}
 	
