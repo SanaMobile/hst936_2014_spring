@@ -6,14 +6,20 @@
         <script type="text/javascript" src="/js/foundation.min.js"></script>
         <script type="text/javascript" src="/js/script.js"></script>
         <script type="text/javascript" src="/js/tabs.js"></script>
+        <script type="text/javascript" src="/js/jquery-ui-sliderAccess.js.js"></script>
+        <script type="text/javascript" src="/js/jquery-ui-timepicker-addon.js"></script>
+        <link rel="stylesheet" href="/styles/jquery-ui-timepicker-addon.css">
         <link rel="stylesheet" href="/styles/foundation.css">
         <link rel="stylesheet" href="/styles/styles.css">
         <link rel="stylesheet" href="/styles/jquery-ui.css">
     </head>
     <body>
         <div class="row header-box">
-            <div class="large-12 small-12 columns">
+            <div class="large-11 small-11 columns">
                 Mobile Dispatch Server
+            </div>
+            <div class="large-1 small-1 columns">
+                <input type="button" class="button tiny secondary" id="logoutButton" value="Logout"/>
             </div>
         </div>
         <div class="large-12 small-12 columns zero-padding front">
@@ -30,13 +36,16 @@
                 <div class="tab-content padding" id="panel1">
                     <div class="row">
                         <div class="large-12 small-12 columns">
-                            <table class="large-12 small-12 columns">
+                            <table class="large-12 small-12 columns table">
                                 <tr>
-                                    <th>S.No.</th>
-                                    <th>Worker</th>
-                                    <th>Patient</th>
-                                    <th>Date</th>
-                                    <th>Assigned By</th>
+                                    <th class="large-1 columns">S.No.</th>
+                                    <th class="large-2 columns">Worker</th>
+                                    <th class="large-2 columns">Patient</th>
+                                    <th class="large-1 columns">Visit Type</th>
+                                    <th class="large-2 columns">Date</th>
+                                    <th class="large-2 columns">Assigned By</th>
+                                    <th class="large-1 columns">Status</th>
+                                    <th class="large-1 columns">Remove</th>
                                 </tr>
                                 <%
                                     var i=1;
@@ -44,11 +53,63 @@
                                     for(var encounter in allEncounters) {
                                         %>
                                             <tr>
-                                                <th><%= i %></th>
-                                                <th><%= encounter.workerId %></th>
-                                                <th><%= encounter.patientId %></th>
-                                                <th><%= encounter.date %></th>
-                                                <th><%= encounter.doctorId %></th>
+                                                <th class="large-1 columns"><%= i %></th>
+                                                <th class="large-2 columns">
+                                                    <%
+                                                        var allWorkers = JSON.parse(workers);
+                                                        for(var worker in allWorkers){
+                                                            if(allWorkers[worker].id == allEncounters[encounter].workerId) {
+                                                            %>
+                                                                 <%= allWorkers[worker].firstName + ' ' + allWorkers[worker].lastName %>
+                                                            <%
+                                                                break;
+                                                            }
+                                                        }
+                                                    %>
+                                                </th>
+                                                <th class="large-2 columns">
+                                                    <%
+                                                        var allPatients = JSON.parse(patients);
+                                                        for(var patient in allPatients){
+                                                            if(allPatients[patient].id == allEncounters[encounter].patientId) {
+                                                            %>
+                                                                <%= allPatients[patient].firstName + ' ' + allPatients[patient].lastName + ' (' + allPatients[patient].id + ')' %>
+                                                            <%
+                                                                break;
+                                                            }
+                                                        }
+                                                    %>
+                                                </th>
+                                                <th class="large-1 columns">
+                                                    <%
+                                                        var allVisits = JSON.parse(visits);
+                                                        for(var visit in allVisits){
+                                                            if(allVisits[visit].id == allEncounters[encounter].visitId) {
+                                                        %>
+                                                            <%= allVisits[visit].type %>
+                                                        <%
+                                                            break;
+                                                        }
+                                                    }
+                                                    %>
+                                                </th>
+                                                <% var date1 = new Date(allEncounters[encounter].date); %>
+                                                <th class="large-2 columns"><%= (date1.getMonth()+1) + '/' + date1.getDate() + '/' + date1.getFullYear() + '  ' + (date1.getHours() > 9 ? date1.getHours() : "0" + date1.getHours()) + ':' + (date1.getMinutes() > 9 ? date1.getMinutes() : "0" + date1.getMinutes()) %></th>
+                                                <th class="large-2 columns">
+                                                    <%
+                                                        var allDoctors = JSON.parse(doctors);
+                                                        for(var doctor1 in allDoctors){
+                                                            if(allDoctors[doctor1].id == allEncounters[encounter].doctorId) {
+                                                            %>
+                                                                <%= allDoctors[doctor1].firstName + ' ' + allDoctors[doctor1].lastName %>
+                                                            <%
+                                                                break;
+                                                            }
+                                                        }
+                                                    %>
+                                                </th>
+                                                <th class="large-1 columns"><%= allEncounters[encounter].status %></th>
+                                                <th class="large-1 columns"><input type="button" id="<%= allEncounters[encounter].id %>" class="button ex-tiny alert remove-button" value="Remove" style="margin:0px !important"/></th>
                                             </tr>
                                         <%
                                         i++;
@@ -65,7 +126,7 @@
                             <form method="POST" action="/home/dashboard">
                                 <label class="large-12 small-12 columns sub-header">Create Encounter</label>
                                 <div class="large-6 small-6 columns">
-                                    <select name="assignedWorker">
+                                    <select name="assignedWorker" aria-required="true" required>
                                         <%
                                             var allWorkers = JSON.parse(workers);
                                             for(var worker in allWorkers){
@@ -75,7 +136,7 @@
                                     </select>
                                 </div>
                                 <div class="large-6 small-6 columns">
-                                    <select name="assignedPatient">
+                                    <select name="assignedPatient" aria-required="true" required>
                                         <%
                                             var allPatients = JSON.parse(patients);
                                             for(var patient in allPatients){
@@ -85,11 +146,32 @@
                                     </select>
                                 </div>
                                 <div class="large-6 small-6 columns">
-                                    <input type="text" placeholder="Date" class="datepicker" name="dob"/>
+                                    <input type="text" placeholder="Date" class="datetimepicker" name="date" aria-required="true" required/>
                                 </div>
                                 <div class="large-6 small-6 columns">
-                                    <input type="text" disabled value="<%= doctor[0].name %>" required/>
-                                    <input type="hidden" name="assignedDoctor" value="<%= doctor[0].id %>"/>
+                                    <select name="visit" aria-required="true" required>
+                                        <%
+                                            var allVisits = JSON.parse(visits);
+                                            for(var visit in allVisits){
+                                        %>
+                                                <option value="<%= allVisits[visit].id %>"><%= allVisits[visit].type %></option>
+                                        <% } %>
+                                    </select>
+                                </div>
+                                <div class="large-6 small-6 columns">
+                                    <input type="text" disabled value="<%= doctor.firstName + " " + doctor.lastName %>" aria-required="true" required/>
+                                    <input type="hidden" name="assignedDoctor" value="<%= doctor.id %>"/>
+                                </div>
+                                <div class="large-12 small-12 columns">
+                                    <input type="submit" value="Add Encounter" class="button tiny success"/>
+                                    <input type="hidden" name="type" value="addEncounter"/><br/>
+                                    <%
+                                        if(encounterMessage != null) {
+                                        %>
+                                            <span class="label alert"><%= encounterMessage %></span>
+                                        <%
+                                        }
+                                    %>
                                 </div>
                             </form>
                         </div>
@@ -102,19 +184,19 @@
                             <form method="POST" action="/home/dashboard">
                                 <label class="large-12 small-12 columns sub-header">Add New Worker</label>
                                 <div class="large-6 small-6 columns">
-                                    <input type="text" placeholder="First Name" name="firstName" required/>
+                                    <input type="text" placeholder="First Name" name="firstName" aria-required="true" required/>
                                 </div>
                                 <div class="large-6 small-6 columns">
-                                    <input type="text" placeholder="Last Name" name="lastName" required/>
+                                    <input type="text" placeholder="Last Name" name="lastName" aria-required="true" required/>
                                 </div>
                                 <div class="large-6 small-6 columns">
-                                    <select name="gender">
+                                    <select name="gender" aria-required="true" required>
                                         <option value="0">Male</option>
                                         <option value="1">Female</option>
                                     </select>
                                 </div>
                                 <div class="large-6 small-6 columns">
-                                    <input type="text" placeholder="Date" class="datepicker" name="dob"/>
+                                    <input type="text" placeholder="Date" class="datepicker" name="dob" aria-required="true" required/>
                                 </div>
                                 <div class="large-12 small-12 columns">
                                     <input type="submit" value="Add Worker" class="button tiny success"/>
@@ -135,22 +217,22 @@
                 <div class="tab-content padding" id="panel4">
                     <div class="row">
                         <div class="large-6 small-12 large-offset-3 columns login-box">
-                            <form method="POST" action="/user/dashboard">
+                            <form method="POST" action="/home/dashboard">
                                 <label class="large-12 small-12 columns sub-header">Add New Patient</label>
                                 <div class="large-6 small-6 columns">
-                                    <input type="text" placeholder="First Name" name="firstName" required/>
+                                    <input type="text" placeholder="First Name" name="firstName" aria-required="true" required/>
                                 </div>
                                 <div class="large-6 small-6 columns">
-                                    <input type="text" placeholder="Last Name" name="lastName" required/>
+                                    <input type="text" placeholder="Last Name" name="lastName" aria-required="true" required/>
                                 </div>
                                 <div class="large-6 small-6 columns">
-                                    <select name="gender">
+                                    <select name="gender" aria-required="true" required>
                                         <option value="0">Male</option>
                                         <option value="1">Female</option>
                                     </select>
                                 </div>
                                 <div class="large-6 small-6 columns">
-                                    <input type="text" placeholder="Date" class="datepicker" name="dob"/>
+                                    <input type="text" placeholder="Date" class="datepicker" name="dob" aria-required="true" required/>
                                 </div>
                                 <div class="large-12 small-12 columns">
                                     <input type="submit" value="Add Patient" class="button tiny success"/>

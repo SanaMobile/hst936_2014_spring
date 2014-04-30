@@ -24,9 +24,9 @@ module.exports = {
    */
    login: function (req, res) {
       if(req.method == 'POST' && req.param('email') != null && req.param('password') != null) {
-          Doctor.find()
+          Doctor.findOne(1)
               .where({
-                  email: req.param('email')
+                  email: 'sample@sample.com'
               })
               .done(function(err, doctor){
                   if(err || doctor == null) {
@@ -36,11 +36,11 @@ module.exports = {
                   }
 
                   //CHECK PASSWORD
-//                  if(doctor.password != req.param('password')) {
-//                      return res.view({
-//                          loginError: "Incorrect Password"
-//                      });
-//                  }
+                  if(doctor.password != req.param('password')) {
+                      return res.view({
+                          loginError: "Incorrect Password"
+                      });
+                  }
 
                   req.session.user = doctor;
                   return res.redirect('/home/dashboard');
@@ -62,16 +62,26 @@ module.exports = {
       return res.redirect('/home/login');
   },
 
-  created: function(req, res) {
+  initialize: function(req, res) {
       Doctor.create({
-          name: 'Team23',
-          email: 'admin@sana.com',
-          password: 'team23'
+          firstName: 'Sample',
+          lastName: 'Doctor',
+          email: 'sample@sample.com',
+          password: 'hello1'
       }).done(function(err, doctor){
           if(err) return res.json(err);
 
           return res.json(doctor);
-      })
+      });
+
+      var list = ["Follow-up", "New Patient", "Nursing only", "Urgent", "Wellness Exam"];
+      for(var listItem in list) {
+          Visit.create({
+              type: list[listItem]
+          }).done(function(err, visit){
+              // VISIT CREATED
+          });
+      }
   },
 
   /**
@@ -97,9 +107,9 @@ module.exports = {
                   gender: gender,
                   dob: dob
               }).done(function(err, patient){
-                  if(err) return dashboardLoad(null, 'Failed to Add New Patient');
+                  if(err) return dashboardLoad(null, 'Failed to Add New Patient', null);
 
-                  return dashboardLoad(null, 'New Patient Added');
+                  return dashboardLoad(null, 'New Patient Added', null);
               });
           } else if(req.param('type') == 'addWorker' && req.param('firstName') != null && req.param('lastName') != null
               && req.param('dob') != null && req.param('gender') != null) {
@@ -114,17 +124,38 @@ module.exports = {
                   gender: gender,
                   dob: dob
               }).done(function(err, worker){
-                  if(err) return dashboardLoad('Failed to Add Worker', null)
+                  if(err) return dashboardLoad('Failed to Add Worker', null, null)
 
-                  return dashboardLoad('New Worker Added', null);
+                  return dashboardLoad('New Worker Added', null, null);
               });
+          } else if(req.param('type') == 'addEncounter' && req.param('assignedWorker') != null && req.param('assignedPatient') != null
+              && req.param('assignedDoctor') != null && req.param('date') != null && req.param('visit') != null) {
+              var worker = req.param('assignedWorker');
+              var patient = req.param('assignedPatient');
+              var doctor = req.param('assignedDoctor');
+              var visit = req.param('visit');
+              var date = new Date(req.param('date'));
+
+              Encounter.create({
+                  patientId: worker,
+                  workerId: patient,
+                  doctorId: doctor,
+                  visitId: visit,
+                  date: date
+              }).done(function(err, encounter){
+                  if(err) return dashboardLoad(null, null, 'Failed to Add Encounter')
+
+                  return dashboardLoad(null, null, 'New Encounter Added');
+              });
+          } else {
+              return dashboardLoad(null, null, null);
           }
       } else {
-          return dashboardLoad(null, null);
+          return dashboardLoad(null, null, null);
       }
 
 
-      function dashboardLoad(workerMessage, patientMessage) {
+      function dashboardLoad(workerMessage, patientMessage, encounterMessage) {
           Encounter.find().done(function(err, encounters){
               if(err || !encounters) return res.json({status: 500, error: 'Internal Error. Contact Technical Support.'});
 
@@ -134,13 +165,22 @@ module.exports = {
                   Worker.find().done(function(err, workers){
                       if(err) return res.json({status: 500, error: 'Internal Error. Contact Technical Support.'});
 
-                      return res.view({
-                          doctor: req.session.user,
-                          encounters: JSON.stringify(encounters),
-                          workerMessage: workerMessage,
-                          patientMessage: patientMessage,
-                          patients: JSON.stringify(patients),
-                          workers: JSON.stringify(workers)
+                      Doctor.find().done(function(err, doctors){
+                          if(err) return res.json({status: 500, error: 'Internal Error. Contact Technical Support.'});
+
+                          Visit.find().done(function(err, visits){
+                              return res.view({
+                                  doctor: req.session.user,
+                                  encounters: JSON.stringify(encounters),
+                                  workerMessage: workerMessage,
+                                  patientMessage: patientMessage,
+                                  encounterMessage: encounterMessage,
+                                  patients: JSON.stringify(patients),
+                                  workers: JSON.stringify(workers),
+                                  doctors: JSON.stringify(doctors),
+                                  visits: JSON.stringify(visits)
+                              });
+                          });
                       });
                   });
               });

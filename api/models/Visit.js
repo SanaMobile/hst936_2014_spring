@@ -1,5 +1,5 @@
 /**
- * Encounter
+ * Visit
  *
  * @module      :: Model
  * @description :: A short summary of how this model works and what it represents.
@@ -7,10 +7,12 @@
  */
 
 module.exports = {
-    attributes: {
-        patientId: 'INTEGER',
-        workerId: 'INTEGER',
-        doctorId: 'INTEGER',
-        date: 'DATETIME'
-    }
+
+  attributes: {
+      type: {
+          type: 'STRING',
+          required: true
+      }
+  }
+
 };

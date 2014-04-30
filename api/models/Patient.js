@@ -32,7 +32,7 @@ module.exports = {
             type: 'STRING'
         },
         status: {
-            type: 'BOOL',
+            type: 'STRING',
             defaultsTo: 'Active'
         },
         email: {

@@ -33,6 +33,12 @@ body {
     z-index: 1;
 }
 
+.ex-tiny {
+    padding: 5px;
+    font-size: 0.8em;
+    margin: 2px !important;
+}
+
 .login-box {
     padding: 20px;
     box-shadow: 0 2px 4px #ccc;
@@ -120,4 +126,10 @@ body {
 }
 .front {
     z-index: 999;
+}
+
+table,
+table tr th,
+table tr td {
+    font-size: 0.9em;
 }

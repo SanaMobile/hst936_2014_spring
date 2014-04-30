@@ -1,2 +1,10 @@
-// Start sails and pass it command line arguments
-require('sails').lift(require('optimist').argv);
+// Start sails
+require('sails').lift(
+    {
+        appName: "Sana MDS"
+    },
+    function(err, sails) {
+        // pass it command line arguments
+        require('optimist').argv;
+    }
+);
