@@ -50,6 +50,31 @@
     return libraryPath;
 }
 
++ (NSString *)saveImage:(UIImage *)img forExtension:(NSString *)extension {
+    NSData *data;
+    if([extension isEqualToString:@"png"]) {
+        data = UIImagePNGRepresentation(img);
+    } else {
+        data = UIImageJPEGRepresentation(img, 1.0f);
+    }
+
+    if(data == nil)
+        return nil;
+
+    BOOL saved = NO;
+
+    NSString *filePath = [self getFullPathForFileName:[[self getUniqueUUID] stringByAppendingPathExtension:extension]];
+    if([[NSFileManager defaultManager] createFileAtPath:filePath contents:data attributes:nil]){
+        saved = YES;
+    }
+
+    if(saved) {
+        return filePath;
+    } else {
+        return nil;
+    }
+}
+
 + (Procedure *)saveProcedure:(NSData *)data forType:(NSString *)extension withName:(NSString *)title {
     if(data == nil)
         return nil;

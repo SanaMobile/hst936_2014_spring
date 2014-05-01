@@ -19,7 +19,6 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 
     [self updateNavigationBarStyle];
-    [self initializeLocationManager];
     
     SanaHomePageViewController *homePageController = [[SanaHomePageViewController alloc] init];
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:homePageController];
@@ -43,12 +42,6 @@
     [[UIBarButtonItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor lightGrayColor], NSForegroundColorAttributeName, [UIFont fontWithName:@"HelveticaNeue-Light" size:15.0], NSFontAttributeName, nil] forState:UIControlStateDisabled];
 
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:YES];
-}
-
-- (void)initializeLocationManager {
-    CLLocationManager *locationManager = [[CLLocationManager alloc] init];
-    [locationManager startUpdatingLocation];
-    [locationManager stopUpdatingLocation];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

@@ -47,8 +47,6 @@
         [self.containerView addSubview:self.proceduresTableView];
         [self.view addSubview:self.containerView];
 
-//        [self.view addSubview:self.proceduresTableView];
-
         [self.navigationItem setTitle:@"Procedures"];
         [self.view setBackgroundColor:[UIColor clearColor]];
 

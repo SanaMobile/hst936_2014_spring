@@ -15,12 +15,14 @@
 #import "Answer.h"
 #import "SanaCoreData.h"
 #import "SanaParseXML.h"
+#import "SanaFileManager.h"
 
-@interface SanaProcedureDetailsViewController : UIViewController <UIScrollViewDelegate, UITextFieldDelegate, UITextViewDelegate, MultiSelectDelegate>
+@interface SanaProcedureDetailsViewController : UIViewController <UIScrollViewDelegate, UITextFieldDelegate, UITextViewDelegate, MultiSelectDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
 - (id)initWithProcedure:(Procedure *)procedure inEditMode:(BOOL)editMode;
 
 - (void)didChangeSwitchValue:(id)sender;
 - (void)textFieldDidChangeValue:(id)sender;
+- (void)didTapPicturePicker:(SanaAttributedPicturePicker *)picker;
 
 @end

@@ -79,13 +79,13 @@
         }
 
         if(current_y <= v.bounds.size.height) {
-//            [v setScrollEnabled:NO];
+            [v setScrollEnabled:NO];
             CGRect frame = v.frame;
             frame.origin.y = frame.size.height/2 - current_y/2;
             frame.size.height = current_y;
             v.frame = frame;
         } else {
-//            [v setScrollEnabled:YES];
+            [v setScrollEnabled:YES];
         }
 
         [v setScrollEnabled:YES];
@@ -214,14 +214,15 @@
         // SELECT ONE
         [self createPicker:element inView:view];
     }
-    else if ([type isEqualToString:@"IMAGE"]){
+    else if ([type isEqualToString:@"IMAGE"] || [type isEqualToString:@"PICTURE"]){
         // IMAGE PICKER
-        [self element:element notAvailable:@"IMAGE" inView:view];
+//        [self element:element inView:view];
+        [self createImagePicker:element inView:view];
     }
-    else if ([type isEqualToString:@"PICTURE"]){
-        // IMAGE PICKER
-        [self element:element notAvailable:@"PICTURE" inView:view];
-    }
+//    else if ([type isEqualToString:@"PICTURE"]){
+//        // IMAGE PICKER
+//        [self element:element inView:view];
+//    }
     else if ([type isEqualToString:@"SOUND"]){
         // RECORD SOUND
     }
@@ -229,13 +230,13 @@
         /*
          * NO REFERENCE
          */
-        [self element:element notAvailable:@"BINARY FILE" inView:view];
+        [self element:element inView:view];
     }
     else if ([type isEqualToString:@"INVALID"]){
         /*
          * NO REFERENCE
          */
-        [self element:element notAvailable:@"INVALID" inView:view];
+        [self element:element inView:view];
     }
     else if ([type isEqualToString:@"GPS"] || [type isEqualToString:@"GEOGRAPHICAL LOCATION"]){
         // RECORD CURRENT GPS COORDINATES
@@ -253,19 +254,19 @@
         /*
          * ONLY FOR ANDROID
          */
-        [self element:element notAvailable:@"EDUCATION RESOURCE" inView:view];
+        [self element:element inView:view];
     }
     else if ([type isEqualToString:@"PLUGIN"]){
         /*
          * ONLY FOR ANDROID 
          */
-        [self element:element notAvailable:@"PLUGIN" inView:view];
+        [self element:element inView:view];
     }
     else if ([type isEqualToString:@"PLUGIN_ENTRY"]){
         /* 
          * ONLY FOR ANDROID 
          */
-        [self element:element notAvailable:@"PLUGIN ENTRY" inView:view];
+        [self element:element inView:view];
     }
     else {
         NSLog(@"%@ : Element cannot be parsed.", type);
@@ -319,18 +320,19 @@
     return inputField;
 }
 
-- (void)element:(GDataXMLElement *)element notAvailable:(NSString *)title inView:(UIView *)view {
+- (void)element:(GDataXMLElement *)element inView:(UIView *)view {
     if ([[[element attributeForName:@"question"] stringValue] length] > 0) {
         [self createLabel:[[element attributeForName:@"question"] stringValue] inView:view];
     }
 
+    NSString *type = [[[element attributeForName:@"type"] stringValue] lowercaseString];
     SanaAttributedTextField *inputField = [[SanaAttributedTextField alloc]initWithFrame:CGRectMake(PADDING, current_y, view.bounds.size.width - (2 * PADDING), INPUT_FIELD_HEIGHT)];
     inputField.backgroundColor = [UIColor whiteColor];
     inputField.delegate = self.controller;
     inputField.textAlignment = NSTextAlignmentCenter;
     inputField.enabled = NO;
     inputField.font = [UIFont fontWithName:HELVETICA_LIGHT size:NORMAL_FONT_SIZE];
-    inputField.text = @"Feature not available yet";
+    inputField.text = [type stringByAppendingString:@" feature coming soon"];
 
     [view addSubview:inputField];
     current_y += INPUT_FIELD_HEIGHT + PADDING;
@@ -543,6 +545,29 @@
         [view addSubview:attributedSwitch];
         current_y += LABEL_HEIGHT + (5 * PADDING);
     }
+}
+
+-(void)createImagePicker:(GDataXMLElement *) imageElement inView:(UIView *)view {
+    if ([[[imageElement attributeForName:@"question"] stringValue] length] > 0) {
+        [self createLabel:[[imageElement attributeForName:@"question"] stringValue] inView:view];
+    }
+
+    UIImage *img = nil;
+    NSString *existing = [self answerForId:[[imageElement attributeForName:@"id"] stringValue]];
+    if([existing length] > 0) {
+        NSData *data = [NSData dataWithContentsOfFile:existing];
+        img = [UIImage imageWithData:data];
+    }
+
+    SanaAttributedPicturePicker *picturePicker = [[SanaAttributedPicturePicker alloc] initWithFrame:CGRectMake(PADDING, current_y, view.bounds.size.width - (2 * PADDING), PICKER_HEIGHT) withSelectedImage:img];
+    picturePicker.elementId = [[imageElement attributeForName:@"id"] stringValue];
+    picturePicker.question = [[imageElement attributeForName:@"question"] stringValue];
+    [picturePicker addTarget:self.controller action:@selector(didTapPicturePicker:) forControlEvents:UIControlEventTouchDown];
+
+    [self.existingElements addObject:picturePicker];
+
+    [view addSubview:picturePicker];
+    current_y += PICKER_HEIGHT + PADDING;
 }
 
 /*

@@ -18,6 +18,7 @@
 #import "SanaAttributedSwitch.h"
 #import "SanaAttributedDatePickerView.h"
 #import "SanaAttributedTableView.h"
+#import "SanaAttributedPicturePicker.h"
 #import "Element.h"
 #import "Procedure.h"
 #import "Answer.h"

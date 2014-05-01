@@ -72,6 +72,7 @@
         [self.containerView addSubview:self.viewNotificationsButton];
 
         [self.view addSubview:self.containerView];
+        [self initializeLocationManager];
     }
     return self;
 }
@@ -102,6 +103,20 @@
 
 - (void)viewNotificationsClicked:(UIButton *)sender {
 
+}
+
+- (void)initializeLocationManager {
+    CLLocationManager *locationManager = [[CLLocationManager alloc] init];
+    [locationManager setDelegate:self];
+    [locationManager startUpdatingLocation];
+}
+
+- (void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status {
+//    [manager stopUpdatingLocation];
+}
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
+//    [manager stopUpdatingLocation];
 }
 
 

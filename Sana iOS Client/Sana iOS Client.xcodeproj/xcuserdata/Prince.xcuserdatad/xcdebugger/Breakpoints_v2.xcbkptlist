@@ -9,13 +9,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Sana iOS Client/SanaProcedureDetailsViewController.m"
-            timestampString = "420406891.642378"
+            filePath = "Sana iOS Client/SanaAttributedPicturePicker.m"
+            timestampString = "420666709.172201"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "334"
-            endingLineNumber = "334"
-            landmarkName = "-multiSelectAnswersUpdated:onElementId:"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "-setSelectedImage:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -26,12 +26,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Sana iOS Client/SanaProcedureDetailsViewController.m"
-            timestampString = "420406891.642378"
+            timestampString = "420665382.149012"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "333"
-            endingLineNumber = "333"
-            landmarkName = "-multiSelectAnswersUpdated:onElementId:"
+            startingLineNumber = "234"
+            endingLineNumber = "234"
+            landmarkName = "-terminateProcedure"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -42,12 +42,58 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Sana iOS Client/SanaProcedureDetailsViewController.m"
-            timestampString = "420406891.642378"
+            timestampString = "420665391.178306"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "332"
-            endingLineNumber = "332"
-            landmarkName = "-multiSelectAnswersUpdated:onElementId:"
+            startingLineNumber = "233"
+            endingLineNumber = "233"
+            landmarkName = "-terminateProcedure"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[SanaProcedureDetailsViewController terminateProcedure]"
+                  moduleName = "Sana iOS Client"
+                  urlString = "file:///iOS/vit-08/Sana%20iOS%20Client/Sana%20iOS%20Client/SanaProcedureDetailsViewController.m"
+                  timestampString = "420665415.188102"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "233"
+                  endingLineNumber = "233"
+                  offsetFromSymbolStart = "1782">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[SanaProcedureDetailsViewController terminateProcedure]"
+                  moduleName = "Sana iOS Client"
+                  urlString = "file:///iOS/vit-08/Sana%20iOS%20Client/Sana%20iOS%20Client/SanaProcedureDetailsViewController.m"
+                  timestampString = "420665415.188481"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "233"
+                  endingLineNumber = "233"
+                  offsetFromSymbolStart = "1821">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Sana iOS Client/SanaProcedureDetailsViewController.m"
+            timestampString = "420666943.544606"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "346"
+            endingLineNumber = "346"
+            landmarkName = "-didTapPicturePicker:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -57,61 +103,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Sana iOS Client/SanaParseXML.m"
-            timestampString = "420414286.337007"
+            filePath = "Sana iOS Client/SanaProcedureDetailsViewController.m"
+            timestampString = "420667122.536457"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "473"
-            endingLineNumber = "473"
-            landmarkName = "-createMultiSelectPicker:inView:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Sana iOS Client/SanaParseXML.m"
-            timestampString = "420414286.337007"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "276"
-            endingLineNumber = "276"
-            landmarkName = "-answerForId:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Sana iOS Client/SanaParseXML.m"
-            timestampString = "420414286.337007"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "277"
-            endingLineNumber = "277"
-            landmarkName = "-answerForId:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Sana iOS Client/SanaParseXML.m"
-            timestampString = "420414286.337007"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "278"
-            endingLineNumber = "278"
-            landmarkName = "-answerForId:"
+            startingLineNumber = "360"
+            endingLineNumber = "360"
+            landmarkName = "-imagePickerController:didFinishPickingMediaWithInfo:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

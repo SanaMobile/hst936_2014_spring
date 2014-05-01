@@ -11,6 +11,8 @@
 
 @interface SanaFileManager : NSObject
 
++ (NSString *)saveImage:(UIImage *)img forExtension:(NSString *)extension;
+
 + (Procedure *)saveProcedure:(NSData *)data forType:(NSString *)extension withName:(NSString *)title;
 
 @end

@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A326890B1912C47000CECC50 /* SanaAttributedPicturePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = A326890A1912C47000CECC50 /* SanaAttributedPicturePicker.m */; };
+		A326890E1912D66600CECC50 /* choose_image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A326890C1912D66600CECC50 /* choose_image.jpg */; };
+		A326890F1912D66600CECC50 /* choose_image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A326890C1912D66600CECC50 /* choose_image.jpg */; };
+		A32689101912D66600CECC50 /* choose_photo@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A326890D1912D66600CECC50 /* choose_photo@2x.jpg */; };
+		A32689111912D66600CECC50 /* choose_photo@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A326890D1912D66600CECC50 /* choose_photo@2x.jpg */; };
 		A3D03C8F18E5BDB600510D84 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3D03C8E18E5BDB600510D84 /* Foundation.framework */; };
 		A3D03C9118E5BDB600510D84 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3D03C9018E5BDB600510D84 /* CoreGraphics.framework */; };
 		A3D03C9318E5BDB600510D84 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3D03C9218E5BDB600510D84 /* UIKit.framework */; };
@@ -159,6 +164,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A32689091912C47000CECC50 /* SanaAttributedPicturePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SanaAttributedPicturePicker.h; sourceTree = "<group>"; };
+		A326890A1912C47000CECC50 /* SanaAttributedPicturePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SanaAttributedPicturePicker.m; sourceTree = "<group>"; };
+		A326890C1912D66600CECC50 /* choose_image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = choose_image.jpg; sourceTree = "<group>"; };
+		A326890D1912D66600CECC50 /* choose_photo@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "choose_photo@2x.jpg"; sourceTree = "<group>"; };
 		A3D03C8B18E5BDB600510D84 /* Sana iOS Client.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sana iOS Client.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3D03C8E18E5BDB600510D84 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A3D03C9018E5BDB600510D84 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -438,6 +447,8 @@
 		A3D03CD018EC68DF00510D84 /* Image Assets */ = {
 			isa = PBXGroup;
 			children = (
+				A326890C1912D66600CECC50 /* choose_image.jpg */,
+				A326890D1912D66600CECC50 /* choose_photo@2x.jpg */,
 				A3D03DC418EF134F00510D84 /* switch_off@2x.jpg */,
 				A3D03DC518EF134F00510D84 /* switch_on@2x.jpg */,
 				A3D03DBE18EF131B00510D84 /* switch_off.jpg */,
@@ -549,6 +560,8 @@
 				A3D03E271903166A00510D84 /* SanaAttributedDatePickerView.m */,
 				A3D03DBA18EF130400510D84 /* SanaAttributedSwitch.h */,
 				A3D03DBB18EF130400510D84 /* SanaAttributedSwitch.m */,
+				A32689091912C47000CECC50 /* SanaAttributedPicturePicker.h */,
+				A326890A1912C47000CECC50 /* SanaAttributedPicturePicker.m */,
 			);
 			name = Subclasses;
 			sourceTree = "<group>";
@@ -656,6 +669,7 @@
 			files = (
 				A3D03DC018EF131B00510D84 /* switch_off.jpg in Resources */,
 				A3D03CFB18EC68EB00510D84 /* save_encounter_on@2x.png in Resources */,
+				A326890E1912D66600CECC50 /* choose_image.jpg in Resources */,
 				A3D03C9B18E5BDB600510D84 /* InfoPlist.strings in Resources */,
 				A3D03D5018EC94B600510D84 /* test_procedure_sana_2_0.xml in Resources */,
 				A3D03CF918EC68EB00510D84 /* save_encounter_off@2x.png in Resources */,
@@ -682,6 +696,7 @@
 				A3D03CE718EC68EB00510D84 /* add_photo_h@2x.png in Resources */,
 				A3D03CF718EC68EB00510D84 /* sana_logo@2x.png in Resources */,
 				A3D03CF118EC68EB00510D84 /* list_arrow_h@2x.png in Resources */,
+				A32689101912D66600CECC50 /* choose_photo@2x.jpg in Resources */,
 				A3D03D5218EC94B600510D84 /* test_proc.xml in Resources */,
 				A3D03DC218EF131B00510D84 /* switch_on.jpg in Resources */,
 				A3D03E3819093D5E00510D84 /* sample_2.xml in Resources */,
@@ -693,6 +708,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A3D03E301903225A00510D84 /* sample_1.xml in Resources */,
+				A326890F1912D66600CECC50 /* choose_image.jpg in Resources */,
 				A3D03CC518E5BF4000510D84 /* sana.ios.old.zip in Resources */,
 				A3D03D5318EC94B600510D84 /* test_proc.xml in Resources */,
 				A3D03DC118EF131B00510D84 /* switch_off.jpg in Resources */,
@@ -713,6 +729,7 @@
 				A3D03D5A18EDC3C600510D84 /* mountain_village.jpg in Resources */,
 				A3D03CE618EC68EB00510D84 /* add_photo@2x.png in Resources */,
 				A3D03CFA18EC68EB00510D84 /* save_encounter_off@2x.png in Resources */,
+				A32689111912D66600CECC50 /* choose_photo@2x.jpg in Resources */,
 				A3D03CF418EC68EB00510D84 /* view_notifications@2x.png in Resources */,
 				A3D03CF818EC68EB00510D84 /* sana_logo@2x.png in Resources */,
 				A3D03CF018EC68EB00510D84 /* list_arrow@2x.png in Resources */,
@@ -751,6 +768,7 @@
 				A3D03E34190338A800510D84 /* Element.m in Sources */,
 				A3D03DB418EEC05600510D84 /* SanaPickerDataSource.m in Sources */,
 				A3D03CA418E5BDB600510D84 /* Sana_iOS_Client.xcdatamodeld in Sources */,
+				A326890B1912C47000CECC50 /* SanaAttributedPicturePicker.m in Sources */,
 				A3E0BF36190D2CDB00582DE3 /* SanaMultiSelectDataSource.m in Sources */,
 				A3E0BF39190D314B00582DE3 /* SanaAttributedTableView.m in Sources */,
 				A3D03E281903166A00510D84 /* SanaAttributedDatePickerView.m in Sources */,

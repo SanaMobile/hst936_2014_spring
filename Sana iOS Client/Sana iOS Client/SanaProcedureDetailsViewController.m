@@ -24,6 +24,7 @@
 @property (nonatomic, strong) UITextView *currentTextView;
 @property (nonatomic, strong) UIBarButtonItem *nextButton;
 @property (nonatomic, strong) UIBarButtonItem *backButton;
+@property (nonatomic, retain) NSString *pictureElementId;
 
 @property (nonatomic, strong) NSMutableArray *widgetsArray;
 @property (nonatomic, strong) NSMutableArray *currentGroupWidgetsArray;
@@ -206,21 +207,9 @@
 }
 
 - (void)terminateProcedure {
-    NSString *final = @"";
     for(NSDictionary *dict in self.allAnsweredElements) {
         for(UIView *view in dict[@"Elements"]) {
-            NSString *pageNumber = [NSString stringWithFormat:@"%@", dict[@"Page"]];
-            final = [[[final stringByAppendingString:@"Page : "] stringByAppendingString:pageNumber] stringByAppendingString:@", "];
-            final = [[[final stringByAppendingString:@"Element : "] stringByAppendingString:[view valueForKey:@"elementId"]] stringByAppendingString:@" => "];
-            final = [final stringByAppendingString:@" "];
-            final = [final stringByAppendingString:[view valueForKey:@"answer"]];
-            final = [final stringByAppendingString:@"\n"];
-        }
-    }
 
-    for(NSDictionary *dict in self.allAnsweredElements) {
-        for(UIView *view in dict[@"Elements"]) {
-            NSString *answer = [view valueForKey:@"answer"];
             NSString *elementId = [view valueForKey:@"elementId"];
 
             Answer *ans = [[SanaCoreData sharedCoreData] createObjectNamed:@"Answer"];
@@ -236,17 +225,21 @@
 
             if(ans) {
                 [ans setProcedure:self.procedure];
-                [ans setAnswer:answer];
                 [ans setElementId:elementId];
+
+                if([view respondsToSelector:NSSelectorFromString(@"answer")]) {
+                    NSString *answer = [view valueForKey:@"answer"];
+                    [ans setAnswer:answer];
+                } else if ([view respondsToSelector:NSSelectorFromString(@"selectedImage")]) {
+                    UIImage *img = [view valueForKey:@"selectedImage"];
+                    [ans setAnswer:[SanaFileManager saveImage:img forExtension:@"jpg"]];
+                }
             }
         }
     }
     [[SanaCoreData sharedCoreData] save];
-
-//    [[[UIAlertView alloc] initWithTitle:@"Procedure" message:@"Complete" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil] show];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
-
 
 
 - (void)removeElementsInScrollView:(UIScrollView *)scrollView afterOffset:(double)xPoint {
@@ -301,6 +294,20 @@
     return NO;
 }
 
+- (UIView *)getElementForId:(NSString *)elemId{
+    for(NSDictionary *dict in self.allAnsweredElements) {
+        for(UIView *view in dict[@"Elements"]) {
+            if([view valueForKey:@"elementId"] != nil) {
+                if([[view valueForKey:@"elementId"] isEqual:elemId]) {
+                    return view;
+                }
+            }
+        }
+    }
+
+    return nil;
+}
+
 - (void)setAnswer:(NSString *)answer forElementId:(NSString *)elemId {
     for(NSDictionary *dict in self.allAnsweredElements) {
         for(UIView *view in dict[@"Elements"]) {
@@ -332,6 +339,35 @@
     if([self elementForId:elementId]) {
         [self setAnswer:answers forElementId:elementId];
     }
+}
+
+- (void)didTapPicturePicker:(SanaAttributedPicturePicker *)picker {
+    if([self elementForId:picker.elementId]) {
+        self.pictureElementId = picker.elementId;
+
+        UIImagePickerController *imagePickerController = [[UIImagePickerController alloc] init];
+        [imagePickerController setSourceType:UIImagePickerControllerSourceTypePhotoLibrary];
+        [imagePickerController setDelegate:self];
+
+        [self presentViewController:imagePickerController animated:YES completion:nil];
+    }
+}
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    if(self.pictureElementId != nil) {
+        UIImage *chosenImage = info[UIImagePickerControllerOriginalImage];
+        if(((SanaAttributedPicturePicker *)[self getElementForId:self.pictureElementId]) != nil){
+            ((SanaAttributedPicturePicker *)[self getElementForId:self.pictureElementId]).selectedImage = chosenImage;
+        }
+    }
+
+    self.pictureElementId = nil;
+    [picker dismissViewControllerAnimated:YES completion:NULL];
+}
+
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
+    self.pictureElementId = nil;
+    [picker dismissViewControllerAnimated:YES completion:NULL];
 }
 
 // TEXTFIELD AND TEXTVIEW DELEGATES

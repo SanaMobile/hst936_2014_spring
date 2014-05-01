@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreLocation/CoreLocation.h>
+
 #import "Defines.h"
 #import "SanaColorManager.h"
 #import "SanaImageManager.h"
@@ -14,6 +16,6 @@
 #import "SanaProceduresViewController.h"
 #import "SanaStoredProceduresViewController.h"
 
-@interface SanaHomePageViewController : UIViewController
+@interface SanaHomePageViewController : UIViewController <CLLocationManagerDelegate>
 
 @end
