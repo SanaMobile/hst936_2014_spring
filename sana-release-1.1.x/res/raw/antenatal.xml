@@ -1,0 +1,284 @@
+<Procedure title = "Antenatal Form(Marathi)" author="Moca">
+    <Page>
+	<Element type="ENTRY" id="patientID" concept="PATIENT ID" question="ओळखपत्र क्रमांक:" answer="" />
+</Page>
+<Page>
+	<Element type="SELECT" id="visit" concept="VISIT NUMBER" question="भेट:" answer="" choices = "1,2,3,4,5,6,7,8,9,10,11,12" />
+</Page>
+<Page>
+	<Element type="SELECT" id="dofd" concept="DATE OF VISIT" question="भेटीची तारीख(दिवस) :" answer="" choices = "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31"/>
+	<Element type="SELECT" id="dofm" concept="DATE OF VISIT" question="भेटीची तारीख(महिना):" answer="" choices = "1,2,3,4,5,6,7,8,9,10,11,12"/>
+	<Element type="SELECT" id="dofy" concept="DATE OF VISIT" question="भेटीची तारीख(वर्ष):" answer="" choices = "2012,2013,2014,2015,2016,2017,2018,2019,2020"/>
+</Page>
+<Page>
+	<Element type="SELECT" id="gestage" concept="GESTATIONAL AGE" question="गरोदरपणाचा  कालावधी (आठवड्यामध्ये):" answer="" choices = "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36"/>
+</Page>
+<Page>
+	<Element type="MULTI_SELECT" id="symptoms" concept="SYMPTOMS" answer = "" question="तपासून बघणे(जर काहीच नाही आढळल्यास “काही नाही” वर क्लिक करणे):" choices ="मळमळणे/उलट्या २४ तासापेक्षा जास्त होणे,अंगावरचे तांबडे जाणे,अंगावरून पांढरे जाणे,ओटीपोटात दुखणे,डोकेदुखी,धाप/धडधडणे,वारंवार लघवी येणे/लघवीस जळजळणे,ताप,झटके,काही नाही"/>	
+</Page>
+<Page>
+<ShowIf>
+	<Criteria type="GREATER" id="gestage" value="19"/>
+</ShowIf>
+	<Element type="RADIO" id="fetal" concept="FETAL MOVEMENTS" question="बाळाची हालचाल?" answer ="" choices = "हो,नाही"/>
+</Page>
+<Page>
+	<Element type="RADIO" id="druguse" concept="DRUG USE" question="लोह फोलिक एसिड आणि कॅल्शियम गोळ्या व्यतिरिक्त काही औषधे घेतल्यास:" answer ="" choices = "हो,नाही"/>
+</Page>
+<Page>
+	<Element type="ENTRY" id="weight" concept="WEIGHT" question="वजन:" answer=""/>
+</Page>
+<Page>
+	<Element type="ENTRY" id="bps" concept="BLOOD PRESSURE (SYSTOLIC)" question="रक्तदाब(वरचा):" answer=""/>
+	<Element type="ENTRY" id="bpd" concept="BLOOD PRESSURE (DIASTOLIC)" question="रक्तदाब(खालचा):" answer=""/>
+</Page>
+<Page>
+	<Element type="RADIO" id="pallor" concept="PALLOR" question="फिकटपणा आहे:" answer = "" choices="हो,नाही"/>
+</Page>
+<Page>
+	<Element type="RADIO" id="jaundice" concept="JAUNDICE" question="कावीळ आहे(डोळ्याची आतील पांढरे बघणे):" answer = "" choices="हो,नाही"/>
+</Page>
+<Page>
+	<Element type="RADIO" id="swelling" concept="SWELLING OF THE FEET" question="पाय सुजणे:" answer = "" choices="हो,नाही"/>
+</Page>
+<Page>
+	<Element type="RADIO" id="facialp" concept="FACIAL PUFFINESS" question="चेहऱ्यावर सूज:" answer = "" choices="हो,नाही"/>
+</Page>
+<Page>
+<ShowIf>
+<and>
+	<Criteria type="GREATER" id = "gestage" value ="23"/>
+	<Criteria type="LESS" id = "gestage" value ="36"/>
+</and>
+</ShowIf>
+	<Element type="ENTRY" id="uterineheight" concept="UTERINE HEIGHT" question="गर्भाशयाची उंची सेमी मध्ये:" answer = ""/>
+</Page>
+<Page>
+<ShowIf>
+	<and>
+	<Criteria type="GREATER" id = "gestage" value ="23"/>
+	<Criteria type="LESS" id = "gestage" value ="36"/>
+	</and>
+</ShowIf>
+	<Element type="ENTRY" id="fetalhr" concept="FETAL HEART RATE" question= "बाळाच्या हहृदयाचे ठोके:" answer = ""/>
+</Page>
+<Page>
+<ShowIf>
+	<Criteria type="GREATER" id = "gestage" value ="12"/>
+</ShowIf>
+	<Element type="RADIO" id="irontab" concept="IRON TABLETS" question="लोह युक्त गोळ्या घेते का?" answer ="" choices = "हो,नाही"/>
+</Page>
+<Page>
+	<Element type="ENTRY" id="hb" concept="Haemoglobin" question= "हिमोग्लोबिनचे प्रमाण:" answer = ""/>
+</Page>
+<Page>
+<ShowIf>
+    <and>
+        <Criteria type="LESS" id = "gestage" value ="12"/>
+	<Criteria type="LESS" id = "hb" value ="12"/>
+    </and>
+</ShowIf>
+	<Element type="RADIO" id="ifaless" concept="IFA TABLETS" question= "लोह युक्त आहार घ्या आणि तीन महिन्यानंतर लोह युक्त गोळ्या घ्या:" answer = "" choices = "खात्री करून घेतली"/>
+</Page>
+<Page>
+<ShowIf>
+    <and>
+     <Criteria type="GREATER" id = "gestage" value ="12"/>
+	<Criteria type="LESS" id = "hb" value ="12"/>   
+    </and>
+	
+</ShowIf>
+	<Element type="RADIO" id="ifagreater" concept="IFA TABLETS" question= "दररोज दोन लोह युक्त गोळ्या घ्या:" answer = "" choices = "खात्री करून घेतली"/>
+</Page>
+<Page>
+	<Element type="RADIO" id="rbsfast" concept="RANDOM BLOOD SUGAR FASTING" question= "रक्तातील साखरेचे प्रमाण:" answer = "" choices = "८-१० तास उपाशी पोटी,जेवण करून दोन तासा नंतर"/>
+</Page>
+<Page>
+	<Element type="ENTRY" id="rbs" concept="RANDOM BLOOD SUGAR" question= "रक्तातील साखरेचे प्रमाण:" answer = ""/>
+</Page>
+<Page>
+	<Element type="RADIO" id="urinen" concept="URINE TEST" question= "लघवीची चाचणी-नायट्राईट:" answer = "" choices="हो,नाही "/>
+	<Element type="RADIO" id="urinep" concept="URINE TEST" question= "लघवीची चाचणी-प्रोटीन:" answer = "" choices="हो,नाही "/>
+	<Element type="RADIO" id="urines" concept="URINE TEST" question= "लघवीची चाचणी-ग्लुकोस:" answer = "" choices="हो,नाही "/>
+</Page>
+<Page>
+<ShowIf>	
+<Criteria type="EQUALS" id = "symptoms" value="मळमळणे/उलट्या २४ तासापेक्षा जास्त होणे"/>
+</ShowIf>
+	<Element type="RADIO" id="refnausea" concept="REFERAL" question= "मळमळणे, उलट्या होत असल्यास स्थानिक दवाखान्यात संपर्क करणे:" answer = "" choices="खात्री करून घेतली"/>
+</Page>
+
+<Page>
+<ShowIf>
+    <and>
+     	<Criteria type="EQUALS" id = "fetal" value="नाही"/>
+	<Criteria type="GREATER" id = "gestage" value="19"/>   
+    </and>
+
+</ShowIf>
+	<Element type="RADIO" id="reffetal" concept="REFERAL" question= "बाळाची हालचाल होत नसल्यास स्थानिक दवाखान्यात संपर्क करणे:" answer = "" choices="खात्री करून घेतली"/>
+</Page>
+<Page>
+<ShowIf>
+	<Criteria type="EQUALS" id = "symptoms" value="अंगावरचे तांबडे जाणे"/>
+</ShowIf>
+	<Element type="RADIO" id="refbpv" concept="REFERAL" question= "अंगावरून तांबडे जात असल्यास स्थानिक दवाखान्यात संपर्क करणे:" answer = "" choices="खात्री करून घेतली"/>
+</Page>
+<Page>
+<ShowIf>
+	<Criteria type="EQUALS" id = "symptoms" value="अंगावरून पांढरे जाणे"/>
+</ShowIf>
+	<Element type="RADIO" id="refdpv" concept="REFERAL" question= "अंगावरून पांढरे जात असल्यास स्थानिक दवाखान्यात संपर्क करणे:" answer = "" choices="खात्री करून घेतली"/>
+</Page>
+<Page>
+<ShowIf>
+	<Criteria type="EQUALS" id = "symptoms" value="ओटीपोटात दुखणे"/>
+</ShowIf>
+	<Element type="RADIO" id="refpaininabdomen" concept="REFERAL" question= "ओटीपोटात दुखत असेल तर स्थानिक दवाखान्यात संपर्क करणे:" answer = "" choices="खात्री करून घेतली"/>
+</Page>
+
+<Page>
+<ShowIf>
+	<Criteria type="EQUALS" id = "symptoms" value="डोकेदुखी"/>
+</ShowIf>
+	<Element type="RADIO" id="refheadache" concept="REFERAL" question= "डोकदुखी होत असल्यास स्थानिक दवाखान्यात संपर्क करणे:" answer = "" choices="खात्री करून घेतली"/>
+</Page>
+
+<Page>
+<ShowIf>
+	<Criteria type="EQUALS" id = "symptoms" value="धाप/धडधडणे"/>
+</ShowIf>
+	<Element type="RADIO" id="refbreathlessness" concept="REFERAL" question= "धाप,धडधडणे होत असल्यास स्थानिक दवाखान्यात संपर्क करणे:" answer = "" choices="खात्री करून घेतली"/>
+</Page>
+<Page>
+<ShowIf>
+	<Criteria type="EQUALS" id = "druguse" value="हो"/>
+</ShowIf>
+	<Element type="RADIO" id="refdruguse" concept="REFERAL" question= "लोह आणि कॅल्शियम युक्त गोळ्या व्यतिरिक्त दुसरे औषधे घेत असल्यास स्थानिक दवाखान्यात संपर्क करणे." answer = "" choices="खात्री करून घेतली"/>
+</Page>
+<Page>
+<ShowIf>
+	<Criteria type="EQUALS" id = "symptoms" value="ताप"/>
+</ShowIf>
+	<Element type="RADIO" id="reffever" concept="REFERAL" question= "ताप असल्यास स्थानिक दवाखान्यात संपर्क करणे:" answer = "" choices="खात्री करून घेतली"/>
+</Page>
+
+<Page>
+<ShowIf>
+	<Criteria type="EQUALS" id = "symptoms" value="झटके"/>
+</ShowIf>
+	<Element type="RADIO" id="refconvulsion" concept="REFERAL" question= "झटके येत असल्यास स्थानिक दवाखान्यात संपर्क करणे:" answer = "" choices="खात्री करून घेतली"/>
+</Page>
+
+<Page>
+<ShowIf>
+	<Criteria type="EQUALS" id = "symptoms" value="वारंवार लघवी येणे/लघवीस जळजळणे"/>
+</ShowIf>
+	<Element type="RADIO" id="refurination" concept="REFERAL" question= "लघवीस जळजळ होत असल्यास स्थानिक दवाखान्यात संपर्क करणे:" answer = "" choices="खात्री करून घेतली"/>
+</Page>
+
+<Page>
+<ShowIf>
+	<Criteria type="EQUALS" id = "pallor" value="हो"/>
+</ShowIf>
+	<Element type="RADIO" id="refpallor" concept="REFERAL" question= "फिकटपणा आढळल्यास स्थानिक दवाखान्यात संपर्क करणे:" answer = "" choices="खात्री करून घेतली"/>
+</Page>
+
+<Page>
+<ShowIf>
+	<Criteria type="EQUALS" id = "facialp" value="हो"/>
+</ShowIf>
+	<Element type="RADIO" id="reffacial" concept="REFERAL" question= "चेहऱ्यावर सूज असल्यास स्थानिक दवाखान्यात संपर्क करणे:" answer = "" choices="खात्री करून घेतली"/>
+</Page>
+
+<Page>
+<ShowIf>
+	<Criteria type="EQUALS" id = "swelling" value="हो"/>
+</ShowIf>
+	<Element type="RADIO" id="swelling" concept="REFERAL" question= "पायाला सूज असल्यास स्थानिक दवाखान्यात संपर्क करणे:" answer = "" choices="खात्री करून घेतली"/>
+</Page>
+<Page>
+<ShowIf>
+	<Criteria type="EQUALS" id = "jaundice" value="हो"/>
+</ShowIf>
+	<Element type="RADIO" id="refjaundice" concept="REFERAL" question= "कावीळ असल्यास स्थानिक दवाखान्यात संपर्क करणे:" answer = "" choices="खात्री करून घेतली"/>
+</Page>
+
+<Page>
+<ShowIf>
+	<Criteria type="EQUALS" id = "irontab" value="हो"/>
+</ShowIf>
+	<Element type="RADIO" id="refirontab" concept="REFERAL" question= "लोह युक्त गोळ्या मिळण्यासाठी स्थानिक दवाखान्यात संपर्क करणे:" answer = "" choices="खात्री करून घेतली"/>
+</Page>
+
+<Page>
+<ShowIf>
+<and>
+	<Criteria type="GREATER" id = "bps" value="140"/>
+	<Criteria type="GREATER" id = "bpd" value="90"/>
+</and>
+</ShowIf>
+	<Element type="RADIO" id="refbp" concept="REFERAL" question= "उच्च रक्तदाब असल्यास स्थानिक दवाखान्यात संपर्क करणे:" answer = "" choices="खात्री करून घेतली"/>
+</Page>
+
+
+<Page>
+<ShowIf>
+<and>
+	<Criteria type="GREATER" id = "gestage" value ="23"/>
+	<Criteria type="LESS" id = "gestage" value ="36"/>
+<or>
+	<Criteria type="GREATER" id = "fetalhr" value="160"/>
+	<Criteria type="LESS" id = "fetalhr" value="110"/>
+</or>
+
+</and>
+
+</ShowIf>
+	<Element type="RADIO" id="reffetalhr" concept="REFERAL" question= "बाळाच्या हृदयाचे ठोके कमी असल्यास स्थानिक दवाखान्यात संपर्क करणे:" answer = "" choices="खात्री करून घेतली"/>
+</Page>
+
+
+<Page>
+<ShowIf>
+	<or>
+	<Criteria type="LESS" id = "hb" value ="12"/>
+	<Criteria type="LESS" id = "hb" value ="8"/>
+	</or>
+
+</ShowIf>
+	<Element type="RADIO" id="refhb" concept="REFERAL" question= "हिमोग्लोबिन कमी असल्यास स्थानिक दवाखान्यात संपर्क करणे:" answer = "" choices="खात्री करून घेतली"/>
+</Page>
+
+<Page>
+<ShowIf>
+    <and>
+     <Criteria type="EQUALS" id = "rbsfast" value="८-१० तास उपाशी पोटी"/>
+	<Criteria type="GREATER" id = "rbs" value="100"/>       
+    </and>
+
+</ShowIf>
+	<Element type="RADIO" id="refrbsfast" concept="REFERAL" question= "रक्तातील साखर जास्त असल्यास स्थानिक दवाखान्यात संपर्क करणे:" answer = "" choices="खात्री करून घेतली"/>
+</Page>
+<Page>
+<ShowIf>
+    <and>
+     <Criteria type="EQUALS" id = "rbsfast" value="जेवण करून दोन तासा नंतर"/>
+	<Criteria type="GREATER" id = "rbs" value="120"/>       
+    </and>
+
+</ShowIf>
+	<Element type="RADIO" id="refrbs2hrs" concept="REFERAL" question= "रक्तातील साखर जास्त असल्यास स्थानिक दवाखान्यात संपर्क करणे:" answer = "" choices="खात्री करून घेतली"/>
+</Page>
+<Page>
+<ShowIf>
+<or>
+	<Criteria type="EQUALS" id = "urinep" value="हो"/>
+	<Criteria type="EQUALS" id = "urines" value="हो"/>
+	<Criteria type="EQUALS" id = "urinen" value="हो"/>
+</or>
+</ShowIf>
+	<Element type="RADIO" id="refurine" concept="REFERAL" question= "लघवीमध्ये नायट्राइट,प्रोटीन,किंवा ग्लुकोस असल्यास स्थानिक दवाखान्यात संपर्क करणे:" answer = "" choices="खात्री करून घेतली"/>
+</Page>
+</Procedure>
+

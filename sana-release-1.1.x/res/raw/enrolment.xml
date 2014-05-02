@@ -1,0 +1,212 @@
+<Procedure title = "Enrollment Form(Marathi)" author="Moca">
+<Page>
+	<Element type="RADIO" id="group" concept="RESEARCH GROUP" question="ग्रुप:" answer="" choices = " ए,बी,सी"/>
+</Page>
+<Page>
+	<Element type="ENTRY" id="id" concept="PATIENT ID" question="संशोधन सह्भागीचा युनिक ओळखपत्र क्रमांक:" answer=""/>
+</Page>
+<Page>
+	<Element type="ENTRY" id ="village" concept="VILLAGE NAME" question="गावाचे नाव:" answer=""/>
+</Page>
+<Page>
+	<Element type="ENTRY" id="name" concept="PATIENT NAME" question="नाव:" answer=""/>
+</Page>
+<Page>
+	<Element type="SELECT" id="age" concept="PATIENT AGE" question="वय:" answer="" choices = "13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50"/>
+</Page>
+<Page>
+	<Element type="ENTRY" id="education" concept="EDUCATION" question = "शिक्षण(पूर्ण झालेले शिक्षण):" answer=""/>
+</Page>
+<Page>
+	<Element type="RADIO" id="work" concept="WORK" question="तुम्ही घराच्या बाहेर काम करता का?" answer="" choices = "हो,नाही"/>
+</Page>
+<Page>
+<ShowIf>
+	<Criteria type="EQUALS" id="work" value="हो"/>
+</ShowIf>
+	<Element type="RADIO" id="typeofwork" concept="TYPE OF WORK" question="जर होय:" answer="" choices = "शेतीकाम,इतर काम"/></Page>
+<Page>
+<ShowIf>
+<and>
+	<Criteria type="EQUALS" id="work" value="हो"/>
+	<Criteria type="EQUALS" id="typeofwork" value="इतर काम"/>
+</and>
+</ShowIf>
+	<Element type="RADIO" id="otherwork" concept="OTHER WORK" question="उल्लेख करणे:" answer="" choices = "घरगुती व्यवसाय,नोकरी,मजुरी काम "/>
+</Page>
+<Page>
+	<Element type="SELECT" id="famsize" concept="HOUSEHOLD FAMILY SIZE" question="कुटुंबातील सदस्यांची संख्या:" answer="" choices = "1,2,3,4,5,6,7,8,9,10"/>
+</Page>
+<Page>
+	<Element type="ENTRY" id="mincome" concept= "MONTHLY FAMILY INCOME" question="मासिक उत्पन्न:" answer=""/>
+</Page>
+<Page>
+	<Element type="RADIO" id="phone" concept="PHONE ACCESS" question="तुमच्याकडे किंवा तुमच्या घरातील सदस्याकडे फोन आहे का,जो तुम्ही वापरू शकता:" answer="" choices = "हो,नाही"/>
+</Page>
+<Page>
+<ShowIf>
+    <and>
+	<Criteria type="EQUALS" id="phone" value="हो"/>
+	<or>
+	  <Criteria type="EQUALS" id="group" value="बी"/>
+	  <Criteria type="EQUALS" id="group" value="सी"/>  
+	</or>
+	</and>
+</ShowIf>
+	<Element type="ENTRY" id="preferphone" concept="PREFERRED PHONE NUMBER" question="जर होय फोन नंबर:" answer=""/>
+</Page>
+
+<Page>
+<ShowIf>
+	<Criteria type="EQUALS" id="phone" value="हो"/>
+</ShowIf>
+	<Element type="RADIO" id="phoneowner" concept="PHONE OWNER" question="कोणाच्या मालकीचा आहे:" answer="" choices = "पत्नी,पती,कौटुंबिक फोन,इतर"/>
+</Page>
+<Page>
+<ShowIf>
+<and>
+	<Criteria type="EQUALS" id="phone" value="हो"/>
+	<Criteria type="EQUALS" id="phoneowner" value="इतर"/>
+</and>
+</ShowIf>
+	<Element type="ENTRY" id="phoneother" concept="OTHER PHONE OWNER" question="उल्लेख करणे:" answer = ""/>
+</Page>
+<Page>
+<ShowIf>
+	<Criteria type="EQUALS" id="phone" value="हो"/>
+</ShowIf>
+	<Element type="ENTRY" id="phonelong" concept="PHONE LENGTH" question="किती काळ तुमच्याकडे फोन आहे (महिने):" answer=""/>
+</Page>
+<Page>
+<ShowIf>
+	<or>
+	  <Criteria type="EQUALS" id="group" value="बी"/>
+	  <Criteria type="EQUALS" id="group" value="सी"/>  
+	</or> 
+</ShowIf>
+<Element type="ENTRY" id="alternaten1" concept="ALTERNATE PHONE NUMBER" question="अल्टरनेट (वैकल्पिक) फोन नंबर:" answer=""/>
+<Element type="ENTRY" id="alternateowner1" concept="ALTERNATE PHONE NUMBER OWNER" question="कोणाच्या मालकीचा आहे:" answer=""/>
+<Element type="ENTRY" id="alternaten2" concept="ALTERNATE PHONE NUMBER" question="अल्टरनेट (वैकल्पिक) फोन नंबर:" answer=""/>
+<Element type="ENTRY" id="alternateowner2" concept="ALTERNATE PHONE NUMBER OWNER" question="कोणाच्या मालकीचा आहे:" answer=""/>
+</Page>
+<Page>
+<ShowIf>
+	<or>
+	  <Criteria type="EQUALS" id="group" value="बी"/>
+	  <Criteria type="EQUALS" id="group" value="सी"/>  
+	</or> 
+</ShowIf>
+	<Element type="SELECT" id="timing" concept="CHOICE OF TIME" question="पसंतीची वेळ (1 तास स्लॉट):" answer="" choices = "1-2,2-3,3-4,4-5,5-6,6-7,7-8,8-9,9-10,10-11,11-12"/>
+<Element type="RADIO" id="ampm" concept="AM OR PM" question="AM किंवा PM" answer="" choices = "AM,PM"/>
+</Page>
+<Page>
+ <ShowIf>
+	<or>
+	  <Criteria type="EQUALS" id="group" value="बी"/>
+	  <Criteria type="EQUALS" id="group" value="सी"/>  
+	</or> 
+</ShowIf>   
+	<Element type="RADIO" id="language" concept="PREFERRED LANGUAGE" question="पसंतीची भाषा:" answer="" choices = "मराठी,हिंदी"/>
+</Page>
+<Page>
+<ShowIf>
+	<or>
+	  <Criteria type="EQUALS" id="group" value="बी"/>
+	  <Criteria type="EQUALS" id="group" value="सी"/>  
+	</or> 
+</ShowIf>    
+	<Element type="RADIO" id="rcall" concept="RECEIEVE CALLS" question="तुम्ही कॉल आलेला उचलू शकता का?" answer="" choices = "हो,नाही"/>
+</Page>
+<Page>
+	<Element type="RADIO" id="mcall" concept="MAKING CALLS" question="तुम्ही स्वतहून कॉल करू शकता का?" answer="" choices = "हो,नाही"/>
+</Page>
+<Page>
+	<Element type="RADIO" id="rsms" concept="RECEIEVE SMS" question="तुम्ही मेसेज(SMS)आलेला बघू शकता का?" answer="" choices = "हो,नाही"/>
+</Page>
+<Page>
+	<Element type="RADIO" id="readsms" concept="READ SMS" question="तुम्ही आलेला मेसेज वाचू शकता का?" answer="" choices = "हो,नाही"/>
+</Page>
+<Page>
+	<Element type="RADIO" id="ssms" concept="SEND SMS" question="तुम्ही मेसेज पाठवू शकता का?" answer="" choices = "हो,नाही"/>
+</Page>
+<Page>
+	<Element type="RADIO" id="lmpyn" concept="LMP" question="LMP माहित असेल तर?" answer="" choices = "हो,नाही"/>
+</Page>
+<Page>
+<ShowIf>
+	<Criteria type="EQUALS" id="lmpyn" value="हो"/>
+</ShowIf>
+<Element type="SELECT" id="lmpd" concept="LMP" question = "LMP(दिवस):" answer="" choices = "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31"/>
+<Element type="SELECT" id="lmpm" concept="LMP" question = "LMP(महिना):" answer="" choices = "1,2,3,4,5,6,7,8,9,10,11,12"/>
+<Element type="SELECT" id="lmpy" concept="LMP" question = "LMP(वर्ष):" answer="" choices = "2012,2013,2014,2015,2016,2017,2018,2019,2020"/>
+</Page>
+<Page>
+<ShowIf>
+	<Criteria type="EQUALS" id="lmpyn" value="हो"/>
+</ShowIf>
+	<Element type="SELECT" id="eddd" concept="EDD" question="अंदाजे प्रसूती तारीख (दिवस):" answer="" choices = "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31"/>
+	<Element type="SELECT" id="eddm" concept="EDD" question="अंदाजे प्रसूती तारीख(महिना):" answer="" choices = "1,2,3,4,5,6,7,8,9,10,11,12"/>
+	<Element type="SELECT" id="eddy" concept="EDD" question="अंदाजे प्रसूती तारीख (वर्ष):" answer="" choices = "2012,2013,2014,2015,2016,2017,2018,2019,2020"/>
+</Page>
+<Page>
+    <ShowIf>
+	<Criteria type="EQUALS" id="lmpyn" value="हो"/>
+</ShowIf>
+	<Element type="SELECT" id="gestation" concept="GESTATIONAL AGE" question="गरोदरपणाचा कालावधी (आठवड्यामध्ये):" answer = "" choices ="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45"/>
+</Page>
+<Page>
+    <ShowIf>
+	<Criteria type="EQUALS" id="lmpyn" value="नाही"/>
+</ShowIf>
+	<Element type="SELECT" id="approxgestation" concept="APPROXIMATE GESTATIONAL AGE" question="अंदाजे गरोदरपणाचा कालावधी:" answer = "" choices ="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45"/>
+</Page>
+<Page>
+ 
+	<Element type="ENTRY" id="g" concept="G" question="प्रसूतीपूर्व इतिहास:(G):" answer=""/>
+	<Element type="ENTRY" id="p" concept="P" question="प्रसूतीपूर्व इतिहास:(P):" answer=""/>
+	<Element type="ENTRY" id="l" concept="L" question="प्रसूतीपूर्व इतिहास:(L):" answer=""/>
+	<Element type="ENTRY" id="a" concept="A" question="प्रसूतीपूर्व इतिहास:(A):" answer=""/>
+</Page>
+<Page>
+		<Element type="SELECT" id="doed" concept="DATE OF ENROLLMENT" question = "नोंदणी तारीख (दिवस):" answer="" choices = "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31"/>
+<Element type="SELECT" id="doem" concept="DATE OF ENROLLMENT" question = "नोंदणी तारीख (महिना):" answer="" choices = "1,2,3,4,5,6,7,8,9,10,11,12"/>
+<Element type="SELECT" id="doey" concept="DATE OF ENROLLMENT" question = "नोंदणी तारीख (वर्ष):" answer="" choices = "2012,2013,2014,2015,2016,2017,2018,2019,2020"/>
+
+</Page>
+
+
+<Page>
+<Element type="MULTI_SELECT" id="obscomps" concept="OBSTETRIC COMPLICATION"  question="पूर्वीच्या प्रसूतीमध्ये आलेल्या अडचणी:" answer = "" choices = "काही नाही,रक्तदाब,रक्तातील साखर,मधुमेह,छातीत दुखणे,फुफ्फुसांचा आजार,किडनी आजार,रक्तस्त्राव/गर्भधारणेदरम्यान इतर स्त्राव,गर्भधारणा झाल्यानंतर अति रक्तस्त्राव,गर्भपात,मृतगर्भजनन (मेलेले बाळ जन्माला येणे किंवा आतच मरण पावणे),बाल मृत्यू,अर्भक मृत्यू,सिजेरीयन"/>		
+<Element type="ENTRY" id="otherobscomps" concept="OTHER OBSTETRIC COMPLICATIONS" question="इतर अडचणी:" answer=""/>
+</Page>
+<Page>
+	<Element type="ENTRY" id="surgicalillness" concept="MEDICAL/SURGICAL ILLNESS" question="इतर वैदकीय/सर्जिकल आजार:" answer=""/>
+</Page>
+
+<Page>
+	<Element type="MULTI_SELECT" id="personalhis" concept="PERSONAL HISTORY" question="वैयक्तिक माहिती:" answer = "" choices ="काही नाही,तंबाखू सेवन,सिगारेट,दारू,मादक पदार्थाचे सेवन"/></Page>
+<Page>
+ <ShowIf>
+	<or>
+	  <Criteria type="EQUALS" id="group" value="ए"/>
+	  <Criteria type="EQUALS" id="group" value="सी"/>  
+	</or> 
+</ShowIf>   
+	<Element type="RADIO" id="ssg" concept = "SHG" question="तुम्ही बचत गटाचे सहभागी आहात का?" answer = "" choices ="SSP,इतर,नाही"/>
+</Page>
+<Page>
+	<Element type="RADIO" id="birthloc" concept = "BIRTH LOCATION" question="जन्म स्थान योजना:" answer = "" choices ="त्याच गावात,जर त्याच गावात नाही तर कोठे आणि किती दूर"/>
+</Page>
+<Page>
+<ShowIf>
+	<Criteria type="EQUALS" id="birthloc" value="जर त्याच गावात नाही तर कोठे आणि किती दूर"/>
+</ShowIf>
+	<Element type="ENTRY" id="birthwhere" concept = "BIRTH VILLAGE LOCATION" question="गाव" answer = ""/>
+<Element type="ENTRY" id="distancebirth" concept = "BIRTH VILLAGE DISTANCE" question="किती दूर?" answer = ""/>
+</Page>
+</Procedure>
+
+
+
+
+
