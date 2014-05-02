@@ -61,7 +61,7 @@ try:
       	     row = '{"Page":{"'+row[1]+'":["type=\\"'+row[2]+'\\"","concept=\\"'+row[3]+'\\"","question=\\"'+row[4]+'\\"","id=\\"'+str(row[5])+'\\"","answer=\\"'+row[6]+'\\"","helpText=\\"'+row[9]+'\\"","required=\\"'+row[8]+'\\""] }}'
           if row[2]=="MULTI_SELECT" or row[2]=="RADIO" or row[2]=="SELECT" :      
              row = '{"Page":{"'+row[1]+'":["type=\\"'+row[2]+'\\"","concept=\\"'+row[3]+'\\"","question=\\"'+row[4]+'\\"","id=\\"'+str(row[5])+'\\"","answer=\\"'+row[6]+'\\"","choices=\\"'+row[7]+'\\"","helpText=\\"'+row[9]+'\\"","required=\\"'+row[8]+'\\""] }}'
-          jk=json.dumps(row)
+          
           j =json.loads(row)
           print(json2xml(j))
           fh.write(json2xml(j))
