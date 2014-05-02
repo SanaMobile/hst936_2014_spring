@@ -26,7 +26,7 @@ module.exports = {
       if(req.method == 'POST' && req.param('email') != null && req.param('password') != null) {
           Doctor.findOne(1)
               .where({
-                  email: 'sample@sample.com'
+                  email: 'doctor@sana.com'
               })
               .done(function(err, doctor){
                   if(err || doctor == null) {
@@ -66,8 +66,8 @@ module.exports = {
       Doctor.create({
           firstName: 'Sample',
           lastName: 'Doctor',
-          email: 'sample@sample.com',
-          password: 'hello1'
+          email: 'doctor@sana.com',
+          password: 'test23'
       }).done(function(err, doctor){
           if(err) return res.json(err);
 
@@ -156,31 +156,51 @@ module.exports = {
 
 
       function dashboardLoad(workerMessage, patientMessage, encounterMessage) {
-          Encounter.find().done(function(err, encounters){
-              if(err || !encounters) return res.json({status: 500, error: 'Internal Error. Contact Technical Support.'});
+          Patient.find().done(function(err, patients){
+              if(err) return res.json({status: 500, error: 'Internal Error. Contact Technical Support.'});
 
-              Patient.find().done(function(err, patients){
+              Worker.find().done(function(err, workers){
                   if(err) return res.json({status: 500, error: 'Internal Error. Contact Technical Support.'});
 
-                  Worker.find().done(function(err, workers){
+                  Doctor.find().done(function(err, doctors){
                       if(err) return res.json({status: 500, error: 'Internal Error. Contact Technical Support.'});
 
-                      Doctor.find().done(function(err, doctors){
-                          if(err) return res.json({status: 500, error: 'Internal Error. Contact Technical Support.'});
+                      Visit.find().done(function(err, visits){
+                          if (err || !visits) return res.json({status: 500, error: 'Internal Error. Contact Technical Support.'});
 
-                          Visit.find().done(function(err, visits){
-                              return res.view({
-                                  doctor: req.session.user,
-                                  encounters: JSON.stringify(encounters),
-                                  workerMessage: workerMessage,
-                                  patientMessage: patientMessage,
-                                  encounterMessage: encounterMessage,
-                                  patients: JSON.stringify(patients),
-                                  workers: JSON.stringify(workers),
-                                  doctors: JSON.stringify(doctors),
-                                  visits: JSON.stringify(visits)
+                          if(req.param('visit') != null) {
+                              Encounter.find().where({visitId: req.param('visit')}).done(function(err, encounters) {
+                                  if (err || !encounters) return res.json({status: 500, error: 'Internal Error. Contact Technical Support.'});
+
+                                  return res.view({
+                                      doctor: req.session.user,
+                                      encounters: JSON.stringify(encounters),
+                                      workerMessage: workerMessage,
+                                      patientMessage: patientMessage,
+                                      encounterMessage: encounterMessage,
+                                      patients: JSON.stringify(patients),
+                                      workers: JSON.stringify(workers),
+                                      doctors: JSON.stringify(doctors),
+                                      visits: JSON.stringify(visits)
+                                  });
                               });
-                          });
+                          } else {
+                              Encounter.find().done(function(err, encounters) {
+                                  if (err || !encounters) return res.json({status: 500, error: 'Internal Error. Contact Technical Support.'});
+
+                                  return res.view({
+                                      doctor: req.session.user,
+                                      encounters: JSON.stringify(encounters),
+                                      workerMessage: workerMessage,
+                                      patientMessage: patientMessage,
+                                      encounterMessage: encounterMessage,
+                                      patients: JSON.stringify(patients),
+                                      workers: JSON.stringify(workers),
+                                      doctors: JSON.stringify(doctors),
+                                      visits: JSON.stringify(visits)
+                                  });
+                              });
+                          }
                       });
                   });
               });

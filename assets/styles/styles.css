@@ -133,3 +133,7 @@ table tr th,
 table tr td {
     font-size: 0.9em;
 }
+
+.right-text {
+    text-align: right;
+}

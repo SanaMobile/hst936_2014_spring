@@ -1,2 +1,0 @@
-# mds
-### a Sails application

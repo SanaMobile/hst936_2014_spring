@@ -42,7 +42,7 @@ module.exports.adapters = {
         module: 'sails-mongo',
         host: 'localhost',
         user: 'admin',
-        password: '',
+        password: 'macpro',
         database: 'socket-trial'
     }
 };

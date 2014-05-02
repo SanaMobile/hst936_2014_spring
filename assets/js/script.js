@@ -36,4 +36,10 @@ $(function() {
     $('#logoutButton').click(function(){
        window.location.href = '/home/logout';
     });
+
+    $('#visitTypeSelector').on('change', function(e){
+        var optionSelected = $("option:selected", this);
+        var valueSelected = this.value;
+        window.location.href = '/home/dashboard?visit='+valueSelected;
+    });
 });
