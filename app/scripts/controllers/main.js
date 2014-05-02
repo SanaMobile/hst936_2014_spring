@@ -15,6 +15,8 @@ angular.module('sanaAngApp')
     $scope.cHelperText = "";
     $scope.comp = { cName: '',
        cConcept:'',
+        cPlaceholder:'',
+        cValidation:'',
         cKeywords:'',cText:'', cHelperText:'',qTypeSel:'',
         cOption:[] };
   

@@ -1,62 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="16a3fc6a-465e-4ff3-8611-9b6258841bb5" name="Default" comment="Reorganized Components&#10;Added Example Concepts&#10;Added input types for Date, Files and Video, Audio, etc">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist.zip" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/favicon.ico" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/fonts/glyphicons-halflings-regular.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/fonts/glyphicons-halflings-regular.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/fonts/glyphicons-halflings-regular.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vit-19.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/images/yeoman.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.bowerrc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/.buildignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.editorconfig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitattributes" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/.htaccess" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.jshintrc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/.jshintrc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/.name" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.travis.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/404.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Gruntfile.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/New Text Document.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/SANA-AngJS-Demo.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/about.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/scripts/app.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/audio.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/styles/bootstrap.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/checkBoxes.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/computation.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/datePicker.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/display.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/freeText.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/geolocation.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/fonts/glyphicons-halflings-regular.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/image.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/karma-e2e.conf.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/karma.conf.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/styles/main.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/main.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/scripts/controllers/main.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/spec/controllers/main.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/number.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/radioButtons.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/robots.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/runner.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/scripts/script.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/video.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/viewA.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    <list default="true" id="16a3fc6a-465e-4ff3-8611-9b6258841bb5" name="Default" comment="Added modal dialog to review code before submission">
+      <change type="DELETED" beforePath="C:\Users\karthik\Documents\GitHub\WebStormProjects\vit-19\New Text Document.txt" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/computation.html" afterPath="$PROJECT_DIR$/app/views/computation.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/geolocation.html" afterPath="$PROJECT_DIR$/app/views/geolocation.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/index.html" afterPath="$PROJECT_DIR$/app/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/main.html" afterPath="$PROJECT_DIR$/app/views/main.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/controllers/main.js" afterPath="$PROJECT_DIR$/app/scripts/controllers/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/number.html" afterPath="$PROJECT_DIR$/app/views/number.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/script.js" afterPath="$PROJECT_DIR$/app/scripts/script.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="SANA-AngJS-Demo.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -78,62 +32,7 @@
     <favorites_list name="SANA-AngJS-Demo" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="geolocation.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/geolocation.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="10" selection-start="30" selection-end="30" vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="153">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="number.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/number.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="153">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/main.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="228" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2176">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="about.html" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/about.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="12" selection-start="241" selection-end="241" vertical-scroll-proportion="0.31070495" vertical-offset="0" max-vertical-offset="383">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="display.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/display.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="10" selection-start="26" selection-end="26" vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="153">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="computation.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/computation.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="6" selection-start="37" selection-end="37" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="153">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -153,15 +52,18 @@
       <list>
         <option value="$PROJECT_DIR$/app/views/radioButtons.html" />
         <option value="$PROJECT_DIR$/app/views/checkBoxes.html" />
-        <option value="$PROJECT_DIR$/app/scripts/script.js" />
         <option value="$PROJECT_DIR$/app/views/datePicker.html" />
         <option value="$PROJECT_DIR$/app/views/freeText.html" />
         <option value="$PROJECT_DIR$/app/styles/main.css" />
-        <option value="$PROJECT_DIR$/app/index.html" />
         <option value="$PROJECT_DIR$/app/scripts/app.js" />
-        <option value="$PROJECT_DIR$/app/scripts/controllers/main.js" />
-        <option value="$PROJECT_DIR$/app/views/main.html" />
         <option value="$PROJECT_DIR$/app/views/about.html" />
+        <option value="$PROJECT_DIR$/app/index.html" />
+        <option value="$PROJECT_DIR$/app/views/geolocation.html" />
+        <option value="$PROJECT_DIR$/app/views/computation.html" />
+        <option value="$PROJECT_DIR$/app/scripts/controllers/main.js" />
+        <option value="$PROJECT_DIR$/app/scripts/script.js" />
+        <option value="$PROJECT_DIR$/app/views/main.html" />
+        <option value="$PROJECT_DIR$/app/views/number.html" />
       </list>
     </option>
   </component>
@@ -203,6 +105,16 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="SANA-AngJS-Demo" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SANA-AngJS-Demo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vit-19" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -285,18 +197,23 @@
       <created>1398594228134</created>
       <updated>1398594228134</updated>
     </task>
+    <task id="LOCAL-00001" summary="Reorganized Components&#10;Added Example Concepts&#10;Added input types for Date, Files and Video, Audio, etc">
+      <created>1399017502359</created>
+      <updated>1399017502359</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3287037" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287037" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287037" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3287037" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24304539" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24304539" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287037" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -381,7 +298,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/scripts/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="0" selection-start="323" selection-end="323" vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="408" />
+        <state line="18" column="0" selection-start="323" selection-end="323" vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="408">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/main.html">
@@ -414,7 +333,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/scripts/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="0" selection-start="323" selection-end="323" vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="408" />
+        <state line="18" column="0" selection-start="323" selection-end="323" vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="408">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
@@ -446,42 +367,11 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="388" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/script.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="63" selection-start="144" selection-end="144" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="204">
-          <folding>
-            <element signature="e#0#40#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/styles/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="96" column="1" selection-start="1755" selection-end="1755" vertical-scroll-proportion="0.0" vertical-offset="1278" max-vertical-offset="1751" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="70" column="25" selection-start="3589" selection-end="3589" vertical-scroll-proportion="-5.576923" vertical-offset="1045" max-vertical-offset="1479">
+        <state line="96" column="1" selection-start="1755" selection-end="1755" vertical-scroll-proportion="0.0" vertical-offset="1278" max-vertical-offset="1751">
           <folding />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="35" selection-start="370" selection-end="370" vertical-scroll-proportion="0.66237116" vertical-offset="15" max-vertical-offset="476" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="0" selection-start="44" selection-end="44" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="986">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/audio.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="622" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/datePicker.html">
@@ -496,23 +386,9 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="388" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/freeText.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="38" selection-start="44" selection-end="44" vertical-scroll-proportion="0.044386424" vertical-offset="0" max-vertical-offset="383">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/image.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="6" selection-start="242" selection-end="242" vertical-scroll-proportion="0.26631853" vertical-offset="0" max-vertical-offset="383" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/geolocation.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="10" selection-start="30" selection-end="30" vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="153">
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/radioButtons.html">
@@ -522,46 +398,95 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/number.html">
+    <entry file="file://$PROJECT_DIR$/app/views/geolocation.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="388">
+        <state line="2" column="56" selection-start="76" selection-end="76" vertical-scroll-proportion="-1.3076923" vertical-offset="0" max-vertical-offset="153">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/checkBoxes.html">
+    <entry file="file://$PROJECT_DIR$/app/views/audio.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="33" selection-start="107" selection-end="107" vertical-scroll-proportion="0.08877285" vertical-offset="0" max-vertical-offset="383">
-          <folding>
-            <element signature="n#style#0;n#ul#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/display.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="10" selection-start="26" selection-end="26" vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="153">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/computation.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="6" selection-start="37" selection-end="37" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="153">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/main.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="228" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="2176">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="622">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/about.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="12" selection-start="241" selection-end="241" vertical-scroll-proportion="0.31070495" vertical-offset="0" max-vertical-offset="383">
+        <state line="7" column="17" selection-start="246" selection-end="246" vertical-scroll-proportion="0.20695652" vertical-offset="0" max-vertical-offset="575">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/computation.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="78" selection-start="84" selection-end="84" vertical-scroll-proportion="0.02852349" vertical-offset="0" max-vertical-offset="596">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="41" selection-start="1985" selection-end="1985" vertical-scroll-proportion="0.78216124" vertical-offset="292" max-vertical-offset="1513">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/display.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="10" selection-start="26" selection-end="26" vertical-scroll-proportion="-1.3076923" vertical-offset="0" max-vertical-offset="153">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/freeText.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="74" selection-start="8" selection-end="80" vertical-scroll-proportion="-0.65384614" vertical-offset="0" max-vertical-offset="136">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="47" selection-start="489" selection-end="489" vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="1020">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="3" selection-start="341" selection-end="341" vertical-scroll-proportion="0.30670103" vertical-offset="0" max-vertical-offset="388">
+          <folding>
+            <element signature="e#0#40#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/number.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="6" selection-start="89" selection-end="89" vertical-scroll-proportion="0.08877285" vertical-offset="0" max-vertical-offset="383">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/main.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="146" column="49" selection-start="7316" selection-end="7316" vertical-scroll-proportion="0.7810811" vertical-offset="2193" max-vertical-offset="2873">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/checkBoxes.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="6" selection-start="157" selection-end="157" vertical-scroll-proportion="0.22193211" vertical-offset="0" max-vertical-offset="383">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="35" selection-start="370" selection-end="370" vertical-scroll-proportion="0.6650367" vertical-offset="0" max-vertical-offset="476">
           <folding />
         </state>
       </provider>

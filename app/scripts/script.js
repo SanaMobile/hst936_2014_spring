@@ -6,4 +6,5 @@ $('#addOption').click(function($scope){
     var newOp={index: a.comp.cOption.length,
     value:''};
     a.comp.cOption.push(newOp);
+    document.getElementById('compName').value=document.getElementById('compName').value;
 });

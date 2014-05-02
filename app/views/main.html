@@ -5,25 +5,19 @@
     </ul>
     <h3 class="text-muted">VIT Team 19</h3>
 </div>
-
-
 <div class>
     <h2>Sana Component Creator </h2>
-
     <p> Create a component and visualize what it will look like.</p>
-
     <hr>
-
-
 </div>
 <div class="container">
     <div class="row">
 
-        <div class="col-md-6">
+        <div class="col-lg-6">
             <form role="form">
                 <div class="form-group">
                     <label for="exampleInputEmail1">Component Name</label>
-                    <input ng-model="comp.cName" type="text" class="form-control" placeholder="Name">
+                    <input id="compName" ng-model="comp.cName" type="text" class="form-control" placeholder="Name">
                 </div>
                 <div class="form-group">
                     <label for="exampleInputEmail1">Component Concept</label>
@@ -38,7 +32,7 @@
                 <div class="form-group">
                     <label for="exampleInputEmail1">Question Text</label>
                     <input ng-model="comp.cText" type="text" class="form-control"
-                           placeholder="Whats your favorite color?">
+                           placeholder="">
                 </div>
                 <div class="form-group">
                     <label for="exampleInputEmail1">Helper Text</label>
@@ -79,23 +73,70 @@
 
                 <div class="form-group" ng-show="comp.qTypeSel.name == 'Free Text' || comp.qTypeSel.name == 'Number' || comp.qTypeSel.name == 'Computation'">
                     <label for="exampleInputEmail1">Default Placeholder Value</label>
-                    <input type="text" class="form-control" placeholder="Blue">
+                    <input type="text" class="form-control" placeholder="Enter default value" ng-model="comp.cPlaceholder">
                 </div>
                 <div class="form-group">
                     <label for="exampleInputEmail1">Validation Options</label>
-                    <input type="text" class="form-control" placeholder="min number and max numbers, etc.">
+                    <input type="text" class="form-control" ng-model="comp.cValidation" placeholder="Other constraints/validation notes">
                 </div>
 
 
 
 
-                <button type="submit" class="btn btn-default">Save</button>
+                <button class="btn btn-default" data-toggle="modal" data-target="#myModal">Save</button>
             </form>
+            <!-- Modal -->
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <h4 class="modal-title" id="myModalLabel">Review Component</h4>
+                        </div>
+                        <div class="modal-body">
+                            <table class="table">
+                                <tr>
+                                    <td>Name</td>
+                                    <td>{{comp.cName}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Concept</td>
+                                    <td>{{comp.cConcept}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Keywords</td>
+                                    <td>{{comp.cKeywords}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Type</td>
+                                    <td>{{comp.qTypeSel.name}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Question</td>
+                                    <td>{{comp.cText}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Helper Text</td>
+                                    <td>{{comp.cHelperText}}</td>
+                                </tr>
+                                <tr ng-include="comp.qTypeSel.tableUrl"></tr>
+                            </table>
+                            <h4>JSON Data</h4>
+                            <pre>{{ comp | json}}</pre>
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <!-- //ng-show="appState == 'goodbye'" -->
 
         <!-- Other Column  -->
-        <div class="col-md-6">
+        <div class="col-lg-6">
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <h3 class="panel-title">Your Component: <b>{{comp.cName}}</b></h3>
