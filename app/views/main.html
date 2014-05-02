@@ -1,0 +1,122 @@
+<div class="header">
+    <ul class="nav nav-pills pull-right">
+        <li class="active"><a ng-href="#">Home</a></li>
+        <li><a ng-href="/#/about">About</a></li>
+    </ul>
+    <h3 class="text-muted">VIT Team 19</h3>
+</div>
+
+
+<div class>
+    <h2>Sana Component Creator </h2>
+
+    <p> Create a component and visualize what it will look like.</p>
+
+    <hr>
+
+
+</div>
+<div class="container">
+    <div class="row">
+
+        <div class="col-md-6">
+            <form role="form">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Component Name</label>
+                    <input ng-model="comp.cName" type="text" class="form-control" placeholder="Name">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Component Concept</label>
+                    <select class="form-control" ng-options="qConcept for qConcept in qConcepts"
+                            ng-model="comp.cConcept"></select>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Component Keywords</label>
+                    <input ng-model="comp.cKeywords" type="text" class="form-control"
+                           placeholder="BMI, Body Mass, Index">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Question Text</label>
+                    <input ng-model="comp.cText" type="text" class="form-control"
+                           placeholder="Whats your favorite color?">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Helper Text</label>
+                    <input ng-model="comp.cHelperText" type="text" class="form-control"
+                           placeholder="Primary Colors Only Please">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Component Type</label>
+                    <select class="form-control" ng-options="qType.name for qType in qTypes"
+                            ng-model="comp.qTypeSel"></select>
+                </div>
+
+                <!-- options group -->
+                <div id="optionsGroup" ng-show="comp.qTypeSel.name == 'Radio Buttons' || comp.qTypeSel.name == 'Check Boxes'">
+
+                    <div class="form-group" ng-repeat="op in comp.cOption">
+                        <div class="input-group">
+                            <label for="">Option {{op.index}} </label>
+                                <span class="input-group-addon">
+                                  <input type="checkbox" ng-show="comp.qTypeSel.name =='Check Boxes'">
+                                  <input type="radio" ng-show="comp.qTypeSel.name =='Radio Buttons'">
+                                </span>
+                            <input type="text" class="form-control" ng-model="op.value">
+                        </div>
+                    </div>
+                    <button class="btn btn-default" id="addOption">+</button>
+                    <script src="scripts/script.js"></script>
+
+                    <!-- /input-group -->
+                </div>
+
+
+                <div class="form-group" ng-show="comp.qTypeSel.name == 'Image' || comp.qTypeSel.name == 'Video' || comp.qTypeSel.name == 'Audio' " >
+                    <label for="exampleInputFile">{{comp.qTypeSel.name}} Upload</label>
+                    <input type="file" id="exampleInputFile">
+                    <p class="help-block">Supported files...</p>
+                </div>
+
+                <div class="form-group" ng-show="comp.qTypeSel.name == 'Free Text' || comp.qTypeSel.name == 'Number' || comp.qTypeSel.name == 'Computation'">
+                    <label for="exampleInputEmail1">Default Placeholder Value</label>
+                    <input type="text" class="form-control" placeholder="Blue">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Validation Options</label>
+                    <input type="text" class="form-control" placeholder="min number and max numbers, etc.">
+                </div>
+
+
+
+
+                <button type="submit" class="btn btn-default">Save</button>
+            </form>
+        </div>
+        <!-- //ng-show="appState == 'goodbye'" -->
+
+        <!-- Other Column  -->
+        <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Your Component: <b>{{comp.cName}}</b></h3>
+                    <hr>
+                    <!-- <ul> -->
+                    <li>Concept: {{comp.cConcept}}</li>
+                    <li>Keywords: {{comp.cKeywords}}</li>
+                    <li>Component Type: {{ comp.qTypeSel.name }}</li>
+                    <!-- </ul> -->
+                </div>
+                <div class="panel-body">
+
+                    <h4> {{comp.cText}} </h4>
+                    <h5 class="muted"> {{comp.cHelperText}} </h5>
+                    <div ng-include="comp.qTypeSel.templateUrl"></div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
