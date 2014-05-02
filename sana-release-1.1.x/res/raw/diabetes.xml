@@ -1,0 +1,344 @@
+<Procedure title="Diabetes" author="VIT">
+	<Page>
+		<Element 
+		    concept="PICTURE" 
+		    type="ENTRY" 
+		    id="1" 
+		    question="Please enter the value of Fasting Plasma Glucose(FPG) or Random Plasma Glucose(RPG)" 
+		    answer=""/>
+		<Element 
+		    concept="PICTURE" 
+		    type="ENTRY" 
+		    id="13" 
+		    question="Please enter your systolic blood pressure" 
+		    answer=""/>
+	</Page>
+	<Page>
+	    <ShowIf>
+	        <Criteria type="GREATER" id="1" value="126"/>
+	        </ShowIf>
+	    <Element
+	        concept="ab"
+	        type="TEXT"
+	        id="2"
+	        question="You have type 2 diabetes"/>
+	</Page>
+	<Page>
+	    <ShowIf>
+	        <Criteria type="GREATER" id="1" value="126"/>
+	        </ShowIf>
+	    <Element
+	        concept="ab"
+	        type="TEXT"
+	        id="3"
+	        question="You can follow the following three treatment options for diabetes"/>
+	    <Element
+	        concept="ab"
+	        type="TEXT"
+	        id="4"
+	        question="1. Metaformin"/>
+	    <Element
+	        concept="ab"
+	        type="TEXT"
+	        id="5"
+	        question="2. Insulin Therapy"/>
+	    <Element
+	        concept="ab"
+	        type="TEXT"
+	        id="6"
+	        question="3. GLP-1 receptor agonist"/>
+	</Page>
+	<Page>
+	    <ShowIf>
+	        <Criteria type="GREATER" id="1" value="126"/>
+	        </ShowIf>
+	    <Element
+	        concept="ab"
+	        type="TEXT"
+	        id="7"
+	        question="Please take note of the following recommendations for diabetes"/>
+	    <Element
+	        concept="ab"
+	        type="TEXT"
+	        id="8"
+	        question="1. Maintain BP less than 130/80 mm "/>
+	    <Element
+	        concept="ab"
+	        type="TEXT"
+	        id="9"
+	        question="2. Regular Exercise"/>
+	    <Element
+	        concept="ab"
+	        type="TEXT"
+	        id="10"
+	        question="3. Weight loss: 7% of body weight"/>
+	    <Element
+	        concept="ab"
+	        type="TEXT"
+	        id="11"
+	        question="4. Diet therapy: avoid refined sugars in soft drinks or added sugar to beverages"/>
+	   </Page>
+	   <Page>
+	       <ShowIf>
+	           <Criteria type="LESS" id="1" value="126"/>
+	       </ShowIf>
+	       <Element
+	           id="12"
+	           type="TEXT"
+	           concept="ab"
+	           question="Good News! You don't suffer from diabetes."/>
+	   </Page>
+	   <Page>
+	       <ShowIf>
+	           <and>
+	           <Criteria type="GREATER" id="13" value="130"/>
+	           <Criteria type="LESS" id="13" value="140"/>
+	           </and>
+	       </ShowIf>
+	       <Element
+	           id="18"
+	           type="TEXT"
+	           concept="ab"
+	           question="For blood pressure"/>
+	       <Element
+	           id="14"
+	           type="TEXT"
+	           concept="ab"
+	           question="Your diagnosis is Pre-Hypertension"/>
+	       <Element
+	           id="15"
+	           type="TEXT"
+	           concept="ab"
+	           question="You should consider treatment"/>
+	   </Page>
+	   <Page>
+	       <ShowIf>
+	           <and>
+	           <Criteria type="GREATER" id="13" value="140"/>
+	           <Criteria type="LESS" id="13" value="160"/>
+	           </and>
+	       </ShowIf>
+	       <Element
+	           id="18"
+	           type="TEXT"
+	           concept="ab"
+	           question="For blood pressure"/>
+	       <Element
+	           id="16"
+	           type="TEXT"
+	           concept="ab"
+	           question="Your diagnosis is Stage 1 Hypertension"/>
+	       <Element
+	           id="17"
+	           type="TEXT"
+	           concept="ab"
+	           question="Treatment is required"/>
+	   </Page>
+	   <Page>
+	       <ShowIf>
+	           <and>
+	           <Criteria type="GREATER" id="13" value="160"/>
+	           <Criteria type="LESS" id="13" value="180"/>
+	           </and>
+	       </ShowIf>
+	       <Element
+	           id="18"
+	           type="TEXT"
+	           concept="ab"
+	           question="For blood pressure"/>
+	       <Element
+	           id="19"
+	           type="TEXT"
+	           concept="ab"
+	           question="Your diagnosis is Stage 2 Hypertension"/>
+	       <Element
+	           id="20"
+	           type="TEXT"
+	           concept="ab"
+	           question="Treatment is required"/>
+	   </Page>
+	   <Page>
+	       <ShowIf>
+	           <Criteria type="GREATER" id="13" value="180"/>
+	       </ShowIf>
+	       <Element
+	           id="18"
+	           type="TEXT"
+	           concept="ab"
+	           question="For blood pressure"/>
+	       <Element
+	           id="21"
+	           type="TEXT"
+	           concept="ab"
+	           question="Your diagnosis is Severe Hypertension"/>
+	       <Element
+	           id="22"
+	           type="TEXT"
+	           concept="ab"
+	           question="Treatment is required"/>
+	   </Page>
+	   <Page>
+	       <ShowIf>
+	           <Criteria type="LESS" id="13" value="130"/>
+	       </ShowIf>
+	       <Element
+	           id="18"
+	           type="TEXT"
+	           concept="ab"
+	           question="Good News, you don't suffer from high blood pressure"/>
+	       </Page>
+	       
+	       <Page>
+	       <ShowIf>
+	           <or>
+	           <Criteria type="GREATER" id="13" value="140"/>
+	           <Criteria type="GREATER" id="13" value="160"/>
+	           <Criteria type="GREATER" id="13" value="180"/>
+	           </or>
+	       </ShowIf>
+	       <Element
+	           id="23"
+	           type="RADIO"
+	           concept="ab"
+	           question="Please select your symptoms"
+	           choices="No Comorbidities,Angina,Coronary Artery Disease,Heart Failure,Cerebrovascular Disease,Diabetes without proteinuria,Pregnant"
+	           answer=""/>
+	       	    
+	       </Page>
+	       
+	       <Page>
+	       <ShowIf>
+	           <and>
+	           <Criteria type="EQUALS" id="23" value="No Comorbidities"/>
+	           <or>
+	           <Criteria type="GREATER" id="13" value="140"/>
+	           <Criteria type="GREATER" id="13" value="160"/>
+	           <Criteria type="GREATER" id="13" value="180"/>
+	           </or>
+	           </and>
+	       </ShowIf>
+	       <Element
+	           id="24"
+	           type="TEXT"
+	           question="ACE inhibitor is prescribed"/>
+	       </Page>
+	       
+	       <Page>
+	       <ShowIf>
+	           <and>
+	           <Criteria type="EQUALS" id="23" value="Angina"/>
+	           <or>
+	           <Criteria type="GREATER" id="13" value="140"/>
+	           <Criteria type="GREATER" id="13" value="160"/>
+	           <Criteria type="GREATER" id="13" value="180"/>
+	           </or>
+	           </and>
+	       </ShowIf>
+	       <Element
+	           id="24"
+	           type="TEXT"
+	           question="Beta andrenergic blockers are prescribed"/>
+	       </Page>
+	       
+	       <Page>
+	       <ShowIf>
+	           <and>
+	           <Criteria type="EQUALS" id="23" value="Coronary Artery Disease"/>
+	           <or>
+	           <Criteria type="GREATER" id="13" value="140"/>
+	           <Criteria type="GREATER" id="13" value="160"/>
+	           <Criteria type="GREATER" id="13" value="180"/>
+	           </or>
+	           </and>
+	       </ShowIf>
+	       <Element
+	           id="24"
+	           type="TEXT"
+	           question="Beta andrenergic blockers and ACE inhibitor is prescribed"/>
+	       </Page>
+	       
+	       <Page>
+	       <ShowIf>
+	           <and>
+	           <Criteria type="EQUALS" id="23" value="Heart Failure"/>
+	           <or>
+	           <Criteria type="GREATER" id="13" value="140"/>
+	           <Criteria type="GREATER" id="13" value="160"/>
+	           <Criteria type="GREATER" id="13" value="180"/>
+	           </or>
+	           </and>
+	       </ShowIf>
+	       <Element
+	           id="24"
+	           type="TEXT"
+	           question="ACE inhibitor or diuretics are prescribed"/>
+	       </Page>
+	       
+	       <Page>
+	       <ShowIf>
+	           <and>
+	           <Criteria type="EQUALS" id="23" value="Cerebrovascular Disease"/>
+	           <or>
+	           <Criteria type="GREATER" id="13" value="140"/>
+	           <Criteria type="GREATER" id="13" value="160"/>
+	           <Criteria type="GREATER" id="13" value="180"/>
+	           </or>
+	           </and>
+	       </ShowIf>
+	       <Element
+	           id="24"
+	           type="TEXT"
+	           question="ACE inhibitor plus CCB is prescribed"/>
+	       </Page>
+	       
+	       <Page>
+	       <ShowIf>
+	           <and>
+	           <Criteria type="EQUALS" id="23" value="Diabetes without proteinuria"/>
+	           <or>
+	           <Criteria type="GREATER" id="13" value="140"/>
+	           <Criteria type="GREATER" id="13" value="160"/>
+	           <Criteria type="GREATER" id="13" value="180"/>
+	           </or>
+	           </and>
+	       </ShowIf>
+	       <Element
+	           id="24"
+	           type="TEXT"
+	           question="ACE inhibitor or ARB or CCB is prescribed"/>
+	       </Page>
+	       
+	       <Page>
+	       <ShowIf>
+	           <and>
+	           <Criteria type="EQUALS" id="23" value="Pregnant"/>
+	           <or>
+	           <Criteria type="GREATER" id="13" value="140"/>
+	           <Criteria type="GREATER" id="13" value="160"/>
+	           <Criteria type="GREATER" id="13" value="180"/>
+	           </or>
+	           </and>
+	       </ShowIf>
+	       <Element
+	           id="24"
+	           type="TEXT"
+	           question="Methyldopa is prescribed"/>
+	       </Page>
+	       <Page>
+	       <Element
+	           id="25"
+	           type="TEXT"
+	           question="Lifestyle Management Advice"/>
+	       
+	       <Element
+	           id="25"
+	           type="TEXT"
+	           question="1. Reduce intake of calories, salt and alcohol"/>
+	       
+	       <Element
+	           id="25"
+	           type="TEXT"
+	           question="2. Increase physical activity"/>
+	       
+	       </Page>
+</Procedure>

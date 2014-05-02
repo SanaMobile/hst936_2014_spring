@@ -1,0 +1,407 @@
+<Procedure title="AYUDA" author="VIT">
+	<Page>
+	    
+	        <Element 
+		    concept="PICTURE" 
+		    type="ENTRY" 
+		    id="1" 
+		    question="Please enter your name" 
+		    answer=""/>
+	        
+	</Page>
+	<Page>
+	    <ShowIf>
+	        <Criteria type="EQUALS" id="patientGender" value="Male"/>
+	        </ShowIf>
+	        <Element 
+		    concept="PICTURE" 
+		    type="RADIO" 
+		    id="2" 
+		    question="Are you a"
+		    choices="Smoker,Non Smoker,Drug Addict,Tobacco,Alcoholic,None" 
+		    answer=""/>
+	        
+	</Page>
+	
+	<Page>
+	    <ShowIf>
+	        <Criteria type="EQUALS" id="2" value="Smoker"/>
+	        </ShowIf>
+	        <Element 
+		    concept="PICTURE" 
+		    type="RADIO" 
+		    id="3" 
+		    question="Do You (including yourself) smoke cigarettes inside your home every day
+or most days?"
+		    choices="Yes,No,Don't know" 
+		    answer=""/>
+	        
+	</Page>
+	
+	<Page>
+	    <ShowIf>
+	        <Criteria type="EQUALS" id="2" value="Smoker"/>
+	        </ShowIf>
+	        <Element 
+		    concept="PICTURE" 
+		    type="RADIO" 
+		    id="4" 
+		    question="Which of those statements best describes you now? "
+		    choices="I have no thoughts of quitting smoking,
+ 				I think I need to consider quitting smoking someday,
+ 				I think I should quit smoking but I’m not quite ready,
+				 I think about doing things that will help me quit smoking,
+				 I’m doing things that will help me quit smoking,
+				 Don’t know" 
+		    answer=""/>
+	        
+	</Page>
+	
+	<Page>
+	    <ShowIf>
+	        <Criteria type="EQUALS" id="2" value="Alcoholic"/>
+	        </ShowIf>
+	        <Element 
+		    concept="PICTURE" 
+		    type="RADIO" 
+		    id="5" 
+		    question="How often do you have a drink containing alcohol?"
+		    choices="Monthly or less,Up to 3 times a week,
+		    Up to 4 times a month, 4 or more times a week" 
+		    answer=""/>
+	        
+	</Page>
+	
+	<Page>
+	    <ShowIf>
+	        <Criteria type="EQUALS" id="2" value="Alcoholic"/>
+	        </ShowIf>
+	        <Element 
+		    concept="PICTURE" 
+		    type="RADIO" 
+		    id="6" 
+		    question="How many drinks containing alcohol do you have on a typical day when you
+are drinking?"
+		    choices="One or two, 
+				Three or four ,
+				Five or six,
+				Seven to nine,
+				Ten or more" 
+		    answer=""/>
+	        
+	</Page>
+	
+	<Page>
+	    <Element
+	        concept="ab"
+	        type="RADIO"
+	        id="7"
+	        question="When was the last time that you saw a medical specialist?"
+	        choices="Within the last 4 weeks,
+More than four weeks and less than 12 weeks (3 months),
+More than 12 weeks and less than 24 weeks (6 months),
+More than 6 months ago,
+Don’t know"
+answer=""/>
+	</Page>
+	
+	<Page>
+	    <Element
+	        concept="ab"
+	        type="RADIO"
+	        id="8"
+	        question="Tell about your food habits"
+	        choices="Mostly rice based food,
+ 	Rice and wheat,
+ 	Rice and other cereal like millet, corn etc,
+Other"
+answer=""/>
+	    </Page>
+	
+	<Page>
+	    <Element
+	        concept="ab"
+	        type="RADIO"
+	        id="9"
+	        question="Reading a book or newspaper?"
+	        choices="No difficulty,
+A little bit of difficulty,
+Moderate difficulty,
+Quite a bit of difficulty,
+Extreme difficulty/cannot see,
+   I cannot read"
+answer=""/>
+	    </Page>
+	
+	<Page>
+	    <Element
+	        concept="ab"
+	        type="RADIO"
+	        id="10"
+	        question=". During the past 4 weeks, how much difficulty (using a hearing aid if you
+usually do) did you have in hearing what is said in a conversation with one"
+	        choices="No difficulty, Quite a bit of difficulty,
+A little bit of difficulty, Extreme difficulty/cannot hear,
+Moderate difficulty"
+answer=""/>
+	    </Page>
+	    
+	<Page>
+	    <Element
+	        concept="ab"
+	        type="RADIO"
+	        id="11"
+	        question="Have constipation (difficulty with passing bowel motions)?"
+	        choices="All the time,Some of the time,
+	   Most of the time ,A little of the time,
+	  A good bit of the time,None of the time"
+answer=""/>
+	    </Page>
+	    
+	<Page>
+	    <Element
+	        concept="ab"
+	        type="RADIO"
+	        id="12"
+	        question="During the past 4 weeks, how much of the time did you have indigestion,
+e.g. burning in the stomach, 'heartburn'?"
+	        choices="All the time,Some of the time,
+	   Most of the time ,A little of the time,
+	  A good bit of the time,None of the time"
+answer=""/>
+	    </Page>
+	
+	<Page>
+	    <Element
+	        concept="ab"
+	        type="RADIO"
+	        id="13"
+	        question="Get short of breath at rest?"
+	        choices="All the time,Some of the time,
+	   Most of the time ,A little of the time,
+	  A good bit of the time,None of the time"
+answer=""/>
+	    </Page>
+	    
+	<Page>
+	    <Element
+	        concept="ab"
+	        type="MULTI_SELECT"
+	        id="14"
+	        question="Where did you have pain? (Record below. Multiple response.)"
+	        choices="Head (headache, migraines),
+Neck,
+Back,
+Stomach or abdomen, Arms, Hands, Legs, Feet
+Face or jaw or the joint just below the ear,Chest,None"
+answer=""/>
+	    </Page>
+	    
+	<Page>
+	    <Element
+	        concept="ab"
+	        type="RADIO"
+	        id="15"
+	        question="Waking up frequently during the night?"
+	        choices="All the time,Some of the time,
+	   Most of the time ,A little of the time,
+	  A good bit of the time,None of the time"
+answer=""/>
+	    </Page>
+	    
+	<Page>
+	    <Element
+	        concept="ab"
+	        type="ENTRY"
+	        id="16"
+	        question="Enter blood pressure below"
+			answer=""/>
+	    
+	    <Element
+	        concept="ab"
+	        type="ENTRY"
+	        id="17"
+	        question="Enter diabetes test value below"
+			answer=""/>
+	    </Page>
+	
+	<Page>
+	    <ShowIf>
+	        <Criteria type="GREATER" id="16" value="130"/>
+	        </ShowIf>
+	        <Element 
+		    concept="PICTURE" 
+		    type="RADIO" 
+		    id="18"
+		    question="Have you ever told by doctor or other that you have high blood pressure?"
+		    choices="Yes,
+No,
+Don’t know"
+	answer=""/>
+	        </Page>
+	        
+	<Page>
+	    <ShowIf>
+	        <and>
+	        <Criteria type="GREATER" id="16" value="130"/>
+	        <Criteria type="EQUALS" id="18" value="Yes"/>
+	        </and>
+	        </ShowIf>
+	        <Element 
+		    concept="PICTURE" 
+		    type="RADIO" 
+		    id="19"
+		    question="If yes,  Who made diagnosis"
+		    choices="General practitioner,
+Specialists,
+Health worker"
+	answer=""/>
+	        </Page>
+	        
+	<Page>
+	    <ShowIf>
+	        <and>
+	        <Criteria type="GREATER" id="16" value="130"/>
+	        <Criteria type="EQUALS" id="18" value="Yes"/>
+	        </and>
+	        </ShowIf>
+	        <Element 
+		    concept="PICTURE" 
+		    type="RADIO" 
+		    id="20"
+		    question="If yes, When was the last time your blood pressure was measured?"
+		    choices="During last 12 months,
+Around 1-3 years ago,
+Around 3-5years ago,
+More than 5 years ago,
+Don`t know"
+	answer=""/>
+	        </Page>
+	
+	<Page>
+	    <ShowIf>
+	        <and>
+	        <Criteria type="GREATER" id="16" value="130"/>
+	        <Criteria type="EQUALS" id="18" value="Yes"/>
+	        </and>
+	        </ShowIf>
+	        <Element 
+		    concept="PICTURE" 
+		    type="RADIO" 
+		    id="21"
+		    question="If yes, have you ever taken any pills/tablets for high blood pressure"
+		    choices="Yes,
+No,
+Don’t know"
+	answer=""/>
+	        </Page>
+	
+	<Page>
+	    <ShowIf>
+	        <and>
+	        <Criteria type="GREATER" id="16" value="130"/>
+	        <Criteria type="EQUALS" id="18" value="Yes"/>
+	        <Criteria type="EQUALS" id="21" value="Yes"/>
+	        </and>
+	        </ShowIf>
+	        <Element 
+		    concept="PICTURE" 
+		    type="ENTRY" 
+		    id="22"
+		    question="if yes what were they"
+		    answer=""/>
+	        </Page>
+	
+	
+	<Page>
+	    <ShowIf>
+	        <Criteria type="GREATER" id="17" value="80"/>
+	        </ShowIf>
+	        <Element 
+		    concept="PICTURE" 
+		    type="RADIO" 
+		    id="23"
+		    question="Do you usually have daily at least 30 minutes of physical activity at work and/or during leisure time (including normal daily activity)?"
+		    choices="Yes,
+No"
+	answer=""/>
+	        </Page>
+	
+	
+	<Page>
+	    <ShowIf>
+	        <Criteria type="GREATER" id="17" value="80"/>
+	        </ShowIf>
+	        <Element 
+		    concept="PICTURE" 
+		    type="RADIO" 
+		    id="24"
+		    question="Have you ever been found to have high blood glucose "
+		    choices="Yes,
+No"
+	answer=""/>
+	        </Page>
+	
+	<Page>
+	    <ShowIf>
+	        <and>
+	        <Criteria type="GREATER" id="17" value="80"/>
+	        <Criteria type="EQUALS" id="24" value="Yes"/>
+	        </and>
+	        </ShowIf>
+	        <Element 
+		    concept="PICTURE" 
+		    type="RADIO" 
+		    id="25"
+		    question="If yes, Have you ever taken medication for high glucose on regular basis?"
+		    choices="Yes,
+No"
+	answer=""/>
+	        </Page>
+	
+	<Page>
+	    <ShowIf>
+	        <Criteria type="GREATER" id="17" value="80"/>
+	        </ShowIf>
+	        <Element 
+		    concept="PICTURE" 
+		    type="RADIO" 
+		    id="26"
+		    question="Have any of the members of your immediate family or other relatives been diagnosed with diabetes (type 1 or type 2)?"
+		    choices="No,
+Yes: grandparent or aunt or uncle or first cousin (but no own parent or brother or sister or child),
+Yes: parent or brother or sister or own child"
+	answer=""/>
+	        </Page>
+	
+	<Page>
+	    <ShowIf>
+	        <Criteria type="GREATER" id="17" value="80"/>
+	        </ShowIf>
+	        <Element 
+		    concept="PICTURE" 
+		    type="RADIO" 
+		    id="27"
+		    question="Do you frequently urinate?"
+		    choices="Yes,
+No,
+Not sure"
+	answer=""/>
+	        </Page>
+	
+	<Page>
+	    <ShowIf>
+	        <Criteria type="GREATER" id="17" value="80"/>
+	        </ShowIf>
+	        <Element 
+		    concept="PICTURE" 
+		    type="RADIO" 
+		    id="28"
+		    question="7.	Have difficulty passing/controlling urine (in other words, peeing, passing water or urinating)?"
+		    choices="All the time,Some of the time,
+	   Most of the time ,A little of the time,
+	  A good bit of the time,None of the time"
+	answer=""/>
+	        </Page>
+	
+</Procedure>
