@@ -3,28 +3,34 @@ README
 1. We have used table with following schema
 
  		  
-		  Table "public.proc"
+		  Table "public.sample"
 	
-	 Column | Type | Modifiers 
+	         Column | Type | Modifiers 
 		--------+------+-----------
 		 title  | text | not null
 		 author | text | not null
-
-the above table stores information ABOUT procedure attributes, like title , author name.
+		 key    | text | not null
+		 id     | int  | not null
+		 
+		 
+the above table stores information ABOUT procedure attributes, like title , author name, key.
 
  
-             Table "public.component"
-  Column  | Type |           Modifiers            
-----------+------+--------------------------------
- tag_name | text | not null
- type     | text | not null default 'TEXT'::text
- concept  | text | not null default 'TEXT '::text
- question | text | not null default ' '::text
- id       | text | 
- answer   | text | default ' '::text
- choices  | text | default ' '::text
- required | text | default 'false'::text
- helptext | text | default ' '::text 
+ Table "public.s2"
+  Column  |  Type   |           Modifiers           
+----------+---------+-------------------------------
+ xml_id   | integer | 
+ tag_name | text    | not null
+ type     | text    | not null default 'TEXT'::text
+ concept  | text    | not null default 'TEXT'::text
+ question | text    | not null default ' '::text
+ s_id     | text    | 
+ answer   | text    | default ' '::text
+ choices  | text    | default ' '::text
+ required | text    | default 'false'::text
+ helptext | text    | default ' '::text
+Foreign-key constraints:
+    "s2_xml_id_fkey" FOREIGN KEY (xml_id) REFERENCES sample(id) 
 
 the above tables stores general information about components in the xml file
 
@@ -32,50 +38,44 @@ the above tables stores general information about components in the xml file
 2. For testing Purposes , we entered sample datas in respective table as follows
 
 
-		Table "public.proc"
+		
+ select * from sample;
+ title | author |  key   | id 
+-------+--------+--------+----
+ Sana  | kundan | cancer |  1
+ Sana  | kundan | cancer |  2
+ Sana  | Azad   | TB     |  3
+(3 rows)
 
- 		 title  | author 
-		--------+--------
-		 VIT-13 | azad,kundan
+ 		 
 
-		Table "public.component"
-
-
-
-	 tag_name |  type  | concept |       question        | id | answer | choices | required |              helptext              
-	----------+--------+---------+-----------------------+----+--------+---------+----------+------------------------------------
- 	 Element  | ENTRY  | TEXT    | Enter a name          | 1  |        |         | false    |  
- 	 Element  | SELECT | TEXT    | Select a single value | 2  |        | 1,2,3,4 | false    |  
- 	 Element  | ENTRY  | NUMBER  | Enter integer value   | 3  |        |         | true     | Please enter data before advancing
+		Table "public.s2"
 
 
+xml_id | tag_name |  type  | concept |    question    | s_id | answer |  choices  | required |            helptext            
+--------+----------+--------+---------+----------------+------+--------+-----------+----------+--------------------------------
+      2 | Element  | RADIO  | TEXT    | SELECT INTEGER | 2    |        | 1,2,3,4   | false    |  
+      1 | Element  | RADIO  | TEXT    | SELECT INTEGER | 2    |        | 1,2,3,4   | false    |  
+      1 | Element  | ENTRY  | TEXT    | Enter name     | 1    |        |           | false    |  
+      2 | Element  | ENTRY  | TEXT    | Enter number   | 1    |        |           | true     | please enter before advancing
+      3 | Element  | SELECT | TEXT    | Choose numbers | 1    |        | 1,2,3,4,5 | true     | enter details before advancing
+(5 rows)
 
 3. we have created locally the database "mysanadb" where the above tables are stored
 
-4. We are storing the generated XML code from Json object passed to the function json2xml in test.xml
+4. We are storing the generated XML code from Json object passed to the function json2xml in 1.xml
 
-5. sample output is shown as stored in test.xml
+5. sample output is shown as stored in 1.xml
 
 
-<Procedure title="VIT-13"author="azad,kundan">
+<Procedure title="Sana" key="cancer" author="kundan">
 <Page>
 	<Element>
-		type="ENTRY"
+		type="RADIO"
 		concept="TEXT"
-		question="Enter a name"
-		id="1"
-		answer=" "
-		helpText=" "
-		required="false"
-	</Element>
-</Page>
-<Page>
-	<Element>
-		type="SELECT"
-		concept="TEXT"
-		question="Select a single value"
+		question="SELECT INTEGER"
 		id="2"
-		answer=" "
+		answer=""
 		choices="1,2,3,4"
 		helpText=" "
 		required="false"
@@ -84,16 +84,15 @@ the above tables stores general information about components in the xml file
 <Page>
 	<Element>
 		type="ENTRY"
-		concept="NUMBER"
-		question="Enter integer value"
-		id="3"
+		concept="TEXT"
+		question="Enter name"
+		id="1"
 		answer=" "
-		helpText="Please enter data before advancing"
-		required="true"
+		helpText=" "
+		required="false"
 	</Element>
 </Page>
 </Procedure>
-
 
 
 
