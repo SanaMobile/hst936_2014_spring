@@ -118,7 +118,7 @@ public class CalendarView extends Activity {
 		month.set(Integer.parseInt(dateArr[0]), Integer.parseInt(dateArr[1]), Integer.parseInt(dateArr[2]));
 	}
 	
-	public Runnable calendarUpdater = new Runnable() {
+	/*public Runnable calendarUpdater = new Runnable() {
 		
 		public void run() {
 			items.clear();
@@ -135,5 +135,5 @@ public class CalendarView extends Activity {
 			adapter.setItems(items);
 			adapter.notifyDataSetChanged();
 		}
-	};
+	};*/
 }

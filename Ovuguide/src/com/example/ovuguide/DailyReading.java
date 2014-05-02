@@ -3,7 +3,7 @@ package com.example.ovuguide;
 public class DailyReading {
 	
 	int dayOfMonth, month, year,mucus,phase;
-	double temperature;
+	//double temperature;
 	
 	
 	/*public void DayReadings(int dayOfMonth,int month,int year,double temperature,int mucus)
@@ -68,14 +68,14 @@ public class DailyReading {
 	}
 
 
-	public double getTemperature() {
+	/*public double getTemperature() {
 		return temperature;
 	}
 
 
 	public void setTemperature(double temperature) {
 		this.temperature = temperature;
-	}
+	}*/
 
 	
 

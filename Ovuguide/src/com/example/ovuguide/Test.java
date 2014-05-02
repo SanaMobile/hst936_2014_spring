@@ -23,42 +23,28 @@ public class Test extends Activity {
 		dailyReading.setDayOfMonth(intent.getIntExtra("dayOfMonth",0));
 		dailyReading.setMonth(intent.getIntExtra("month",0));
 		dailyReading.setYear(intent.getIntExtra("year",0));
-		//Random r1 = new Random();
+		Random r1 = new Random();
 		
-		dailyReading.setMucus(0);
-		dailyReading.setTemperature(0.0);
-		dailyReading.setPhase(0);
+		dailyReading.setMucus(r1.nextInt(6));
+		//dailyReading.setTemperature(0.0);
+		PhaseCalculator phaseCalculator = new PhaseCalculator();
+		dailyReading.setPhase(phaseCalculator.calculatePhase(getBaseContext(), dailyReading));
 		
-		observationsDAO.open();
-		observationsDAO.addDailyReadings(dailyReading);
-		observationsDAO.close();
 		
-		/*Intent i = new Intent("com.example.ovuguide.Test2");
-		i.putExtra("dayOfMonth", dailyReading.getDayOfMonth());
-		i.putExtra("month", dailyReading.getMonth());
-		i.putExtra("year", dailyReading.getYear());
-		startActivity(i);*/
+		boolean success = observationsDAO.addDailyReadings(dailyReading);
 		
-		observationsDAO.open();		
-		dailyReading2= observationsDAO.getDailyReading(intent.getIntExtra("dayOfMonth",0), intent.getIntExtra("month",0), intent.getIntExtra("year",0));
-		observationsDAO.close();
 		
-		String txt = dailyReading2.getDayOfMonth()+"\n"+dailyReading2.getMonth()+"\n"+dailyReading2.getYear()+"\n"+dailyReading2.getMucus()+"\n"+dailyReading2.getTemperature()+"\n"+dailyReading2.getPhase();
-		Toast toast =Toast.makeText(this.getBaseContext(), txt, Toast.LENGTH_LONG);
-		toast.show();
-		/*if(dailyReading2==null)
+		if(!success)
 		{
-			
-			Toast toast =Toast.makeText(this.getBaseContext(), "Null cursor", Toast.LENGTH_LONG);
+			Toast toast =Toast.makeText(getBaseContext(), "Could not insert the reading ", Toast.LENGTH_LONG);
 			toast.show();
-			
+			return;
 		}
-		else
-		{
-		String txt = dailyReading2.getDayOfMonth()+"\n"+dailyReading2.getMonth()+"\n"+dailyReading2.getYear()+"\n"+dailyReading2.getMucus()+"\n"+dailyReading2.getTemperature()+"\n"+dailyReading2.getPhase();
-		Toast toast =Toast.makeText(this.getBaseContext(), txt, Toast.LENGTH_LONG);
+		
+		dailyReading2 = observationsDAO.getDailyReading(intent.getIntExtra("dayOfMonth",0), intent.getIntExtra("month",0), intent.getIntExtra("year",0));
+		String msg = dailyReading.getMucus()+"\n"+dailyReading.getPhase()+"\n";
+		Toast toast =Toast.makeText(getBaseContext(), msg, Toast.LENGTH_LONG);
 		toast.show();
-		//}*/
 	}
 
 	@Override

@@ -1,6 +1,6 @@
 package com.example.ovuguide;
 
 public class Phase {
-	public static int BIP=0,FERTILE=1,POSTOVULATORY_INFERTILE=3;
+	public static int INDECISIVE=0,INFERTILE=1,FERTILE=2;
 }
 	
