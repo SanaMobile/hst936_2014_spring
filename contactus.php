@@ -76,10 +76,10 @@
             <legend id ="info"><span class="glyphicon glyphicon-globe"></span> Our office</legend>
             <address>
                 <p id = "info">Clean Hive<br></p><p id ="header">
-                Nelson Mandela Block,<br>
-                D # 311, VIT University, Vellore, 632014, TN<br>
+                Addiction Recovery,MIT SANA<br>
+                <br>
                 <span class="glyphicon glyphicon-earphone"></span>
-                 (+91) 989-1323-132.</p>
+                 (+001) 932-1239-533.</p>
             <address>
                 <!-- <strong>Full Name</strong><br>
                 <a href="mailto:#">first.last@example.com</a> -->
