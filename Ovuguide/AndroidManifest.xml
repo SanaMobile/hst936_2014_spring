@@ -23,10 +23,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.ovuguide.Test"
+            android:name="com.example.ovuguide.Form"
             android:label="@string/title_activity_test" >
             <intent-filter>
-                <action android:name="com.example.ovuguide.Test" />
+                <action android:name="com.example.ovuguide.Form" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>

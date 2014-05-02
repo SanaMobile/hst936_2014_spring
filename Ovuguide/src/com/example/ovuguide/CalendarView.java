@@ -84,7 +84,7 @@ public class CalendarView extends Activity {
 		        if(date instanceof TextView && !date.getText().equals("")) {
 		        	
 		        	
-		        	Intent intent = new Intent("com.example.ovuguide.Test");
+		        	Intent intent = new Intent("com.example.ovuguide.Form");
 		        	String day = date.getText().toString();
 		        			        	
 		        	//intent.putExtra("date", android.text.format.DateFormat.format("yyyy-MM", month)+"-"+day);
