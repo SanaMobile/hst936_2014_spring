@@ -42,13 +42,13 @@ public class ObservationsDAO {
 		long result = observations.insert(ObservationsSQLiteHelper.TABLE_NAME, null, contentValues);
 		close();
 		
-		if(result!=-1)
+		if(result==-1)
 		{
 			DailyReading newReading = dailyReading;			
 			return updateDailyReading(newReading);
 		}
 		else
-			return false;
+			return true;
 		
 	}
 	

@@ -16,7 +16,7 @@
         android:text="Enter texture of mucus" />
 
     <RadioGroup
-        android:id="@+id/radioMucusTexture"
+        android:id="@+id/radioGroupMucusTexture"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         >
@@ -85,7 +85,7 @@
         android:text="No" />
  </RadioGroup>
      <Button
-        android:id="@+id/button1"
+        android:id="@+id/btnSubmit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Submit"
