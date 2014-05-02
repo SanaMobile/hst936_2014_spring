@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="MIT SANA Clean Hive">
-    <meta name="author" content="Bondili Rohan Singh">
+    <meta name="author" content="Bondili Rohan Singh, Nitin Nair">
     <link rel="shortcut icon" href="assets/icons/favicon.ico">
     <title>Clean Hive| Contact Us</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -19,7 +19,7 @@
         <div class="row">
             <div class="col-sm-12 col-lg-12">
                 <h1 class="h1">
-                    Contact Us <small>Feel free</small></h1>
+                    Contact Us</h1>
             </div>
         </div>
     </div>
@@ -80,7 +80,8 @@
                 D # 311, VIT University, Vellore, 632014, TN<br>
                 <!-- <abbr title="Phone">
                     </abbr> -->
-                (+91) 989-1323-132</p> 
+                Rohan-  (+91) 989-1323-132 <br>
+                Nitin-    (+91) 959-7366-410</p>
             </address>
             <address>
                 <!-- <strong>Full Name</strong><br>
