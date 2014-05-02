@@ -1,7 +1,7 @@
 # mds
 ## a Sails application
 Steps to run the web application:
-1.Download the Node.js source code or a pre-built installer from
+##1.Download the Node.js source code or a pre-built installer from
 ->http://nodejs.org/download/
 2.Get started with Sails.js ->http://sailsjs.org/#!getStarted
 3.In adapter.js set the password to your root password.
