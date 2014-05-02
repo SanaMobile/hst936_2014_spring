@@ -1,0 +1,455 @@
+*{
+    margin: 0;
+}
+
+html{
+    height: 100%;
+}
+
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,300|Oswald);
+
+body {
+    height: 100%;
+    min-height: 400px;
+    min-width: 475px;
+    background-color: #fff;
+    font-family: Roboto;
+}
+
+.mottoOuter{
+    width: 300px; border: 1px solid grey; 
+    z-index: 5; height: 351px; vertical-align: top;
+    margin: auto 5px auto 5px; display: inline-block; 
+    transition: 0.3s all ease; -webkit-transition: 0.3s all ease;
+}
+
+.mottoOuter:hover{
+    transform: scale(1.1, 1.1);
+    z-index: 10;
+    -webkit-transform: scale(1.1, 1.1);
+    box-shadow: 2px 2px 15px darkgrey;
+    margin: auto 5px auto 5px;
+}
+
+.mottoInner{
+    background-color: #ece9e9; text-align: center; padding: 25px; height: 147px;
+}
+
+#wrapper {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -120px;
+}
+
+a{text-decoration: none;}
+
+header{
+    position: fixed;
+    opacity: 0.95;
+    z-index: 1000;
+    width: 100%;
+    overflow: hidden;
+    border-bottom: 3px solid #008AC3;
+    padding: 5px;
+    background-color: #fff;
+    height: 60px;
+    color: #000;
+    font-family: Roboto;
+}
+
+#headingHeader{
+    font-weight: 300;
+}
+
+li{display: inline-block;}
+
+.headerLinks{
+    color: #000;
+    font-size: 14px;
+    display: inline-block;
+    padding: 4px;
+    margin: 15px 3px auto 3px;
+    text-decoration: none;
+    transition: 0.2s all ease;
+    -webkit-transition: 0.2s all ease;
+}
+
+.headerLinks:hover{
+    transform: scale(1.15, 1.15);
+    -webkit-transform: scale(1.15, 1.15);
+    background-color: #000;
+    color: #fff;
+}
+
+/* ----------------------- About Us ---------------------------- */
+
+#boardPicsContainer{
+    margin: -30px 10px auto 10px; 
+    white-space: nowrap; 
+    overflow-x: scroll; 
+    overflow-x: overlay;
+    height: 210px; 
+    padding: 10px 10px;
+}
+
+#aboutText{
+    font-family:'Roboto', 'Arial'; 
+    font-weight:300; 
+    text-align:center; 
+    font-size:1.2em; 
+    margin: 40px;
+    margin-top: 100px;
+    padding-top: 110px;
+}
+
+#aboutText::selection{
+    background: #0267AB;
+    color: #fff;
+}
+
+.boardPics{
+    border-width: 1px 1px 0;
+    border-color: #000;
+    border-style: solid;
+	width: 135px;
+	height: 135px;
+}
+
+.picContainer{
+
+	background-color: black;
+	position:absolute;
+right:600px;
+	width: 137px;
+	height: 200px;
+	box-shadow: 2px 2px 5px grey;
+	transition: 0.5s all ease;
+	-webkit-transition:0.5s all ease;
+	display: inline-block;
+    margin: auto auto 7px 2px;
+    z-index: 300;
+}
+
+.caption{
+	font-family: Arial, 'sans-serif';
+	color:#fff;
+	font-size: 12.5px;
+	position: relative;
+    top: 2px;
+	text-align: center;
+	font-style: italic;
+}
+
+.caption:first-line{
+	font-size: 15px;
+	font-style: normal;
+    font-weight: 700;
+}
+
+.caption::selection{
+    background-color: #000;
+    color: #0267AB;
+}
+
+.picContainer:hover{
+	box-shadow: 0 0 100px #fff;
+	-webkit-transform:scale(1.1,1.1);
+	transform:scale(1.1,1.1);
+	display: inline-block;
+    z-index: 500;
+}
+
+.core{
+	font-family: 'Roboto', 'Arial', sans-serif;
+	background-color: #0267AB;
+	color: #fff;
+    border: 0;
+	box-shadow: 0.2em 0.2em 0.2em darkgrey;
+	transition: 0.35s all ease;
+	-webkit-transition:0.35s all ease;
+	position: relative;
+	display: inline-block;
+	margin: 8px auto auto 8px;
+	padding:7px;
+}
+
+.core:hover{
+	background-color: #fff;
+	color:  #0267AB;
+	cursor: default;
+	box-shadow: 0.2em 0.2em 0.2em #fff;
+}
+
+/*--------------------- Events ---------------------------*/
+
+.md-trigger{
+                font-family: Roboto, Arial;
+                font-size: 20px;
+                padding: 8px;
+                border: 0;
+                box-shadow: 2px 2px 2px darkgrey;
+                transition: 0.2s all ease;
+                -webkit-transition: 0.2s all ease;
+                display: inline-block;
+                margin-right: 8px;
+                margin-bottom: 8px;
+                background-color: #0267AB;
+                color: #fff;
+            }
+            
+            .md-trigger:hover{
+                background-color: #0099FF;
+                cursor: pointer;
+            }
+            
+            .md-trigger:active{
+                transform: scale(0.9, 0.9);
+                -webkit-transform: scale(0.9, 0.9);
+            }
+            
+            .md-close{
+                font-family: Roboto, Arial;
+                font-size: 20px;
+                padding: 8px;
+                border-radius: 5px;
+                border: 1px solid #0094ff;
+                box-shadow: 0 0 20px #fff;
+                transition: 0.2s all ease;
+                -webkit-transition: 0.2s all ease;
+                display: inline-block;
+                margin-top: 5px;
+                background-color: #0094ff;
+                color: #fff;
+            }
+            
+            .md-close:hover{
+                cursor: pointer;
+            }
+            
+            .buttonContainer{
+                margin: 5px 100px auto 90px;
+            }
+            
+            #eventSummary{
+                max-height: 220px; overflow-y: scroll; 
+                padding-right:5px; margin-bottom: 15px;
+            }
+            
+            #eventSummary::selection{
+                background: #000;
+                color: #0099FF;
+            }       
+
+            .eventSemYear{
+                color: #fff;
+                font-size: 50px;
+                font-family: Oswald, Arial;
+                margin-top: 10px;
+            }
+
+            .eventIndicator{
+                height: 95px; width: 80px; 
+                float: left; position: relative;
+                top: 10px; text-align: center;
+            }
+            
+            .fallIndicator{
+                background-color: #FF9912;
+            }
+            
+            .winterIndicator{
+                background-color: #74BBFB;
+            }
+            
+            .eventSemContainer{
+                margin-bottom: 20px;
+                margin-right: 50px;
+            }
+            
+            #closeBtn{
+                position: absolute;
+                top: 7px;
+                right: 7px;
+                font-size: 15px;
+                font-weight: 700;
+                color: #dbdbdb;
+                width: 30px;
+                height: 30px;
+                border: 1px solid #bababa;
+                padding: 0;
+                border-radius: 3px;
+                box-shadow: 0 0 0;
+            }
+
+            #closeBtn:hover{
+                color: #fff;
+                background-color: #ce0a0a;
+                border: 1px solid maroon;
+            }
+            
+            #downloadBtn:hover{
+                background-color: green;
+                border: 1px solid limegreen;
+            }
+
+/*--------------------------------- Gallery -----------------------------------------*/
+
+.carousel-container {
+  position:relative;
+  width:960px;
+}
+
+#carousel {
+  height:350px;
+  width:960px;
+  position:relative;
+  margin-bottom:0.5em;
+  font-size:12px;
+  font-family: Arial;
+}
+.carousel-image {
+  border:0;
+  display:block;
+  visibility: hidden;
+}
+.carousel-feature {
+  position:absolute;
+  top:-1000px;
+  left:-1000px;
+  border:2px solid #5d5d5d;
+  cursor:pointer;
+}
+.carousel-feature .carousel-caption {
+  position:absolute;
+  bottom:0;
+  width:100%;
+  background-color:#000;
+}
+.carousel-feature .carousel-caption p {
+  margin:0;
+  padding:5px;
+  font-weight:bold;
+  font-size:12px;
+  color:white;
+}
+.tracker-summation-container {
+  position:absolute;
+  color:white;
+  right:48px;
+  top:230px;
+  padding:3px;
+  margin:3px;
+  background-color:#000;
+  display: none;
+}
+.tracker-individual-container {
+  position:absolute;
+  color:white;
+  right:48px;
+  top:230px;
+  padding:0;
+  margin:0;
+}
+.tracker-individual-container li {
+  list-style:none;
+}
+.tracker-individual-container .tracker-individual-blip {
+  margin:0 2px;
+  padding:2px 4px;
+  color:white;
+  text-align:center;
+  background-color:#5d5d5d;
+}
+.tracker-individual-container .tracker-individual-blip-selected {
+  color:white;
+  font-weight:bold;
+  background-color:#008AC3;
+}
+#carousel-left {
+  position:absolute;
+  bottom:40px;
+  left:150px;
+  cursor:pointer;
+}
+#carousel-right {
+    position: absolute;
+    bottom: 40px;
+    right: 150px;
+    cursor: pointer;
+}
+
+/*------------------------------ Facebook Activity ------------------------------------*/
+    
+#fbContainer{
+       height: inherit;
+       padding: 5px 0;
+       text-align: center;
+}
+
+#fbHover:hover{
+    cursor: pointer;
+}
+
+            .fbStoryContainer{
+                height: 340px;
+                width: 350px;
+                border: 1px solid #008AC3;
+                box-shadow: 0 0 10px #3b5998;
+                background-color: #fff;
+                padding: 15px;
+                overflow: hidden;
+                overflow-wrap: break-word;
+                display: inline-block;
+                margin: auto 15px 15px auto;
+            }
+
+            #fbHeading{
+                margin: 0 auto 10px auto;
+                color: #008AC3;
+                font-weight: 400;
+                overflow: hidden;
+                height: 64px;
+                text-align: left;
+            }
+
+            #fbHeading2{
+                margin: 0 auto 10px auto;
+                color: #008AC3;
+                font-weight: 100;
+                text-align: center;
+                margin-top: 85px;
+                margin-bottom: 0px;
+            }
+
+            .fbPic{
+                height: 200px;
+                width: 348px;
+                border: 1px solid grey;
+            }
+
+            #fbCaption{
+                text-align: center;
+                font-size: 12px;
+                max-height: 50px;
+                overflow-y: hidden;
+                color: grey;
+            }
+
+
+/*-------------------------------------------------------------------------------------*/
+
+#push{
+    height: 120px;
+}
+
+#footer{
+    background-color: #000;
+    height: 120px;
+    border-top: 3px solid grey;
+    color: #fff;
+    font-size: 14px;
+    padding: 20px;
+    text-align: center;
+    clear: both;
+}

@@ -1,11 +1,17 @@
+<?php $page="Overview"; ?>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="MIT SANA Clean Hive">
+<<<<<<< HEAD
     <meta name="author" content="Bondili Rohan Singh">
     <link rel="shortcut icon" href="assets/icons/favicon.ico">
+=======
+    <meta name="author" content="Bondili Rohan Singh, Nitin Nair">
+    <link rel="shortcut icon" href="assets/icons/colors.ico">
+>>>>>>> 0011aa480dc4e74dd0d36227b663ff55111205ee
     <title>Clean Hive | Dashboard</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/dashboard.css" rel="stylesheet">
@@ -13,6 +19,7 @@
 
   <body>
 
+<<<<<<< HEAD
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container-fluid">
         <div class="navbar-header">
@@ -55,22 +62,12 @@
             <li><a href="#">User Groups</a></li>
             <li><a href="#">Create Profile</a></li>
           </ul>
+=======
+    <?php include_once "navbar.php"; ?>
+    <?php include_once "sidebar.php"; ?>
+>>>>>>> 0011aa480dc4e74dd0d36227b663ff55111205ee
 
-          <!-- 
-          <ul class="nav nav-sidebar">
-            <li><a href="">Nav item</a></li>
-            <li><a href="">Nav item again</a></li>
-            <li><a href="">One more nav</a></li>
-            <li><a href="">Another nav item</a></li>
-            <li><a href="">More navigation</a></li>
-          </ul>
-          <ul class="nav nav-sidebar">
-            <li><a href="">Nav item again</a></li>
-            <li><a href="">One more nav</a></li>
-            <li><a href="">Another nav item</a></li>
-          </ul> -->
-        
-        </div>
+    
 
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
           <h1 class="page-header">Dashboard</h1>
