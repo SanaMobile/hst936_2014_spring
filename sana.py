@@ -24,10 +24,10 @@ def json2xml(json_obj, line_padding=""):
         for tag_name in json_obj:
             sub_obj = json_obj[tag_name]
 	    
-	    y=tag_name.split(" ")
+	    
             result_list.append("%s<%s>" % (line_padding, tag_name))
             result_list.append(json2xml(sub_obj, "\t" + line_padding))
-            result_list.append("%s</%s>" % (line_padding, y[0]))
+            result_list.append("%s</%s>" % (line_padding,tag_name ))
 
         return "\n".join(result_list)
 
@@ -37,34 +37,38 @@ con = None
 
 try:
      
-    con = psycopg2.connect(database='mysanadb', user='azadkundan')    
+    con = psycopg2.connect(database='mysanadb', user='kundan')    
     
     cur = con.cursor()
-
+    
     con.commit()
-    fh=open("test.xml","w")
-    cur.execute("SELECT * FROM proc")
-    for x in cur.fetchall():
-     x='<Procedure title=\"'+x[0]+'\"author=\"'+x[1]+'\">\n'
+    cur.execute("select id from sample")
+    for y in cur.fetchall():
+	z=str(y[0])+".xml"
 
-     fh.write(x)
-    
-    cur.execute("SELECT * FROM component")
-    
-    for row in cur.fetchall():
+        fh=open(z,"w")
+        cur.execute("SELECT * FROM sample where id="+str(y[0]))
+        for x in cur.fetchall():
+            x='<Procedure title=\"'+x[0]+'\" key=\"'+x[2]+'\" author=\"'+x[1]+'\">\n'
 
-      if row[1]=="ENTRY" or row[1]=="TEXT" or row[1]=="NUMBER" : 
-      	   row = '{"Page":{"'+row[0]+'":["type=\\"'+row[1]+'\\"","concept=\\"'+row[2]+'\\"","question=\\"'+row[3]+'\\"","id=\\"'+str(row[4])+'\\"","answer=\\"'+row[5]+'\\"","helpText=\\"'+row[8]+'\\"","required=\\"'+row[7]+'\\""] }}'
-      if row[1]=="MULTI_SELECT" or row[1]=="RADIO" or row[1]=="SELECT" :      
-           row = '{"Page":{"'+row[0]+'":["type=\\"'+row[1]+'\\"","concept=\\"'+row[2]+'\\"","question=\\"'+row[3]+'\\"","id=\\"'+str(row[4])+'\\"","answer=\\"'+row[5]+'\\"","choices=\\"'+row[6]+'\\"","helpText=\\"'+row[8]+'\\"","required=\\"'+row[7]+'\\""] }}'
-      jk=json.dumps(row)
-      j =json.loads(row)
-      print(json2xml(j))
-      fh.write(json2xml(j))
-      fh.write("\n")
-    fh.write("</Procedure>\n")
-    fh.close()
+            fh.write(x)
     
+        cur.execute("SELECT * FROM s2 where xml_id="+str(y[0]))
+    
+        for row in cur.fetchall():
+
+          if row[2]=="ENTRY" or row[2]=="TEXT" or row[2]=="NUMBER" : 
+      	     row = '{"Page":{"'+row[1]+'":["type=\\"'+row[2]+'\\"","concept=\\"'+row[3]+'\\"","question=\\"'+row[4]+'\\"","id=\\"'+str(row[5])+'\\"","answer=\\"'+row[6]+'\\"","helpText=\\"'+row[9]+'\\"","required=\\"'+row[8]+'\\""] }}'
+          if row[2]=="MULTI_SELECT" or row[2]=="RADIO" or row[2]=="SELECT" :      
+             row = '{"Page":{"'+row[1]+'":["type=\\"'+row[2]+'\\"","concept=\\"'+row[3]+'\\"","question=\\"'+row[4]+'\\"","id=\\"'+str(row[5])+'\\"","answer=\\"'+row[6]+'\\"","choices=\\"'+row[7]+'\\"","helpText=\\"'+row[9]+'\\"","required=\\"'+row[8]+'\\""] }}'
+          jk=json.dumps(row)
+          j =json.loads(row)
+          print(json2xml(j))
+          fh.write(json2xml(j))
+          fh.write("\n")
+        fh.write("</Procedure>\n")
+        fh.close()
+     
 except psycopg2.DatabaseError, e:
     
     if con:
