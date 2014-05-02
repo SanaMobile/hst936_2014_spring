@@ -30,6 +30,11 @@
                            placeholder="BMI, Body Mass, Index">
                 </div>
                 <div class="form-group">
+                    <label for="exampleInputEmail1">Component Group</label>
+                    <select class="form-control" ng-options="qComponent for qComponent in qComponentGroups" ng-model="comp.cGroup"></select>
+                </div>
+                <hr>
+                <div class="form-group">
                     <label for="exampleInputEmail1">Question Text</label>
                     <input ng-model="comp.cText" type="text" class="form-control"
                            placeholder="">
@@ -112,6 +117,10 @@
                                     <td>{{comp.qTypeSel.name}}</td>
                                 </tr>
                                 <tr>
+                                    <td>Component Group</td>
+                                    <td>{{comp.cGroup}}</td>
+                                </tr>
+                                <tr>
                                     <td>Question</td>
                                     <td>{{comp.cText}}</td>
                                 </tr>
@@ -145,17 +154,15 @@
                     <li>Concept: {{comp.cConcept}}</li>
                     <li>Keywords: {{comp.cKeywords}}</li>
                     <li>Component Type: {{ comp.qTypeSel.name }}</li>
+                    <li>Component Group: {{ comp.cGroup }}</li>
                     <!-- </ul> -->
                 </div>
                 <div class="panel-body">
-
                     <h4> {{comp.cText}} </h4>
                     <h5 class="muted"> {{comp.cHelperText}} </h5>
                     <div ng-include="comp.qTypeSel.templateUrl"></div>
-
                 </div>
             </div>
-
         </div>
     </div>
 </div>

@@ -13,13 +13,16 @@ angular.module('sanaAngApp')
     $scope.cKeywords = "";
     $scope.cText = "";
     $scope.cHelperText = "";
-    $scope.comp = { cName: '',
-       cConcept:'',
+    $scope.comp = {
+        cName: '',
+        cConcept:'',
         cPlaceholder:'',
         cValidation:'',
         cKeywords:'',cText:'', cHelperText:'',qTypeSel:'',
-        cOption:[] };
-  
+        cOption:[],
+        cGroup:''
+    };
+    $scope.qComponentGroups=["Group 1","Group 2","Group 3","Group 4","Group 5","Group 6"];
     $scope.qConcepts= ['SURGERY SITE','ORGAN','SYMPTOMS','WOUND DRAINAGE','PAIN LEVEL','INITIAL DIAGNOSIS','RECOMMENDATION','FOLLOW UP PERIOD','FOLLOW UP PERIOD','COMMENTS','GPS','SURGERY SITE IMAGE'],
 
             $scope.qTypes = [
