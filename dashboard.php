@@ -1,25 +1,17 @@
-<?php $page="Overview"; ?>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="MIT SANA Clean Hive">
-<<<<<<< HEAD
     <meta name="author" content="Bondili Rohan Singh">
     <link rel="shortcut icon" href="assets/icons/favicon.ico">
-=======
-    <meta name="author" content="Bondili Rohan Singh, Nitin Nair">
-    <link rel="shortcut icon" href="assets/icons/colors.ico">
->>>>>>> 0011aa480dc4e74dd0d36227b663ff55111205ee
     <title>Clean Hive | Dashboard</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/dashboard.css" rel="stylesheet">
   </head>
-
   <body>
 
-<<<<<<< HEAD
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container-fluid">
         <div class="navbar-header">
@@ -29,11 +21,11 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <p id ="custom">Clean Hive</p>
+          <p id ="custom">Clean Hive - Addiction Recovery</p>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="testing.php">Dashboard</a></li>
+            <li><a href="#">Dashboard</a></li>
             <li><a href="#">Settings</a></li>
             <li><a href="#">Profile</a></li>
             <li><a href="#">Help</a></li>
@@ -44,196 +36,29 @@
         </div>
       </div>
     </div>
-
-    <div class="container-fluid">
+<div class="container-fluid">
       <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
           <ul class="nav nav-sidebar">
-            <li class="active"><a href="#">
-              <span class="badge pull-right">4</span>
-              Overview</a>
-            </li>
-              <li>
-                <a href="testing.php">
-                <span class="badge pull-right">10</span>
-                Reports
-              </a>
-              </li>
+            <li class="active"><a href="#">Overview</a></li>
+            <li><a href="#">Reports</a></li>
             <li><a href="#">User Groups</a></li>
+            <li><a href="#">Export Users</a></li>
             <li><a href="#">Create Profile</a></li>
+            <li><a href="#"><span class="badge pull-right" id ="check">15</span>
+              Notifications</a></li>
           </ul>
-=======
-    <?php include_once "navbar.php"; ?>
-    <?php include_once "sidebar.php"; ?>
->>>>>>> 0011aa480dc4e74dd0d36227b663ff55111205ee
-
-    
-
+        </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
           <h1 class="page-header">Dashboard</h1>
 
           <div class="row placeholders">
-            <div class="col-xs-6 col-sm-3 placeholder">
-              <img data-src="holder.js/200x200/auto/sky" class="img-responsive" alt="Generic placeholder thumbnail">
-              <h4>Label</h4>
-              <span class="text-muted">Something else</span>
-            </div>
-            <div class="col-xs-6 col-sm-3 placeholder">
-              <img data-src="holder.js/200x200/auto/vine" class="img-responsive" alt="Generic placeholder thumbnail">
-              <h4>Label</h4>
-              <span class="text-muted">Something else</span>
-            </div>
-            <div class="col-xs-6 col-sm-3 placeholder">
-              <img data-src="holder.js/200x200/auto/sky" class="img-responsive" alt="Generic placeholder thumbnail">
-              <h4>Label</h4>
-              <span class="text-muted">Something else</span>
-            </div>
-            <div class="col-xs-6 col-sm-3 placeholder">
-              <img data-src="holder.js/200x200/auto/vine" class="img-responsive" alt="Generic placeholder thumbnail">
-              <h4>Label</h4>
-              <span class="text-muted">Something else</span>
-            </div>
           </div>
-
-          <h2 class="sub-header">Section title</h2>
-          
-         
-
-        <div class="table-responsive">
-            <table class="table table-striped">
-              <thead>
-                <tr>
-                  <th>#</th>
-                  <th>Header</th>
-                  <th>Header</th>
-                  <th>Header</th>
-                  <th>Header</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>1,001</td>
-                  <td>label</td>
-                  <td>label</td>
-                  <td>label</td>
-                  <td>label</td>
-                </tr>
-                <tr>
-                  <td>1,002</td>
-                  <td>label</td>
-                  <td>label</td>
-                  <td>label</td>
-                  <td>label</td>
-                </tr>
-                <tr>
-                  <td>1,003</td>
-                  <td>label</td>
-                  <td>label</td>
-                  <td>label</td>
-                  <td>label</td>
-                </tr>
-                <tr>
-                  <td>1,003</td>
-                  <td>label</td>
-                  <td>label</td>
-                  <td>label</td>
-                  <td>label</td>
-                </tr>
-                <tr>
-                  <td>1,004</td>
-                  <td>label</td>
-                  <td>label</td>
-                  <td>label</td>
-                  <td>label</td>
-                </tr>
-                <tr>
-                  <td>1,005</td>
-                  <td>label</td>
-                  <td>label</td>
-                  <td>label</td>
-                  <td>label</td>
-                </tr>
-                <tr>
-                  <td>1,006</td>
-                  <td>label</td>
-                  <td>label</td>
-                  <td>label</td>
-                  <td>label</td>
-                </tr>
-                <tr>
-                  <td>1,007</td>
-                  <td>label</td>
-                  <td>label</td>
-                  <td>label</td>
-                  <td>label</td>
-                </tr>
-                <tr>
-                  <td>1,008</td>
-                  <td>label</td>
-                  <td>label</td>
-                  <td>label</td>
-                  <td>label</td>
-                </tr>
-                <tr>
-                  <td>1,009</td>
-                  <td>label</td>
-                  <td>label</td>
-                  <td>label</td>
-                  <td>label</td>
-                </tr>
-                <tr>
-                  <td>1,010</td>
-                  <td>label</td>
-                  <td>label</td>
-                  <td>label</td>
-                  <td>label</td>
-                </tr>
-                <tr>
-                  <td>1,011</td>
-                  <td>label</td>
-                  <td>label</td>
-                  <td>label</td>
-                  <td>label</td>
-                </tr>
-                <tr>
-                  <td>1,012</td>
-                  <td>label</td>
-                  <td>label</td>
-                  <td>label</td>
-                  <td>label</td>
-                </tr>
-                <tr>
-                  <td>1,013</td>
-                  <td>label</td>
-                  <td>label</td>
-                  <td>label</td>
-                  <td>label</td>
-                </tr>
-                <tr>
-                  <td>1,014</td>
-                  <td>label</td>
-                  <td>label</td>
-                  <td>label</td>
-                  <td>label</td>
-                </tr>
-                <tr>
-                  <td>1,015</td>
-                  <td>label</td>
-                  <td>label</td>
-                  <td>label</td>
-                  <td>label</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-       
-       
-
-        </div> 
-
-        
+        </div>
       </div>
     </div>
+
+    <!-- ====================================== LOAD FILES HERE ============================ -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/docs.min.js"></script>
