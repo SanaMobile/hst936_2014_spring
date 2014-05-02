@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="MIT SANA Clean Hive">
     <meta name="author" content="Bondili Rohan Singh">
-    <link rel="shortcut icon" href="assets/icons/colors.ico">
+    <link rel="shortcut icon" href="assets/icons/favicon.ico">
     <title>Clean Hive | Dashboard</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/dashboard.css" rel="stylesheet">
@@ -26,7 +26,7 @@
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Dashboard</a></li>
+            <li><a href="testing.php">Dashboard</a></li>
             <li><a href="#">Settings</a></li>
             <li><a href="#">Profile</a></li>
             <li><a href="#">Help</a></li>
@@ -47,7 +47,7 @@
               Overview</a>
             </li>
               <li>
-                <a href="#">
+                <a href="testing.php">
                 <span class="badge pull-right">10</span>
                 Reports
               </a>
@@ -72,7 +72,6 @@
         
         </div>
 
-        <!-- ================================   Image START
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
           <h1 class="page-header">Dashboard</h1>
 
@@ -101,7 +100,7 @@
 
           <h2 class="sub-header">Section title</h2>
           
-         TABLE START ===================================================================
+         
 
         <div class="table-responsive">
             <table class="table table-striped">
@@ -231,11 +230,11 @@
             </table>
           </div>
        
-       ================================= ENDING TABLE
+       
 
         </div> 
 
-        =============================IMAGE END=========================== -->
+        
       </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>

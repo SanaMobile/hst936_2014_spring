@@ -1,0 +1,8 @@
+body { margin: 50px 0; background: url(assets/bglight.png); }
+		.well { background-color: #fff; }
+
+		.fixme { position: fixed; }
+		/* Landscape phone to portrait tablet */
+		@media (max-width: 767px) {
+			.fixme { width: 100%; position: static; }
+		}

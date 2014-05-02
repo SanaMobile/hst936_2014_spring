@@ -73,14 +73,14 @@
         </div>
         <div class="col-md-4">
             <form>
-            <legend id ="info">Our office</legend>
+            <legend id ="info"><span class="glyphicon glyphicon-globe"></span> Our office</legend>
             <address>
                 <p id = "info">Clean Hive<br></p><p id ="header">
                 Nelson Mandela Block,<br>
                 D # 311, VIT University, Vellore, 632014, TN<br>
                 <!-- <abbr title="Phone">
-                    </abbr> -->
-                (+91) 989-1323-132</p> 
+                    </abbr> --><span class="glyphicon glyphicon-earphone"></span>
+                 (+91) 989-1323-132.</p> 
             </address>
             <address>
                 <!-- <strong>Full Name</strong><br>
