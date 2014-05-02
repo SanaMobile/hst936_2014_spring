@@ -13,5 +13,6 @@
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_display">DisplayActivity</string>
     <string name="title_activity_test2">Test2</string>
+    <string name="title_activity_menses_form">MensesForm</string>
 
 </resources>

@@ -41,10 +41,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.ovuguide.Test2"
-            android:label="@string/title_activity_test2" >
+            android:name="com.example.ovuguide.MensesForm"
+            android:label="@string/title_activity_menses_form" >
             <intent-filter>
-                <action android:name="com.example.ovuguide.Test2" />
+                <action android:name="com.example.ovuguide.MensesForm" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
