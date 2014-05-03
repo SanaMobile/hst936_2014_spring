@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.mexicoehr"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.mexicoehr.Five"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+           <activity
+            android:name="com.example.mexicoehr.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAINACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name="com.example.mexicoehr.Next"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.NEXT" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+         <activity
+            android:name="com.example.mexicoehr.ShowdetailsA"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.SHOWDETAILSA" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name="com.example.mexicoehr.Doctor"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.DOCTOR" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.mexicoehr.DoctorEdit"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.DOCTOREDIT" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.mexicoehr.Showdetails"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.SHOWDETAILS" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.mexicoehr.EditdetailsA"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.EDITDETAILSA" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.mexicoehr.Select"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.SELECT" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.mexicoehr.PatientC"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.PATIENTC" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.mexicoehr.PatientA"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.PATIENTA" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.mexicoehr.CreateA"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.CREATEA" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.mexicoehr.Editdetails"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.EDITDETAILS" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+         <activity
+            android:name="com.example.mexicoehr.TechCreate"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.TECHCREATE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.mexicoehr.TechdetailsA"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.TECHDETAILSA" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.mexicoehr.TechdetailsC"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.TECHDETAILSC" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.mexicoehr.ShowTech"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.SHOWTECH" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.mexicoehr.ShowTechA"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.SHOWTECHA" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.mexicoehr.Create"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.CREATE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.mexicoehr.Edit"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.EDIT" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.mexicoehr.EditA"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.EDITA" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+          <activity
+            android:name="com.example.mexicoehr.After"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.AFTER" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.mexicoehr.Nurse"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.example.mexicoehr.ClinicTechnician"
+            android:label="@string/app_name" >
+        </activity>
+    </application>
+
+</manifest>

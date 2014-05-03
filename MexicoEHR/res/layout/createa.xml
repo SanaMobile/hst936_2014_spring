@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:padding="20dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="20dp"
+                android:text="Enter the patient details"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CURP or Insurance" />
+
+            <EditText
+                android:id="@+id/curpa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="ID" >
+
+                <requestFocus />
+                
+            </EditText>
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name" />
+
+            <EditText
+                android:id="@+id/namea"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Patient&apos;s Name"
+                android:inputType="textPersonName" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gender" />
+
+            <RadioGroup
+                android:id="@+id/gendera"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/malea"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Male" />
+
+                <RadioButton
+                    android:id="@+id/femalea"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Female" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Phone" />
+
+            <EditText
+                android:id="@+id/phonea"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="10 Digits (8+2)"
+                android:inputType="phone" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Email" />
+
+            <EditText
+                android:id="@+id/emaila"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Email"
+                android:inputType="textEmailAddress" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Address" />
+
+            <EditText
+                android:id="@+id/zipa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="ZIP-CODE"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/colonya"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Colony"
+                android:inputType="textPostalAddress" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Familiar antecedents"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+            
+           
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cancer" />
+
+            <RadioGroup
+                android:id="@+id/cancera"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/cyesa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Yes" />
+
+                <RadioButton
+                    android:id="@+id/cnoa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Diabetes" />
+
+            <RadioGroup
+                android:id="@+id/diabetesa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/dyesa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Yes" />
+
+                <RadioButton
+                    android:id="@+id/dnoa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hypertension" />
+
+            <RadioGroup
+                android:id="@+id/hypertensiona"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/hyesa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Yes" />
+
+                <RadioButton
+                    android:id="@+id/hnoa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No" />
+            </RadioGroup>
+             <TextView
+                android:id="@+id/alergy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Type of Alergy"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+            
+     <CheckBox android:id="@+id/dust"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dust"
+        android:onClick="onCheckboxClicked"/>
+     
+    <CheckBox android:id="@+id/metals"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Metals"
+        android:onClick="onCheckboxClicked"/>
+    
+     <CheckBox android:id="@+id/animals"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Animals"
+        android:onClick="onCheckboxClicked"/>
+     
+    <CheckBox android:id="@+id/food"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Food"
+        android:onClick="onCheckboxClicked"/>
+             
+     <CheckBox android:id="@+id/medicine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Medicine"
+        android:onClick="onCheckboxClicked"/>
+     
+    <EditText android:id="@+id/otheralergies"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Other"
+        />
+    
+    
+      <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Body Measurements" />
+            
+             <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Height" />
+
+            <EditText
+                android:id="@+id/heightv2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Height(m)"
+                android:inputType="number"
+                
+              />
+            
+            
+              <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Weight" />
+
+            <EditText
+                android:id="@+id/weightv2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Weight(kg)"
+                android:inputType="number"
+              />
+            
+             <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tempreture" />
+
+            <EditText
+                android:id="@+id/tempreturev2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Tempreture(°)"
+                 android:inputType="number"
+              />
+            
+              <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Blood Pressure" />
+
+            <EditText
+                android:id="@+id/blodd_pressurev2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Blood Pressure"
+                 android:inputType="number"
+              />
+            
+             <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Waist circumference" />
+
+            <EditText
+                android:id="@+id/Waist_circumferencev2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Waist circumference"
+                android:inputType="number"
+              />
+
+            
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Immunization" />
+
+            <RadioGroup
+                android:id="@+id/immunization2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/immune_yes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="On Time" />
+
+                <RadioButton
+                    android:id="@+id/immune_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Late" />
+            </RadioGroup>
+            
+      <TextView android:text="Pre-Diagnosis"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"/>
+      
+      
+    <AutoCompleteTextView
+    android:id="@+id/autocomplete_country1"
+    android:layout_width="fill_parent"
+    android:layout_height="130dp"     
+    android:textColor="#000000"
+    android:hint="STDs, Sprain, Anemia, Heart Attack,
+Cardiopathy, Arrhythmia, Arrhythmia," />
+            
+            <EditText
+                android:id="@+id/ckname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Clinic name"
+                android:inputType="textEmailAddress" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Clinic Address" />
+
+            <EditText
+                android:id="@+id/ckadd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Clinic number"
+                android:inputType="textEmailAddress" />
+
+          
+            <Button
+                android:id="@+id/submita"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Submit" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
