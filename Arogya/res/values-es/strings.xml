@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name"> Arogya</string>
+    <string name="action_settings">Settings</string>
+    <string name="male">Masculino</string>
+    <string name="female">Femenino</string>
+    <string name="gender">Genero</string>
+    <string name="dob">Fecha de nacimiento</string>
+    <string name="cal">Calendario</string>
+    <string name="sub">Proceder >></string>
+    <string name="weight">Peso  (kg)</string>
+    <string name="height">Altura  (cm)</string>
+        <string name="dev">Acerca de</string>
+    <color name="green">#00FF99</color>
+    <color name="blue">#0033FF</color>
+    <color name="gb">#00FFFF</color>
+    <color name="red">#FF9933 </color>
+    <color name="black">#000000 </color>
+    <color name="white">#FFFFFF </color>
+
+</resources>
