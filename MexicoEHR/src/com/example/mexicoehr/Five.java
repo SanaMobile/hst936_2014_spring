@@ -31,7 +31,7 @@ public class Five extends Activity {
 			}
 			finally
 			{
-				Intent op=new Intent(Five.this,MainActivity.class);
+				Intent op=new Intent("android.intent.action.MAINACTIVITY");
 				startActivity(op);
 			}
 		}
