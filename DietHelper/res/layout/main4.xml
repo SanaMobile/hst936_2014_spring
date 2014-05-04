@@ -1,0 +1,112 @@
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:background="@drawable/image5">
+      <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="31dp"
+        android:text="Intake of nutrients  per day"
+        android:textColor="#0000CD"
+        android:textStyle="bold"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView4"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="31dp"
+        android:text="MALE &amp; FEMALE"
+        android:textStyle="bold"
+        android:textColor="#0000CD"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView1"
+        android:layout_marginTop="21dp"
+        android:text="Calories       1000kcal  "
+        android:textColor="#0000CD"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView5"
+        android:layout_marginTop="26dp"
+        android:text="Lean Meat   1.5oz"
+        android:textColor="#0000CD"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView6"
+        android:layout_marginTop="29dp"
+        android:text="Fruits            1.5cup"
+        android:textColor="#0000CD"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView7"
+        android:layout_marginTop="24dp"
+        android:text="Vegetables 1 cup"
+        android:textColor="#0000CD"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView8"
+        android:layout_marginTop="24dp"
+        android:text="Grains          2.5oz"
+        android:textColor="#0000CD"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView2"
+        android:layout_marginTop="15dp"
+        android:text="Fat                20-35%kcal"
+        android:textColor="#0000CD"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView3"
+        android:layout_marginTop="15dp"
+        android:text="Milk/Diary    2 cups"
+        android:textColor="#0000CD"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+    
+
+   
+
+</RelativeLayout>
