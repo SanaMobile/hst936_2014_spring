@@ -1,5 +1,6 @@
 package com.example.ovuguide;
 
+import java.sql.SQLException;
 import java.util.ArrayList;
 
 import android.content.ContentValues;
@@ -38,17 +39,14 @@ public class ObservationsDAO {
 		//contentValues.put(ObservationsSQLiteHelper.TEMPERATURE, dailyReading.getTemperature());
 		contentValues.put(ObservationsSQLiteHelper.PHASE, dailyReading.getPhase());
 		
-		open();
-		long result = observations.insert(ObservationsSQLiteHelper.TABLE_NAME, null, contentValues);
-		close();
 		
-		if(result==-1)
-		{
-			DailyReading newReading = dailyReading;			
-			return updateDailyReading(newReading);
-		}
-		else
-			return true;
+		
+		open();		
+		long result = observations.insertWithOnConflict(ObservationsSQLiteHelper.TABLE_NAME, null, contentValues,SQLiteDatabase.CONFLICT_REPLACE);
+		close();
+		if(result!=-1)
+				return true;
+		return updateDailyReading(dailyReading);
 		
 	}
 	
@@ -56,9 +54,9 @@ public class ObservationsDAO {
 	{
 		open();
 		ContentValues contentValues = new ContentValues();
-		contentValues.put(ObservationsSQLiteHelper.DAY_OF_MONTH, dailyReading.getDayOfMonth());
-		contentValues.put(ObservationsSQLiteHelper.MONTH, dailyReading.getMonth());
-		contentValues.put(ObservationsSQLiteHelper.YEAR, dailyReading.getYear());
+		//contentValues.put(ObservationsSQLiteHelper.DAY_OF_MONTH, dailyReading.getDayOfMonth());
+		//contentValues.put(ObservationsSQLiteHelper.MONTH, dailyReading.getMonth());
+		//contentValues.put(ObservationsSQLiteHelper.YEAR, dailyReading.getYear());
 		contentValues.put(ObservationsSQLiteHelper.MUCUS, dailyReading.getPhase());
 		//contentValues.put(ObservationsSQLiteHelper.TEMPERATURE, dailyReading.getTemperature());
 		contentValues.put(ObservationsSQLiteHelper.PHASE, dailyReading.getPhase());
@@ -100,12 +98,4 @@ public class ObservationsDAO {
 	
 	}
 	
-	/*public void addDailyPhase(int dayOfMonth, int month,int year,int phase)
-	{
-		ContentValues contentValues = new ContentValues();
-		contentValues.put(ObservationsSQLiteHelper.PHASE, phase);
-		String whereClause = ObservationsSQLiteHelper.DAY_OF_MONTH+"=? and "+ObservationsSQLiteHelper.MONTH+"=? and "+ObservationsSQLiteHelper.YEAR+"=?";
-		String whereArgs[]={dayOfMonth+"",month+"",year+""};
-		observations.update(ObservationsSQLiteHelper.TABLE_NAME, contentValues,whereClause , whereArgs);
-	}*/
 }

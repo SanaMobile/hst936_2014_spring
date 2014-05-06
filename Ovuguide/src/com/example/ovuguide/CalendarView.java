@@ -32,7 +32,8 @@ public class CalendarView extends Activity {
 	    
 	    month = Calendar.getInstance();				//get today's date
 	    //onNewIntent(getIntent());
-	    
+	    Calendar previousDay = Calendar.getInstance();
+		
 	    items = new ArrayList<String>();
 	    adapter = new CalendarAdapter(this, month);
 	    

@@ -24,6 +24,7 @@ import java.util.Calendar;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.util.Log;
 
 public class PhaseCalculator {
 	
@@ -42,6 +43,9 @@ public class PhaseCalculator {
 		int todayMucus = todayReading.getMucus();
 		
 		Calendar today = Calendar.getInstance();
+		today.set(Calendar.DAY_OF_MONTH, todayReading.getDayOfMonth());
+		today.set(Calendar.MONTH, todayReading.getMonth());
+		today.set(Calendar.YEAR, todayReading.getYear());
 		Calendar previousDay = Calendar.getInstance();
 		previousDay.setTimeInMillis(today.getTimeInMillis() - 1000*60*60*24);
 		
@@ -57,19 +61,25 @@ public class PhaseCalculator {
 			return Phase.INFERTILE;
 		}
 		else if(todayMucus==MucusTexture.CREAMY || todayMucus==MucusTexture.EGGWHITE || todayMucus==MucusTexture.WATERY)
+		{
+			editor.putBoolean(INDECISIVE_FLAG, false);
+			editor.commit();
 			return Phase.FERTILE;
+		}	
 		try
 		{
 			previousDayReading = observationsDAO.getDailyReading(previousDay.get(Calendar.DAY_OF_MONTH), previousDay.get(Calendar.MONTH), previousDay.get(Calendar.YEAR));
 		}
 		catch(android.database.CursorIndexOutOfBoundsException ex)
 		{
-			previousDayReading=null;
+			ex.printStackTrace();
+			//previousDayReading=null;
 		}
 		finally
 		{
-			if(previousDayReading == null || flags.getBoolean(INDECISIVE_FLAG, true))
+			if(previousDayReading == null )				//|| flags.getBoolean(INDECISIVE_FLAG, true)
 			{
+				Log.i("PhaseCalculator","Previous day reading obltained");
 				//set indecisiveFlag
 				editor.putBoolean(INDECISIVE_FLAG, true);
 				editor.commit();

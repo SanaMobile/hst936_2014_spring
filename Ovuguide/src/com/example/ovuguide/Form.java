@@ -56,22 +56,21 @@ public class Form extends Activity {
 				String mucus = radioBtnMucus.getText().toString();
 				int mucusValue=MucusTexture.NONE;
 				
-				switch(mucus)
+				if(mucus.compareTo("Dry")==0)
 				{
-					case "Dry":mucusValue = MucusTexture.NONE;
-								break;
-					case "Sticky":mucusValue = MucusTexture.STICKY;
-								break;
-					case "Creamy":mucusValue = MucusTexture.CREAMY;
-								break;
-					case "Egg-White":mucusValue = MucusTexture.EGGWHITE;
-								break;
-					case "Watery":mucusValue = MucusTexture.WATERY;
-							break;
-					case "Menses":mucusValue = MucusTexture.MENSES;
-						break;		
-					
+					mucusValue = MucusTexture.NONE;
 				}
+				else if(mucus.compareTo("Sticky")==0)
+					mucusValue = MucusTexture.STICKY;
+				else if(mucus.compareTo("Creamy")==0)				
+					mucusValue = MucusTexture.CREAMY;
+				else if(mucus.compareTo("Egg-White")==0)				
+					mucusValue = MucusTexture.EGGWHITE;
+				else if(mucus.compareTo("Watery")==0)	
+					mucusValue = MucusTexture.WATERY;
+				else if	(mucus.compareTo("Menses")==0)		
+					mucusValue = MucusTexture.MENSES;
+				
 				
 				ObservationsDAO observationsDAO = new ObservationsDAO(getBaseContext());
 				DailyReading dailyReading, dailyReading2;
