@@ -10,7 +10,7 @@ import android.os.Bundle;
 import android.preference.PreferenceManager;
 
 public class Five extends Activity {
-	MediaPlayer mp;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
@@ -31,7 +31,7 @@ public class Five extends Activity {
 			}
 			finally
 			{
-				Intent op=new Intent(Five.this,MainActivity.class);
+				Intent op=new Intent("android.intent.action.MAINACTIVITY");
 				startActivity(op);
 			}
 		}
@@ -40,9 +40,8 @@ public class Five extends Activity {
 }
 	@Override
 	protected void onPause() {
-		// TODO Auto-generated method stub
+	
 		super.onPause();
-		mp.release();
 		finish();
 	}
 	
