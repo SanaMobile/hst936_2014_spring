@@ -29,10 +29,58 @@ public class JSONParser {
 	static String lastLine = "", Curp, Relation, Phone, Zip, Colony, Gender,
 			Cancer, Diabetes, Hypertension, Created_by, Created_on, Email,
 			Name, Updatedon, Updatedby, Weight, Height, Waist, Temp, Pregnancy,
-			Notes, Symptoms, Bp, Lr1, Lr2, Lr3, Lr4, Lr5, L1, L2, L3, L4, L5;
+			Notes, Symptoms, Bp, Lr1, Lr2, Lr3,Lr4,Lr5,Lr6, L1, L2, L3, L4, L5,Imn;
 	
-	static String trt1, trt2, trt3, trt4, trt5, phy, tt1, tt2, tt3, diag1,
-			diag2, rec, imp, agg;
+	public static String getImn() {
+		return Imn;
+	}
+
+	public static void setImn(String imn) {
+		Imn = imn;
+	}
+
+	static String trt1, trt2, trt3, trt4, trt5, phy,phy2,phy3,phy4,phy5,phy6, tt1, tt2, tt3, diag1,
+			diag2, diag3,diag4,diag5,diag6,rec, imp, agg;
+
+	public static String getPhy2() {
+		return phy2;
+	}
+
+	public static void setPhy2(String phy2) {
+		JSONParser.phy2 = phy2;
+	}
+
+	public static String getPhy3() {
+		return phy3;
+	}
+
+	public static void setPhy3(String phy3) {
+		JSONParser.phy3 = phy3;
+	}
+
+	public static String getPhy4() {
+		return phy4;
+	}
+
+	public static void setPhy4(String phy4) {
+		JSONParser.phy4 = phy4;
+	}
+
+	public static String getPhy5() {
+		return phy5;
+	}
+
+	public static void setPhy5(String phy5) {
+		JSONParser.phy5 = phy5;
+	}
+
+	public static String getPhy6() {
+		return phy6;
+	}
+
+	public static void setPhy6(String phy6) {
+		JSONParser.phy6 = phy6;
+	}
 
 	// constructor
 	public JSONParser() {
@@ -121,6 +169,7 @@ public class JSONParser {
 			Temp = jObj.getString("temperature");
 			Waist = jObj.getString("waist_circumference");
 			Bp = jObj.getString("blood_pressure");
+			Imn =jObj.getString("immunization");
 			Symptoms = jObj.getString("symptoms");
 			Notes = jObj.getString("notes");
 			Lr1 = jObj.getString("labrequest1");
@@ -128,18 +177,29 @@ public class JSONParser {
 			Lr3 = jObj.getString("labrequest3");
 			Lr4 = jObj.getString("labrequest4");
 			Lr5 = jObj.getString("labrequest5");
+			
 			L1 = jObj.getString("labresult1");
 			L2 = jObj.getString("labresult2");
 			L3 = jObj.getString("labresult3");
 			L4 = jObj.getString("labresult4");
 			L5 = jObj.getString("labresult5");
 			trt1 = jObj.getString("treatement1");
-			trt2 = jObj.getString("treatement3");
-			trt3 = jObj.getString("treatement2");
+			trt2 = jObj.getString("treatement2");
+			trt3 = jObj.getString("treatement3");
+			trt4 = jObj.getString("treatement4");
 
 			phy = jObj.getString("pysical_exploration1");
-			diag1 = jObj.getString("d_details1");
-			diag2 = jObj.getString("d_details2");
+			phy2 = jObj.getString("pysical_exploration2");
+			phy3= jObj.getString("pysical_exploration3");
+			phy4 = jObj.getString("pysical_exploration4");
+			phy5= jObj.getString("pysical_exploration5");
+			phy6= jObj.getString("pysical_exploration6");
+			diag1 = jObj.getString("diagnosis1");
+			diag2 = jObj.getString("diagnosis2");
+			diag3 = jObj.getString("diagnosis3");
+			diag4 = jObj.getString("diagnosis4");
+			diag5 = jObj.getString("diagnosis5");
+			diag6 = jObj.getString("diagnosis6");
 			rec = jObj.getString("recovery");
 			agg = jObj.getString("aggravate");
 			imp = jObj.getString("improvement");
@@ -151,6 +211,54 @@ public class JSONParser {
 		// return JSON String
 		return jObj;
 
+	}
+
+	public static String getLr6() {
+		return Lr6;
+	}
+
+	public static void setLr6(String lr6) {
+		Lr6 = lr6;
+	}
+
+	public static String getTrt4() {
+		return trt4;
+	}
+
+	public static void setTrt4(String trt4) {
+		JSONParser.trt4 = trt4;
+	}
+
+	public static String getDiag3() {
+		return diag3;
+	}
+
+	public static void setDiag3(String diag3) {
+		JSONParser.diag3 = diag3;
+	}
+
+	public static String getDiag4() {
+		return diag4;
+	}
+
+	public static void setDiag4(String diag4) {
+		JSONParser.diag4 = diag4;
+	}
+
+	public static String getDiag5() {
+		return diag5;
+	}
+
+	public static void setDiag5(String diag5) {
+		JSONParser.diag5 = diag5;
+	}
+
+	public static String getDiag6() {
+		return diag6;
+	}
+
+	public static void setDiag6(String diag6) {
+		JSONParser.diag6 = diag6;
 	}
 
 	public static String getAgg() {

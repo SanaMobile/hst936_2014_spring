@@ -33,7 +33,8 @@ import android.widget.TabHost.TabSpec;
 
 public class Editdetails extends Activity implements OnClickListener,
 		OnCheckedChangeListener {
-	Button edit,final1;
+	Button edit, final1;
+	TextView kad, bhar, tap, wc, bpos, imn;
 	TextView curp, phone, email, zip, colony, parent, name, createdby,
 			createdon, updatedon, updatedby;
 	EditText temperature, weight, height, waist, bp, symptoms, notes;
@@ -42,11 +43,11 @@ public class Editdetails extends Activity implements OnClickListener,
 	String Curp, Name, Phone, Email, Zip, Colony, Parent, Gender, Cancer,
 			Diabetes, Hypertension, Uname, Date_created, Temp, Weight, Height,
 			Waist, Bp, Pregnancy, Symptoms, Notes, Updatedon, Updatedby, T1,
-			T2, T3,s,s1,t,t1;
-	int mm,yy,dd,dd1,mm1,yy1,h1,m1,h2,m2;
+			T2, T3, s, s1, t, t1;
+	int mm, yy, dd, dd1, mm1, yy1, h1, m1, h2, m2;
 	TextView c1, c2, c3;
-	DatePicker dp1,dp2;
-	TimePicker tp1,tp2;
+	DatePicker dp1, dp2;
+	TimePicker tp1, tp2;
 	private ProgressDialog pDialog;
 
 	TabHost th;
@@ -85,21 +86,43 @@ public class Editdetails extends Activity implements OnClickListener,
 
 	private void update() {
 		// TODO Auto-generated method stub
+
+		kad = (TextView) findViewById(R.id.kad);
+		bhar = (TextView) findViewById(R.id.bhar);
+		tap = (TextView) findViewById(R.id.tapman);
+		wc = (TextView) findViewById(R.id.kamar);
+		bpos = (TextView) findViewById(R.id.bpos);
+		imn = (TextView) findViewById(R.id.imn);
 		edit = (Button) findViewById(R.id.etsubmit);
 		final1 = (Button) findViewById(R.id.final1);
 		final1.setOnClickListener(this);
-		dp1=(DatePicker)findViewById(R.id.datePicker1);
-		dp2=(DatePicker)findViewById(R.id.datePicker2);
-		tp1=(TimePicker)findViewById(R.id.timePicker1);
-		tp2=(TimePicker)findViewById(R.id.timePicker2);
-		
-		
+		dp1 = (DatePicker) findViewById(R.id.datePicker1);
+		dp2 = (DatePicker) findViewById(R.id.datePicker2);
+		tp1 = (TimePicker) findViewById(R.id.timePicker1);
+		tp2 = (TimePicker) findViewById(R.id.timePicker2);
+
 		c1 = (TextView) findViewById(R.id.trt1);
 		c2 = (TextView) findViewById(R.id.trt2);
 		c3 = (TextView) findViewById(R.id.trt3);
-		c1.setText(JSONParser.getTrt1());
-		c2.setText(JSONParser.getTrt2());
-		c3.setText(JSONParser.getTrt3());
+		if(JSONParser.getTrt1().equalsIgnoreCase("Yes"))
+		{
+			c1.setVisibility(View.VISIBLE);
+			
+			c1.setText("Antibiotic");
+		}
+		if(JSONParser.getTrt2().equalsIgnoreCase("Yes"))
+		{
+			c2.setVisibility(View.VISIBLE);
+			
+			c2.setText("Analgesic");
+		}
+		if(JSONParser.getTrt3().equalsIgnoreCase("Yes"))
+		{
+			c3.setVisibility(View.VISIBLE);
+			
+			c3.setText("Insulin");
+		}
+		
 		updatedon = (TextView) findViewById(R.id.etupdatedon);
 		updatedby = (TextView) findViewById(R.id.etupdatedby);
 		createdby = (TextView) findViewById(R.id.etcreatedby);
@@ -142,6 +165,13 @@ public class Editdetails extends Activity implements OnClickListener,
 		parent.setText(JSONParser.getRelation());
 		createdby.setText(JSONParser.getCreated_by());
 		createdon.setText(JSONParser.getCreated_on());
+		
+		kad.setText(JSONParser.getHeight());
+		bhar.setText(JSONParser.getWeight());
+		tap.setText(JSONParser.getTemp());
+		wc.setText(JSONParser.getWaist());
+		bpos.setText(JSONParser.getBp());
+		imn.setText(JSONParser.getImn());
 		if (JSONParser.getUpdatedby().equals("")) {
 			updatedby.setText("NOT yet Updated..");
 		} else
@@ -172,32 +202,27 @@ public class Editdetails extends Activity implements OnClickListener,
 	@Override
 	public void onClick(View v) {
 		// TODO Auto-generated method stub
-		switch(v.getId())
-		{
-		
+		switch (v.getId()) {
+
 		case R.id.final1:
-			dd=dp1.getDayOfMonth();
-			yy=dp1.getYear();
-			dd1=dp2.getDayOfMonth();
-			mm=dp1.getMonth();
-			mm1=dp2.getMonth();
-			yy1=dp2.getYear();
-			h1=tp1.getCurrentHour();
-			m1=tp1.getCurrentMinute();
-			h2=tp2.getCurrentHour();
-			m2=tp2.getCurrentMinute();
-		 s = "" + dd + "-" + mm + "-" + yy;
-			 s1 = "" + dd1 + "-" + mm1 + "-" + yy1;
-			 t = "" + h1 + ":" + m1;
-			 t1 = "" + h2 + ":" + m2 ;
-			
-			
-		
-		
+			dd = dp1.getDayOfMonth();
+			yy = dp1.getYear();
+			dd1 = dp2.getDayOfMonth();
+			mm = dp1.getMonth();
+			mm1 = dp2.getMonth();
+			yy1 = dp2.getYear();
+			h1 = tp1.getCurrentHour();
+			m1 = tp1.getCurrentMinute();
+			h2 = tp2.getCurrentHour();
+			m2 = tp2.getCurrentMinute();
+			s = "" + dd + "-" + mm + "-" + yy;
+			s1 = "" + dd1 + "-" + mm1 + "-" + yy1;
+			t = "" + h1 + ":" + m1;
+			t1 = "" + h2 + ":" + m2;
+
 			new AttemptLogin3().execute();
 			break;
-			
-			
+
 		case R.id.etsubmit:
 			Temp = temperature.getText().toString();
 			Weight = weight.getText().toString();
@@ -210,9 +235,7 @@ public class Editdetails extends Activity implements OnClickListener,
 			new AttemptLogin().execute();
 			break;
 		}
-		
-		
-		
+
 	}
 
 	class AttemptLogin extends AsyncTask<String, String, String> {
@@ -307,12 +330,6 @@ public class Editdetails extends Activity implements OnClickListener,
 
 	}
 
-	
-	
-	
-	
-	
-	
 	class AttemptLogin3 extends AsyncTask<String, String, String> {
 
 		/**
@@ -350,15 +367,13 @@ public class Editdetails extends Activity implements OnClickListener,
 				params.add(new BasicNameValuePair("s1", s1));
 				params.add(new BasicNameValuePair("t", t));
 				params.add(new BasicNameValuePair("t1", t1));
-				
-				
+
 				params.add(new BasicNameValuePair("Curp", Curp));
-				
 
 				Log.d("request!", "starting");
 				// getting product details by making HTTP request
-				JSONObject json = jsonParser.makeHttpRequest(LOGIN_URL5, "POST",
-						params);
+				JSONObject json = jsonParser.makeHttpRequest(LOGIN_URL5,
+						"POST", params);
 
 				// check your log for json response
 				Log.d("insert attempt", json.toString());
@@ -399,26 +414,6 @@ public class Editdetails extends Activity implements OnClickListener,
 
 	}
 
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	class AttemptLogin1 extends AsyncTask<String, String, String> {
 
 		/**

@@ -38,7 +38,8 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:orientation="vertical" >
+                            android:orientation="vertical"
+                            android:padding="20dp" >
 
                             <TextView
                                 android:id="@+id/textView16"
@@ -58,6 +59,7 @@
                                 android:id="@+id/etvcreatedby"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
                                 android:textAppearance="?android:attr/textAppearanceMedium" />
 
                             <TextView
@@ -70,6 +72,7 @@
                                 android:id="@+id/etvcreatedon"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
                                 android:textAppearance="?android:attr/textAppearanceMedium" />
 
                             <TextView
@@ -82,6 +85,7 @@
                                 android:id="@+id/etvupdatedby"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
                                 android:textAppearance="?android:attr/textAppearanceMedium" />
 
                             <TextView
@@ -94,6 +98,7 @@
                                 android:id="@+id/etvupdatedon"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
                                 android:textAppearance="?android:attr/textAppearanceMedium" />
 
                             <TextView
@@ -106,6 +111,7 @@
                                 android:id="@+id/etvcurp"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
                                 android:hint="ID"
                                 android:textAppearance="?android:attr/textAppearanceMedium" />
 
@@ -119,6 +125,7 @@
                                 android:id="@+id/etvname"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
                                 android:hint="Patient&apos;s Name"
                                 android:inputType="textPersonName"
                                 android:textAppearance="?android:attr/textAppearanceMedium" />
@@ -133,7 +140,9 @@
                                 android:id="@+id/etvgender"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="..." />
+                                android:layout_marginBottom="10dp"
+                                android:text="..."
+                                android:textAppearance="?android:attr/textAppearanceMedium" />
 
                             <TextView
                                 android:id="@+id/textView4"
@@ -145,12 +154,13 @@
                                 android:id="@+id/etvphone"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
                                 android:hint="10 Digits (8+2)"
                                 android:inputType="phone"
                                 android:textAppearance="?android:attr/textAppearanceMedium" />
 
                             <TextView
-                                android:id="@+id/textView6"
+                                android:id="@+id/pppp"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Parenthood" />
@@ -159,6 +169,7 @@
                                 android:id="@+id/etvparenthood"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
                                 android:hint="Relation"
                                 android:textAppearance="?android:attr/textAppearanceMedium" />
 
@@ -172,6 +183,7 @@
                                 android:id="@+id/etvemail"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
                                 android:hint="Email"
                                 android:inputType="textEmailAddress"
                                 android:textAppearance="?android:attr/textAppearanceMedium" />
@@ -186,6 +198,7 @@
                                 android:id="@+id/etvzip"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
                                 android:hint="ZIP-CODE"
                                 android:inputType="number"
                                 android:textAppearance="?android:attr/textAppearanceMedium" />
@@ -194,6 +207,7 @@
                                 android:id="@+id/etvcolony"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
                                 android:hint="Colony"
                                 android:inputType="textPostalAddress"
                                 android:textAppearance="?android:attr/textAppearanceMedium" />
@@ -215,7 +229,9 @@
                                 android:id="@+id/etvcancer"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:orientation="horizontal" />
+                                android:layout_marginBottom="10dp"
+                                android:orientation="horizontal"
+                                android:textAppearance="?android:attr/textAppearanceMedium" />
 
                             <TextView
                                 android:id="@+id/textView3"
@@ -227,7 +243,9 @@
                                 android:id="@+id/etvdiabetes"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:orientation="horizontal" />
+                                android:layout_marginBottom="10dp"
+                                android:orientation="horizontal"
+                                android:textAppearance="?android:attr/textAppearanceMedium" />
 
                             <TextView
                                 android:id="@+id/textView8"
@@ -239,7 +257,9 @@
                                 android:id="@+id/etvhypertension"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:orientation="horizontal" />
+                                android:layout_marginBottom="10dp"
+                                android:orientation="horizontal"
+                                android:textAppearance="?android:attr/textAppearanceMedium" />
 
                             <TextView
                                 android:id="@+id/textView7"
@@ -251,6 +271,7 @@
                                 android:id="@+id/etvtemp"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
                                 android:hint="In Degree Celcius"
                                 android:inputType="textEmailAddress"
                                 android:textAppearance="?android:attr/textAppearanceMedium" />
@@ -265,7 +286,8 @@
                                 android:id="@+id/etvweight"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:hint="In Kg"
+                                android:layout_marginBottom="10dp"
+                                android:hint="Not Yet Updated"
                                 android:inputType="textEmailAddress"
                                 android:textAppearance="?android:attr/textAppearanceMedium" />
 
@@ -279,7 +301,8 @@
                                 android:id="@+id/etvheight"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:hint="In cm"
+                                android:layout_marginBottom="10dp"
+                                android:hint="Nt Yet Updated"
                                 android:inputType="textEmailAddress"
                                 android:textAppearance="?android:attr/textAppearanceMedium" />
 
@@ -293,7 +316,8 @@
                                 android:id="@+id/etvwaist"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:hint="In Inches"
+                                android:layout_marginBottom="10dp"
+                                android:hint="Not Yet Updated"
                                 android:inputType="textEmailAddress"
                                 android:textAppearance="?android:attr/textAppearanceMedium" />
 
@@ -307,7 +331,8 @@
                                 android:id="@+id/etvblood"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:hint="Blood Pressure"
+                                android:layout_marginBottom="10dp"
+                                android:hint="Not Yet Updated"
                                 android:inputType="textEmailAddress"
                                 android:textAppearance="?android:attr/textAppearanceMedium" />
 
@@ -321,7 +346,9 @@
                                 android:id="@+id/etvpregnant"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:orientation="horizontal" />
+                                android:layout_marginBottom="10dp"
+                                android:orientation="horizontal"
+                                android:textAppearance="?android:attr/textAppearanceMedium" />
 
                             <TextView
                                 android:id="@+id/textView7"
@@ -333,6 +360,7 @@
                                 android:id="@+id/etvpps"
                                 android:layout_width="match_parent"
                                 android:layout_height="97dp"
+                                android:layout_marginBottom="10dp"
                                 android:inputType="textMultiLine"
                                 android:textAppearance="?android:attr/textAppearanceMedium" />
 
@@ -346,135 +374,270 @@
                                 android:id="@+id/etvnotes"
                                 android:layout_width="match_parent"
                                 android:layout_height="97dp"
+                                android:layout_marginBottom="10dp"
                                 android:inputType="textMultiLine"
                                 android:textAppearance="?android:attr/textAppearanceMedium" />
-                            
+
                             <TextView
                                 android:id="@+id/textView7"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Physical Explorations"
-                                 android:textAppearance="?android:attr/textAppearanceMedium"  />
+                                android:text="Physical Explorations" />
 
                             <TextView
                                 android:id="@+id/phy1"
                                 android:layout_width="match_parent"
-                                android:layout_height="97dp"
+                                android:layout_height="wrap_content"
                                 android:layout_marginBottom="10dp"
-                                android:inputType="textMultiLine"/>
-                               <TextView
+                                android:inputType="textMultiLine"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:id="@+id/phy2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:inputType="textMultiLine"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:id="@+id/phy3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:inputType="textMultiLine"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:id="@+id/phy4"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:inputType="textMultiLine"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:id="@+id/phy5"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:inputType="textMultiLine"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:id="@+id/phy6"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:inputType="textMultiLine"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:visibility="gone" />
+
+                            <TextView
                                 android:id="@+id/textView7"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Improvement"
-                                 android:textAppearance="?android:attr/textAppearanceMedium"  />
+                                android:text="Improvement" />
 
                             <TextView
                                 android:id="@+id/imptv"
                                 android:layout_width="match_parent"
-                                android:layout_height="97dp"
+                                android:layout_height="wrap_content"
                                 android:layout_marginBottom="10dp"
-                               />
-                             <TextView
+                                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                            <TextView
                                 android:id="@+id/textView7"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Recovery"
-                                 android:textAppearance="?android:attr/textAppearanceMedium"  />
+                                android:text="Recovery" />
 
                             <TextView
                                 android:id="@+id/rectv"
                                 android:layout_width="match_parent"
-                                android:layout_height="97dp"
+                                android:layout_height="wrap_content"
                                 android:layout_marginBottom="10dp"
-                                />
-                             <TextView
+                                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                            <TextView
                                 android:id="@+id/textView7"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Aggravate"
-                                 android:textAppearance="?android:attr/textAppearanceMedium"  />
+                                android:text="Aggravate" />
 
                             <TextView
                                 android:id="@+id/aggtv"
                                 android:layout_width="match_parent"
-                                android:layout_height="97dp"
+                                android:layout_height="wrap_content"
                                 android:layout_marginBottom="10dp"
-                               />
-                            
-                             <TextView
+                                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                            <TextView
                                 android:id="@+id/textView7"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Diagnosis"
-                                 android:textAppearance="?android:attr/textAppearanceMedium"  />
+                                android:text="Diagnosis" />
 
                             <TextView
                                 android:id="@+id/diag1tv"
                                 android:layout_width="match_parent"
-                                android:layout_height="97dp"
+                                android:layout_height="wrap_content"
                                 android:layout_marginBottom="10dp"
-                                android:inputType="textMultiLine"/>
-                            
-                            
-                             <TextView
+                                android:inputType="textMultiLine"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:visibility="gone" />
+
+                            <TextView
                                 android:id="@+id/diag2tv"
                                 android:layout_width="match_parent"
-                                android:layout_height="97dp"
+                                android:layout_height="wrap_content"
                                 android:layout_marginBottom="10dp"
-                                android:inputType="textMultiLine"/>
-                            
-                            
-                                <TextView
+                                android:inputType="textMultiLine"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:id="@+id/diag3tv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:inputType="textMultiLine"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:id="@+id/diag4tv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:inputType="textMultiLine"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:id="@+id/diag5tv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:inputType="textMultiLine"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:id="@+id/diag6tv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:inputType="textMultiLine"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:visibility="gone" />
+
+                            <TextView
                                 android:id="@+id/textView7"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Prescribed Medicines"
-                                 android:textAppearance="?android:attr/textAppearanceMedium"  />
+                                android:text="Prescribed Treatment" />
 
                             <TextView
                                 android:id="@+id/pres1tv"
                                 android:layout_width="match_parent"
-                                android:layout_height="97dp"
+                                android:layout_height="wrap_content"
                                 android:layout_marginBottom="10dp"
-                                android:inputType="textMultiLine"/>
+                                android:inputType="textMultiLine"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:visibility="gone" />
+
                             <TextView
                                 android:id="@+id/pres2tv"
                                 android:layout_width="match_parent"
-                                android:layout_height="97dp"
+                                android:layout_height="wrap_content"
                                 android:layout_marginBottom="10dp"
-                                android:inputType="textMultiLine"/>
+                                android:inputType="textMultiLine"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:visibility="gone" />
+
                             <TextView
                                 android:id="@+id/pres3tv"
                                 android:layout_width="match_parent"
-                                android:layout_height="97dp"
+                                android:layout_height="wrap_content"
                                 android:layout_marginBottom="10dp"
-                                android:inputType="textMultiLine"/>
-                                        <TextView
+                                android:inputType="textMultiLine"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:id="@+id/pres4tv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:inputType="textMultiLine"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:visibility="gone" />
+
+                            <TextView
                                 android:id="@+id/textView7"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Lab Request"
-                                 android:textAppearance="?android:attr/textAppearanceMedium"  />
+                                android:text="Lab Request" />
 
                             <TextView
-                                android:id="@+id/lab1tv"
+                                android:id="@+id/lab11tv"
                                 android:layout_width="match_parent"
-                                android:layout_height="97dp"
+                                android:layout_height="wrap_content"
                                 android:layout_marginBottom="10dp"
-                                android:inputType="textMultiLine"/>
+                                android:inputType="textMultiLine"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:visibility="gone" />
+
                             <TextView
-                                android:id="@+id/lab2tv"
+                                android:id="@+id/lab21tv"
                                 android:layout_width="match_parent"
-                                android:layout_height="97dp"
+                                android:layout_height="wrap_content"
                                 android:layout_marginBottom="10dp"
-                                android:inputType="textMultiLine"/>
+                                android:inputType="textMultiLine"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:visibility="gone" />
+
                             <TextView
-                                android:id="@+id/lab3tv"
+                                android:id="@+id/lab31tv"
                                 android:layout_width="match_parent"
-                                android:layout_height="97dp"
+                                android:layout_height="wrap_content"
                                 android:layout_marginBottom="10dp"
-                                android:inputType="textMultiLine"/>
+                                android:inputType="textMultiLine"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:id="@+id/lab41tv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:inputType="textMultiLine"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:id="@+id/lab51tv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:inputType="textMultiLine"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:id="@+id/lab61tv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:inputType="textMultiLine"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:visibility="gone" />
                         </LinearLayout>
                     </ScrollView>
                 </LinearLayout>
@@ -493,54 +656,54 @@
                             android:id="@+id/tab2"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:orientation="vertical" >
+                            android:orientation="vertical"
+                            android:padding="20dp" >
 
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
                                 android:text="Physical exploration"
                                 android:textAppearance="?android:attr/textAppearanceMedium" />
 
-                            <Spinner
-                                android:id="@+id/spe1"
+                            <CheckBox
+                                android:id="@+id/undw"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Underweight" />
+
+                            <CheckBox
+                                android:id="@+id/ovrw"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Overweight" />
+
+                            <CheckBox
+                                android:id="@+id/obs"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Obesity" />
+
+                            <CheckBox
+                                android:id="@+id/club"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Absent Clubbing" />
+
+                            <CheckBox
+                                android:id="@+id/edema"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Edema" />
+
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                 android:prompt="@string/select"
-                                android:entries="@array/option1_arrays"
-                                />
+                                android:text="Others"
+                                android:textAppearance="?android:attr/textAppearanceMedium" />
 
                             <EditText
-                                android:id="@+id/epe1"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="0.21"
-                                android:ems="10"
-                                android:inputType="textMultiLine" />
-
-                            <Spinner
-                                android:id="@+id/spe2"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:entries="@array/option2_arrays"
-                                android:prompt="@string/country_prompt" />
-
-                            <EditText
-                                android:id="@+id/epe2"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="0.21"
-                                android:ems="10"
-                                android:inputType="textMultiLine" />
-
-                            <Spinner
-                                android:id="@+id/spe3"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:entries="@array/option3_arrays"
-                                android:prompt="@string/country_prompt" />
-
-                            <EditText
-                                android:id="@+id/epe3"
+                                android:id="@+id/otherpy"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="0.21"
@@ -577,45 +740,47 @@
                                 android:text=" Diagnosis"
                                 android:textAppearance="?android:attr/textAppearanceMedium" />
 
-                            <Spinner
-                                android:id="@+id/d1"
+                            <CheckBox
+                                android:id="@+id/viral"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Viral Infection" />
+
+                            <CheckBox
+                                android:id="@+id/infection"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Infection" />
+
+                            <CheckBox
+                                android:id="@+id/head"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Headache" />
+
+                            <CheckBox
+                                android:id="@+id/urine"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Urinary tract infection" />
+
+                            <CheckBox
+                                android:id="@+id/metal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Metabolic Syndrome" />
+
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:entries="@array/option4_arrays"
-                                android:prompt="@string/country_prompt" />
+                                android:text="Others"
+                                android:textAppearance="?android:attr/textAppearanceMedium" />
 
                             <EditText
-                                android:id="@+id/dd1"
-                                android:layout_width="match_parent"
-                                android:layout_height="50dp"
-                                android:ems="10"
-                                android:inputType="textMultiLine" />
-
-                            <Spinner
-                                android:id="@+id/d2"
+                                android:id="@+id/otherdiagnosis"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:entries="@array/option5_arrays"
-                                android:prompt="@string/country_prompt" />
-
-                            <EditText
-                                android:id="@+id/dd2"
-                                android:layout_width="match_parent"
-                                android:layout_height="50dp"
-                                android:ems="10"
-                                android:inputType="textMultiLine" />
-
-                            <Spinner
-                                android:id="@+id/d3"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:entries="@array/option6_arrays"
-                                android:prompt="@string/country_prompt" />
-
-                            <EditText
-                                android:id="@+id/dd3"
-                                android:layout_width="match_parent"
-                                android:layout_height="50dp"
+                                android:layout_weight="0.21"
                                 android:ems="10"
                                 android:inputType="textMultiLine" />
 
@@ -639,19 +804,11 @@
                                 android:layout_height="wrap_content"
                                 android:text="Treatment " />
 
-                            <Spinner
-                                android:id="@+id/t1"
-                                android:layout_width="fill_parent"
+                            <CheckBox
+                                android:id="@+id/antib"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:entries="@array/option7_arrays"
-                                android:prompt="@string/country_prompt" />
-
-                            <EditText
-                                android:id="@+id/tdetails1"
-                                android:layout_width="match_parent"
-                                android:layout_height="50dp"
-                                android:ems="10"
-                                android:inputType="textMultiLine" />
+                                android:text="Antibiotic" />
 
                             <LinearLayout
                                 android:layout_width="wrap_content"
@@ -680,18 +837,11 @@
                                     android:prompt="@string/country_prompt" />
                             </LinearLayout>
 
-                            <Spinner
-                                android:id="@+id/t2"
-                                android:layout_width="fill_parent"
+                            <CheckBox
+                                android:id="@+id/analg"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:entries="@array/option8_arrays"
-                                android:prompt="@string/country_prompt" />
-                             <EditText
-                                android:id="@+id/tdetails2"
-                                android:layout_width="match_parent"
-                                android:layout_height="50dp"
-                                android:ems="10"
-                                android:inputType="textMultiLine" />
+                                android:text="Analgesic" />
 
                             <LinearLayout
                                 android:layout_width="wrap_content"
@@ -720,18 +870,11 @@
                                     android:prompt="@string/country_prompt" />
                             </LinearLayout>
 
-                            <Spinner
-                                android:id="@+id/t3"
-                                android:layout_width="fill_parent"
+                            <CheckBox
+                                android:id="@+id/insulin"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:entries="@array/option9_arrays"
-                                android:prompt="@string/country_prompt" />
-                             <EditText
-                                android:id="@+id/tdetails3"
-                                android:layout_width="match_parent"
-                                android:layout_height="50dp"
-                                android:ems="10"
-                                android:inputType="textMultiLine" />
+                                android:text="Insulin" />
 
                             <LinearLayout
                                 android:layout_width="wrap_content"
@@ -740,25 +883,39 @@
 
                                 <Spinner
                                     android:id="@+id/td3"
-                                    android:layout_width="wrap_content"
+                                    android:layout_width="100dp"
                                     android:layout_height="wrap_content"
                                     android:entries="@array/optio_arrays"
                                     android:prompt="@string/country_prompt" />
 
                                 <Spinner
                                     android:id="@+id/tv3"
-                                    android:layout_width="wrap_content"
+                                    android:layout_width="100dp"
                                     android:layout_height="wrap_content"
                                     android:entries="@array/opti_arrays"
                                     android:prompt="@string/country_prompt" />
 
                                 <Spinner
                                     android:id="@+id/tp3"
-                                    android:layout_width="wrap_content"
+                                    android:layout_width="100dp"
                                     android:layout_height="wrap_content"
                                     android:entries="@array/opt_arrays"
                                     android:prompt="@string/country_prompt" />
                             </LinearLayout>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Others"
+                                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                            <EditText
+                                android:id="@+id/othertreat"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.21"
+                                android:ems="10"
+                                android:inputType="textMultiLine" />
 
                             <TextView
                                 android:id="@+id/textView7"
@@ -766,40 +923,49 @@
                                 android:layout_height="wrap_content"
                                 android:text="Clinical laboratory request " />
 
-                            <Spinner
-                                android:id="@+id/lr1"
-                                android:layout_width="fill_parent"
+                            <CheckBox
+                                android:id="@+id/bchem"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:entries="@array/option1_arrays"
-                                android:prompt="@string/country_prompt" />
+                                android:text="Blood Chemistry 35 elememnts" />
 
-                            <Spinner
-                                android:id="@+id/lr2"
-                                android:layout_width="fill_parent"
+                            <CheckBox
+                                android:id="@+id/bchem24"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:entries="@array/option1_arrays"
-                                android:prompt="@string/country_prompt" />
+                                android:text="Blood Chemistry 24 elements" />
 
-                            <Spinner
-                                android:id="@+id/lr3"
-                                android:layout_width="fill_parent"
+                            <CheckBox
+                                android:id="@+id/bbio"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:entries="@array/option1_arrays"
-                                android:prompt="@string/country_prompt" />
+                                android:text="Blood Biometry" />
 
-                            <Spinner
-                                android:id="@+id/lr4"
-                                android:layout_width="fill_parent"
+                            <CheckBox
+                                android:id="@+id/uri"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:entries="@array/option1_arrays"
-                                android:prompt="@string/country_prompt" />
+                                android:text="Urinary tract infection" />
 
-                            <Spinner
-                                android:id="@+id/lr5"
-                                android:layout_width="fill_parent"
+                            <CheckBox
+                                android:id="@+id/serum"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:entries="@array/option1_arrays"
-                                android:prompt="@string/country_prompt" />
+                                android:text="Serum Electrolytes" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Others"
+                                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                            <EditText
+                                android:id="@+id/otherlab"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.21"
+                                android:ems="10"
+                                android:inputType="textMultiLine" />
 
                             <Button
                                 android:id="@+id/dbt"

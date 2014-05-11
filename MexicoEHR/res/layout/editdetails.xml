@@ -320,6 +320,104 @@
                                     android:layout_height="wrap_content"
                                     android:text="No" />
                             </RadioGroup>
+                              <TextView
+                                android:id="@+id/textView9"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Body Measurements"
+                                android:textAppearance="?android:attr/textAppearanceMedium" />
+                             <TextView
+                                android:id="@+id/textView7"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Height" />
+
+                            <TextView
+                                android:id="@+id/kad"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:ems="10"
+                                android:hint="Email"
+                                android:inputType="textEmailAddress"
+                                android:textAppearance="?android:attr/textAppearanceMedium" />
+                             <TextView
+                                android:id="@+id/textView7"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Weight" />
+
+                            <TextView
+                                android:id="@+id/bhar"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:ems="10"
+                                android:hint="Email"
+                                android:inputType="textEmailAddress"
+                                android:textAppearance="?android:attr/textAppearanceMedium" />
+                             <TextView
+                                android:id="@+id/textView7"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Temperature" />
+
+                            <TextView
+                                android:id="@+id/tapman"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:ems="10"
+                                android:hint="Email"
+                                android:inputType="textEmailAddress"
+                                android:textAppearance="?android:attr/textAppearanceMedium" />
+                            
+                             <TextView
+                                android:id="@+id/textView7"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="WAIST CIRCUMFERENCE" />
+
+                            <TextView
+                                android:id="@+id/kamar"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:ems="10"
+                                android:hint="Email"
+                                android:inputType="textEmailAddress"
+                                android:textAppearance="?android:attr/textAppearanceMedium" />
+                             <TextView
+                                android:id="@+id/textView7"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Blood Pressure" />
+
+                            <TextView
+                                android:id="@+id/bpos"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:ems="10"
+                                android:hint="Email"
+                                android:inputType="textEmailAddress"
+                                android:textAppearance="?android:attr/textAppearanceMedium" />
+                             <TextView
+                                android:id="@+id/textView7"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Immunization" />
+
+                            <TextView
+                                android:id="@+id/imn"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:ems="10"
+                                android:hint="Email"
+                                android:inputType="textEmailAddress"
+                                android:textAppearance="?android:attr/textAppearanceMedium" />
+                            
                         </LinearLayout>
                     </ScrollView>
                 </LinearLayout>
@@ -471,23 +569,27 @@
                                 android:id="@+id/trt1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:visibility="gone"
                                 android:text="Ignore " />
 
                             <RadioGroup
                                 android:id="@+id/tradio1"
                                 android:layout_width="wrap_content"
+                                 android:visibility="gone"
                                 android:layout_height="wrap_content"
                                 android:orientation="horizontal" >
 
                                 <RadioButton
                                     android:id="@+id/t1yes"
                                     android:layout_width="wrap_content"
+                                       android:visibility="gone"
                                     android:layout_height="wrap_content"
                                     android:text="Yes" />
 
                                 <RadioButton
                                     android:id="@+id/t1no"
                                     android:layout_width="wrap_content"
+                                    android:visibility="gone"
                                     android:layout_height="wrap_content"
                                     android:text="No" />
                             </RadioGroup>
@@ -495,12 +597,14 @@
                             <TextView
                                 android:id="@+id/trt2"
                                 android:layout_width="wrap_content"
+                                  android:visibility="gone"
                                 android:layout_height="wrap_content"
                                 android:text="Ignore " />
 
                             <RadioGroup
                                 android:id="@+id/tradio2"
                                 android:layout_width="wrap_content"
+                                  android:visibility="gone"
                                 android:layout_height="wrap_content"
                                 android:orientation="horizontal" >
 
@@ -508,11 +612,13 @@
                                     android:id="@+id/t2yes"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
+                                     android:visibility="gone"
                                     android:text="Yes" />
 
                                 <RadioButton
                                     android:id="@+id/t2no"
                                     android:layout_width="wrap_content"
+                                     android:visibility="gone"
                                     android:layout_height="wrap_content"
                                     android:text="No" />
                             </RadioGroup>
@@ -520,24 +626,28 @@
                             <TextView
                                 android:id="@+id/trt3"
                                 android:layout_width="wrap_content"
+                                  android:visibility="gone"
                                 android:layout_height="wrap_content"
                                 android:text="Ignore " />
 
                             <RadioGroup
                                 android:id="@+id/tradio3"
                                 android:layout_width="wrap_content"
+                                  android:visibility="gone"
                                 android:layout_height="wrap_content"
                                 android:orientation="horizontal" >
 
                                 <RadioButton
                                     android:id="@+id/t3yes"
                                     android:layout_width="wrap_content"
+                                     
                                     android:layout_height="wrap_content"
                                     android:text="Yes" />
 
                                 <RadioButton
                                     android:id="@+id/t3no"
                                     android:layout_width="wrap_content"
+                                   
                                     android:layout_height="wrap_content"
                                     android:text="No" />
                             </RadioGroup>

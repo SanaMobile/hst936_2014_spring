@@ -33,6 +33,7 @@ import android.widget.TabHost.TabSpec;
 
 public class EditdetailsA extends Activity implements OnClickListener,OnCheckedChangeListener {
 	Button edit,final1;
+	TextView kad, bhar, tap, wc, bpos, imn;
 	TextView curp, phone, email, zip, colony,parent, name, createdby,
 			createdon, updatedon, updatedby;
 	EditText temperature, weight, height, waist, bp, symptoms, notes;
@@ -87,6 +88,12 @@ public class EditdetailsA extends Activity implements OnClickListener,OnCheckedC
 
 	private void update() {
 		// TODO Auto-generated method stub
+		kad = (TextView) findViewById(R.id.kad);
+		bhar = (TextView) findViewById(R.id.bhar);
+		tap = (TextView) findViewById(R.id.tapman);
+		wc = (TextView) findViewById(R.id.kamar);
+		bpos = (TextView) findViewById(R.id.bpos);
+		imn = (TextView) findViewById(R.id.imn);
 		and =(TextView) findViewById(R.id.parent6);
 		and.setVisibility(View.GONE);
 		edit = (Button) findViewById(R.id.etsubmit);
@@ -101,9 +108,27 @@ public class EditdetailsA extends Activity implements OnClickListener,OnCheckedC
 		c1 = (TextView) findViewById(R.id.trt1);
 		c2 = (TextView) findViewById(R.id.trt2);
 		c3 = (TextView) findViewById(R.id.trt3);
-		c1.setText(JSONParser.getTrt1());
-		c2.setText(JSONParser.getTrt2());
-		c3.setText(JSONParser.getTrt3());
+		c1 = (TextView) findViewById(R.id.trt1);
+		c2 = (TextView) findViewById(R.id.trt2);
+		c3 = (TextView) findViewById(R.id.trt3);
+		if(JSONParser.getTrt1().equalsIgnoreCase("Yes"))
+		{
+			c1.setVisibility(View.VISIBLE);
+			
+			c1.setText("Antibiotic");
+		}
+		if(JSONParser.getTrt2().equalsIgnoreCase("Yes"))
+		{
+			c2.setVisibility(View.VISIBLE);
+			
+			c2.setText("Analgesic");
+		}
+		if(JSONParser.getTrt3().equalsIgnoreCase("Yes"))
+		{
+			c3.setVisibility(View.VISIBLE);
+			
+			c3.setText("Insulin");
+		}
 		updatedon = (TextView) findViewById(R.id.etupdatedon);
 		updatedby = (TextView) findViewById(R.id.etupdatedby);
 		createdby = (TextView) findViewById(R.id.etcreatedby);
@@ -147,7 +172,36 @@ public class EditdetailsA extends Activity implements OnClickListener,OnCheckedC
 		parent.setText(JSONParser.getRelation());
 		createdby.setText(JSONParser.getCreated_by());
 		createdon.setText(JSONParser.getCreated_on());
-		
+		kad.setText(JSONParser.getHeight());
+		bhar.setText(JSONParser.getWeight());
+		tap.setText(JSONParser.getTemp());
+		wc.setText(JSONParser.getWaist());
+		bpos.setText(JSONParser.getBp());
+		imn.setText(JSONParser.getImn());
+		if (JSONParser.getUpdatedby().equals("")) {
+			updatedby.setText("NOT yet Updated..");
+		} else
+			updatedby.setText((JSONParser.getUpdatedby()));
+		if (JSONParser.getUpdatedon().equals("")) {
+			updatedon.setText("NOT yet Updated..");
+		} else
+			updatedon.setText((JSONParser.getUpdatedon()));
+		if (JSONParser.getGender().equals("Male")) {
+			gender.check(R.id.etmale);
+		} else
+			gender.check(R.id.etfemale);
+		if (JSONParser.getCancer().equals("Yes")) {
+			cancer.check(R.id.etcyes);
+		} else
+			cancer.check(R.id.etcno);
+		if (JSONParser.getDiabetes().equals("Yes")) {
+			diabetes.check(R.id.etdyes);
+		} else
+			diabetes.check(R.id.etdno);
+		if (JSONParser.getHypertension().equals("Yes")) {
+			hypertension.check(R.id.ethyes);
+		} else
+			hypertension.check(R.id.ethno);
 		
 		
 		

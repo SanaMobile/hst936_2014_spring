@@ -98,49 +98,49 @@ public class ShowTech extends Activity implements OnClickListener {
 		lk3=JSONParser.getLr3();
 		lk4=JSONParser.getLr4();
 		lk5=JSONParser.getLr5();
-		if(lk1.equalsIgnoreCase("None") && lk2.equalsIgnoreCase("None") && lk3.equalsIgnoreCase("None") && lk4.equalsIgnoreCase("None") && lk5.equalsIgnoreCase("None"))
+		if(lk1.equalsIgnoreCase("No") && lk2.equalsIgnoreCase("No") && lk3.equalsIgnoreCase("No") && lk4.equalsIgnoreCase("No") && lk5.equalsIgnoreCase("No"))
 		{
 			f.setVisibility(View.VISIBLE);
 			f.setText("NOT AVAILABLE");
 		}
-		if(!(lk1.equalsIgnoreCase("None")))
+		if((lk1.equalsIgnoreCase("Yes")))
 		{rl1.setVisibility(View.VISIBLE);
 			lr1.setVisibility(View.VISIBLE);
 			t1.setVisibility(View.VISIBLE);
 			rbr.setVisibility(View.VISIBLE);
-			lr1.setText(lk1);
-			t1.setText(lk1);
+			lr1.setText("Blood chemistry 35 elements");
+			t1.setText("Blood chemistry 35 elements");
 			
 		}
-		if(!(lk2.equalsIgnoreCase("None")))
+		if((lk2.equalsIgnoreCase("Yes")))
 		{rl2.setVisibility(View.VISIBLE);
 			lr2.setVisibility(View.VISIBLE);
-			lr2.setText(lk2);
-			t2.setText(lk2);
+			lr2.setText("Blood chemistry 24 elements");
+			t2.setText("Blood chemistry 24 elements");
 			t2.setVisibility(View.VISIBLE);
 			rbr.setVisibility(View.VISIBLE);
 		}
-		if(!(lk3.equalsIgnoreCase("None")))
+		if((lk3.equalsIgnoreCase("Yes")))
 		{rl3.setVisibility(View.VISIBLE);
 			lr3.setVisibility(View.VISIBLE);
-			lr3.setText(lk3);
-			t3.setText(lk3);
+			lr3.setText("Blood biometry");
+			t3.setText("Blood biometry");
 			t3.setVisibility(View.VISIBLE);
 			rbr.setVisibility(View.VISIBLE);
 		}
-		if(!(lk4.equalsIgnoreCase("None")))
+		if((lk4.equalsIgnoreCase("Yes")))
 		{rl4.setVisibility(View.VISIBLE);
 			lr4.setVisibility(View.VISIBLE);
-			lr4.setText(lk4);
-			t4.setText(lk4);
+			lr4.setText("Urinalysis");
+			t4.setText("Urinalysis");
 			t4.setVisibility(View.VISIBLE);
 			rbr.setVisibility(View.VISIBLE);
 		}
-		if(!(lk5.equalsIgnoreCase("None")))
+		if((lk5.equalsIgnoreCase("Yes")))
 		{rl5.setVisibility(View.VISIBLE);
 			lr5.setVisibility(View.VISIBLE);
-			lr5.setText(lk5);
-			t5.setText(lk5);
+			lr5.setText("Serum electrolytes");
+			t5.setText("Serum electrolytes");
 			t5.setVisibility(View.VISIBLE);
 			rbr.setVisibility(View.VISIBLE);
 		}
