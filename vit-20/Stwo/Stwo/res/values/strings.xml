@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Stwo</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="nine">pallor,(of plams or inside of eyelids or mouth)</string>
+    <string name="ten">tiredness</string>
+    <string name="eleven">breathlessness and headaches</string>
+    <string name="four">night blindness(inability to see in low light)</string>
+    <string name="five">bitot(spots on whites of eyes)</string>
+    <string name="six">spots</string>
+    <string name="seven">xerosis</string>
+    <string name="eight">keratomalacia</string>
+
+</resources>

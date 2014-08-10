@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical" >
+
+  <LinearLayout
+      android:orientation="vertical"
+      android:layout_width="fill_parent"
+      android:layout_height="fill_parent" >
+
+   <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="A thin ‘old man’ face(Thin, flaccid skin, hanging in loose folds)"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+ <RelativeLayout
+     android:layout_width="fill_parent"
+     android:layout_height="wrap_content" >
+
+ <RadioGroup
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content" >
+
+   <RadioButton
+       android:id="@+id/checkBox1"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="Yes" />
+
+   <RadioButton
+       android:id="@+id/checkBox2"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_alignParentTop="true"
+       android:layout_marginLeft="44dp"
+       android:layout_toRightOf="@+id/checkBox1"
+       android:text="No" />
+</RadioGroup>
+   
+   
+</RelativeLayout>
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="‘Baggy pants’ (loose skin around the Buttocks)"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+ <RelativeLayout
+     android:layout_width="fill_parent"
+     android:layout_height="wrap_content" >
+ 
+<RadioGroup
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+     <RadioButton
+        android:id="@+id/two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Yes" />
+
+    <RadioButton
+        android:id="@+id/extra"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="36dp"
+        android:layout_toRightOf="@+id/two"
+        android:text="No" />
+
+</RadioGroup>
+</RelativeLayout>
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No nutritional oedema(no swelling in the feet and ankles)"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+ <RelativeLayout
+     android:layout_width="fill_parent"
+     android:layout_height="wrap_content" >
+    
+<RadioGroup
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+    <RadioButton
+        android:id="@+id/three"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Yes" />
+
+    <RadioButton
+        android:id="@+id/six"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/three"
+        android:text="No" />
+  </RadioGroup>     
+</RelativeLayout>
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Prominent ribs (ribs projecting out) "
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    
+
+ <RelativeLayout
+     android:layout_width="fill_parent"
+     android:layout_height="wrap_content" >
+   
+  <RadioGroup
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content" >
+
+     <RadioButton
+        android:id="@+id/four"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Yes" />
+
+    <RadioButton
+        android:id="@+id/seven"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/four"
+        android:text="No" />
+</RadioGroup>   
+</RelativeLayout>
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="The children are usually active and may appear to be alert in their condition"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    
+ <RelativeLayout
+     android:layout_width="fill_parent"
+     android:layout_height="wrap_content" >
+  
+ <RadioGroup
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content" >
+
+     <RadioButton
+        android:id="@+id/five"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Yes" />
+
+    <RadioButton
+        android:id="@+id/eight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="No" />
+</RadioGroup>
+</RelativeLayout>  
+  
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nutritional oedema (swelling in the feet and ankles)"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+ <RelativeLayout
+     android:layout_width="fill_parent"
+     android:layout_height="wrap_content" >
+ 
+<RadioGroup
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+     <RadioButton
+        android:id="@+id/none"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Yes" />
+
+    <RadioButton
+        android:id="@+id/ntwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="36dp"
+        android:layout_toRightOf="@+id/none"
+        android:text="No" />
+
+</RadioGroup>
+</RelativeLayout>
+
+   
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hair changes (change in color or texture)"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+ <RelativeLayout
+     android:layout_width="fill_parent"
+     android:layout_height="wrap_content" >
+ 
+<RadioGroup
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+     <RadioButton
+        android:id="@+id/nthree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Yes" />
+
+    <RadioButton
+        android:id="@+id/nfour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="36dp"
+        android:layout_toRightOf="@+id/nfour"
+        android:text="No" />
+
+</RadioGroup>
+</RelativeLayout>
+ 
+     <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/some"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+ <RelativeLayout
+     android:layout_width="fill_parent"
+     android:layout_height="wrap_content" >
+ 
+<RadioGroup
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+     <RadioButton
+        android:id="@+id/nfive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Yes" />
+
+    <RadioButton
+        android:id="@+id/nsix"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="36dp"
+        android:layout_toRightOf="@+id/nfive"
+        android:text="No" />
+
+</RadioGroup>
+</RelativeLayout>
+ 
+     <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Children are usually apathetic (having no enthusiasm), Miserable and irritable"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+ <RelativeLayout
+     android:layout_width="fill_parent"
+     android:layout_height="wrap_content" >
+ 
+<RadioGroup
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+     <RadioButton
+        android:id="@+id/nseven"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Yes" />
+
+    <RadioButton
+        android:id="@+id/neight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="36dp"
+        android:layout_toRightOf="@+id/nseven"
+        android:text="No" />
+
+</RadioGroup>
+</RelativeLayout>
+
+ 
+     <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Moon Face(Round Face)"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+ <RelativeLayout
+     android:layout_width="fill_parent"
+     android:layout_height="wrap_content" >
+ 
+<RadioGroup
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+     <RadioButton
+        android:id="@+id/nnine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Yes" />
+
+    <RadioButton
+        android:id="@+id/nten"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="36dp"
+        android:layout_toRightOf="@+id/nnine"
+        android:text="No" />
+
+</RadioGroup>
+</RelativeLayout>
+
+ <Button
+     android:id="@+id/next"
+     android:layout_width="fill_parent"
+     android:layout_height="wrap_content"
+     android:layout_marginTop="10dip"
+     android:text="Continue the process" />
+
+ </LinearLayout> 
+</ScrollView>

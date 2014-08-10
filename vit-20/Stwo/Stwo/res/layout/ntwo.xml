@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="@drawable/none">
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/nutrition" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="•	Foods providing adequate proteins, carbohydrates,and simple sugars."
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="•	Red meat (beef, pork, liver), chicken, fish, eggs, poultry, fish are some of the protein rich food that can be given to children above five years of age."
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="•	Milk, dairy products, leguminous plants such namely chickpeas, flageolet beans, kidney beans, split beans, haricot beans, and lentils, cereals, food grains, nut various other vegetables and fruits that are rich in various proteins, vitamins and minerals."
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="•	A mixture of dried skim milk, vegetable oil, and casein is ideal, and if necessary the child can be given the mixture through a feeding tube."
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+</LinearLayout>

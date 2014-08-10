@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<peoples>
+    <people>
+    <peopleId>1</peopleId>
+    <peoplename>Rahul kiran</peoplename>
+    <packageTitle>Person1</packageTitle>
+  </people>
+    <people>
+    <peopleId>2</peopleId>
+    <peoplename>Gowthan</peoplename>
+    <packageTitle>Person2</packageTitle>
+  </people>
+    <people>
+    <peopleId>3</peopleId>
+    <peoplename>Thivagar</peoplename>
+    <packageTitle>Person3</packageTitle>
+  </people>
+</peoples>
