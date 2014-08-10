@@ -1,0 +1,24 @@
+<html>
+<body onload="disable()">
+<form action="new_disease.php" method="post">
+Disease:<input type="text" name="disease" required="yes"><br>
+Symptom:<input type="text" name="symptom" require="yes"><br>
+Prescription:<input type="text" name="prescription"><br>
+<input type="button" value="save" onclick="verify()" id="save">
+<input type="submit" value="Submit" id="submit">
+</form> 
+<script type="text/javascript">
+function disable()
+{
+document.getElementById("submit").disabled=true;
+}
+function verify()
+{
+	document.getElementById("submit").disabled=false;
+	x=document.getElementById("prescription");
+	if(x.value=="" || x.value==" " ||x.value==null);
+		x.value="shubha";
+}
+</script>
+</body>
+</html>
