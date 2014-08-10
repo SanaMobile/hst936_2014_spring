@@ -1,0 +1,6 @@
+<Acl metadata="Role based access">
+	<Role title="doctor">
+		<View id="btn_main_register_patient"/>
+		<View id="textView1"/>
+	</Role>
+</Acl>
