@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Open calendar</string>
+    <string name="app_name">Ovuguide</string>
+
+    <color name="text_color">#31D1F1</color>
+    <color name="white">#ffffff</color>
+
+    <string name="open">Open</string>
+    <string name="title_activity_test">Test</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_display">DisplayActivity</string>
+    <string name="title_activity_test2">Test2</string>
+    <string name="title_activity_menses_form">MensesForm</string>
+
+</resources>
