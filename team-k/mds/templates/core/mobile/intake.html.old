@@ -1,0 +1,281 @@
+{% extends "core/mobile/base.html" %}
+{% block script %}
+  {{ block.super }}
+  <script type="text/javascript">
+    function clearSubjectForm(){
+        $(':input','#id_subject')
+          .not(':button, :submit, :reset, :hidden')
+          .val('');
+    }
+    function clearSubject(){
+        $('#id_system_id').text("").show();
+        $('#id_given_name').text("").show();
+        $('#id_family_name').text("").show();
+        $('#id_dob').text("").show();
+        $('#id_gender').text("").show();
+        //$('#id_image').text("").show();
+    }
+
+    function submitSubject(){
+        var system_id = $('#id_system_id').val();
+        var given_name = $('#id_given_name').val();
+        var family_name = $('#id_family_name').val();
+        var use_age  = $('#id_use_age').val();
+        var age  = $('#id__age').val();
+        var dob  = $('#id_dob').val();
+        var gender = $('#id_gender').val();
+        var image = $('#id_image').val();
+        //var image = $('#id_image').files[0];
+        var location = $('#id_location').val();
+        if(window.console){
+            console.log("system_id "+system_id);
+            console.log("location " + location);
+            console.log("image " + image);
+        }
+        $.post('/mds/core/surgicalsubject/',{ 
+                    system_id: system_id,
+                    given_name: given_name,
+                    family_name: family_name,
+                    dob: dob,
+                    gender: gender,
+                    location: location,
+                    image: image
+                },function(data){ 
+                    if(window.console){
+                        console.log("SUCCESS ");
+                    }
+                    var msg = data['message'];
+                    $('#task_patient_id').text(msg['system_id']).show();
+                    $('#id_patient_uuid').val(msg['uuid']);
+                    alert("Success Creating Patient:\n " + data['message']['system_id']);
+                    //alert(parseJson($));
+                    clearSubject();
+               }).fail(function(){
+                    alert("Fail " + $('this'));
+                });
+    }
+
+  function submitEncounter(){
+        if(window.console){
+            console.log("submitEncounter()");
+        }
+        var subject = $('#id_patient_uuid').val();
+        var observer = $('#id_observer_uuid').val();
+        var concept = "266d8a8f-9178-4616-bcea-896194379059";
+        var procedure = "303a113c-6345-413f-88cb-aa6c4be3a07d";
+        var device = "be1a6270-5f2a-470e-8e09-3e1639c190c0";
+        $.post('/mds/core/encounter/',{ 
+                    subject: subject,
+                    procedure: procedure,
+                    observer: observer,
+                    device: device
+                },function(data){ 
+                    var msg = data['message'];
+                    if(window.console){
+                        console.log("SUCCESS " + msg['uuid']);
+                    }
+                    $('#id_encounter_uuid').val(msg['uuid']);
+                    alert("Success Entering Initial Data:\n " + msg['uuid']);
+               }).fail(function(){
+                    alert("Fail " + $('this'));
+                });
+        // Create observations
+        var encounter_uuid = $('#id_encounter_uuid').val();
+        // Initial diagnosis
+        var value = $('#id_diagnosis').val();
+        if (value == "Other"){    
+            value = $('#id_diagnosis_other').val();
+        }
+        postObs(encounter_uuid, '1', '104889a3-b6fa-4cdc-b232-d3b73e924cd1', value);
+        // Operation(s)
+        var value = $('#id_operation').val();
+        var operations_other = $('#id_operations_other').val();
+        if(operations_other){
+             value.push(operations_other);
+        }
+        postObs(encounter_uuid, '2', '9b01ef00-9fac-4f3c-87e5-66b152a3159b', value);
+        
+        value= $('#id_date_of_operation').val();
+        postObs(encounter_uuid, '3', '9082b5f8-74c6-4f54-a92b-04fa98e780d6', value);
+
+        value = $('#id_date_of_discharge').val();
+        postObs(encounter_uuid, '4', '069ba5bb-a183-4d14-b485-9f93bca812c3', value);
+
+        value = $('#id_date_of_regular_follow_up').val();
+        postObs(encounter_uuid, '5', 'd24cf683-4b51-46d8-a4c4-154c38e1dd38', value);
+    }
+
+    function postObs(encounter,node,concept,value){
+
+        $.post('/mds/core/observation/',{ 
+                    encounter: encounter,
+                    node: node,
+                    concept: concept,
+                    value_text: value
+                },function(data){ 
+                    var msg = data['message'];
+                    if(window.console){
+                        console.log("SUCCESS " + msg['uuid']);
+                    }
+                    $('#id_encounter_uuid').val(msg['uuid']);
+                    alert("Success Entering Initial Data:\n " + msg['uuid']);
+               }).fail(function(){
+                    alert("Fail " + $('this'));
+                });
+    }
+ 
+    function postTask(assigned_to,status, due_on, subject, procedure){
+        $.post('/mds/task/encountertask/',{ 
+                    assigned_to: assigned_to,
+                    status: status,
+                    procedure: procedure,
+                    subject: concept,
+                    due_date: value
+                },function(data){ 
+                    var msg = data['message'];
+                    if(window.console){
+                        console.log("SUCCESS " + msg['uuid']);
+                    }
+                    $('#id_encounter_uuid').val(msg['uuid']);
+                    alert("Success Entering Initial Data:\n " + msg['uuid']);
+               }).fail(function(){
+                    alert("Fail " + $('this'));
+                });
+    }
+
+    function submitEncounterTasks(){
+        var subject = $('#id_patient_uuid').val()
+        var status = 1;
+        var assigned_to = $('#id_assigned_to_sa').val();
+        var system_id = $('#id_system_id').val();
+        // Initial visit - swivi operasyon - hard coded for now
+        var procedure = "5299055a-c5e6-47e7-b649-dc17dac6019b";
+        // initial follow up
+        var due_on = $('#id_date_of_first_sa_follow_up').val();
+        postTask(assigned_to,status, due_on, subject, procedure);
+        // final follow up
+        due_on = $('#id_date_of_final_sa_follow_up').val();
+        postTask(assigned_to,status, due_on, subject, procedure);
+  }
+
+    function submitIntake(){
+        if(window.console){ console.log("Submitting subject"); }
+        submitSubject();
+        if(window.console){ console.log("Submitting Encounter"); }
+        submitEncounter();
+        if(window.console){ console.log("Submitting Tasks"); }
+        submitEncounterTasks();
+    }
+  //$(function() {
+  //    $( "#tabs" ).tabs();
+  //});
+  </script>
+{% endblock %}
+{% block body %}
+{{ block.super }}
+<div>
+<form name="intake" id="id_intake" action="javascript:submitIntake()" method="post">
+<div id="tabs" data-role="tabs">  
+  <div>
+    <ul>
+        <li><a  href="#tabs-1" data-theme="a" data-ajax="false">Patient</a></li>
+        <li><a  href="#tabs-2" data-theme="a" data-ajax="false">Intake</a></li>
+        <li><a  href="#tabs-3" data-theme="a" data-ajax="false">Schedule</a></li>
+    </ul>
+  </div>
+  <input id="id_patient_uuid" type="hidden"/>
+  <input type="hidden" name="observer_uuid" id="id_observer_uuid" value="{{ observer.uuid }}">
+  <div id="tabs-1" class="ui-content">
+    <!--
+    <form name="subject" action="javascript:submitSubject()" method="post" >
+    -->
+      {{ subject_form.as_table }}
+      <input type="hidden" name="patient" id="patient_uuid">
+      <!-- 
+      <p align="center">
+        <input type="submit" id="id_submit_subject" class="show-page-loading-msg">
+      </p>
+      -->
+    <!--
+    <script>
+        $('#id_age').prop('disabled',true);
+        $('#id_use_age').change(function(){
+            if(window.console){
+                console.log("use_age " + $('#id_use_age').prop("checked"));
+            }
+            if($('#id_use_age').prop("checked")){
+                if(window.console){
+                    console.log("use_age " + 'on');
+                }
+                $('#id_dob').attr('disabled',true);
+                $('#id_age').attr('disabled',false);
+            } else {
+                if(window.console){
+                    console.log("use_age " + 'off');
+                }
+                $('#id_dob').attr('disabled',false);
+                $('#id_age').attr('disabled',true);
+            }
+        });
+    </script>
+    -->
+    <!--
+    </form> 
+    -->
+  </div>
+
+  <div id="tabs-2" class="ui-content"> 
+    <input id="id_encounter_uuid" type="hidden"/>
+    <!--
+    <form name="encounter" action="javascript:submitEncounter()" method="post">
+    -->
+      <input type="hidden" name="procedure" id="procedure" value="303a113c-6345-413f-88cb-aa6c4be3a07d"/>
+      <input type="hidden" name="concept" id="concept" value="266d8a8f-9178-4616-bcea-896194379059"/>
+      <!-- <form name="observations"> -->
+        {{encounter_form.as_table }}
+      <!-- </form> -->
+      <!-- 
+      <p align="center">
+        <input type="submit" id="id_submit_encounter" class="show-page-loading-msg">
+      </p>
+      -->
+    <!-- 
+    </form>
+    -->
+  </div>
+ 
+  <div id="tabs-3" class="ui-content"> 
+    <input id="task_patient_id" type="text" enabled="false"/>
+<!--
+    <form name="sa_tasks" action="javascript:submitEncounterTasks()" method="post">
+-->
+      {{ sa_form.as_table }}
+      <!-- 
+      <p align="center">
+        <input type="submit" id="id_submit_tasks" class="show-page-loading-msg">
+      </p>
+      -->
+<!--
+    </form>
+-->
+  </div>
+
+</div>
+<!-- end tabs -->
+  <p align="center">
+    <input type="submit" id="id_submit_intake" class="show-page-loading-msg">
+  </p>
+</form>
+</div>
+<!--
+<div data-role="footer" data-position="fixed" class="jqm-footer">
+  <p align="center">
+    <ul>
+        <li><a href="/mds/core/mobile/intake/?flavor=mobile">Registration</a></li>
+        <li><a href="/mds/core/mobile/encounter/">Encounter List</a></li>
+        <li><a href="index.html">Home</a></li>
+      </ul>
+    </p>
+  </div>
+-->
+{% endblock %}
