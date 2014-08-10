@@ -1,0 +1,139 @@
+@font-face {
+    font-family: rsbold;
+    src: url("/styles/fonts/RobotoSlab-Bold.ttf");
+}
+@font-face {
+    font-family: rslight;
+    src: url("/styles/fonts/RobotoSlab-Light.ttf");
+}
+@font-face {
+    font-family: reregular;
+    src: url("/styles/fonts/RobotoSlab-Regular.ttf");
+}
+@font-face {
+    font-family: rsthin;
+    src: url("/styles/fonts/RobotoSlab-Thin.ttf");
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #e6e6e6;
+    font-family: rsregular;
+}
+
+.header-box {
+    font-size: 2.0em;
+    padding: 20px;
+    text-align: left;
+    font-family: rsbold;
+    background-color: #260126;
+    color: #f6f6f6;
+    box-shadow: 0 2px 4px #260126;
+    z-index: 1;
+}
+
+.ex-tiny {
+    padding: 5px;
+    font-size: 0.8em;
+    margin: 2px !important;
+}
+
+.login-box {
+    padding: 20px;
+    box-shadow: 0 2px 4px #ccc;
+    background-color: #f6f6f6;
+}
+
+.sub-header {
+    font-family: reregular;
+    font-size: 1.2em;
+    font-weight: 700;
+}
+
+.clear-fix {
+    padding: 20px;
+}
+
+.zero-padding {
+    padding: 0 !important;
+}
+
+.tabs
+{
+    width: 100%;
+    background-color: #59323C;
+    margin-top: 0px;
+}
+
+.tabs ul
+{
+    margin-left: 0.9375em;
+    margin-right: 0.9375em;
+    margin-bottom: 0px;
+    padding-top:15px !important;
+    height: 100% !important;
+    font-family: rsregular;
+    font-weight: 700;
+}
+
+.tabs ul li
+{
+    display: inline-block;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.tabs ul li a , .tabs ul li a:visited
+{
+    color: #FFFFFF;
+}
+
+.tabs ul li:hover
+{
+    background-color: #E6E6E6;
+    cursor: pointer;
+    border-radius: 1px;
+}
+
+.tabs ul .active {
+    background-color: #E6E6E6;
+    cursor: pointer;
+    border-radius: 1px;
+}
+
+.tabs ul li:hover a,.tabs ul li.active a
+{
+    color: #59323C !important;
+}
+
+.tab-content
+{
+    padding: 20px;
+}
+
+.tab-content ul
+{
+    color:#838383;
+    margin-top:2px;
+    margin-left:20px;
+}
+.tab-content ul li
+{
+    font-size:1em;
+}
+.front {
+    z-index: 999;
+}
+
+table,
+table tr th,
+table tr td {
+    font-size: 0.9em;
+}
+
+.right-text {
+    text-align: right;
+}
