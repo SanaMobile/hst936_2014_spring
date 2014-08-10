@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/1037/servers/mds/trunk/sana/contrib/middleware/kannel
+END
+__init__.py
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/1031/servers/mds/trunk/sana/contrib/middleware/kannel/__init__.py
+END
+handlers.py
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/1031/servers/mds/trunk/sana/contrib/middleware/kannel/handlers.py
+END
+tests.py
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/1031/servers/mds/trunk/sana/contrib/middleware/kannel/tests.py
+END
+urls.py
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/1037/servers/mds/trunk/sana/contrib/middleware/kannel/urls.py
+END

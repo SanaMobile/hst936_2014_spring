@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/1041/servers/mds/trunk/sana/contrib/middleware
+END
+urls.py
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/1037/servers/mds/trunk/sana/contrib/middleware/urls.py
+END
+__init__.py
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/1030/servers/mds/trunk/sana/contrib/middleware/__init__.py
+END

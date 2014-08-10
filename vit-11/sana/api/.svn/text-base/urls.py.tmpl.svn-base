@@ -1,0 +1,40 @@
+''' Template for urls '''
+
+from django.conf.urls.defaults import patterns, include
+
+# Uncomment the next two lines to enable the admin:
+import handlers
+
+urlpatterns = patterns(
+    '',
+    
+    (r'^client/$',
+        handlers.client_resource,
+        {},
+        'client'),
+        
+    (r'^encounter/$',
+        handlers.encounter_resource,
+        {},
+        'encounter'),    
+    
+    (r'^notification/$',
+        handlers.notification_resource,
+        {},
+        'notification'),
+        
+    (r'^patient/$',
+        handlers.subject_resource,
+        {},
+        'patient'), 
+    
+    (r'^procedure/$',
+        handlers.procedure_resource,
+        {},
+        'procedure'),
+    
+    (r'^status/$',
+        handlers.status_resource,
+        {},
+        'status'),
+    )

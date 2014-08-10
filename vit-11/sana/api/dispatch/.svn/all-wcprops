@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/1042/servers/mds/trunk/sana/api/dispatch
+END
+__init__.py
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/1030/servers/mds/trunk/sana/api/dispatch/__init__.py
+END
+forms.py
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/1041/servers/mds/trunk/sana/api/dispatch/forms.py
+END
+dispatchlib.py
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/1042/servers/mds/trunk/sana/api/dispatch/dispatchlib.py
+END

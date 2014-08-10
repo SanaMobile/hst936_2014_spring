@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/592/servers/mds/trunk/moca/mrs/templates
+END
+notification_submit.html
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/592/servers/mds/trunk/moca/mrs/templates/notification_submit.html
+END
+base.html
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/592/servers/mds/trunk/moca/mrs/templates/base.html
+END
+procedure_submit.html
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/592/servers/mds/trunk/moca/mrs/templates/procedure_submit.html
+END
+email_notification_submit.html
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/592/servers/mds/trunk/moca/mrs/templates/email_notification_submit.html
+END
+index.html
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/592/servers/mds/trunk/moca/mrs/templates/index.html
+END

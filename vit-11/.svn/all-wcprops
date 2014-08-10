@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 36
+/svn/!svn/ver/1042/servers/mds/trunk
+END
+MANIFEST.in
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/539/servers/mds/trunk/MANIFEST.in
+END
+.pydevproject
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/1037/servers/mds/trunk/.pydevproject
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/!svn/ver/1032/servers/mds/trunk/README
+END
+LICENSE
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/!svn/ver/531/servers/mds/trunk/LICENSE
+END
+.project
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/1032/servers/mds/trunk/.project
+END
+ez_setup.py
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/531/servers/mds/trunk/ez_setup.py
+END
+setup.py
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/!svn/ver/703/servers/mds/trunk/setup.py
+END

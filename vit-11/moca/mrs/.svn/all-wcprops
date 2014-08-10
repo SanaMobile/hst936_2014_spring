@@ -1,0 +1,95 @@
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/1039/servers/mds/trunk/moca/mrs
+END
+views.py
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/592/servers/mds/trunk/moca/mrs/views.py
+END
+legacy_api.py
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/1039/servers/mds/trunk/moca/mrs/legacy_api.py
+END
+__init__.py
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/527/servers/mds/trunk/moca/mrs/__init__.py
+END
+sms.py
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/592/servers/mds/trunk/moca/mrs/sms.py
+END
+patient.py
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/592/servers/mds/trunk/moca/mrs/patient.py
+END
+legacy_urls.py
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/592/servers/mds/trunk/moca/mrs/legacy_urls.py
+END
+api.py
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/592/servers/mds/trunk/moca/mrs/api.py
+END
+util.py
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/1039/servers/mds/trunk/moca/mrs/util.py
+END
+api_urls.py
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/661/servers/mds/trunk/moca/mrs/api_urls.py
+END
+openmrs.py
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/684/servers/mds/trunk/moca/mrs/openmrs.py
+END
+models.py
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/1039/servers/mds/trunk/moca/mrs/models.py
+END
+urls.py
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/592/servers/mds/trunk/moca/mrs/urls.py
+END
+MultipartPostHandler.py
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/1039/servers/mds/trunk/moca/mrs/MultipartPostHandler.py
+END
+admin.py
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/1039/servers/mds/trunk/moca/mrs/admin.py
+END
+api_handlers.py
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/1039/servers/mds/trunk/moca/mrs/api_handlers.py
+END

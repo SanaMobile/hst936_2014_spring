@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/!svn/ver/1042/servers/mds/trunk/sana
+END
+local_settings.py.tmpl
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/1032/servers/mds/trunk/sana/local_settings.py.tmpl
+END
+urls.py
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/1037/servers/mds/trunk/sana/urls.py
+END
+manage.py
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/1030/servers/mds/trunk/sana/manage.py
+END
+settings.py.tmpl
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/1032/servers/mds/trunk/sana/settings.py.tmpl
+END
+__init__.py
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/1030/servers/mds/trunk/sana/__init__.py
+END

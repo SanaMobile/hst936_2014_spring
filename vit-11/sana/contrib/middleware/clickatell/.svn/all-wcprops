@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/1037/servers/mds/trunk/sana/contrib/middleware/clickatell
+END
+__init__.py
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/1031/servers/mds/trunk/sana/contrib/middleware/clickatell/__init__.py
+END
+handlers.py
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/1031/servers/mds/trunk/sana/contrib/middleware/clickatell/handlers.py
+END
+tests.py
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/1031/servers/mds/trunk/sana/contrib/middleware/clickatell/tests.py
+END
+urls.py
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/1037/servers/mds/trunk/sana/contrib/middleware/clickatell/urls.py
+END
