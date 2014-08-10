@@ -1,0 +1,1032 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A326890B1912C47000CECC50 /* SanaAttributedPicturePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = A326890A1912C47000CECC50 /* SanaAttributedPicturePicker.m */; };
+		A326890E1912D66600CECC50 /* choose_image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A326890C1912D66600CECC50 /* choose_image.jpg */; };
+		A326890F1912D66600CECC50 /* choose_image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A326890C1912D66600CECC50 /* choose_image.jpg */; };
+		A32689101912D66600CECC50 /* choose_photo@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A326890D1912D66600CECC50 /* choose_photo@2x.jpg */; };
+		A32689111912D66600CECC50 /* choose_photo@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A326890D1912D66600CECC50 /* choose_photo@2x.jpg */; };
+		A3D03C8F18E5BDB600510D84 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3D03C8E18E5BDB600510D84 /* Foundation.framework */; };
+		A3D03C9118E5BDB600510D84 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3D03C9018E5BDB600510D84 /* CoreGraphics.framework */; };
+		A3D03C9318E5BDB600510D84 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3D03C9218E5BDB600510D84 /* UIKit.framework */; };
+		A3D03C9518E5BDB600510D84 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3D03C9418E5BDB600510D84 /* CoreData.framework */; };
+		A3D03C9B18E5BDB600510D84 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A3D03C9918E5BDB600510D84 /* InfoPlist.strings */; };
+		A3D03C9D18E5BDB600510D84 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D03C9C18E5BDB600510D84 /* main.m */; };
+		A3D03CA118E5BDB600510D84 /* SanaAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D03CA018E5BDB600510D84 /* SanaAppDelegate.m */; };
+		A3D03CA418E5BDB600510D84 /* Sana_iOS_Client.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A3D03CA218E5BDB600510D84 /* Sana_iOS_Client.xcdatamodeld */; };
+		A3D03CA618E5BDB600510D84 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3D03CA518E5BDB600510D84 /* Images.xcassets */; };
+		A3D03CAD18E5BDB600510D84 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3D03CAC18E5BDB600510D84 /* XCTest.framework */; };
+		A3D03CAE18E5BDB600510D84 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3D03C8E18E5BDB600510D84 /* Foundation.framework */; };
+		A3D03CAF18E5BDB600510D84 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3D03C9218E5BDB600510D84 /* UIKit.framework */; };
+		A3D03CB018E5BDB600510D84 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3D03C9418E5BDB600510D84 /* CoreData.framework */; };
+		A3D03CB818E5BDB600510D84 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A3D03CB618E5BDB600510D84 /* InfoPlist.strings */; };
+		A3D03CBA18E5BDB600510D84 /* Sana_iOS_ClientTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D03CB918E5BDB600510D84 /* Sana_iOS_ClientTests.m */; };
+		A3D03CC418E5BF4000510D84 /* sana.ios.old.zip in Resources */ = {isa = PBXBuildFile; fileRef = A3D03CC318E5BF4000510D84 /* sana.ios.old.zip */; };
+		A3D03CC518E5BF4000510D84 /* sana.ios.old.zip in Resources */ = {isa = PBXBuildFile; fileRef = A3D03CC318E5BF4000510D84 /* sana.ios.old.zip */; };
+		A3D03CC818EC569300510D84 /* SanaHomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D03CC718EC569300510D84 /* SanaHomePageViewController.m */; };
+		A3D03CC918EC569300510D84 /* SanaHomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D03CC718EC569300510D84 /* SanaHomePageViewController.m */; };
+		A3D03CCE18EC642200510D84 /* SanaColorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D03CCD18EC642200510D84 /* SanaColorManager.m */; };
+		A3D03CCF18EC642200510D84 /* SanaColorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D03CCD18EC642200510D84 /* SanaColorManager.m */; };
+		A3D03CE118EC68EB00510D84 /* create_encounter@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3D03CD118EC68EB00510D84 /* create_encounter@2x.png */; };
+		A3D03CE218EC68EB00510D84 /* create_encounter@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3D03CD118EC68EB00510D84 /* create_encounter@2x.png */; };
+		A3D03CE318EC68EB00510D84 /* create_encounter_h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3D03CD218EC68EB00510D84 /* create_encounter_h@2x.png */; };
+		A3D03CE418EC68EB00510D84 /* create_encounter_h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3D03CD218EC68EB00510D84 /* create_encounter_h@2x.png */; };
+		A3D03CE518EC68EB00510D84 /* add_photo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3D03CD318EC68EB00510D84 /* add_photo@2x.png */; };
+		A3D03CE618EC68EB00510D84 /* add_photo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3D03CD318EC68EB00510D84 /* add_photo@2x.png */; };
+		A3D03CE718EC68EB00510D84 /* add_photo_h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3D03CD418EC68EB00510D84 /* add_photo_h@2x.png */; };
+		A3D03CE818EC68EB00510D84 /* add_photo_h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3D03CD418EC68EB00510D84 /* add_photo_h@2x.png */; };
+		A3D03CE918EC68EB00510D84 /* add_video@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3D03CD518EC68EB00510D84 /* add_video@2x.png */; };
+		A3D03CEA18EC68EB00510D84 /* add_video@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3D03CD518EC68EB00510D84 /* add_video@2x.png */; };
+		A3D03CEB18EC68EB00510D84 /* add_video_h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3D03CD618EC68EB00510D84 /* add_video_h@2x.png */; };
+		A3D03CEC18EC68EB00510D84 /* add_video_h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3D03CD618EC68EB00510D84 /* add_video_h@2x.png */; };
+		A3D03CED18EC68EB00510D84 /* arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3D03CD718EC68EB00510D84 /* arrow@2x.png */; };
+		A3D03CEE18EC68EB00510D84 /* arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3D03CD718EC68EB00510D84 /* arrow@2x.png */; };
+		A3D03CEF18EC68EB00510D84 /* list_arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3D03CD818EC68EB00510D84 /* list_arrow@2x.png */; };
+		A3D03CF018EC68EB00510D84 /* list_arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3D03CD818EC68EB00510D84 /* list_arrow@2x.png */; };
+		A3D03CF118EC68EB00510D84 /* list_arrow_h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3D03CD918EC68EB00510D84 /* list_arrow_h@2x.png */; };
+		A3D03CF218EC68EB00510D84 /* list_arrow_h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3D03CD918EC68EB00510D84 /* list_arrow_h@2x.png */; };
+		A3D03CF318EC68EB00510D84 /* view_notifications@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3D03CDA18EC68EB00510D84 /* view_notifications@2x.png */; };
+		A3D03CF418EC68EB00510D84 /* view_notifications@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3D03CDA18EC68EB00510D84 /* view_notifications@2x.png */; };
+		A3D03CF518EC68EB00510D84 /* view_notifications_h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3D03CDB18EC68EB00510D84 /* view_notifications_h@2x.png */; };
+		A3D03CF618EC68EB00510D84 /* view_notifications_h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3D03CDB18EC68EB00510D84 /* view_notifications_h@2x.png */; };
+		A3D03CF718EC68EB00510D84 /* sana_logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3D03CDC18EC68EB00510D84 /* sana_logo@2x.png */; };
+		A3D03CF818EC68EB00510D84 /* sana_logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3D03CDC18EC68EB00510D84 /* sana_logo@2x.png */; };
+		A3D03CF918EC68EB00510D84 /* save_encounter_off@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3D03CDD18EC68EB00510D84 /* save_encounter_off@2x.png */; };
+		A3D03CFA18EC68EB00510D84 /* save_encounter_off@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3D03CDD18EC68EB00510D84 /* save_encounter_off@2x.png */; };
+		A3D03CFB18EC68EB00510D84 /* save_encounter_on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3D03CDE18EC68EB00510D84 /* save_encounter_on@2x.png */; };
+		A3D03CFC18EC68EB00510D84 /* save_encounter_on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3D03CDE18EC68EB00510D84 /* save_encounter_on@2x.png */; };
+		A3D03CFD18EC68EB00510D84 /* view_encounters@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3D03CDF18EC68EB00510D84 /* view_encounters@2x.png */; };
+		A3D03CFE18EC68EB00510D84 /* view_encounters@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3D03CDF18EC68EB00510D84 /* view_encounters@2x.png */; };
+		A3D03CFF18EC68EB00510D84 /* view_encounters_h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3D03CE018EC68EB00510D84 /* view_encounters_h@2x.png */; };
+		A3D03D0018EC68EB00510D84 /* view_encounters_h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3D03CE018EC68EB00510D84 /* view_encounters_h@2x.png */; };
+		A3D03D0218EC6E6700510D84 /* main_background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A3D03D0118EC6E6700510D84 /* main_background.jpg */; };
+		A3D03D0318EC6E6700510D84 /* main_background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A3D03D0118EC6E6700510D84 /* main_background.jpg */; };
+		A3D03D0618EC71F400510D84 /* SanaProceduresViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D03D0518EC71F400510D84 /* SanaProceduresViewController.m */; };
+		A3D03D0718EC71F400510D84 /* SanaProceduresViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D03D0518EC71F400510D84 /* SanaProceduresViewController.m */; };
+		A3D03D0A18EC843900510D84 /* SanaImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D03D0918EC843900510D84 /* SanaImageManager.m */; };
+		A3D03D0B18EC843900510D84 /* SanaImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D03D0918EC843900510D84 /* SanaImageManager.m */; };
+		A3D03D0F18EC886D00510D84 /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D03D0E18EC886D00510D84 /* GDataXMLNode.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		A3D03D1018EC886D00510D84 /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D03D0E18EC886D00510D84 /* GDataXMLNode.m */; };
+		A3D03D1818EC88D100510D84 /* libxml2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A3D03D1718EC88D100510D84 /* libxml2.2.dylib */; };
+		A3D03D1A18EC88DA00510D84 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A3D03D1918EC88DA00510D84 /* libxml2.dylib */; };
+		A3D03D1C18EC890A00510D84 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3D03D1B18EC890A00510D84 /* QuartzCore.framework */; };
+		A3D03D1E18EC891100510D84 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3D03D1D18EC891100510D84 /* MobileCoreServices.framework */; };
+		A3D03D2118EC899900510D84 /* SanaConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D03D2018EC899900510D84 /* SanaConstants.m */; };
+		A3D03D2218EC899900510D84 /* SanaConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D03D2018EC899900510D84 /* SanaConstants.m */; };
+		A3D03D3918EC89A600510D84 /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D03D2518EC89A600510D84 /* AFHTTPClient.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		A3D03D3A18EC89A600510D84 /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D03D2518EC89A600510D84 /* AFHTTPClient.m */; };
+		A3D03D3B18EC89A600510D84 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D03D2718EC89A600510D84 /* AFHTTPRequestOperation.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		A3D03D3C18EC89A600510D84 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D03D2718EC89A600510D84 /* AFHTTPRequestOperation.m */; };
+		A3D03D3D18EC89A600510D84 /* AFImageRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D03D2918EC89A600510D84 /* AFImageRequestOperation.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		A3D03D3E18EC89A600510D84 /* AFImageRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D03D2918EC89A600510D84 /* AFImageRequestOperation.m */; };
+		A3D03D3F18EC89A600510D84 /* AFJSONRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D03D2B18EC89A600510D84 /* AFJSONRequestOperation.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		A3D03D4018EC89A600510D84 /* AFJSONRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D03D2B18EC89A600510D84 /* AFJSONRequestOperation.m */; };
+		A3D03D4118EC89A600510D84 /* AFJSONUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D03D2D18EC89A600510D84 /* AFJSONUtilities.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		A3D03D4218EC89A600510D84 /* AFJSONUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D03D2D18EC89A600510D84 /* AFJSONUtilities.m */; };
+		A3D03D4318EC89A600510D84 /* AFNetworkActivityIndicatorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D03D2F18EC89A600510D84 /* AFNetworkActivityIndicatorManager.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		A3D03D4418EC89A600510D84 /* AFNetworkActivityIndicatorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D03D2F18EC89A600510D84 /* AFNetworkActivityIndicatorManager.m */; };
+		A3D03D4518EC89A600510D84 /* AFPropertyListRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D03D3218EC89A600510D84 /* AFPropertyListRequestOperation.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		A3D03D4618EC89A600510D84 /* AFPropertyListRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D03D3218EC89A600510D84 /* AFPropertyListRequestOperation.m */; };
+		A3D03D4718EC89A600510D84 /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D03D3418EC89A600510D84 /* AFURLConnectionOperation.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		A3D03D4818EC89A600510D84 /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D03D3418EC89A600510D84 /* AFURLConnectionOperation.m */; };
+		A3D03D4918EC89A600510D84 /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D03D3618EC89A600510D84 /* AFXMLRequestOperation.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		A3D03D4A18EC89A600510D84 /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D03D3618EC89A600510D84 /* AFXMLRequestOperation.m */; };
+		A3D03D4B18EC89A600510D84 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D03D3818EC89A600510D84 /* UIImageView+AFNetworking.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		A3D03D4C18EC89A600510D84 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D03D3818EC89A600510D84 /* UIImageView+AFNetworking.m */; };
+		A3D03D5018EC94B600510D84 /* test_procedure_sana_2_0.xml in Resources */ = {isa = PBXBuildFile; fileRef = A3D03D4E18EC94B600510D84 /* test_procedure_sana_2_0.xml */; };
+		A3D03D5118EC94B600510D84 /* test_procedure_sana_2_0.xml in Resources */ = {isa = PBXBuildFile; fileRef = A3D03D4E18EC94B600510D84 /* test_procedure_sana_2_0.xml */; };
+		A3D03D5218EC94B600510D84 /* test_proc.xml in Resources */ = {isa = PBXBuildFile; fileRef = A3D03D4F18EC94B600510D84 /* test_proc.xml */; };
+		A3D03D5318EC94B600510D84 /* test_proc.xml in Resources */ = {isa = PBXBuildFile; fileRef = A3D03D4F18EC94B600510D84 /* test_proc.xml */; };
+		A3D03D5918EDC3C600510D84 /* mountain_village.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A3D03D5818EDC3C600510D84 /* mountain_village.jpg */; };
+		A3D03D5A18EDC3C600510D84 /* mountain_village.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A3D03D5818EDC3C600510D84 /* mountain_village.jpg */; };
+		A3D03D6D18EEAC3000510D84 /* test_proc_2.xml in Resources */ = {isa = PBXBuildFile; fileRef = A3D03D6C18EEAC3000510D84 /* test_proc_2.xml */; };
+		A3D03D6E18EEAC3000510D84 /* test_proc_2.xml in Resources */ = {isa = PBXBuildFile; fileRef = A3D03D6C18EEAC3000510D84 /* test_proc_2.xml */; };
+		A3D03DA818EEB88B00510D84 /* SanaAttributedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D03DA718EEB88B00510D84 /* SanaAttributedLabel.m */; };
+		A3D03DA918EEB88B00510D84 /* SanaAttributedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D03DA718EEB88B00510D84 /* SanaAttributedLabel.m */; };
+		A3D03DAC18EEB8DD00510D84 /* SanaAttributedTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D03DAB18EEB8DD00510D84 /* SanaAttributedTextField.m */; };
+		A3D03DAD18EEB8DD00510D84 /* SanaAttributedTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D03DAB18EEB8DD00510D84 /* SanaAttributedTextField.m */; };
+		A3D03DB018EEB8EE00510D84 /* SanaAttributedTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D03DAF18EEB8EE00510D84 /* SanaAttributedTextView.m */; };
+		A3D03DB118EEB8EE00510D84 /* SanaAttributedTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D03DAF18EEB8EE00510D84 /* SanaAttributedTextView.m */; };
+		A3D03DB418EEC05600510D84 /* SanaPickerDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D03DB318EEC05600510D84 /* SanaPickerDataSource.m */; };
+		A3D03DB518EEC05600510D84 /* SanaPickerDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D03DB318EEC05600510D84 /* SanaPickerDataSource.m */; };
+		A3D03DB818EF066D00510D84 /* SanaAttributedPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D03DB718EF066D00510D84 /* SanaAttributedPickerView.m */; };
+		A3D03DB918EF066D00510D84 /* SanaAttributedPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D03DB718EF066D00510D84 /* SanaAttributedPickerView.m */; };
+		A3D03DBC18EF130400510D84 /* SanaAttributedSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D03DBB18EF130400510D84 /* SanaAttributedSwitch.m */; };
+		A3D03DBD18EF130400510D84 /* SanaAttributedSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D03DBB18EF130400510D84 /* SanaAttributedSwitch.m */; };
+		A3D03DC018EF131B00510D84 /* switch_off.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A3D03DBE18EF131B00510D84 /* switch_off.jpg */; };
+		A3D03DC118EF131B00510D84 /* switch_off.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A3D03DBE18EF131B00510D84 /* switch_off.jpg */; };
+		A3D03DC218EF131B00510D84 /* switch_on.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A3D03DBF18EF131B00510D84 /* switch_on.jpg */; };
+		A3D03DC318EF131B00510D84 /* switch_on.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A3D03DBF18EF131B00510D84 /* switch_on.jpg */; };
+		A3D03DC618EF134F00510D84 /* switch_off@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A3D03DC418EF134F00510D84 /* switch_off@2x.jpg */; };
+		A3D03DC718EF134F00510D84 /* switch_off@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A3D03DC418EF134F00510D84 /* switch_off@2x.jpg */; };
+		A3D03DC818EF134F00510D84 /* switch_on@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A3D03DC518EF134F00510D84 /* switch_on@2x.jpg */; };
+		A3D03DC918EF134F00510D84 /* switch_on@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A3D03DC518EF134F00510D84 /* switch_on@2x.jpg */; };
+		A3D03E1819027B3D00510D84 /* procedure_schema.xml in Resources */ = {isa = PBXBuildFile; fileRef = A3D03E1719027B3D00510D84 /* procedure_schema.xml */; };
+		A3D03E1919027B3D00510D84 /* procedure_schema.xml in Resources */ = {isa = PBXBuildFile; fileRef = A3D03E1719027B3D00510D84 /* procedure_schema.xml */; };
+		A3D03E2019027C8F00510D84 /* SanaParseXML.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D03E1F19027C8F00510D84 /* SanaParseXML.m */; };
+		A3D03E2119027C8F00510D84 /* SanaParseXML.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D03E1F19027C8F00510D84 /* SanaParseXML.m */; };
+		A3D03E281903166A00510D84 /* SanaAttributedDatePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D03E271903166A00510D84 /* SanaAttributedDatePickerView.m */; };
+		A3D03E291903166A00510D84 /* SanaAttributedDatePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D03E271903166A00510D84 /* SanaAttributedDatePickerView.m */; };
+		A3D03E2C190318AE00510D84 /* SanaProcedureDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D03E2B190318AE00510D84 /* SanaProcedureDetailsViewController.m */; };
+		A3D03E2D190318AE00510D84 /* SanaProcedureDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D03E2B190318AE00510D84 /* SanaProcedureDetailsViewController.m */; };
+		A3D03E2F1903225A00510D84 /* sample_1.xml in Resources */ = {isa = PBXBuildFile; fileRef = A3D03E2E1903225A00510D84 /* sample_1.xml */; };
+		A3D03E301903225A00510D84 /* sample_1.xml in Resources */ = {isa = PBXBuildFile; fileRef = A3D03E2E1903225A00510D84 /* sample_1.xml */; };
+		A3D03E34190338A800510D84 /* Element.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D03E33190338A800510D84 /* Element.m */; };
+		A3D03E35190338A800510D84 /* Element.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D03E33190338A800510D84 /* Element.m */; };
+		A3D03E3819093D5E00510D84 /* sample_2.xml in Resources */ = {isa = PBXBuildFile; fileRef = A3D03E3719093D5E00510D84 /* sample_2.xml */; };
+		A3D03E3919093D5E00510D84 /* sample_2.xml in Resources */ = {isa = PBXBuildFile; fileRef = A3D03E3719093D5E00510D84 /* sample_2.xml */; };
+		A3E0BF09190CFFF300582DE3 /* SanaFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E0BF08190CFFF300582DE3 /* SanaFileManager.m */; };
+		A3E0BF15190D02F900582DE3 /* SanaCoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E0BF14190D02F900582DE3 /* SanaCoreData.m */; };
+		A3E0BF2D190D153600582DE3 /* SanaStoredProceduresViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E0BF2C190D153600582DE3 /* SanaStoredProceduresViewController.m */; };
+		A3E0BF30190D165E00582DE3 /* Answer.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E0BF2F190D165E00582DE3 /* Answer.m */; };
+		A3E0BF33190D165F00582DE3 /* Procedure.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E0BF32190D165F00582DE3 /* Procedure.m */; };
+		A3E0BF36190D2CDB00582DE3 /* SanaMultiSelectDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E0BF35190D2CDB00582DE3 /* SanaMultiSelectDataSource.m */; };
+		A3E0BF39190D314B00582DE3 /* SanaAttributedTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E0BF38190D314B00582DE3 /* SanaAttributedTableView.m */; };
+		A3E0BF3B190EFC1100582DE3 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3E0BF3A190EFC1100582DE3 /* CoreLocation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A3D03CB118E5BDB600510D84 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A3D03C8318E5BDB500510D84 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A3D03C8A18E5BDB600510D84;
+			remoteInfo = "Sana iOS Client";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A32689091912C47000CECC50 /* SanaAttributedPicturePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SanaAttributedPicturePicker.h; sourceTree = "<group>"; };
+		A326890A1912C47000CECC50 /* SanaAttributedPicturePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SanaAttributedPicturePicker.m; sourceTree = "<group>"; };
+		A326890C1912D66600CECC50 /* choose_image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = choose_image.jpg; sourceTree = "<group>"; };
+		A326890D1912D66600CECC50 /* choose_photo@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "choose_photo@2x.jpg"; sourceTree = "<group>"; };
+		A3D03C8B18E5BDB600510D84 /* Sana iOS Client.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sana iOS Client.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3D03C8E18E5BDB600510D84 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		A3D03C9018E5BDB600510D84 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		A3D03C9218E5BDB600510D84 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		A3D03C9418E5BDB600510D84 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		A3D03C9818E5BDB600510D84 /* Sana iOS Client-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Sana iOS Client-Info.plist"; sourceTree = "<group>"; };
+		A3D03C9A18E5BDB600510D84 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A3D03C9C18E5BDB600510D84 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A3D03C9E18E5BDB600510D84 /* Sana iOS Client-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Sana iOS Client-Prefix.pch"; sourceTree = "<group>"; };
+		A3D03C9F18E5BDB600510D84 /* SanaAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SanaAppDelegate.h; sourceTree = "<group>"; };
+		A3D03CA018E5BDB600510D84 /* SanaAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SanaAppDelegate.m; sourceTree = "<group>"; };
+		A3D03CA318E5BDB600510D84 /* Sana_iOS_Client.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Sana_iOS_Client.xcdatamodel; sourceTree = "<group>"; };
+		A3D03CA518E5BDB600510D84 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		A3D03CAB18E5BDB600510D84 /* Sana iOS ClientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Sana iOS ClientTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3D03CAC18E5BDB600510D84 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		A3D03CB518E5BDB600510D84 /* Sana iOS ClientTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Sana iOS ClientTests-Info.plist"; sourceTree = "<group>"; };
+		A3D03CB718E5BDB600510D84 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A3D03CB918E5BDB600510D84 /* Sana_iOS_ClientTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Sana_iOS_ClientTests.m; sourceTree = "<group>"; };
+		A3D03CC318E5BF4000510D84 /* sana.ios.old.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = sana.ios.old.zip; sourceTree = "<group>"; };
+		A3D03CC618EC569300510D84 /* SanaHomePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SanaHomePageViewController.h; sourceTree = "<group>"; };
+		A3D03CC718EC569300510D84 /* SanaHomePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SanaHomePageViewController.m; sourceTree = "<group>"; };
+		A3D03CCA18EC587D00510D84 /* Defines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Defines.h; sourceTree = "<group>"; };
+		A3D03CCC18EC642200510D84 /* SanaColorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SanaColorManager.h; sourceTree = "<group>"; };
+		A3D03CCD18EC642200510D84 /* SanaColorManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SanaColorManager.m; sourceTree = "<group>"; };
+		A3D03CD118EC68EB00510D84 /* create_encounter@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "create_encounter@2x.png"; sourceTree = "<group>"; };
+		A3D03CD218EC68EB00510D84 /* create_encounter_h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "create_encounter_h@2x.png"; sourceTree = "<group>"; };
+		A3D03CD318EC68EB00510D84 /* add_photo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "add_photo@2x.png"; sourceTree = "<group>"; };
+		A3D03CD418EC68EB00510D84 /* add_photo_h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "add_photo_h@2x.png"; sourceTree = "<group>"; };
+		A3D03CD518EC68EB00510D84 /* add_video@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "add_video@2x.png"; sourceTree = "<group>"; };
+		A3D03CD618EC68EB00510D84 /* add_video_h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "add_video_h@2x.png"; sourceTree = "<group>"; };
+		A3D03CD718EC68EB00510D84 /* arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow@2x.png"; sourceTree = "<group>"; };
+		A3D03CD818EC68EB00510D84 /* list_arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "list_arrow@2x.png"; sourceTree = "<group>"; };
+		A3D03CD918EC68EB00510D84 /* list_arrow_h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "list_arrow_h@2x.png"; sourceTree = "<group>"; };
+		A3D03CDA18EC68EB00510D84 /* view_notifications@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "view_notifications@2x.png"; sourceTree = "<group>"; };
+		A3D03CDB18EC68EB00510D84 /* view_notifications_h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "view_notifications_h@2x.png"; sourceTree = "<group>"; };
+		A3D03CDC18EC68EB00510D84 /* sana_logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sana_logo@2x.png"; sourceTree = "<group>"; };
+		A3D03CDD18EC68EB00510D84 /* save_encounter_off@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "save_encounter_off@2x.png"; sourceTree = "<group>"; };
+		A3D03CDE18EC68EB00510D84 /* save_encounter_on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "save_encounter_on@2x.png"; sourceTree = "<group>"; };
+		A3D03CDF18EC68EB00510D84 /* view_encounters@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "view_encounters@2x.png"; sourceTree = "<group>"; };
+		A3D03CE018EC68EB00510D84 /* view_encounters_h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "view_encounters_h@2x.png"; sourceTree = "<group>"; };
+		A3D03D0118EC6E6700510D84 /* main_background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = main_background.jpg; sourceTree = "<group>"; };
+		A3D03D0418EC71F400510D84 /* SanaProceduresViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SanaProceduresViewController.h; sourceTree = "<group>"; };
+		A3D03D0518EC71F400510D84 /* SanaProceduresViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SanaProceduresViewController.m; sourceTree = "<group>"; };
+		A3D03D0818EC843900510D84 /* SanaImageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SanaImageManager.h; sourceTree = "<group>"; };
+		A3D03D0918EC843900510D84 /* SanaImageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SanaImageManager.m; sourceTree = "<group>"; };
+		A3D03D0D18EC886D00510D84 /* GDataXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDataXMLNode.h; sourceTree = "<group>"; };
+		A3D03D0E18EC886D00510D84 /* GDataXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDataXMLNode.m; sourceTree = "<group>"; };
+		A3D03D1718EC88D100510D84 /* libxml2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.2.dylib; path = usr/lib/libxml2.2.dylib; sourceTree = SDKROOT; };
+		A3D03D1918EC88DA00510D84 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		A3D03D1B18EC890A00510D84 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		A3D03D1D18EC891100510D84 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		A3D03D1F18EC899900510D84 /* SanaConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SanaConstants.h; sourceTree = "<group>"; };
+		A3D03D2018EC899900510D84 /* SanaConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SanaConstants.m; sourceTree = "<group>"; };
+		A3D03D2418EC89A600510D84 /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
+		A3D03D2518EC89A600510D84 /* AFHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPClient.m; sourceTree = "<group>"; };
+		A3D03D2618EC89A600510D84 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
+		A3D03D2718EC89A600510D84 /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
+		A3D03D2818EC89A600510D84 /* AFImageRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFImageRequestOperation.h; sourceTree = "<group>"; };
+		A3D03D2918EC89A600510D84 /* AFImageRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFImageRequestOperation.m; sourceTree = "<group>"; };
+		A3D03D2A18EC89A600510D84 /* AFJSONRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFJSONRequestOperation.h; sourceTree = "<group>"; };
+		A3D03D2B18EC89A600510D84 /* AFJSONRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFJSONRequestOperation.m; sourceTree = "<group>"; };
+		A3D03D2C18EC89A600510D84 /* AFJSONUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFJSONUtilities.h; sourceTree = "<group>"; };
+		A3D03D2D18EC89A600510D84 /* AFJSONUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFJSONUtilities.m; sourceTree = "<group>"; };
+		A3D03D2E18EC89A600510D84 /* AFNetworkActivityIndicatorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkActivityIndicatorManager.h; sourceTree = "<group>"; };
+		A3D03D2F18EC89A600510D84 /* AFNetworkActivityIndicatorManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkActivityIndicatorManager.m; sourceTree = "<group>"; };
+		A3D03D3018EC89A600510D84 /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
+		A3D03D3118EC89A600510D84 /* AFPropertyListRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFPropertyListRequestOperation.h; sourceTree = "<group>"; };
+		A3D03D3218EC89A600510D84 /* AFPropertyListRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFPropertyListRequestOperation.m; sourceTree = "<group>"; };
+		A3D03D3318EC89A600510D84 /* AFURLConnectionOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLConnectionOperation.h; sourceTree = "<group>"; };
+		A3D03D3418EC89A600510D84 /* AFURLConnectionOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLConnectionOperation.m; sourceTree = "<group>"; };
+		A3D03D3518EC89A600510D84 /* AFXMLRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFXMLRequestOperation.h; sourceTree = "<group>"; };
+		A3D03D3618EC89A600510D84 /* AFXMLRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFXMLRequestOperation.m; sourceTree = "<group>"; };
+		A3D03D3718EC89A600510D84 /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
+		A3D03D3818EC89A600510D84 /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
+		A3D03D4E18EC94B600510D84 /* test_procedure_sana_2_0.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = test_procedure_sana_2_0.xml; sourceTree = "<group>"; };
+		A3D03D4F18EC94B600510D84 /* test_proc.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = test_proc.xml; sourceTree = "<group>"; };
+		A3D03D5818EDC3C600510D84 /* mountain_village.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mountain_village.jpg; sourceTree = "<group>"; };
+		A3D03D6C18EEAC3000510D84 /* test_proc_2.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = test_proc_2.xml; sourceTree = "<group>"; };
+		A3D03DA618EEB88B00510D84 /* SanaAttributedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SanaAttributedLabel.h; sourceTree = "<group>"; };
+		A3D03DA718EEB88B00510D84 /* SanaAttributedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SanaAttributedLabel.m; sourceTree = "<group>"; };
+		A3D03DAA18EEB8DD00510D84 /* SanaAttributedTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SanaAttributedTextField.h; sourceTree = "<group>"; };
+		A3D03DAB18EEB8DD00510D84 /* SanaAttributedTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SanaAttributedTextField.m; sourceTree = "<group>"; };
+		A3D03DAE18EEB8EE00510D84 /* SanaAttributedTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SanaAttributedTextView.h; sourceTree = "<group>"; };
+		A3D03DAF18EEB8EE00510D84 /* SanaAttributedTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SanaAttributedTextView.m; sourceTree = "<group>"; };
+		A3D03DB218EEC05600510D84 /* SanaPickerDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SanaPickerDataSource.h; sourceTree = "<group>"; };
+		A3D03DB318EEC05600510D84 /* SanaPickerDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SanaPickerDataSource.m; sourceTree = "<group>"; };
+		A3D03DB618EF066D00510D84 /* SanaAttributedPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SanaAttributedPickerView.h; sourceTree = "<group>"; };
+		A3D03DB718EF066D00510D84 /* SanaAttributedPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SanaAttributedPickerView.m; sourceTree = "<group>"; };
+		A3D03DBA18EF130400510D84 /* SanaAttributedSwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SanaAttributedSwitch.h; sourceTree = "<group>"; };
+		A3D03DBB18EF130400510D84 /* SanaAttributedSwitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SanaAttributedSwitch.m; sourceTree = "<group>"; };
+		A3D03DBE18EF131B00510D84 /* switch_off.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = switch_off.jpg; sourceTree = "<group>"; };
+		A3D03DBF18EF131B00510D84 /* switch_on.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = switch_on.jpg; sourceTree = "<group>"; };
+		A3D03DC418EF134F00510D84 /* switch_off@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "switch_off@2x.jpg"; sourceTree = "<group>"; };
+		A3D03DC518EF134F00510D84 /* switch_on@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "switch_on@2x.jpg"; sourceTree = "<group>"; };
+		A3D03E1719027B3D00510D84 /* procedure_schema.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = procedure_schema.xml; sourceTree = "<group>"; };
+		A3D03E1E19027C8F00510D84 /* SanaParseXML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SanaParseXML.h; sourceTree = "<group>"; };
+		A3D03E1F19027C8F00510D84 /* SanaParseXML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SanaParseXML.m; sourceTree = "<group>"; };
+		A3D03E261903166A00510D84 /* SanaAttributedDatePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SanaAttributedDatePickerView.h; sourceTree = "<group>"; };
+		A3D03E271903166A00510D84 /* SanaAttributedDatePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SanaAttributedDatePickerView.m; sourceTree = "<group>"; };
+		A3D03E2A190318AE00510D84 /* SanaProcedureDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SanaProcedureDetailsViewController.h; sourceTree = "<group>"; };
+		A3D03E2B190318AE00510D84 /* SanaProcedureDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SanaProcedureDetailsViewController.m; sourceTree = "<group>"; };
+		A3D03E2E1903225A00510D84 /* sample_1.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = sample_1.xml; sourceTree = "<group>"; };
+		A3D03E32190338A800510D84 /* Element.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Element.h; sourceTree = "<group>"; };
+		A3D03E33190338A800510D84 /* Element.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Element.m; sourceTree = "<group>"; };
+		A3D03E3719093D5E00510D84 /* sample_2.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = sample_2.xml; sourceTree = "<group>"; };
+		A3E0BF07190CFFF300582DE3 /* SanaFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SanaFileManager.h; sourceTree = "<group>"; };
+		A3E0BF08190CFFF300582DE3 /* SanaFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SanaFileManager.m; sourceTree = "<group>"; };
+		A3E0BF13190D02F900582DE3 /* SanaCoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SanaCoreData.h; sourceTree = "<group>"; };
+		A3E0BF14190D02F900582DE3 /* SanaCoreData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SanaCoreData.m; sourceTree = "<group>"; };
+		A3E0BF2B190D153600582DE3 /* SanaStoredProceduresViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SanaStoredProceduresViewController.h; sourceTree = "<group>"; };
+		A3E0BF2C190D153600582DE3 /* SanaStoredProceduresViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SanaStoredProceduresViewController.m; sourceTree = "<group>"; };
+		A3E0BF2E190D165E00582DE3 /* Answer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Answer.h; sourceTree = "<group>"; };
+		A3E0BF2F190D165E00582DE3 /* Answer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Answer.m; sourceTree = "<group>"; };
+		A3E0BF31190D165F00582DE3 /* Procedure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Procedure.h; sourceTree = "<group>"; };
+		A3E0BF32190D165F00582DE3 /* Procedure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Procedure.m; sourceTree = "<group>"; };
+		A3E0BF34190D2CDB00582DE3 /* SanaMultiSelectDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SanaMultiSelectDataSource.h; sourceTree = "<group>"; };
+		A3E0BF35190D2CDB00582DE3 /* SanaMultiSelectDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SanaMultiSelectDataSource.m; sourceTree = "<group>"; };
+		A3E0BF37190D314B00582DE3 /* SanaAttributedTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SanaAttributedTableView.h; sourceTree = "<group>"; };
+		A3E0BF38190D314B00582DE3 /* SanaAttributedTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SanaAttributedTableView.m; sourceTree = "<group>"; };
+		A3E0BF3A190EFC1100582DE3 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A3D03C8818E5BDB600510D84 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3E0BF3B190EFC1100582DE3 /* CoreLocation.framework in Frameworks */,
+				A3D03D1E18EC891100510D84 /* MobileCoreServices.framework in Frameworks */,
+				A3D03D1C18EC890A00510D84 /* QuartzCore.framework in Frameworks */,
+				A3D03D1A18EC88DA00510D84 /* libxml2.dylib in Frameworks */,
+				A3D03D1818EC88D100510D84 /* libxml2.2.dylib in Frameworks */,
+				A3D03C9118E5BDB600510D84 /* CoreGraphics.framework in Frameworks */,
+				A3D03C9518E5BDB600510D84 /* CoreData.framework in Frameworks */,
+				A3D03C9318E5BDB600510D84 /* UIKit.framework in Frameworks */,
+				A3D03C8F18E5BDB600510D84 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A3D03CA818E5BDB600510D84 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3D03CAD18E5BDB600510D84 /* XCTest.framework in Frameworks */,
+				A3D03CB018E5BDB600510D84 /* CoreData.framework in Frameworks */,
+				A3D03CAF18E5BDB600510D84 /* UIKit.framework in Frameworks */,
+				A3D03CAE18E5BDB600510D84 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A3D03C8218E5BDB500510D84 = {
+			isa = PBXGroup;
+			children = (
+				A3D03E0F19027A4200510D84 /* Procedure */,
+				A3D03C9618E5BDB600510D84 /* Sana iOS Client */,
+				A3D03CB318E5BDB600510D84 /* Sana iOS ClientTests */,
+				A3D03C8D18E5BDB600510D84 /* Frameworks */,
+				A3D03C8C18E5BDB600510D84 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A3D03C8C18E5BDB600510D84 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A3D03C8B18E5BDB600510D84 /* Sana iOS Client.app */,
+				A3D03CAB18E5BDB600510D84 /* Sana iOS ClientTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A3D03C8D18E5BDB600510D84 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A3E0BF3A190EFC1100582DE3 /* CoreLocation.framework */,
+				A3D03D1D18EC891100510D84 /* MobileCoreServices.framework */,
+				A3D03D1B18EC890A00510D84 /* QuartzCore.framework */,
+				A3D03D1918EC88DA00510D84 /* libxml2.dylib */,
+				A3D03D1718EC88D100510D84 /* libxml2.2.dylib */,
+				A3D03C8E18E5BDB600510D84 /* Foundation.framework */,
+				A3D03C9018E5BDB600510D84 /* CoreGraphics.framework */,
+				A3D03C9218E5BDB600510D84 /* UIKit.framework */,
+				A3D03C9418E5BDB600510D84 /* CoreData.framework */,
+				A3D03CAC18E5BDB600510D84 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A3D03C9618E5BDB600510D84 /* Sana iOS Client */ = {
+			isa = PBXGroup;
+			children = (
+				A3D03E311903389400510D84 /* Classes */,
+				A3D03D5F18EEA5D700510D84 /* Subclasses */,
+				A3D03D0C18EC882200510D84 /* Resources */,
+				A3D03CD018EC68DF00510D84 /* Image Assets */,
+				A3D03CCB18EC63F300510D84 /* Libraries */,
+				A3D03C9F18E5BDB600510D84 /* SanaAppDelegate.h */,
+				A3D03CA018E5BDB600510D84 /* SanaAppDelegate.m */,
+				A3D03CC618EC569300510D84 /* SanaHomePageViewController.h */,
+				A3D03CC718EC569300510D84 /* SanaHomePageViewController.m */,
+				A3D03D0418EC71F400510D84 /* SanaProceduresViewController.h */,
+				A3D03D0518EC71F400510D84 /* SanaProceduresViewController.m */,
+				A3E0BF2B190D153600582DE3 /* SanaStoredProceduresViewController.h */,
+				A3E0BF2C190D153600582DE3 /* SanaStoredProceduresViewController.m */,
+				A3D03E2A190318AE00510D84 /* SanaProcedureDetailsViewController.h */,
+				A3D03E2B190318AE00510D84 /* SanaProcedureDetailsViewController.m */,
+				A3D03E1E19027C8F00510D84 /* SanaParseXML.h */,
+				A3D03E1F19027C8F00510D84 /* SanaParseXML.m */,
+				A3D03DB218EEC05600510D84 /* SanaPickerDataSource.h */,
+				A3D03DB318EEC05600510D84 /* SanaPickerDataSource.m */,
+				A3E0BF34190D2CDB00582DE3 /* SanaMultiSelectDataSource.h */,
+				A3E0BF35190D2CDB00582DE3 /* SanaMultiSelectDataSource.m */,
+				A3D03CA518E5BDB600510D84 /* Images.xcassets */,
+				A3D03CA218E5BDB600510D84 /* Sana_iOS_Client.xcdatamodeld */,
+				A3E0BF31190D165F00582DE3 /* Procedure.h */,
+				A3E0BF32190D165F00582DE3 /* Procedure.m */,
+				A3E0BF2E190D165E00582DE3 /* Answer.h */,
+				A3E0BF2F190D165E00582DE3 /* Answer.m */,
+				A3D03C9718E5BDB600510D84 /* Supporting Files */,
+			);
+			path = "Sana iOS Client";
+			sourceTree = "<group>";
+		};
+		A3D03C9718E5BDB600510D84 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A3D03CC318E5BF4000510D84 /* sana.ios.old.zip */,
+				A3D03C9818E5BDB600510D84 /* Sana iOS Client-Info.plist */,
+				A3D03C9918E5BDB600510D84 /* InfoPlist.strings */,
+				A3D03C9C18E5BDB600510D84 /* main.m */,
+				A3D03C9E18E5BDB600510D84 /* Sana iOS Client-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A3D03CB318E5BDB600510D84 /* Sana iOS ClientTests */ = {
+			isa = PBXGroup;
+			children = (
+				A3D03CB918E5BDB600510D84 /* Sana_iOS_ClientTests.m */,
+				A3D03CB418E5BDB600510D84 /* Supporting Files */,
+			);
+			path = "Sana iOS ClientTests";
+			sourceTree = "<group>";
+		};
+		A3D03CB418E5BDB600510D84 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A3D03CB518E5BDB600510D84 /* Sana iOS ClientTests-Info.plist */,
+				A3D03CB618E5BDB600510D84 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A3D03CCB18EC63F300510D84 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				A3D03D2318EC89A600510D84 /* AFNetworking */,
+				A3D03CCA18EC587D00510D84 /* Defines.h */,
+				A3D03D1F18EC899900510D84 /* SanaConstants.h */,
+				A3D03D2018EC899900510D84 /* SanaConstants.m */,
+				A3D03CCC18EC642200510D84 /* SanaColorManager.h */,
+				A3D03CCD18EC642200510D84 /* SanaColorManager.m */,
+				A3D03D0818EC843900510D84 /* SanaImageManager.h */,
+				A3D03D0918EC843900510D84 /* SanaImageManager.m */,
+				A3E0BF07190CFFF300582DE3 /* SanaFileManager.h */,
+				A3E0BF08190CFFF300582DE3 /* SanaFileManager.m */,
+				A3E0BF13190D02F900582DE3 /* SanaCoreData.h */,
+				A3E0BF14190D02F900582DE3 /* SanaCoreData.m */,
+			);
+			name = Libraries;
+			sourceTree = "<group>";
+		};
+		A3D03CD018EC68DF00510D84 /* Image Assets */ = {
+			isa = PBXGroup;
+			children = (
+				A326890C1912D66600CECC50 /* choose_image.jpg */,
+				A326890D1912D66600CECC50 /* choose_photo@2x.jpg */,
+				A3D03DC418EF134F00510D84 /* switch_off@2x.jpg */,
+				A3D03DC518EF134F00510D84 /* switch_on@2x.jpg */,
+				A3D03DBE18EF131B00510D84 /* switch_off.jpg */,
+				A3D03DBF18EF131B00510D84 /* switch_on.jpg */,
+				A3D03D5818EDC3C600510D84 /* mountain_village.jpg */,
+				A3D03D0118EC6E6700510D84 /* main_background.jpg */,
+				A3D03CD118EC68EB00510D84 /* create_encounter@2x.png */,
+				A3D03CD218EC68EB00510D84 /* create_encounter_h@2x.png */,
+				A3D03CD318EC68EB00510D84 /* add_photo@2x.png */,
+				A3D03CD418EC68EB00510D84 /* add_photo_h@2x.png */,
+				A3D03CD518EC68EB00510D84 /* add_video@2x.png */,
+				A3D03CD618EC68EB00510D84 /* add_video_h@2x.png */,
+				A3D03CD718EC68EB00510D84 /* arrow@2x.png */,
+				A3D03CD818EC68EB00510D84 /* list_arrow@2x.png */,
+				A3D03CD918EC68EB00510D84 /* list_arrow_h@2x.png */,
+				A3D03CDA18EC68EB00510D84 /* view_notifications@2x.png */,
+				A3D03CDB18EC68EB00510D84 /* view_notifications_h@2x.png */,
+				A3D03CDC18EC68EB00510D84 /* sana_logo@2x.png */,
+				A3D03CDD18EC68EB00510D84 /* save_encounter_off@2x.png */,
+				A3D03CDE18EC68EB00510D84 /* save_encounter_on@2x.png */,
+				A3D03CDF18EC68EB00510D84 /* view_encounters@2x.png */,
+				A3D03CE018EC68EB00510D84 /* view_encounters_h@2x.png */,
+			);
+			name = "Image Assets";
+			sourceTree = "<group>";
+		};
+		A3D03D0C18EC882200510D84 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A3D03E3619093D2200510D84 /* Sample Procdeures */,
+				A3D03E1719027B3D00510D84 /* procedure_schema.xml */,
+				A3D03D4D18EC94A800510D84 /* Sample Procedures - xForms */,
+				A3D03D1118EC887600510D84 /* XML */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		A3D03D1118EC887600510D84 /* XML */ = {
+			isa = PBXGroup;
+			children = (
+				A3D03D0D18EC886D00510D84 /* GDataXMLNode.h */,
+				A3D03D0E18EC886D00510D84 /* GDataXMLNode.m */,
+			);
+			name = XML;
+			sourceTree = "<group>";
+		};
+		A3D03D2318EC89A600510D84 /* AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				A3D03D2418EC89A600510D84 /* AFHTTPClient.h */,
+				A3D03D2518EC89A600510D84 /* AFHTTPClient.m */,
+				A3D03D2618EC89A600510D84 /* AFHTTPRequestOperation.h */,
+				A3D03D2718EC89A600510D84 /* AFHTTPRequestOperation.m */,
+				A3D03D2818EC89A600510D84 /* AFImageRequestOperation.h */,
+				A3D03D2918EC89A600510D84 /* AFImageRequestOperation.m */,
+				A3D03D2A18EC89A600510D84 /* AFJSONRequestOperation.h */,
+				A3D03D2B18EC89A600510D84 /* AFJSONRequestOperation.m */,
+				A3D03D2C18EC89A600510D84 /* AFJSONUtilities.h */,
+				A3D03D2D18EC89A600510D84 /* AFJSONUtilities.m */,
+				A3D03D2E18EC89A600510D84 /* AFNetworkActivityIndicatorManager.h */,
+				A3D03D2F18EC89A600510D84 /* AFNetworkActivityIndicatorManager.m */,
+				A3D03D3018EC89A600510D84 /* AFNetworking.h */,
+				A3D03D3118EC89A600510D84 /* AFPropertyListRequestOperation.h */,
+				A3D03D3218EC89A600510D84 /* AFPropertyListRequestOperation.m */,
+				A3D03D3318EC89A600510D84 /* AFURLConnectionOperation.h */,
+				A3D03D3418EC89A600510D84 /* AFURLConnectionOperation.m */,
+				A3D03D3518EC89A600510D84 /* AFXMLRequestOperation.h */,
+				A3D03D3618EC89A600510D84 /* AFXMLRequestOperation.m */,
+				A3D03D3718EC89A600510D84 /* UIImageView+AFNetworking.h */,
+				A3D03D3818EC89A600510D84 /* UIImageView+AFNetworking.m */,
+			);
+			path = AFNetworking;
+			sourceTree = "<group>";
+		};
+		A3D03D4D18EC94A800510D84 /* Sample Procedures - xForms */ = {
+			isa = PBXGroup;
+			children = (
+				A3D03D4E18EC94B600510D84 /* test_procedure_sana_2_0.xml */,
+				A3D03D4F18EC94B600510D84 /* test_proc.xml */,
+				A3D03D6C18EEAC3000510D84 /* test_proc_2.xml */,
+			);
+			name = "Sample Procedures - xForms";
+			sourceTree = "<group>";
+		};
+		A3D03D5F18EEA5D700510D84 /* Subclasses */ = {
+			isa = PBXGroup;
+			children = (
+				A3D03DA618EEB88B00510D84 /* SanaAttributedLabel.h */,
+				A3D03DA718EEB88B00510D84 /* SanaAttributedLabel.m */,
+				A3D03DAA18EEB8DD00510D84 /* SanaAttributedTextField.h */,
+				A3D03DAB18EEB8DD00510D84 /* SanaAttributedTextField.m */,
+				A3D03DAE18EEB8EE00510D84 /* SanaAttributedTextView.h */,
+				A3D03DAF18EEB8EE00510D84 /* SanaAttributedTextView.m */,
+				A3D03DB618EF066D00510D84 /* SanaAttributedPickerView.h */,
+				A3D03DB718EF066D00510D84 /* SanaAttributedPickerView.m */,
+				A3E0BF37190D314B00582DE3 /* SanaAttributedTableView.h */,
+				A3E0BF38190D314B00582DE3 /* SanaAttributedTableView.m */,
+				A3D03E261903166A00510D84 /* SanaAttributedDatePickerView.h */,
+				A3D03E271903166A00510D84 /* SanaAttributedDatePickerView.m */,
+				A3D03DBA18EF130400510D84 /* SanaAttributedSwitch.h */,
+				A3D03DBB18EF130400510D84 /* SanaAttributedSwitch.m */,
+				A32689091912C47000CECC50 /* SanaAttributedPicturePicker.h */,
+				A326890A1912C47000CECC50 /* SanaAttributedPicturePicker.m */,
+			);
+			name = Subclasses;
+			sourceTree = "<group>";
+		};
+		A3D03E0F19027A4200510D84 /* Procedure */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Procedure;
+			sourceTree = "<group>";
+		};
+		A3D03E311903389400510D84 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				A3D03E32190338A800510D84 /* Element.h */,
+				A3D03E33190338A800510D84 /* Element.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		A3D03E3619093D2200510D84 /* Sample Procdeures */ = {
+			isa = PBXGroup;
+			children = (
+				A3D03E2E1903225A00510D84 /* sample_1.xml */,
+				A3D03E3719093D5E00510D84 /* sample_2.xml */,
+			);
+			name = "Sample Procdeures";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A3D03C8A18E5BDB600510D84 /* Sana iOS Client */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A3D03CBD18E5BDB600510D84 /* Build configuration list for PBXNativeTarget "Sana iOS Client" */;
+			buildPhases = (
+				A3D03C8718E5BDB600510D84 /* Sources */,
+				A3D03C8818E5BDB600510D84 /* Frameworks */,
+				A3D03C8918E5BDB600510D84 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Sana iOS Client";
+			productName = "Sana iOS Client";
+			productReference = A3D03C8B18E5BDB600510D84 /* Sana iOS Client.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A3D03CAA18E5BDB600510D84 /* Sana iOS ClientTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A3D03CC018E5BDB600510D84 /* Build configuration list for PBXNativeTarget "Sana iOS ClientTests" */;
+			buildPhases = (
+				A3D03CA718E5BDB600510D84 /* Sources */,
+				A3D03CA818E5BDB600510D84 /* Frameworks */,
+				A3D03CA918E5BDB600510D84 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A3D03CB218E5BDB600510D84 /* PBXTargetDependency */,
+			);
+			name = "Sana iOS ClientTests";
+			productName = "Sana iOS ClientTests";
+			productReference = A3D03CAB18E5BDB600510D84 /* Sana iOS ClientTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A3D03C8318E5BDB500510D84 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = Sana;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = MIT;
+				TargetAttributes = {
+					A3D03CAA18E5BDB600510D84 = {
+						TestTargetID = A3D03C8A18E5BDB600510D84;
+					};
+				};
+			};
+			buildConfigurationList = A3D03C8618E5BDB500510D84 /* Build configuration list for PBXProject "Sana iOS Client" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = A3D03C8218E5BDB500510D84;
+			productRefGroup = A3D03C8C18E5BDB600510D84 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A3D03C8A18E5BDB600510D84 /* Sana iOS Client */,
+				A3D03CAA18E5BDB600510D84 /* Sana iOS ClientTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A3D03C8918E5BDB600510D84 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3D03DC018EF131B00510D84 /* switch_off.jpg in Resources */,
+				A3D03CFB18EC68EB00510D84 /* save_encounter_on@2x.png in Resources */,
+				A326890E1912D66600CECC50 /* choose_image.jpg in Resources */,
+				A3D03C9B18E5BDB600510D84 /* InfoPlist.strings in Resources */,
+				A3D03D5018EC94B600510D84 /* test_procedure_sana_2_0.xml in Resources */,
+				A3D03CF918EC68EB00510D84 /* save_encounter_off@2x.png in Resources */,
+				A3D03CF518EC68EB00510D84 /* view_notifications_h@2x.png in Resources */,
+				A3D03CE518EC68EB00510D84 /* add_photo@2x.png in Resources */,
+				A3D03CF318EC68EB00510D84 /* view_notifications@2x.png in Resources */,
+				A3D03DC818EF134F00510D84 /* switch_on@2x.jpg in Resources */,
+				A3D03E2F1903225A00510D84 /* sample_1.xml in Resources */,
+				A3D03CEF18EC68EB00510D84 /* list_arrow@2x.png in Resources */,
+				A3D03D5918EDC3C600510D84 /* mountain_village.jpg in Resources */,
+				A3D03CE918EC68EB00510D84 /* add_video@2x.png in Resources */,
+				A3D03D6D18EEAC3000510D84 /* test_proc_2.xml in Resources */,
+				A3D03CEB18EC68EB00510D84 /* add_video_h@2x.png in Resources */,
+				A3D03CE118EC68EB00510D84 /* create_encounter@2x.png in Resources */,
+				A3D03CFD18EC68EB00510D84 /* view_encounters@2x.png in Resources */,
+				A3D03CC418E5BF4000510D84 /* sana.ios.old.zip in Resources */,
+				A3D03CED18EC68EB00510D84 /* arrow@2x.png in Resources */,
+				A3D03CA618E5BDB600510D84 /* Images.xcassets in Resources */,
+				A3D03DC618EF134F00510D84 /* switch_off@2x.jpg in Resources */,
+				A3D03CE318EC68EB00510D84 /* create_encounter_h@2x.png in Resources */,
+				A3D03E1819027B3D00510D84 /* procedure_schema.xml in Resources */,
+				A3D03CFF18EC68EB00510D84 /* view_encounters_h@2x.png in Resources */,
+				A3D03D0218EC6E6700510D84 /* main_background.jpg in Resources */,
+				A3D03CE718EC68EB00510D84 /* add_photo_h@2x.png in Resources */,
+				A3D03CF718EC68EB00510D84 /* sana_logo@2x.png in Resources */,
+				A3D03CF118EC68EB00510D84 /* list_arrow_h@2x.png in Resources */,
+				A32689101912D66600CECC50 /* choose_photo@2x.jpg in Resources */,
+				A3D03D5218EC94B600510D84 /* test_proc.xml in Resources */,
+				A3D03DC218EF131B00510D84 /* switch_on.jpg in Resources */,
+				A3D03E3819093D5E00510D84 /* sample_2.xml in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A3D03CA918E5BDB600510D84 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3D03E301903225A00510D84 /* sample_1.xml in Resources */,
+				A326890F1912D66600CECC50 /* choose_image.jpg in Resources */,
+				A3D03CC518E5BF4000510D84 /* sana.ios.old.zip in Resources */,
+				A3D03D5318EC94B600510D84 /* test_proc.xml in Resources */,
+				A3D03DC118EF131B00510D84 /* switch_off.jpg in Resources */,
+				A3D03CEA18EC68EB00510D84 /* add_video@2x.png in Resources */,
+				A3D03CFC18EC68EB00510D84 /* save_encounter_on@2x.png in Resources */,
+				A3D03CB818E5BDB600510D84 /* InfoPlist.strings in Resources */,
+				A3D03CEC18EC68EB00510D84 /* add_video_h@2x.png in Resources */,
+				A3D03CE418EC68EB00510D84 /* create_encounter_h@2x.png in Resources */,
+				A3D03D0318EC6E6700510D84 /* main_background.jpg in Resources */,
+				A3D03DC718EF134F00510D84 /* switch_off@2x.jpg in Resources */,
+				A3D03CF618EC68EB00510D84 /* view_notifications_h@2x.png in Resources */,
+				A3D03DC318EF131B00510D84 /* switch_on.jpg in Resources */,
+				A3D03D5118EC94B600510D84 /* test_procedure_sana_2_0.xml in Resources */,
+				A3D03D0018EC68EB00510D84 /* view_encounters_h@2x.png in Resources */,
+				A3D03CE218EC68EB00510D84 /* create_encounter@2x.png in Resources */,
+				A3D03CE818EC68EB00510D84 /* add_photo_h@2x.png in Resources */,
+				A3D03DC918EF134F00510D84 /* switch_on@2x.jpg in Resources */,
+				A3D03D5A18EDC3C600510D84 /* mountain_village.jpg in Resources */,
+				A3D03CE618EC68EB00510D84 /* add_photo@2x.png in Resources */,
+				A3D03CFA18EC68EB00510D84 /* save_encounter_off@2x.png in Resources */,
+				A32689111912D66600CECC50 /* choose_photo@2x.jpg in Resources */,
+				A3D03CF418EC68EB00510D84 /* view_notifications@2x.png in Resources */,
+				A3D03CF818EC68EB00510D84 /* sana_logo@2x.png in Resources */,
+				A3D03CF018EC68EB00510D84 /* list_arrow@2x.png in Resources */,
+				A3D03E3919093D5E00510D84 /* sample_2.xml in Resources */,
+				A3D03D6E18EEAC3000510D84 /* test_proc_2.xml in Resources */,
+				A3D03CFE18EC68EB00510D84 /* view_encounters@2x.png in Resources */,
+				A3D03CF218EC68EB00510D84 /* list_arrow_h@2x.png in Resources */,
+				A3D03E1919027B3D00510D84 /* procedure_schema.xml in Resources */,
+				A3D03CEE18EC68EB00510D84 /* arrow@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A3D03C8718E5BDB600510D84 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3D03D4118EC89A600510D84 /* AFJSONUtilities.m in Sources */,
+				A3E0BF30190D165E00582DE3 /* Answer.m in Sources */,
+				A3D03DB818EF066D00510D84 /* SanaAttributedPickerView.m in Sources */,
+				A3D03D3B18EC89A600510D84 /* AFHTTPRequestOperation.m in Sources */,
+				A3D03D0A18EC843900510D84 /* SanaImageManager.m in Sources */,
+				A3D03D0F18EC886D00510D84 /* GDataXMLNode.m in Sources */,
+				A3D03DB018EEB8EE00510D84 /* SanaAttributedTextView.m in Sources */,
+				A3D03E2019027C8F00510D84 /* SanaParseXML.m in Sources */,
+				A3D03D4718EC89A600510D84 /* AFURLConnectionOperation.m in Sources */,
+				A3D03D4318EC89A600510D84 /* AFNetworkActivityIndicatorManager.m in Sources */,
+				A3E0BF2D190D153600582DE3 /* SanaStoredProceduresViewController.m in Sources */,
+				A3D03E2C190318AE00510D84 /* SanaProcedureDetailsViewController.m in Sources */,
+				A3E0BF33190D165F00582DE3 /* Procedure.m in Sources */,
+				A3D03C9D18E5BDB600510D84 /* main.m in Sources */,
+				A3D03D4518EC89A600510D84 /* AFPropertyListRequestOperation.m in Sources */,
+				A3D03E34190338A800510D84 /* Element.m in Sources */,
+				A3D03DB418EEC05600510D84 /* SanaPickerDataSource.m in Sources */,
+				A3D03CA418E5BDB600510D84 /* Sana_iOS_Client.xcdatamodeld in Sources */,
+				A326890B1912C47000CECC50 /* SanaAttributedPicturePicker.m in Sources */,
+				A3E0BF36190D2CDB00582DE3 /* SanaMultiSelectDataSource.m in Sources */,
+				A3E0BF39190D314B00582DE3 /* SanaAttributedTableView.m in Sources */,
+				A3D03E281903166A00510D84 /* SanaAttributedDatePickerView.m in Sources */,
+				A3D03D4918EC89A600510D84 /* AFXMLRequestOperation.m in Sources */,
+				A3D03DAC18EEB8DD00510D84 /* SanaAttributedTextField.m in Sources */,
+				A3D03DA818EEB88B00510D84 /* SanaAttributedLabel.m in Sources */,
+				A3D03D4B18EC89A600510D84 /* UIImageView+AFNetworking.m in Sources */,
+				A3E0BF15190D02F900582DE3 /* SanaCoreData.m in Sources */,
+				A3D03DBC18EF130400510D84 /* SanaAttributedSwitch.m in Sources */,
+				A3E0BF09190CFFF300582DE3 /* SanaFileManager.m in Sources */,
+				A3D03CA118E5BDB600510D84 /* SanaAppDelegate.m in Sources */,
+				A3D03D2118EC899900510D84 /* SanaConstants.m in Sources */,
+				A3D03CCE18EC642200510D84 /* SanaColorManager.m in Sources */,
+				A3D03D3D18EC89A600510D84 /* AFImageRequestOperation.m in Sources */,
+				A3D03D3F18EC89A600510D84 /* AFJSONRequestOperation.m in Sources */,
+				A3D03CC818EC569300510D84 /* SanaHomePageViewController.m in Sources */,
+				A3D03D3918EC89A600510D84 /* AFHTTPClient.m in Sources */,
+				A3D03D0618EC71F400510D84 /* SanaProceduresViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A3D03CA718E5BDB600510D84 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3D03DAD18EEB8DD00510D84 /* SanaAttributedTextField.m in Sources */,
+				A3D03D4818EC89A600510D84 /* AFURLConnectionOperation.m in Sources */,
+				A3D03D4218EC89A600510D84 /* AFJSONUtilities.m in Sources */,
+				A3D03D0B18EC843900510D84 /* SanaImageManager.m in Sources */,
+				A3D03DB518EEC05600510D84 /* SanaPickerDataSource.m in Sources */,
+				A3D03E2D190318AE00510D84 /* SanaProcedureDetailsViewController.m in Sources */,
+				A3D03D4018EC89A600510D84 /* AFJSONRequestOperation.m in Sources */,
+				A3D03DB918EF066D00510D84 /* SanaAttributedPickerView.m in Sources */,
+				A3D03D3C18EC89A600510D84 /* AFHTTPRequestOperation.m in Sources */,
+				A3D03DA918EEB88B00510D84 /* SanaAttributedLabel.m in Sources */,
+				A3D03E35190338A800510D84 /* Element.m in Sources */,
+				A3D03D3E18EC89A600510D84 /* AFImageRequestOperation.m in Sources */,
+				A3D03DBD18EF130400510D84 /* SanaAttributedSwitch.m in Sources */,
+				A3D03DB118EEB8EE00510D84 /* SanaAttributedTextView.m in Sources */,
+				A3D03E2119027C8F00510D84 /* SanaParseXML.m in Sources */,
+				A3D03D4C18EC89A600510D84 /* UIImageView+AFNetworking.m in Sources */,
+				A3D03D3A18EC89A600510D84 /* AFHTTPClient.m in Sources */,
+				A3D03D2218EC899900510D84 /* SanaConstants.m in Sources */,
+				A3D03D4618EC89A600510D84 /* AFPropertyListRequestOperation.m in Sources */,
+				A3D03CBA18E5BDB600510D84 /* Sana_iOS_ClientTests.m in Sources */,
+				A3D03CCF18EC642200510D84 /* SanaColorManager.m in Sources */,
+				A3D03CC918EC569300510D84 /* SanaHomePageViewController.m in Sources */,
+				A3D03D0718EC71F400510D84 /* SanaProceduresViewController.m in Sources */,
+				A3D03D4418EC89A600510D84 /* AFNetworkActivityIndicatorManager.m in Sources */,
+				A3D03D1018EC886D00510D84 /* GDataXMLNode.m in Sources */,
+				A3D03D4A18EC89A600510D84 /* AFXMLRequestOperation.m in Sources */,
+				A3D03E291903166A00510D84 /* SanaAttributedDatePickerView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A3D03CB218E5BDB600510D84 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A3D03C8A18E5BDB600510D84 /* Sana iOS Client */;
+			targetProxy = A3D03CB118E5BDB600510D84 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A3D03C9918E5BDB600510D84 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A3D03C9A18E5BDB600510D84 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		A3D03CB618E5BDB600510D84 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A3D03CB718E5BDB600510D84 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A3D03CBB18E5BDB600510D84 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A3D03CBC18E5BDB600510D84 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A3D03CBE18E5BDB600510D84 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Sana iOS Client/Sana iOS Client-Prefix.pch";
+				"HEADER_SEARCH_PATHS[arch=*]" = $SDKROOT/usr/include/libxml2;
+				INFOPLIST_FILE = "Sana iOS Client/Sana iOS Client-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		A3D03CBF18E5BDB600510D84 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Sana iOS Client/Sana iOS Client-Prefix.pch";
+				"HEADER_SEARCH_PATHS[arch=*]" = $SDKROOT/usr/include/libxml2;
+				INFOPLIST_FILE = "Sana iOS Client/Sana iOS Client-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		A3D03CC118E5BDB600510D84 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Sana iOS Client.app/Sana iOS Client";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Sana iOS Client/Sana iOS Client-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Sana iOS ClientTests/Sana iOS ClientTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		A3D03CC218E5BDB600510D84 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Sana iOS Client.app/Sana iOS Client";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Sana iOS Client/Sana iOS Client-Prefix.pch";
+				INFOPLIST_FILE = "Sana iOS ClientTests/Sana iOS ClientTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A3D03C8618E5BDB500510D84 /* Build configuration list for PBXProject "Sana iOS Client" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A3D03CBB18E5BDB600510D84 /* Debug */,
+				A3D03CBC18E5BDB600510D84 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A3D03CBD18E5BDB600510D84 /* Build configuration list for PBXNativeTarget "Sana iOS Client" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A3D03CBE18E5BDB600510D84 /* Debug */,
+				A3D03CBF18E5BDB600510D84 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A3D03CC018E5BDB600510D84 /* Build configuration list for PBXNativeTarget "Sana iOS ClientTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A3D03CC118E5BDB600510D84 /* Debug */,
+				A3D03CC218E5BDB600510D84 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A3D03CA218E5BDB600510D84 /* Sana_iOS_Client.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A3D03CA318E5BDB600510D84 /* Sana_iOS_Client.xcdatamodel */,
+			);
+			currentVersion = A3D03CA318E5BDB600510D84 /* Sana_iOS_Client.xcdatamodel */;
+			path = Sana_iOS_Client.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = A3D03C8318E5BDB500510D84 /* Project object */;
+}

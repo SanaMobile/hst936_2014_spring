@@ -1,0 +1,231 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://dev.sana.mit.edu/xml/procedure/"
+    elementFormDefault="qualified"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns="http://dev.sana.mit.edu/xml/procedure/">
+
+    <xsd:annotation>
+        <xsd:documentation>XML scheme for the 1.x versions of the Sana platform
+            mark up. This is the procedure scheme only. Current schema files
+            currently available at http://dev.sana.mit.edu/xml/</xsd:documentation>
+    </xsd:annotation>
+
+    <xsd:simpleType name="idType">
+        <xsd:restriction base="xsd:string">
+            <xsd:minLength value="1"></xsd:minLength>
+            <xsd:whiteSpace value="collapse"></xsd:whiteSpace>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+
+	<xsd:complexType name="procedureType">
+		<xsd:sequence>
+			<xsd:element name="Page" type="pageType" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:attribute name="title" use="required">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:minLength value="1"></xsd:minLength>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="author" use="optional">
+			<xsd:simpleType>
+                <xsd:restriction base="xsd:string"></xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="version">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:pattern value="\d(.\d{0,2})?(.\d{0,2})?"></xsd:pattern>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+	</xsd:complexType>
+
+	<xsd:complexType name="pageType">
+		<xsd:sequence minOccurs="1" maxOccurs="1">
+			<xsd:element name="ShowIf" type="booleanOp" minOccurs="0">
+			</xsd:element>
+            <xsd:element name="Element" type="elementType" maxOccurs="unbounded"></xsd:element>
+        </xsd:sequence>
+		<xsd:attribute name="id" type="xsd:string" use="optional"></xsd:attribute>
+	</xsd:complexType>
+
+	<xsd:complexType name="elementType">
+        <xsd:sequence>
+            <xsd:element name="help" type="helpType" minOccurs="0">
+            </xsd:element>
+            <xsd:element name="choices" type="choicesType" minOccurs="0">
+            </xsd:element>
+        </xsd:sequence>
+        <xsd:attribute
+            name="id"
+            use="required"
+            >
+            <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                    <xsd:minLength value="1"></xsd:minLength>
+                </xsd:restriction>
+            </xsd:simpleType>
+        </xsd:attribute>
+        <xsd:attribute name="concept" type="xsd:string" use="required">
+        </xsd:attribute>
+        <xsd:attribute name="type" use="required">
+            <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                    <xsd:enumeration value="TEXT"></xsd:enumeration>
+                    <xsd:enumeration value="ENTRY"></xsd:enumeration>
+                    <xsd:enumeration value="SELECT"></xsd:enumeration>
+                    <xsd:enumeration value="PATIENT_ID"></xsd:enumeration>
+                    <xsd:enumeration value="MULTI_SELECT"></xsd:enumeration>
+                    <xsd:enumeration value="RADIO"></xsd:enumeration>
+                    <xsd:enumeration value="IMAGE"></xsd:enumeration>
+                    <xsd:enumeration value="PICTURE"></xsd:enumeration>
+                    <xsd:enumeration value="SOUND"></xsd:enumeration>
+                    <xsd:enumeration value="BINARYFILE"></xsd:enumeration>
+                    <xsd:enumeration value="INVALID"></xsd:enumeration>
+                    <xsd:enumeration value="GPS"></xsd:enumeration>
+                    <xsd:enumeration value="TIME"></xsd:enumeration>
+                    <xsd:enumeration value="DATE"></xsd:enumeration>
+                    <xsd:enumeration value="EDUCATION_RESOURCE"></xsd:enumeration>
+                    <xsd:enumeration value="PLUGIN"></xsd:enumeration>
+                    <xsd:enumeration value="PLUGIN_ENTRY"></xsd:enumeration>
+                </xsd:restriction>
+            </xsd:simpleType>
+        </xsd:attribute>
+        <xsd:attribute name="question" type="xsd:string" use="required">
+        </xsd:attribute>
+        <xsd:attribute name="answer" type="xsd:string">
+        </xsd:attribute>
+        <xsd:attribute name="choices" type="xsd:string">
+        </xsd:attribute>
+        <xsd:attribute name="figure" type="xsd:string">
+        </xsd:attribute>
+        <xsd:attribute name="audio" type="xsd:string">
+        </xsd:attribute>
+        <xsd:attribute name="required" type="xsd:string">
+        </xsd:attribute>
+        <xsd:attribute name="helpText" type="xsd:string">
+        </xsd:attribute>
+        <xsd:attribute name="action" type="xsd:string">
+        </xsd:attribute>
+        <xsd:attribute name="mimeType" type="xsd:string">
+        </xsd:attribute>
+        <xsd:attribute name="numeric">
+            <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                    <xsd:enumeration value="NONE"></xsd:enumeration>
+                    <xsd:enumeration value="DIALPAD"></xsd:enumeration>
+                    <xsd:enumeration value="DECIMAL"></xsd:enumeration>
+                    <xsd:enumeration value="INTEGER"></xsd:enumeration>
+                    <xsd:enumeration value="SIGNED"></xsd:enumeration>
+                </xsd:restriction>
+            </xsd:simpleType>
+        </xsd:attribute>
+        <xsd:attribute name="appearance" type="xsd:string">
+        </xsd:attribute>
+        <xsd:attribute name="alert" type="xsd:string">
+        </xsd:attribute>
+        <xsd:attribute name="help" type="xsd:string">
+        </xsd:attribute>
+        <xsd:attribute name="hint" type="xsd:string">
+        </xsd:attribute>
+        <xsd:attribute name="bind" type="xsd:string">
+        </xsd:attribute>
+	</xsd:complexType>
+
+	<xsd:complexType name="criteriaType">
+		<xsd:sequence></xsd:sequence>
+		<xsd:attribute name="id" type="xsd:string" use="required"></xsd:attribute>
+		<xsd:attribute name="type" use="required">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="EQUALS"></xsd:enumeration>
+					<xsd:enumeration value="GREATER"></xsd:enumeration>
+					<xsd:enumeration value="LESS"></xsd:enumeration>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="value" type="xsd:string" use="required"></xsd:attribute>
+	</xsd:complexType>
+
+	<xsd:complexType name="booleanOp">
+		<xsd:choice minOccurs="1">
+			<xsd:element name="Criteria" type="criteriaType" minOccurs="1"></xsd:element>
+			<xsd:element name="and" type="andOp"></xsd:element>
+			<xsd:element name="or" type="orOp"></xsd:element>
+			<xsd:element name="not" type="notOp"></xsd:element>
+		</xsd:choice>
+
+	</xsd:complexType>
+
+
+	<xsd:complexType name="andOp">
+		<xsd:sequence minOccurs="2" maxOccurs="unbounded">
+			<xsd:choice>
+				<xsd:element name="Criteria" type="criteriaType"></xsd:element>
+				<xsd:element name="and" type="andOp"></xsd:element>
+				<xsd:element name="not" type="notOp"></xsd:element>
+				<xsd:element name="or" type="orOp"></xsd:element>
+			</xsd:choice>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="notOp">
+		<xsd:sequence minOccurs="1" maxOccurs="1">
+			<xsd:choice>
+				<xsd:element name="Criteria" type="criteriaType"></xsd:element>
+				<xsd:element name="and" type="andOp"></xsd:element>
+				<xsd:element name="or" type="orOp"></xsd:element>
+				<xsd:element name="not" type="notOp"></xsd:element>
+			</xsd:choice>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="orOp">
+		<xsd:sequence minOccurs="2" maxOccurs="unbounded">
+			<xsd:choice>
+				<xsd:element name="Criteria" type="criteriaType"></xsd:element>
+				<xsd:element name="and" type="andOp"></xsd:element>
+				<xsd:element name="not" type="notOp"></xsd:element>
+				<xsd:element name="or" type="orOp"></xsd:element>
+			</xsd:choice>
+		</xsd:sequence>
+	</xsd:complexType>
+
+
+	<xsd:complexType name="helpType">
+		<xsd:sequence>
+			<xsd:element name="name" type="xsd:string"></xsd:element>
+			<xsd:element name="value" type="xsd:string" minOccurs="0"></xsd:element>
+			<xsd:element name="description" type="xsd:string" minOccurs="0" maxOccurs="1">
+			</xsd:element>
+			<xsd:element name="src" type="xsd:string" minOccurs="0"></xsd:element>
+			<xsd:element name="mediatype" type="xsd:string" minOccurs="0"></xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+    
+	<xsd:complexType name="choicesType">
+		<xsd:sequence>
+			<xsd:element name="item" type="itemType"></xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+    
+	<xsd:complexType name="itemType">
+		<xsd:sequence>
+            <xsd:element name="value" type="xsd:string"></xsd:element>
+            <xsd:element name="label" type="xsd:string"></xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+    
+	<xsd:complexType name="outputType">
+		<xsd:sequence>
+			<xsd:element name="source" type="xsd:string"></xsd:element>
+			<xsd:element name="mediatype" type="xsd:string"></xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+    
+    <xsd:element name="Procedure" type="procedureType"></xsd:element>
+</xsd:schema>
