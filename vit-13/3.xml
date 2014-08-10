@@ -1,0 +1,14 @@
+<Procedure title="Sana" key="TB" author="Azad">
+<Page>
+	<Element>
+		type="SELECT"
+		concept="TEXT"
+		question="Choose numbers"
+		id="1"
+		answer=""
+		choices="1,2,3,4,5"
+		helpText="enter details before advancing"
+		required="true"
+	</Element>
+</Page>
+</Procedure>

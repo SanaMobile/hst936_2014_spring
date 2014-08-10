@@ -1,0 +1,25 @@
+<Procedure title="Sana" key="cancer" author="kundan">
+<Page>
+	<Element>
+		type="RADIO"
+		concept="TEXT"
+		question="SELECT INTEGER"
+		id="2"
+		answer=""
+		choices="1,2,3,4"
+		helpText=" "
+		required="false"
+	</Element>
+</Page>
+<Page>
+	<Element>
+		type="ENTRY"
+		concept="TEXT"
+		question="Enter name"
+		id="1"
+		answer=" "
+		helpText=" "
+		required="false"
+	</Element>
+</Page>
+</Procedure>
