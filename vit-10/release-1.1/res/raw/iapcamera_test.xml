@@ -1,0 +1,22 @@
+<Procedure title="Welcome" author="Sana" id="000-0000000" version="1">
+    <!-- Plugin template
+    <Page>
+        <Element type="PLUGIN | ENTRY_PLUGIN" id="$VALUE" 
+        concept="$VALUE"
+        question="$VALUE per concept"
+        action="[Intent action string]"
+        package=""
+        text=""
+        answer=""/>
+    </Page>
+    -->
+    <Page>
+        <Element type="PLUGIN" id="1" 
+        concept="IMAGE TEST"
+        question="Take a picture"
+        action="org.sana.android.camera.IMAGE_TEST"
+        mimeType="image/jpeg"
+        text=""
+        answer=""/>
+    </Page>
+</Procedure>

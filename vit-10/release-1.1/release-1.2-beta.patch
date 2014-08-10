@@ -1,0 +1,123 @@
+Index: res/raw/iapcamera_test.xml
+===================================================================
+--- res/raw/iapcamera_test.xml	(revision 0)
++++ res/raw/iapcamera_test.xml	(revision 0)
+@@ -0,0 +1,22 @@
++<Procedure title="Welcome" author="Sana" id="000-0000000" version="1">
++    <!-- Plugin template
++    <Page>
++        <Element type="PLUGIN | ENTRY_PLUGIN" id="$VALUE" 
++        concept="$VALUE"
++        question="$VALUE per concept"
++        action="[Intent action string]"
++        package=""
++        text=""
++        answer=""/>
++    </Page>
++    -->
++    <Page>
++        <Element type="PLUGIN" id="1" 
++        concept="IMAGE TEST"
++        question="Take a picture"
++        action="org.sana.android.camera.IMAGE_TEST"
++        mimeType="image/jpeg"
++        text=""
++        answer=""/>
++    </Page>
++</Procedure>
+\ No newline at end of file
+Index: src/org/moca/activity/Moca.java
+===================================================================
+--- src/org/moca/activity/Moca.java	(revision 1313)
++++ src/org/moca/activity/Moca.java	(working copy)
+@@ -252,13 +252,14 @@
+         				showDialog(DIALOG_NO_PHONE_NAME);
+         		}
+         		// Attempt to validate the credentials changed in the settings.
+-        		if(mCredentialsTask != null 
+-        			|| mCredentialsTask.getStatus() == Status.FINISHED)
+-        		{
++        		if(mCredentialsTask != null){ 
++        			if(mCredentialsTask.getStatus() == Status.FINISHED)
++        			{
+         				mCredentialsTask = new CheckCredentialsTask();
+         				mCredentialsTask.setValidationListener(
+         								new CredentialsValidatedListener());
+         				mCredentialsTask.execute(this);
++        			}
+         		}
+         	}
+             break;
+Index: src/org/moca/activity/ProcedureRunner.java
+===================================================================
+--- src/org/moca/activity/ProcedureRunner.java	(revision 1313)
++++ src/org/moca/activity/ProcedureRunner.java	(working copy)
+@@ -638,6 +638,19 @@
+ 				Log.d(TAG,"State: " + mEncounterState.toUri(
+ 										Intent.URI_INTENT_SCHEME));
+ 				Intent plug = intent.getParcelableExtra(Intent.EXTRA_INTENT);
++				// Add some state about the current encounter to the Intent
++				plug.putExtra("subject", 
++						p.getPatientInfo().getPatientIdentifier());
++				plug.putExtra("encounter", EncounterDAO.getEncounterGuid(this, 
++						thisSavedProcedure));
++				plug.putExtra("observation", intent.getStringExtra(
++						BinarySQLFormat.ELEMENT_ID));
++				String action = plug.getAction();
++				int last = action.lastIndexOf(".");
++				if (last > -1){
++					String concept = action.substring(last).replace("_"," ");
++					plug.putExtra("concept", concept);
++				}
+ 				Log.d(TAG, "Plug: " + plug.toUri(Intent.URI_INTENT_SCHEME));
+ 				startActivityForResult(plug, PLUGIN_INTENT_REQUEST_CODE);
+ 				break;
+Index: src/org/moca/activity/settings/NetworkSettings.java
+===================================================================
+--- src/org/moca/activity/settings/NetworkSettings.java	(revision 1313)
++++ src/org/moca/activity/settings/NetworkSettings.java	(working copy)
+@@ -140,7 +140,7 @@
+ 		enableUploadHack.setKey(Constants.PREFERENCE_UPLOAD_HACK);
+ 		enableUploadHack.setTitle(getString(R.string.setting_upload_hack));
+ 		enableUploadHack.setSummary(getString(R.string.setting_upload_hack_summary));
+-		enableUploadHack.setDefaultValue(false);
++		enableUploadHack.setDefaultValue(true);
+ 		dialogBasedPrefCat.addPreference(enableUploadHack);
+ 		
+         // return the preference screen
+Index: src/org/moca/util/MocaUtil.java
+===================================================================
+--- src/org/moca/util/MocaUtil.java	(revision 1313)
++++ src/org/moca/util/MocaUtil.java	(working copy)
+@@ -430,7 +430,9 @@
+     	insertProcedure(ctx, R.raw.cvd_protocol);
+     	insertProcedure(ctx, R.raw.oral_cancer);
+     	*/
+-    	insertProcedure(ctx, R.raw.api_test);
++    	//insertProcedure(ctx, R.raw.api_test);
++
++    	insertProcedure(ctx, R.raw.iapcamera_test);
+ 
+     	//insertProcedure(ctx, R.raw.audio_upload_test);
+     }
+Index: src/org/moca/net/MDSInterface.java
+===================================================================
+--- src/org/moca/net/MDSInterface.java	(revision 1313)
++++ src/org/moca/net/MDSInterface.java	(working copy)
+@@ -303,6 +303,7 @@
+ 			Log.d(TAG, "Received from MDS:" + responseString.length()+" chars");
+ 			Gson gson = new Gson();
+ 			response = gson.fromJson(responseString, MDSResult.class);
++			Log.d(TAG, response.getData());
+ 
+ 		} catch (IOException e1) {
+ 			Log.e(TAG, e1.toString());
+@@ -488,7 +489,7 @@
+ 		SharedPreferences preferences = PreferenceManager
+ 											.getDefaultSharedPreferences(c);
+ 		boolean hacksMode = preferences.getBoolean(
+-				Constants.PREFERENCE_UPLOAD_HACK, false);
++				Constants.PREFERENCE_UPLOAD_HACK, true);
+ 		// check if we want to post as base64 encoded text
+ 		if(hacksMode) {
+ 			return postBinaryAsEncodedText(c, savedProcedureId, elementId, 
