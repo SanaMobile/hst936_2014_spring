@@ -1,0 +1,825 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TabHost
+        android:id="@+id/tabhost"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+            </TabWidget>
+
+            <FrameLayout
+                android:padding="10dp"
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <LinearLayout
+                    android:id="@+id/tab1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical" >
+
+                    <ScrollView
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent" >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical" >
+
+                            <TextView
+                                android:id="@+id/textView16"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingBottom="20dp"
+                                android:text="Patient details"
+                                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                            <TextView
+                                android:id="@+id/textView11"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Created By" />
+
+                            <TextView
+                                android:id="@+id/etvcreatedby"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                            <TextView
+                                android:id="@+id/textView11"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Created On" />
+
+                            <TextView
+                                android:id="@+id/etvcreatedon"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                            <TextView
+                                android:id="@+id/textView11"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Updated By" />
+
+                            <TextView
+                                android:id="@+id/etvupdatedby"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                            <TextView
+                                android:id="@+id/textView11"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Updated On" />
+
+                            <TextView
+                                android:id="@+id/etvupdatedon"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                            <TextView
+                                android:id="@+id/textView1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="CURP or Insurance" />
+
+                            <TextView
+                                android:id="@+id/etvcurp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                            <TextView
+                                android:id="@+id/textView10"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Name" />
+
+                            <TextView
+                                android:id="@+id/etvname"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:inputType="textPersonName"
+                                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                            <TextView
+                                android:id="@+id/textView2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Gender" />
+
+                            <TextView
+                                android:id="@+id/etvgender"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:text="..."
+                                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                            <TextView
+                                android:id="@+id/textView4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Phone" />
+
+                            <TextView
+                                android:id="@+id/etvphone"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:inputType="phone"
+                                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                            <TextView
+                                android:id="@+id/textView6"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Parenthood" />
+
+                            <TextView
+                                android:id="@+id/etvparenthood"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                            <TextView
+                                android:id="@+id/textView7"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Email" />
+
+                            <TextView
+                                android:id="@+id/etvemail"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:inputType="textEmailAddress"
+                                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                            <TextView
+                                android:id="@+id/textView7"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Address" />
+
+                            <TextView
+                                android:id="@+id/etvzip"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:inputType="number"
+                                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                            <TextView
+                                android:id="@+id/etvcolony"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:inputType="textPostalAddress"
+                                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                            <TextView
+                                android:id="@+id/textView9"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:text="Familiar antecedents"
+                                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                            <TextView
+                                android:id="@+id/textView5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Cancer" />
+
+                            <TextView
+                                android:id="@+id/etvcancer"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:orientation="horizontal"
+                                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                            <TextView
+                                android:id="@+id/textView3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:text="Diabetes"
+                                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                            <TextView
+                                android:id="@+id/etvdiabetes"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:orientation="horizontal"
+                                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                            <TextView
+                                android:id="@+id/textView8"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:text="Hypertension"
+                                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                            <TextView
+                                android:id="@+id/etvhypertension"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:orientation="horizontal"
+                                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                            <TextView
+                                android:id="@+id/textView7"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Temperature" />
+
+                            <TextView
+                                android:id="@+id/etvtemp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                            <TextView
+                                android:id="@+id/textView7"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Weight" />
+
+                            <TextView
+                                android:id="@+id/etvweight"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                            <TextView
+                                android:id="@+id/textView7"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Height" />
+
+                            <TextView
+                                android:id="@+id/etvheight"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                            <TextView
+                                android:id="@+id/textView7"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Waist Circumference" />
+
+                            <TextView
+                                android:id="@+id/etvwaist"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                            <TextView
+                                android:id="@+id/textView7"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Blood Pressure" />
+
+                            <TextView
+                                android:id="@+id/etvblood"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                            <TextView
+                                android:id="@+id/textView2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Pregnancy Status" />
+
+                            <TextView
+                                android:id="@+id/etvpregnant"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                            <TextView
+                                android:id="@+id/textView7"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Patient principal symptoms " />
+
+                            <TextView
+                                android:id="@+id/etvpps"
+                                android:layout_width="match_parent"
+                                android:layout_height="97dp"
+                                android:layout_marginBottom="10dp"
+                                android:inputType="textMultiLine"
+                                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                            <TextView
+                                android:id="@+id/textView7"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Notes " />
+
+                            <TextView
+                                android:id="@+id/etvnotes"
+                                android:layout_width="match_parent"
+                                android:layout_height="97dp"
+                                android:layout_marginBottom="10dp"
+                                android:inputType="textMultiLine"
+                                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+
+                            <Button
+                                android:id="@+id/etvsubmit"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Edit" />
+                        </LinearLayout>
+                    </ScrollView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:padding="10dp"
+                    android:id="@+id/tab2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical" >
+
+                    <ScrollView
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent" >
+
+                        <LinearLayout
+                            android:id="@+id/tab2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical" >
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Physical exploration"
+                                android:textAppearance="?android:attr/textAppearanceMedium" />
+                           
+                            <CheckBox
+                                android:id="@+id/under_weight"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Underweight" />
+                            
+                            <CheckBox
+                                android:id="@+id/over_weight"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Overweight" />
+      
+                              <CheckBox
+                                android:id="@+id/obesity"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Obesity" />
+
+                                  <CheckBox
+                                android:id="@+id/ab_pallor"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Absent pallor" />
+
+                                  <CheckBox
+                                android:id="@+id/mild_pallor"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Mild pallor" />
+                            
+                            
+                            <Spinner
+                                android:id="@+id/spinner1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:entries="@array/option1_arrays"
+                                android:prompt="@string/country_prompt" />
+
+                            <EditText
+                                android:id="@+id/other_physical"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.21"
+                                android:hint="Other"
+                                android:inputType="textMultiLine" />
+
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text=" Evolution of previous diagnosis"
+                                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                            <CheckBox
+                                android:id="@+id/checkBox1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Improvement" />
+
+                            <CheckBox
+                                android:id="@+id/checkBox1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Recovery" />
+
+                            <CheckBox
+                                android:id="@+id/checkBox1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Aggravate" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text=" Diagnosis"
+                                android:textAppearance="?android:attr/textAppearanceMedium" />
+                            
+                             <CheckBox
+                                android:id="@+id/hyper"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Hypertension" />
+                             
+                              <CheckBox
+                                android:id="@+id/diabetes"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Diabetes" />
+                              
+                               <CheckBox
+                                android:id="@+id/meta_syndrome"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Metabolic Syndrome" />
+                               
+                                <CheckBox
+                                android:id="@+id/viral_infect"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Viral infection" />
+
+                                <CheckBox
+                                android:id="@+id/respi_track"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Respi track infect" />
+                                
+                                <CheckBox
+                                android:id="@+id/urinary_track"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Urinary track infect" />
+                                
+                                <CheckBox
+                                android:id="@+id/headache"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Headache" />
+
+                                <CheckBox
+                                android:id="@+id/aches"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Aches" />
+                                
+                                <EditText
+                                android:id="@+id/others_diag"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:hint="Other" />
+                            
+
+
+                            <TextView
+                                android:id="@+id/textView7"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Treatment" />
+                            
+        <CheckBox android:id="@+id/anti_bio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Antibiotic"
+        android:onClick="onCheckboxClicked"/>       
+
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal" >
+
+                                <Spinner
+                                    android:id="@+id/spinner2"
+                                    android:layout_width="100dp"
+                                    android:layout_height="wrap_content"
+                                    android:entries="@array/option1_arrays"
+                                    android:prompt="@string/country_prompt" />
+
+                                <Spinner
+                                    android:id="@+id/spinner3"
+                                    android:layout_width="100dp"
+                                    android:layout_height="wrap_content"
+                                    android:entries="@array/option1_arrays"
+                                    android:prompt="@string/country_prompt" />
+
+                                <Spinner
+                                    android:id="@+id/spinner4"
+                                    android:layout_width="100dp"
+                                    android:layout_height="wrap_content"
+                                    android:entries="@array/option1_arrays"
+                                    android:prompt="@string/country_prompt" />
+                            </LinearLayout>
+
+        <CheckBox android:id="@+id/anti_infla"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Anti-inflammatory"
+        android:onClick="onCheckboxClicked"/>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal" >
+
+                                <Spinner
+                                    android:id="@+id/spinner2"
+                                    android:layout_width="100dp"
+                                    android:layout_height="wrap_content"
+                                    android:entries="@array/option1_arrays"
+                                    android:prompt="@string/country_prompt" />
+
+                                <Spinner
+                                    android:id="@+id/spinner3"
+                                    android:layout_width="100dp"
+                                    android:layout_height="wrap_content"
+                                    android:entries="@array/option1_arrays"
+                                    android:prompt="@string/country_prompt" />
+
+                                <Spinner
+                                    android:id="@+id/spinner4"
+                                    android:layout_width="100dp"
+                                    android:layout_height="wrap_content"
+                                    android:entries="@array/option1_arrays"
+                                    android:prompt="@string/country_prompt" />
+                            </LinearLayout>
+
+                          
+         <CheckBox android:id="@+id/analgesics"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Analgesics"
+        android:onClick="onCheckboxClicked"/>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal" >
+
+                                <Spinner
+                                    android:id="@+id/spinner2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:entries="@array/option1_arrays"
+                                    android:prompt="@string/country_prompt" />
+
+                                <Spinner
+                                    android:id="@+id/spinner3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:entries="@array/option1_arrays"
+                                    android:prompt="@string/country_prompt" />
+
+                                <Spinner
+                                    android:id="@+id/spinner4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:entries="@array/option1_arrays"
+                                    android:prompt="@string/country_prompt" />
+                            </LinearLayout>
+
+                            
+        <CheckBox android:id="@+id/antiviral"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Antiviral"
+        android:onClick="onCheckboxClicked"/>
+                             
+                             <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal" >
+
+                                <Spinner
+                                    android:id="@+id/spinner2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:entries="@array/option1_arrays"
+                                    android:prompt="@string/country_prompt" />
+
+                                <Spinner
+                                    android:id="@+id/spinner3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:entries="@array/option1_arrays"
+                                    android:prompt="@string/country_prompt" />
+
+                                <Spinner
+                                    android:id="@+id/spinner4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:entries="@array/option1_arrays"
+                                    android:prompt="@string/country_prompt" />
+                            </LinearLayout>
+
+                                             
+        <CheckBox android:id="@+id/insulin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Insulin"
+        android:onClick="onCheckboxClicked"/>
+           
+        
+               <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal" >
+
+                                <Spinner
+                                    android:id="@+id/spinner2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:entries="@array/option1_arrays"
+                                    android:prompt="@string/country_prompt" />
+
+                                <Spinner
+                                    android:id="@+id/spinner3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:entries="@array/option1_arrays"
+                                    android:prompt="@string/country_prompt" />
+
+                                <Spinner
+                                    android:id="@+id/spinner4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:entries="@array/option1_arrays"
+                                    android:prompt="@string/country_prompt" />
+                            </LinearLayout>
+                            
+        <TextEdit android:id="@+id/edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Other"/>  
+        
+                             
+                            
+                            <TextView
+                                android:id="@+id/textView7"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Clinical laboratory requests" />
+
+     <CheckBox android:id="@+id/blood_chem35"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Blood chem 35elements"
+        android:onClick="onCheckboxClicked"/>
+    
+     <CheckBox android:id="@+id/blood_chem24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Blood chem 24elem"
+        android:onClick="onCheckboxClicked"/>
+     
+    <CheckBox android:id="@+id/blood_biometry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Blood biometry"
+        android:onClick="onCheckboxClicked"/>
+                            
+
+
+     <CheckBox android:id="@+id/leu_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total Leucocyte count"
+        android:onClick="onCheckboxClicked"/>
+    
+     <CheckBox android:id="@+id/serum_elec"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Serum electrolytes"
+        android:onClick="onCheckboxClicked"/>
+     
+    <CheckBox android:id="@+id/uri_analysis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Urinalysis"
+        android:onClick="onCheckboxClicked"/>
+    
+      <CheckBox android:id="@+id/copro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Coproparasitoscopic"
+        android:onClick="onCheckboxClicked"/>
+    
+     <CheckBox android:id="@+id/hepatitis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hepatitis"
+        android:onClick="onCheckboxClicked"/>
+     
+    <CheckBox android:id="@+id/herpes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Herpes"
+        android:onClick="onCheckboxClicked"/>
+
+
+     <CheckBox android:id="@+id/alergy_test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Alergy Test"
+        android:onClick="onCheckboxClicked"/>
+     
+      <CheckBox android:id="@+id/hiv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="HIV"
+        android:onClick="onCheckboxClicked"/>
+      
+       <CheckBox android:id="@+id/vdrl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="VDRL"
+        android:onClick="onCheckboxClicked"/>
+       
+        <CheckBox android:id="@+id/x_ray"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="X ray"
+        android:onClick="onCheckboxClicked"/>
+                            
+                          
+        <TextEdit android:id="@+id/other_tests"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="X ray"
+        android:hint="Other"/>   
+                            
+                          
+
+                            <Button
+                                android:id="@+id/button1"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Submit" />
+                        </LinearLayout>
+                    </ScrollView>
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+    </TabHost>
+
+</LinearLayout>

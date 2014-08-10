@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:padding="20dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Appoinments"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Checkup" />
+
+    <DatePicker
+        android:id="@+id/datePicker1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TimePicker
+        android:id="@+id/timePicker1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+     <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Surgery" />
+
+    <DatePicker
+        android:id="@+id/datePicker2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TimePicker
+        android:id="@+id/timePicker2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+     <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lab test" />
+
+    <DatePicker
+        android:id="@+id/datePicker3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TimePicker
+        android:id="@+id/timePicker3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

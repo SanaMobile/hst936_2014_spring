@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">MexicoEHR</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="select">Choose a Option</string>
+    <string name="country_prompt">Choose an Option</string>
+
+    <string-array name="option1_arrays">
+        <item >None</item>
+        <item>Back pain	</item>
+        <item>Chest paint</item>
+        <item>Heart Paint</item>
+    </string-array>
+    <string-array name="option2_arrays">
+        <item >None</item>
+        <item>Toothache</item>
+        <item>Headache</item>
+        <item>Stomache</item>
+    </string-array>
+    <string-array name="option3_arrays">
+        <item >None</item>
+        <item>Insomania</item>
+        <item>Brain disorder</item>
+        <item>No clue</item>
+    </string-array>
+    <string-array name="option4_arrays">
+        <item >None</item>
+        <item>Lungs Faliure</item>
+        <item> Kidney Faliure</item>
+        <item>Breathing prob</item>
+    </string-array>
+    <string-array name="option5_arrays">
+        <item >None</item>
+        <item>Muscles Damage</item>
+        <item>Oxygen Defficiency</item>
+        <item>No clue</item>
+    </string-array>
+    <string-array name="option6_arrays">
+        <item >None</item>
+        <item>Asthama</item>
+        <item>Brain disorder</item>
+        <item>No clue</item>
+        </string-array>
+         <string-array name="option7_arrays">
+         <item >None</item>
+        <item>Disprin</item>
+        <item>Paracetamol</item>
+        <item>Kalpol</item>
+        </string-array>
+         <string-array name="option8_arrays">
+          <item >None</item>
+        <item>Sumo</item>
+        <item>odoxil</item>
+        <item>TZ norflox</item>
+        </string-array>
+         <string-array name="option9_arrays">
+         <item >None</item>
+        <item>Asthama</item>
+        <item>Brain disorder</item>
+        <item>No clue</item>
+    </string-array>
+    <string-array name="optio_arrays">
+        
+        <item>2 times</item>
+        <item>3 times</item>
+        <item>1 times</item>
+    </string-array>
+    <string-array name="alergyarray">
+        <item >None</item>
+        <item>Dust</item>  
+        <item>Metals</item>
+        <item>Animals</item>
+        <item>Food</item>
+        <item>Medicine</item>
+    </string-array>
+    <string-array name="opti_arrays">
+        
+        <item>milk</item>
+        <item>water</item>
+        <item>Hot water</item>
+    </string-array>
+    <string-array name="opt_arrays">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="pre_diagnosis">
+        <item>Common Cold</item>
+       <item>High Pressure</item>
+       <item>Delivery Pregnancy</item>
+       <item>Tooth Ache</item>
+       <item>Stomach Ache</item>
+<item>Chest Ache</item>
+<item>Diarrheal disease</item>
+<item>Pneumonia</item>
+<item>Fracture</item>
+<item>Strain</item>
+<item>Sprain</item>
+<item>Anemia</item>
+<item>Heart Attack</item>
+<item>Cardiopathy </item>
+<item>Arrhythmia</item>
+<item>Arrhythmia</item>
+<item>Colitis</item>
+<item>Gastritis</item>
+<item>Torn muscle</item>
+<item>Tendinitis</item>
+<item>STDs</item>
+            
+    </string-array>
+    
+    <string name="login">Login As</string>
+     <string name="create">Create New EMR</string>
+     <string name="modify">Edit Existing EMR</string>
+   <string name= "category">Select Patient  category</string> 
+   <string name= "child">Child(-18)</string> 
+   <string name= "adult">Adult(+18)</string> 
+    
+
+</resources>
