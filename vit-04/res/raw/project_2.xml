@@ -1,0 +1,274 @@
+<Procedure
+    author="Team #42"
+    title="Surgical Site Infection"
+    version="1" >
+
+    <Page>
+        <Element
+            id="1"
+            answer="1"
+            choices="Yes,No"
+            concept="PATIENT HOME"
+            helpText="Select a value before proceeding."
+            question="Are you at the house of the patient now? "
+            required="true"
+            type="RADIO" />
+    </Page>
+    <Page>
+        <ShowIf>
+            <Criteria
+                id="1"
+                type="EQUALS"
+                value="Yes" />
+        </ShowIf>
+
+        <Element
+            id="2"
+            answer=""
+            concept="PATIENT HOME GPS LOCATION"
+            helpText="Capture your location"
+            question="Press button to record current location."
+            required="true"
+            type="GPS" />
+    </Page>
+    <Page>
+        <Element
+            id="3"
+            answer="1"
+            choices="Yes,No"
+            concept="PATIENT FEVER"
+            helpText="Select a value before proceeding."
+            question="Since coming home from the hospital, have you had a fever? "
+            required="true"
+            type="RADIO" />
+    </Page>
+    <Page>
+        <Element
+            id="4"
+            answer="1"
+            choices="Yes,No"
+            concept="PATIENT PAIN"
+            helpText="Select a value before proceeding."
+            question="At the incision, have you had increasing pain?"
+            required="true"
+            type="RADIO" />
+    </Page>
+    <Page>
+        <Element
+            id="5"
+            answer="1"
+            choices="Yes,No"
+            concept="PATIENT REDNESS"
+            helpText="Select a value before proceeding."
+            question="At the incision, have you had increasing redness? "
+            required="true"
+            type="RADIO" />
+    </Page>
+    <Page>
+        <Element
+            id="6"
+            answer="1"
+            choices="Yes,No"
+            concept="PATIENT SWELLING"
+            helpText="Select a value before proceeding."
+            question="At the incision, have you had increasing swelling? "
+            required="true"
+            type="RADIO" />
+    </Page>
+    <Page>
+        <Element
+            id="7"
+            answer="1"
+            choices="Yes,No"
+            concept="PATIENT FIRMNESS"
+            helpText="Select a value before proceeding."
+            question="At the incision, have you had increasing firmness? "
+            required="true"
+            type="RADIO" />
+    </Page>
+    <Page>
+        <Element
+            id="8"
+            answer="1"
+            choices="Yes,No"
+            concept="PATIENT DRAINAGE"
+            helpText="Select a value before proceeding."
+            question="At the incision, have you had any drainage?"
+            required="true"
+            type="RADIO" />
+    </Page>
+    <Page>
+        <ShowIf>
+            <Criteria
+                id="8"
+                type="EQUALS"
+                value="Yes" />
+        </ShowIf>
+
+        <Element
+            id="9"
+            answer="1"
+            choices="Thick, Thin (like water)"
+            concept="PATIENT FLUID THICKNESS"
+            helpText="Select a value before proceeding."
+            question="If so, is the fluid thick or thin?"
+            required="true"
+            type="RADIO" />
+    </Page>
+    <Page>
+        <ShowIf>
+            <Criteria
+                id="8"
+                type="EQUALS"
+                value="Yes" />
+        </ShowIf>
+
+        <Element
+            id="10"
+            answer="1"
+            choices="brown yellow green white, red pink clear"
+            concept="PATIENT FLUID COLOR"
+            helpText="Select a value before proceeding."
+            question="If so, which color is the fluid?  "
+            required="true"
+            type="RADIO" />
+    </Page>
+    <Page>
+        <ShowIf>
+            <Criteria
+                id="8"
+                type="EQUALS"
+                value="Yes" />
+        </ShowIf>
+
+        <Element
+            id="11"
+            answer="1"
+            choices="Yes, No"
+            concept="PATIENT FLUID SMELL"
+            helpText="Select a value before proceeding."
+            question="If so, does the fluid smell badly?  "
+            required="true"
+            type="RADIO" />
+    </Page>
+    <Page>
+        <Element
+            id="12"
+            answer="1"
+            choices="Yes,No"
+            concept="PATIENT GAPE"
+            helpText="Select a value before proceeding."
+            question="Has the incision started to gape open spontaneously"
+            required="true"
+            type="RADIO" />
+    </Page>
+    <Page>
+        <Element
+            id="13"
+            answer=""
+            concept="PATIENT IMAGE"
+            question="Please take a photograph of the incision.  Make sure the photograph includes the entire incision. Include any drainage or staining on a dressing if possible."
+            required="true"
+            type="PICTURE" />
+    </Page>
+    <Page>
+        <ShowIf>
+            <or>
+                <Criteria
+                    id="3"
+                    type="EQUALS"
+                    value="Yes" />
+                <Criteria
+                    id="4"
+                    type="EQUALS"
+                    value="Yes" />
+                <Criteria
+                    id="5"
+                    type="EQUALS"
+                    value="Yes" />
+                <Criteria
+                    id="6"
+                    type="EQUALS"
+                    value="Yes" />
+                <Criteria
+                    id="7"
+                    type="EQUALS"
+                    value="Yes" />
+                <Criteria
+                    id="8"
+                    type="EQUALS"
+                    value="Yes" />
+                <!--
+                     <Criteria
+                    id="9"
+                    type="EQUALS"
+                    value="Thick" />
+                <Criteria
+                    id="10"
+                    type="EQUALS"
+                    value="brown yellow green white" />
+                <Criteria
+                    id="11"
+                    type="EQUALS"
+                    value="Yes" />
+                -->
+                <Criteria
+                    id="12"
+                    type="EQUALS"
+                    value="Yes" />
+            </or>
+        </ShowIf>
+
+        <Element
+            id="20"
+            answer=""
+            concept="CALL CLINIC"
+            question="You are in high risk. Please call the clinic"
+            type="TEXT" />
+    </Page>
+    <Page>
+        <ShowIf>
+            <or>
+                <Criteria
+                    id="3"
+                    type="EQUALS"
+                    value="Yes" />
+                <Criteria
+                    id="4"
+                    type="EQUALS"
+                    value="Yes" />
+                <Criteria
+                    id="5"
+                    type="EQUALS"
+                    value="Yes" />
+                <Criteria
+                    id="6"
+                    type="EQUALS"
+                    value="Yes" />
+                <Criteria
+                    id="7"
+                    type="EQUALS"
+                    value="Yes" />
+                <Criteria
+                    id="8"
+                    type="EQUALS"
+                    value="Yes" />
+                <Criteria
+                    id="12"
+                    type="EQUALS"
+                    value="Yes" />
+            </or>
+        </ShowIf>
+
+        <Element
+            id="21"
+            action="android.intent.action.DIAL"
+            answer=""
+            concept="CLINIC DIAL"
+            mimeType=""
+            question="Call the clinic"
+            text=""
+            type="PLUGIN" />
+    </Page>
+
+</Procedure>

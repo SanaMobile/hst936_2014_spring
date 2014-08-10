@@ -1,0 +1,100 @@
+<Procedure
+    author="Team_Innovate"
+    title="Heart Calculator"
+    version="1" >
+    <Page>
+        <Element
+             id="1"
+            answer=""
+            choices="Male,Female"
+            concept="PATIENT HOME"
+            helpText="Select a value before proceeding."
+            question="Enter your Gender "
+            required="true"
+            type="RADIO" />
+       
+        
+    </Page>
+    <Page>
+        <Element
+             id="2"
+            answer=""
+            concept="PATIENT HOME"
+            helpText="Select a value before proceeding."
+            question="Enter your age "
+            required="true"
+            type="ENTRY"
+            numeric="INTEGER" />
+       
+        
+    </Page>
+    <Page>
+        <Element
+             id="3"
+            answer=""
+            concept="PATIENT HOME"
+            helpText="Select a value before proceeding."
+            question="Enter your total cholesterol in mg/dL "
+            required="true"
+            type="ENTRY"
+            numeric="INTEGER" />
+       
+        
+    </Page>
+    <Page>
+        <Element
+             id="4"
+            answer=""
+            choices="Yes,No"
+            concept="PATIENT HOME"
+            helpText="Select a value before proceeding."
+            question="Are you a smoker "
+            required="true"
+            type="RADIO" />
+       
+        
+    </Page>
+     <Page>
+        <Element
+             id="5"
+            answer=""
+            concept="PATIENT HOME"
+            helpText="Select a value before proceeding."
+            question="Enter your total HDL cholesterol in mg/dL "
+            required="true"
+            type="ENTRY"
+            numeric="INTEGER" />
+       
+        
+    </Page>
+    <Page>
+        <Element
+             id="6"
+            answer=""
+            concept="PATIENT HOME"
+            helpText="Select a value before proceeding."
+            question="Enter your systolic blood pressure "
+            required="true"
+            type="ENTRY"
+            numeric="INTEGER" />
+       
+        
+    </Page>
+    <Page>
+        
+        
+        <Element
+             id="7"
+            answer="less than 1%"
+            concept="PATIENT HOME"
+            helpText="Select a value before proceeding."
+            question="Patient's Risk % for 10 years 
+                                            less than 1%"
+            required="false"
+            type="TEXT"
+            numeric="INTEGER" />
+       
+        
+    </Page>
+     
+    </Procedure>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView  xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:minWidth="300dp" 
+    android:minHeight="400dp" >
+
+    <TextView
+        android:id="@+id/tvtreatment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:padding="10dp"
+        android:text="TextView"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/ivtreatment"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center_horizontal"
+        android:scaleType="fitXY" />
+
+ <TextView
+     android:id="@+id/tvtreatment1"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:padding="5dp"
+     android:text="Treatments"
+     android:textSize="20sp" />
+    
+    <TextView
+        android:id="@+id/tvtreatment2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:clickable="true"
+        android:padding="5dp"
+        android:text="TextView"
+        android:textColor="@color/paleYellow"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/tvtreatment3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:clickable="true"
+        android:padding="5dp"
+        android:text="TextView"
+        android:textColor="@color/paleYellow"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/tvtreatment4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:clickable="true"
+        android:padding="5dp"
+        android:text="TextView"
+        android:textColor="@color/paleYellow"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/tvtreatment5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:padding="5dp"
+        android:text=""
+        android:textSize="15sp" />
+   
+</LinearLayout>
+</ScrollView>

@@ -1,0 +1,18 @@
+<Procedure
+    author="Abhishek Shreyas Prince Vasu Devansh"
+    title="Project 1"
+    version="1" >
+
+    <Page>
+        <Element
+            id="barcode"
+            action="android.intent.action.DIAL"
+            answer=""
+            concept="BARCODE TEST"
+            mimeType=""
+            question="Scan barcode"
+            text=""
+            type="PLUGIN" />
+    </Page>
+
+</Procedure>

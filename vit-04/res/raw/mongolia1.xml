@@ -1,0 +1,254 @@
+<Procedure
+    author="Team 4"
+    title="Mongolia Teledermatology"
+    version="1" >
+
+    <Page>
+        <Element
+            id="1"
+            answer=""
+            concept="PATIENT AGE"
+            helpText="Select a value before proceeding."
+            question="Enter your age "
+            required="true"
+            type="ENTRY"
+            numeric="INTEGER"  />
+    </Page>
+    <Page>
+        <ShowIf>
+            <Criteria
+                id="1"
+                type="LESS"
+                value="10" />
+        </ShowIf>
+        <Element
+            id="2"
+            answer="Not blue"
+            choices="Not blue,Blue gray"
+            concept="PATIENT ALLERGY"
+            helpText=""
+            question="What is the color of the allergic area?"
+            required="true"
+            type="RADIO" />
+    </Page>
+    
+    <Page>
+        <Element
+            id="3"
+            answer=""
+            concept="PATIENT DAYS"
+            helpText="Enter a value before proceeding."
+            question="How many days of itching and redness? "
+            required="true"
+            type="ENTRY"
+            numeric="INTEGER" />
+    </Page>
+    <Page>
+        <Element
+            id="4"
+            answer=""
+            concept="PATIENT ALLERGIES"
+            helpText="Enter a value before proceeding."
+            question="Specific allegies with any material?"
+            required="true"
+            type="ENTRY" />
+    </Page>
+    <Page>
+        <Element
+            id="5"
+            answer=""
+            choices="Yes,No"
+            concept="PATIENT REDNESS"
+            helpText="Select a value before proceeding."
+            question="Is there a red rash limited to the area of skin exposed to the allergic material? "
+            required="true"
+            type="RADIO" />
+    </Page>
+    <Page>
+        <Element
+            id="6"
+            answer=""
+            choices="Yes,No"
+            concept="PATIENT YELLOWISH PATCH"
+            helpText="Select a value before proceeding."
+            question="Is there a yellowish patch on scalp and eyebrows, behind ears, around nose? "
+            required="true"
+            type="RADIO" />
+    </Page>
+    <Page>
+        <Element
+            id="7"
+            answer=""
+            choices="Yes,No"
+            concept="PATIENT SKIN"
+            helpText="Select a value before proceeding."
+            question="Is there ulcerated skin inside lower legs and around ankles? "
+            required="true"
+            type="RADIO" />
+    </Page>
+    <Page>
+        <Element
+            id="8"
+            answer=""
+            choices="Yes,No"
+            concept="PATIENT DRAINAGE"
+            helpText="Select a value before proceeding."
+            question="Extreme persistent itchiness? "
+            required="true"
+            type="RADIO" />
+    </Page>
+    
+    <Page>
+        <Element
+            id="9"
+            answer=""
+            concept="PATIENT IMAGE"
+            question="Please take a photograph of the affected region."
+            required="true"
+            type="PICTURE" />
+    </Page>
+    <Page>
+        <ShowIf>
+            <Criteria
+                id="2"
+                type="EQUALS"
+                value="Blue gray" />
+        </ShowIf>
+        <Element
+            id="10"
+            answer=""
+            concept="PATIENT ALLERGY"
+            helpText=""
+            question="You have Mongolia spot"
+            alert="You have Mongolia spot"
+            type="TEXT" />
+    </Page>
+    <Page>
+        <ShowIf>
+            <Criteria
+                id="5"
+                type="EQUALS"
+                value="Yes" />
+        </ShowIf>
+        <Element
+            id="11"
+            answer="1"
+            concept="PATIENT ALLERGY"
+            helpText=""
+            question="You have contact dermatitis"
+            alert="You have contact dermatitis"
+            type="TEXT" />
+    </Page>
+    <Page>
+        <ShowIf>
+            <and>
+            <Criteria
+                id="6"
+                type="EQUALS"
+                value="Yes" />
+                <Criteria
+                id="1"
+                type="LESS"
+                value="11" />
+            </and>
+        </ShowIf>
+        <Element
+            id="12"
+            answer="1"
+            concept="PATIENT ALLERGY"
+            helpText=""
+            question="You have cradle crap"
+            alert="You have cradle crap"
+            type="TEXT" />
+    </Page>
+    <Page>
+        <ShowIf>
+            <and>
+            <Criteria
+                id="6"
+                type="EQUALS"
+                value="Yes" />
+            <Criteria
+                id="1"
+                type="GREATER"
+                value="10" />
+            </and>
+        </ShowIf>
+        <Element
+            id="13"
+            answer=""
+            concept="PATIENT ALLERGY"
+            helpText=""
+            question="You have seborrhoeic dermatitis"
+            alert="You have seborrhoeic dermatitis"
+            type="TEXT" />
+    </Page>
+    <Page>
+        <ShowIf>
+            <Criteria
+                id="7"
+                type="EQUALS"
+                value="Yes" />
+        </ShowIf>
+        <Element
+            id="14"
+            answer=""
+            concept="PATIENT ALLERGY"
+            helpText=""
+            question="You have stasis dermatitis"
+            alert="You have stasis dermatitis"
+            type="TEXT" />
+    </Page>
+    <Page>
+        <ShowIf>
+            <Criteria
+                id="8"
+                type="EQUALS"
+                value="Yes" />
+        </ShowIf>
+        <Element
+            id="15"
+            answer=""
+            concept="PATIENT ALLERGY"
+            helpText=""
+            question="You have atopic dermatitis"
+            alert="You have atopic dermatitis"
+            type="TEXT" />
+    </Page>
+    <Page>
+        <ShowIf>
+            <or>
+                <Criteria
+                id="2"
+                type="EQUALS"
+                value="Blue gray" />
+                <Criteria
+                id="5"
+                type="EQUALS"
+                value="Yes" />
+                <Criteria
+                id="6"
+                type="EQUALS"
+                value="Yes" />
+                <Criteria
+                id="7"
+                type="EQUALS"
+                value="Yes" />
+                <Criteria
+                id="8"
+                type="EQUALS"
+                value="Yes" />
+            </or>
+        </ShowIf>
+        <Element
+            id="16"
+            action="android.intent.action.DIAL"
+            answer=""
+            concept="CLINIC DIAL"
+            mimeType=""
+            question="Call the clinic"
+            text=""
+            type="PLUGIN" />
+    </Page>
+
+</Procedure>
