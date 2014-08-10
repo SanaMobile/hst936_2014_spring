@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">BMI app</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="weightlbl">Enter your weight</string>
+    <string name="heightlbl">Enter your height</string>
+    <string name="calculateButton">calculate BMI</string>
+    <string name="resultLabel"></string>
+    <string name="result"></string>
+    <string name="femlbl">Female</string>
+    <string name="malelbl">Male</string>
+    <string name="genderlbl">Select your gender</string>
+    <string name="doblbl">enter your date of birth</string>
+    <string name="genlbl">Select your gender</string>
+    <string name="flbl">Female</string>
+    <string name="mlbl">Male</string>
+    <string name="next2">Next</string>
+    <string name="next3">Next page</string>
+    <string name="d">enter date of birth</string>
+    <string name="ageCalculate">Calculate age</string>
+    <string name="a">ENTER YOUR AGE</string>
+    <string name="w">ENTER YOUR WEIGHT(lbs)</string>
+    <string name="h">ENTER YOUR HEIGHT</string>
+    <string name="hi">ENTER HEIGHT(inches)</string>
+    <string name="cb">CLACULATE BMI</string>
+    <string name="res"></string>
+    <color name="blue">#0000ff</color>
+    <string name="AGE">ENTER YOUR AGE</string>
+    <string name="WEIGHT">ENTER YOUR WEIGHT</string>
+    <string name="HEIGHT">ENTER YOUR HEIGHT</string>
+    <string name="BMI">CLACULATE BMI</string>
+    <string name="RESULT"></string>
+    <string name="gen">SELECT YOUR GENDER</string>
+    <string name="feml">FEMALE</string>
+    <string name="MAL">MALE</string>
+    <string name="NXT">NEXT PAGE</string>
+
+</resources>

@@ -1,0 +1,141 @@
+                <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent" >
+    
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        
+        android:gravity="center" >
+         
+           <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+            
+         <TextView 
+                android:id="@+id/setdob"
+                android:text="@string/dob"
+                android:textColor="@color/green"
+                android:layout_marginLeft="30sp"
+                android:layout_marginTop="25sp"
+                android:textSize="17sp"/>
+        <Button
+		        android:id="@+id/date"
+		        android:layout_width="65sp"
+		        android:layout_height="68sp"
+		        android:layout_marginTop="25sp"
+		        android:layout_marginLeft="37sp"
+		        android:background="@drawable/cal" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+            <TextView 
+                android:id="@+id/gender"
+                android:text="@string/gender"
+                android:textColor="@color/green"
+                android:layout_marginLeft="30sp"
+                android:layout_marginTop="15sp"
+                android:textSize="17sp"/>
+          </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+            
+        <RadioGroup
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal"
+	        android:layout_marginLeft="30sp"
+	        android:layout_marginTop="10sp" >
+
+        <RadioButton
+            android:id="@+id/male"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/male" 
+            android:textColor="@color/green"/>
+
+        <RadioButton
+            android:id="@+id/female"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10sp"
+            android:text="@string/female"
+            android:textColor="@color/green"/>
+        </RadioGroup>
+ 
+        </TableRow>
+        
+        <TableRow
+            android:id="@+id/tableRow4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+        <TextView 
+                android:id="@+id/setheight"
+                android:text="@string/height"
+                android:textColor="@color/green"
+                android:layout_marginLeft="30sp"
+                android:layout_marginTop="50sp"
+                android:textSize="17sp"/>
+
+        <NumberPicker
+                android:id="@+id/numberPicker1"
+                android:layout_width="40sp"
+                android:layout_height="105sp"
+                android:layout_marginLeft="20sp"
+                android:textSize="16sp" 
+                 />
+
+        </TableRow>
+        
+        <TableRow
+            android:id="@+id/tableRow5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+        
+            <TextView 
+                android:id="@+id/setweight"
+                android:text="@string/weight"
+                android:textColor="@color/green"
+                android:layout_marginLeft="30sp"
+                android:layout_marginTop="65sp"
+                android:textSize="17sp"/>
+
+            <NumberPicker
+                android:id="@+id/numberPicker2"
+                android:layout_width="40sp"
+                android:layout_height="105sp"
+                android:layout_marginLeft="20sp"
+                android:layout_marginTop="20sp"
+                android:textSize="16sp" />
+        </TableRow>
+        
+        <TableRow
+            android:id="@+id/tableRow6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <Button
+                android:id="@+id/submit"
+                android:layout_width="200sp"
+                android:layout_height="match_parent"
+                android:layout_span="3"
+                android:layout_marginLeft="40sp"
+                android:textColor="@color/white"
+                android:background="@drawable/corner"
+                android:onClick="proceedButtton"
+                android:text="@string/sub" />
+
+        </TableRow>     
+    </TableLayout>
+    </ScrollView>
+
+

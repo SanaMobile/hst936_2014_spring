@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linearLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@drawable/image1" >
+    
+      <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+      <TextView
+          android:id="@+id/textView1"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Nutritional advice"
+          android:textAppearance="?android:attr/textAppearanceLarge"
+          android:textColor="#0000CD"
+          android:textSize="35sp" />
+    
+     <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+       <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Click on Your Age Group"
+        android:textColor="#0000CD"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+    
+     <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+     
+      <Button
+        android:id="@+id/button2"
+        android:layout_width="120dp"
+        android:layout_height="60dp"
+        android:text="Age below 1 yr"
+        android:textColor="#0000CD" />
+     
+     
+     <Button
+         android:id="@+id/button1"
+         android:layout_width="120dp"
+         android:layout_height="60dp"
+         android:text="@string/age_1_year"
+         android:textColor="#0000CD" />
+    
+   
+   
+    
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="120dp"
+        android:layout_height="60dp"
+        android:text="Age 2-3 years"
+        android:textColor="#0000CD" />
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="120dp"
+        android:layout_height="60dp"
+        android:text="Age 4-8 years"
+        android:textColor="#0000CD" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="120dp"
+        android:layout_height="60dp"
+        android:text="Age 8-13 years"
+        android:textColor="#0000CD" />
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="120dp"
+        android:layout_height="60dp"
+        android:text="Age 13-16 years"
+        android:textColor="#0000CD" />
+    
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="120dp"
+        android:layout_height="60dp"
+        android:text="Age 16-18 years"
+        android:textColor="#0000CD" />
+
+    
+</LinearLayout>

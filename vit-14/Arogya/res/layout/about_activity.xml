@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?><RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    
+       <TableLayout
+         android:id="@+id/tableLayout1"
+         android:layout_width="320sp"
+         android:layout_height="150sp"
+          android:layout_marginLeft="40sp"
+         android:background="@drawable/title" >
+     </TableLayout>
+     
+      <TableLayout
+          android:id="@+id/tableLayout2"
+          android:layout_width="wrap_content"
+          android:layout_height="match_parent" >
+
+      <TableRow
+          android:id="@+id/tablerow1"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content" >
+     
+      </TableRow>
+
+      <TableRow
+          android:id="@+id/tablerow2"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content" >
+      </TableRow>
+
+
+</TableLayout>
+
+ 
+
+      <TextView
+          android:id="@+id/ab"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+      
+          android:layout_below="@+id/tableLayout1"
+          android:layout_marginLeft="14dp"
+          android:text="@string/dev"
+          android:textAlignment="center"
+          android:textAppearance="?android:attr/textAppearanceSmall"
+          android:textSize="25sp"
+          android:typeface="serif" />
+
+</RelativeLayout>
